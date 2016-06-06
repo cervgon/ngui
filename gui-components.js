@@ -1,0 +1,83 @@
+/*
+The MIT License (MIT)
+
+Copyright (c) 2016 Gonzalo Cervantes
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+*/
+
+// Version 0.1
+// github.com/cervgon/gui-components
+
+function actions(){
+    $('slide').each(function(){
+
+        var content = $(this).html();
+        var html  = '';
+        var slideID = $(this).attr('id');
+        var checked = $(this).attr('checked');
+        var checkedClass = '';
+        if(checked!== undefined){checkedClass = ' checked'}
+        if (slideID !== undefined){
+                html = '<div class="slideOne'+checkedClass+'"><input type="checkbox" value="None" id="'+slideID+'" name="check" /><label for="'+slideID+'"></label></div>';
+            }
+        $(this).replaceWith(html);
+        if(checked != undefined){$('#'+slideID).prop('checked', true);}
+    });
+    $('.slideOne label').click(function(){
+        var bgcolor = $(this).parent().css("background-color");
+        if(bgcolor =='rgb(255, 255, 255)' || bgcolor == '#fff'){
+           $(this).parent().addClass('checked');
+        }
+        else{
+            $(this).parent().removeClass('checked');
+        }    
+    });
+}
+
+function loadJQ() {
+    // Load the script
+    var script = document.createElement("SCRIPT");
+    script.src = 'https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js';
+    script.type = 'text/javascript';
+    document.getElementsByTagName("head")[0].appendChild(script);
+
+    var t = 0;
+    var timer = setInterval(function(){
+      if (window.jQuery) {
+        actions();
+        clearInterval(timer);
+      }
+      else {
+        t++;
+        if (t>100){
+            clearInterval(timer);
+            console.error("This is taking too much.. :(");
+        }
+      }
+    },50);
+}
+
+document.addEventListener("DOMContentLoaded", function(event){
+    // Check if jQuery is loaded.
+    if (!window.jQuery){loadJQ();}
+    else {actions();}
+});
+
+

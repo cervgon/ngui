@@ -1,0 +1,130 @@
+<html>
+<head>
+<meta charset="utf-8">
+<script type="text/javascript" src="../gui-components.js"></script>
+<link rel="stylesheet" type="text/css" href="../gui.css">
+
+<link rel="shortcut" href="images/favicon.png">
+ <!-- non-retina iPhone pre iOS 7 -->
+<link rel="apple-touch-icon" href="images/icon57.png" sizes="57x57">
+<!-- non-retina iPad pre iOS 7 -->
+<link rel="apple-touch-icon" href="images/icon72.png" sizes="72x72">
+<!-- non-retina iPad iOS 7 -->
+<link rel="apple-touch-icon" href="images/icon76.png" sizes="76x76">
+<!-- retina iPhone pre iOS 7 -->
+<link rel="apple-touch-icon" href="images/icon114.png" sizes="114x114">
+<!-- retina iPhone iOS 7 -->
+<link rel="apple-touch-icon" href="images/icon120.png" sizes="120x120">
+<!-- retina iPad pre iOS 7 -->
+<link rel="apple-touch-icon" href="images/icon144.png" sizes="144x144">
+<!-- retina iPad iOS 7 -->
+<link rel="apple-touch-icon" href="images/icon152.png" sizes="152x152">
+<link rel="mask-icon" href="images/icon.svg" color="#333">
+<meta name="apple-mobile-web-app-status-bar-style" content="red">
+<link rel="icon" type="image/x-icon" href="images/favicon.ico">
+<style type="text/css">
+	.container{margin: 0px auto 0; max-width: 960px; padding: 10px}
+</style>
+</head>
+<body>
+	<div class="container">
+		<h1>GUI</h1>
+		<hr>
+		<h2>Tags</h2>
+		<hr>
+		<div>Tag a: <a href="#">Link</a></div>
+		<hr>
+		<div>Tag b: <b>bold</b></div>
+		<hr>
+		<div>Tag button, class .btn: <button>Button</button><a href="#" class="btn">Button</a></div>
+		<hr>
+		<div>button.selected, class .btn.selected: <button class="selected">Button</button><a href="#" class="btn selected">Button</a></div>
+		<hr>
+		<div>Code: <code>var a = [];</code></div>
+		<hr>
+		<div><h1>Header 1</h1><p>Lorem Ipsum</p></div>
+		<hr>
+		<div><h2>Header 2</h2><p>Lorem Ipsum</p></div>
+		<hr>
+		<div><h3>Header 3</h3><p>Lorem Ipsum</p></div>
+		<hr>
+		<div><h4>Header 4</h4><p>Lorem Ipsum</p></div>
+		<hr>
+		<div><h5>Header 5</h5><p>Lorem Ipsum</p></div>
+		<hr>
+		<div><h6>Header 6</h6><p>Lorem Ipsum</p></div>
+		<hr>
+		<div><p>Iframe:</p><iframe src="http://www.w3schools.com"></iframe></div>
+		<hr>
+
+		<h2>Inputs</h2>
+
+		<div><p>Input type:text </p><input type="text"/></div>
+		<hr>
+		<div>
+			<form>
+			  <p>User name:</p>
+			  <input type="text" name="username"><br>
+			  <p>User password:</p>
+			  <input type="password" name="psw">
+			</form>
+		</div>
+		<hr>
+		<div><p>Input type:file </p><input type="file"/></div>
+		<hr>
+		<div>
+			<form action="action_page.php">
+			  <p>First name:</p>
+			  <input type="text" name="firstname" value="Mickey"><br>
+			  <p>Last name:</p>
+			  <input type="text" name="lastname" value="Mouse"><br><br>
+			  <input type="submit" value="Submit">
+			</form>
+		</div>
+		<hr>
+		<div>
+			<form action="#">
+			  <p>
+			    <input type="checkbox" id="test1" />
+			    <label for="test1">Red</label>
+			  </p>
+			  <p>
+			    <input type="checkbox" id="test2" checked="checked" />
+			    <label for="test2">Yellow</label>
+			  </p>
+			  <p>
+			    <input type="checkbox" id="test3" checked="checked" disabled="disabled" />
+			    <label for="test3">Green</label>
+			  </p>
+			    <p>
+			      <input type="checkbox" id="test4" disabled="disabled" />
+			      <label for="test4">Brown</label>
+			  </p>
+			</form>
+		</div>
+		<hr>
+		<div>
+			Big check
+			<div class="roundedOne">
+				<input type="checkbox" value="None" id="roundedOne" name="check" />
+				<label for="roundedOne"></label>
+			</div>
+		</div>
+		<hr>
+		<div>
+			<input type="button" onclick="alert('Hello World!')" value="Click Me!">
+		</div>
+		<hr>
+		<h2>COMPONENTS</h2>
+		<h3>Slide</h3>
+		<div>
+			<code>"&#60;slide id="slide1"&#62;&#60;/slide&#62;"</code>
+			<slide id="slide1"></slide>
+			<br>
+			<code>"&#60;slide id="slide2" checked&#62;&#60;/slide&#62;"</code>
+			<slide id="slide2" checked></slide>
+		</div>
+	</div>
+	<hr class="transparent">
+</body>
+</html>
