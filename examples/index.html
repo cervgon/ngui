@@ -1,6 +1,7 @@
 <html>
 <head>
 <meta charset="utf-8">
+<script type="text/javascript" src="../jquery.min.js"></script>
 <script type="text/javascript" src="../gui-components.js"></script>
 <link rel="stylesheet" type="text/css" href="../gui.css">
 
@@ -106,23 +107,87 @@
 		<div>
 			Big check
 			<div class="roundedOne">
-				<input type="checkbox" value="None" id="roundedOne" name="check" />
-				<label for="roundedOne"></label>
+				<input type="checkbox" value="None" id="rounded1" name="check" />
+				<label for="rounded1"></label>
+			</div>
+			<div class="roundedOne">
+				<input type="checkbox" value="None" id="rounded2" name="check" checked/>
+				<label for="rounded2"></label>
 			</div>
 		</div>
 		<hr>
 		<div>
-			<input type="button" onclick="alert('Hello World!')" value="Click Me!">
+			<input type="button" onclick="alert('Hello World!')" value="This is a button">
 		</div>
 		<hr>
+		<h2>Label</h2>
+		<div>
+			<table>
+				<tr>
+					<td>Default</td>
+					<td><label>This is a label tag</label></td>
+				</tr>
+				<tr>
+					<td>Default</td>
+					<td><label class="label">Default labeled</label></td>
+				</tr>
+				<tr>
+					<td>Red</td>
+					<td><label class="label redLabel">Danger</label></td>
+				</tr>
+				<tr>
+					<td>Orange</td>
+					<td><label class="label orangeLabel">Immidiate Danger</label></td>
+				</tr>
+				<tr>
+					<td>Yellow</td>
+					<td><label class="label yellowLabel">Warning</label></td>
+				</tr>
+				<tr>
+					<td>Lemon</td>
+					<td><label class="label lemonLabel">Almost done</label></td>
+				</tr>
+				<tr>
+					<td>Green</td>
+					<td><label class="label greenLabel">Success</label></td>
+				</tr>
+				<tr>
+					<td>Cyan</td>
+					<td><label class="label cyanLabel">Something</label></td>
+				</tr>
+				<tr>
+					<td>Blue</td>
+					<td><label class="label blueLabel">Concern</label></td>
+				</tr>
+				<tr>
+					<td>Violet</td>
+					<td><label class="label violetLabel">Barnie</label></td>
+				</tr>
+				<tr>
+					<td>Pink</td>
+					<td><label class="label pinkLabel">Gay friendly</label></td>
+				</tr>
+				<tr>
+					<td>Black</td>
+					<td><label class="label blackLabel">Something Bad</label></td>
+				</tr>
+				<tr>
+					<td>Gray</td>
+					<td><label class="label grayLabel">Something non important</label></td>
+				</tr>
+			</table>
+		</div>
+		<hr>
+
+		<hr class="transparent big">
 		<h2>COMPONENTS</h2>
 		<h3>Slide</h3>
 		<div>
-			<code>"&#60;slide id="slide1"&#62;&#60;/slide&#62;"</code>
-			<slide id="slide1"></slide>
+			<code>"&#60;switch id="switch1"&#62;&#60;/switch&#62;"</code>
+			<switch id="switch1"></switch>
 			<br>
-			<code>"&#60;slide id="slide2" checked&#62;&#60;/slide&#62;"</code>
-			<slide id="slide2" checked></slide>
+			<code>"&#60;switch id="switch2" checked&#62;&#60;/switch&#62;"</code>
+			<switch id="switch2" checked></switch>
 		</div>
 	</div>
 	<hr class="transparent">

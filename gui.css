@@ -28,11 +28,11 @@ a:hover,a.selected {color:#005189; outline: none; border: none; }
 body{font-family: 'Open Sans', sans-serif; font-size: 15px;}
 
 
-b{font-weight: 700}
+b,.bold{font-weight: 700}
 br{clear: both;}
 
 
-button,.btn, a.btn, input[type="submit"],input[type="button"]{background-color:#f3f3f3;border: 1px solid #aaa;color: #444;cursor: pointer;display: inline-block;display: inline-flex;padding: .65em .75em;font-size: 0.8em;-webkit-border-radius: .3em;-moz-border-radius: .3em;border-radius: .3em;margin: 0 0.3em;}
+button,.btn, a.btn, input[type="submit"],input[type="button"]{background-color:#f3f3f3;border: 1px solid #aaa;color: #444;cursor: pointer;display: inline-block;display: -webkit-inline-box;padding: .65em .75em;font-size: 0.8em;-webkit-border-radius: .3em;-moz-border-radius: .3em;border-radius: .3em;margin: 0 0.3em;}
 button.active:focus,button:active,button:active:focus,button:focus,button:hover,
 input[type="submit"]:focus,input[type="submit"]:hover,
 input[type="button"]:focus,input[type="button"]:hover{ -webkit-box-shadow: none; -moz-box-shadow: none; box-shadow: none; outline: 0 none;}
@@ -48,7 +48,7 @@ code{}
 div{}
 
 
-h1,h2,h3,h4,h5,h6,p{line-height: 1; margin: 0.5em 0 0.3em}
+h1,h2,h3,h4,h5,h6,p{line-height: 1.25; margin: 0.5em 0 0.3em}
 h1{font-size: 2.35em}
 h2{font-size: 1.85em}
 h3{font-size: 1.6em}
@@ -87,14 +87,23 @@ input[type="file"]:focus,
 textarea:focus{color:#333; -webkit-box-shadow: none; -moz-box-shadow: none; box-shadow: none; outline: 0 none; border: 1px solid #999;}
 
 [type="checkbox"]:not(:checked),
-[type="checkbox"]:checked {
-
-}
+[type="checkbox"]:checked {}
 
 
-
-label{margin-bottom: 0.5em; font-size: 1em}
+label{margin-bottom: 0.5em; font-size: 1em;}
 label .material-icons{vertical-align: middle;}
+.label{background-color:#eee; border: 1px solid #ccc; border-radius: 0.2em; color:#999; display: inline; font-size: 70%; font-weight: 400; margin: 0 0.5em; padding: 0.1em 0.5em 0.2em; -webkit-border-radius: 0.2em; -moz-border-radius: 0.2em; white-space: nowrap;}
+.label.redLabel{background-color:#f00; color:#fff; text-shadow: 0 1px 0 rgba(0,0,0,0.5); border: 1px solid #c00}
+.label.orangeLabel{background-color:#f90; color:#fff; text-shadow: 0 1px 0 rgba(0,0,0,0.5); border: 1px solid #c90}
+.label.yellowLabel{background-color:#ff0; color:#333; text-shadow: 0 1px 0 rgba(255,255,255,0.5); border: 1px solid #cc0}
+.label.lemonLabel{background-color:#9f0; color:#333; text-shadow: 0 1px 0 rgba(255,255,255,0.5); border: 1px solid #7d0}
+.label.greenLabel{background-color:#0f0; color:#333; text-shadow: 0 1px 0 rgba(255,255,255,0.5); border: 1px solid #0d0}
+.label.cyanLabel{background-color:#09f; color:#fff; text-shadow: 0 1px 0 rgba(0,0,0,0.5); border: 1px solid #06c}
+.label.blueLabel{background-color:#00f; color:#fff; text-shadow: 0 1px 0 rgba(0,0,0,0.5); border: 1px solid #00c}
+.label.violetLabel{background-color:#90f; color:#fff; text-shadow: 0 1px 0 rgba(0,0,0,0.5); border: 1px solid #60c}
+.label.pinkLabel{background-color:#f0f; color:#fff; text-shadow: 0 1px 0 rgba(0,0,0,0.5); border: 1px solid #c0c}
+.label.blackLabel{background-color:#333; color:#fff; text-shadow: 0 1px 0 rgba(0,0,0,0.5); border: 1px solid #000}
+.label.grayLabel{background-color:#888; color:#fff; text-shadow: 0 1px 0 rgba(0,0,0,0.5); border: 1px solid #666}
 
 ul{}
 li{list-style: none;}
@@ -103,12 +112,12 @@ ol{}
 
 pre{}
 select{}
-small{font-size: 0.5em}
+small{font-size: 80%}
 strong{font-weight: 700}
 
 table{border-collapse: collapse;}
 tbody{}
-td{}
+td{vertical-align: middle;}
 tfoot{}
 th{}
 thead{}
@@ -131,6 +140,26 @@ tr{}
 .xxl{font-size: 2.6em}
 .xxxl{font-size: 3em}
 
+/* Line Height */
+.lh-s{line-height: 0.75}
+.lh-xs{line-height: 1}
+.lh-m{line-height: 1.25}
+.lh-xm{line-height: 1.5}
+.lh-l{line-height: 1.75}
+.lh-xl{line-height: 2}
+
+/* Paddings */
+.p01-0{padding: 0.1em 0}
+.p02-0{padding: 0.2em 0}
+.p03-0{padding: 0.3em 0}
+.p04-0{padding: 0.4em 0}
+.p05-0{padding: 0.5em 0}
+.p06-0{padding: 0.6em 0}
+.p07-0{padding: 0.7em 0}
+.p08-0{padding: 0.8em 0}
+.p09-0{padding: 0.9em 0}
+.p1-0{padding: 1em 0}
+
 .center{text-align: center;}
 .capitalize{text-transform: capitalize;}
 .uppercase{text-transform: uppercase;}
@@ -144,7 +173,7 @@ tr{}
 .btn2{ background-color: #fff; border: 1px solid #327D40; color: #327D40;}
 .btn1{ background-color: #48B55C; border: 1px solid #327D40; color: #fff; text-shadow:0 1px 1px rgba(0,0,0,.5),0 0 1px rgba(0,0,0,.4);}
 
-.btn1:hover,.btn1:focus, .btn1.selected,.btn1:active:focus{ background-color: #327D40; border-color: #327D40; }
+.btn1:hover,.btn1:focus, .btn1.selected,.btn1:active:focus{ background-color: #327D40; border-color: #327D40; color: #fff; }
 .btn2:hover,.btn2:focus, .btn2.selected,.btn2:active:focus{ background-color: #f9f9f9; border-color: #327D40; color:#327D40;}
 
 .btn1:link {color:#eee;}

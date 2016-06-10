@@ -26,19 +26,19 @@ SOFTWARE.
 // github.com/cervgon/gui-components
 
 function actions(){
-    $('slide').each(function(){
+    $('switch').each(function(){
 
         var content = $(this).html();
         var html  = '';
-        var slideID = $(this).attr('id');
+        var switchID = $(this).attr('id');
         var checked = $(this).attr('checked');
         var checkedClass = '';
         if(checked!== undefined){checkedClass = ' checked'}
-        if (slideID !== undefined){
-                html = '<div class="slideOne'+checkedClass+'"><input type="checkbox" value="None" id="'+slideID+'" name="check" /><label for="'+slideID+'"></label></div>';
+        if (switchID !== undefined){
+                html = '<div class="slideOne'+checkedClass+'"><input type="checkbox" value="None" id="'+switchID+'" name="check" /><label for="'+switchID+'"></label></div>';
             }
         $(this).replaceWith(html);
-        if(checked != undefined){$('#'+slideID).prop('checked', true);}
+        if(checked != undefined){$('#'+switchID).prop('checked', true);}
     });
     $('.slideOne label').click(function(){
         var bgcolor = $(this).parent().css("background-color");
