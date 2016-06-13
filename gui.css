@@ -92,18 +92,21 @@ textarea:focus{color:#333; -webkit-box-shadow: none; -moz-box-shadow: none; box-
 
 label{margin-bottom: 0.5em; font-size: 1em;}
 label .material-icons{vertical-align: middle;}
-.label{background-color:#eee; border: 1px solid #ccc; border-radius: 0.2em; color:#999; display: inline; font-size: 70%; font-weight: 400; margin: 0 0.5em; padding: 0.1em 0.5em 0.2em; -webkit-border-radius: 0.2em; -moz-border-radius: 0.2em; white-space: nowrap;}
-.label.redLabel{background-color:#e9545a; color:#fff; text-shadow: 0 1px 0 rgba(0,0,0,0.5); border: 1px solid #c00}
-.label.orangeLabel{background-color:#f09235; color:#fff; text-shadow: 0 1px 0 rgba(0,0,0,0.5); border: 1px solid #c90}
-.label.yellowLabel{background-color:#e9e454; color:#333; text-shadow: 0 1px 0 rgba(255,255,255,0.5); border: 1px solid #cc0}
-.label.lemonLabel{background-color:#9f0; color:#333; text-shadow: 0 1px 0 rgba(255,255,255,0.5); border: 1px solid #7d0}
-.label.greenLabel{background-color:#0f0; color:#333; text-shadow: 0 1px 0 rgba(255,255,255,0.5); border: 1px solid #0d0}
-.label.cyanLabel{background-color:#09f; color:#fff; text-shadow: 0 1px 0 rgba(0,0,0,0.5); border: 1px solid #06c}
-.label.blueLabel{background-color:#00f; color:#fff; text-shadow: 0 1px 0 rgba(0,0,0,0.5); border: 1px solid #00c}
-.label.violetLabel{background-color:#90f; color:#fff; text-shadow: 0 1px 0 rgba(0,0,0,0.5); border: 1px solid #60c}
-.label.pinkLabel{background-color:#f0f; color:#fff; text-shadow: 0 1px 0 rgba(0,0,0,0.5); border: 1px solid #c0c}
-.label.blackLabel{background-color:#333; color:#fff; text-shadow: 0 1px 0 rgba(0,0,0,0.5); border: 1px solid #000}
-.label.grayLabel{background-color:#888; color:#fff; text-shadow: 0 1px 0 rgba(0,0,0,0.5); border: 1px solid #666}
+.label{background-color:#eee; border: 1px solid #ccc; border-radius: 0.2em; color:#666; display: inline; font-size: 70%; font-weight: 700; margin: 0 0.5em; padding: 0.1em 0.5em 0.2em; -webkit-border-radius: 0.2em; -moz-border-radius: 0.2em; white-space: nowrap;}
+.label.redLabel{background-color:#ff7373; color:#330d0d; /* text-shadow: 0 1px 0 rgba(255,255,255,0.5) */; border: 1px solid #d83636}
+.label.salmonLabel{background-color:#ff895a; color:#3f1610; /* text-shadow: 0 1px 0 rgba(255,255,255,0.5) */; border: 1px solid #cc5936}
+.label.amberLabel{background-color:#ffd45a; color:#473313; /* text-shadow: 0 1px 0 rgba(255,255,255,0.5) */; border: 1px solid #e5a83c}
+.label.orangeLabel{background-color:#ffb45a; color:#3f2710; /* text-shadow: 0 1px 0 rgba(0,0,0,0.5) */; border: 1px solid #d88b36}
+.label.yellowLabel{background-color:#fff15a; color:#473d13; /* text-shadow: 0 1px 0 rgba(255,255,255,0.5) */; border: 1px solid #e5d142}
+.label.lemonLabel{background-color:#bcd877; color:#2e330d; /* text-shadow: 0 1px 0 rgba(255,255,255,0.5)*/; border: 1px solid #95a340}
+.label.greenLabel{background-color:#8dd892; color:#0d330d; /* text-shadow: 0 1px 0 rgba(255,255,255,0.5)*/; border: 1px solid #3da33d}
+.label.emeraldLabel{background-color:#8ed6c3; color:#0c2d1f; /* text-shadow: 0 1px 0 rgba(0,0,0,0.5)*/; border: 1px solid #379378}
+.label.blueLabel{background-color:#9ecef2; color:#0d2833; /* text-shadow: 0 1px 0 rgba(0,0,0,0.5)*/; border: 1px solid #4c96d8}
+.label.lavenderLabel{background-color:#9ea8f2; color:#0b163d; /* text-shadow: 0 1px 0 rgba(0,0,0,0.5)*/; border: 1px solid #6771d8}
+.label.violetLabel{background-color:#ba9ef2; color:#130933; /* text-shadow: 0 1px 0 rgba(0,0,0,0.5)*/; border: 1px solid #8b56ef}
+.label.pinkLabel{background-color:#ed8ed9; color:#3d1035; /* text-shadow: 0 1px 0 rgba(0,0,0,0.5)*/; border: 1px solid #d84cae}
+.label.blackLabel{background-color:#666; color:#fff; /* text-shadow: 0 1px 0 rgba(0,0,0,0.5)*/; border: 1px solid #000}
+.label.grayLabel{background-color:#bfbfbf; color:#333333; /* text-shadow: 0 1px 0 rgba(0,0,0,0.5)*/; border: 1px solid #8c8c8c}
 
 ul{}
 li{list-style: none;}
@@ -180,7 +183,7 @@ button.btn1:active:focus,.btn.btn1:active:focus, a.btn.btn1:active:focus{ backgr
 button.btn2:hover,.btn.btn2:hover, a.btn.btn2:hover,
 button.btn2:focus,.btn.btn2:focus, a.btn.btn2:focus,
 button.btn2.selected,.btn.btn2.selected, a.btn.btn2.selected,
-button.btn2:active:focus,.btn.btn2:active:focus, a.btn.btn2:active:focus{ background-color: #f9f9f9; border-color: #327D40; color:#327D40;}
+button.btn2:active:focus,.btn.btn2:active:focus, a.btn.btn2:active:focus{ background-color: #f4f4f4; border-color: #327D40; color:#327D40;}
 
 .btn1:link {color:#eee;}
 .btn1:visited {color:#eee;}
