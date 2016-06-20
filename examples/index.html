@@ -5,27 +5,28 @@
 <script type="text/javascript" src="../gui-components.js"></script>
 <link rel="stylesheet" type="text/css" href="../gui.css">
 
-<link rel="shortcut" href="images/favicon.png">
+<link rel="shortcut" href="favicon.png">
  <!-- non-retina iPhone pre iOS 7 -->
-<link rel="apple-touch-icon" href="images/icon57.png" sizes="57x57">
+<link rel="apple-touch-icon" href="icon57.png" sizes="57x57">
 <!-- non-retina iPad pre iOS 7 -->
-<link rel="apple-touch-icon" href="images/icon72.png" sizes="72x72">
+<link rel="apple-touch-icon" href="icon72.png" sizes="72x72">
 <!-- non-retina iPad iOS 7 -->
-<link rel="apple-touch-icon" href="images/icon76.png" sizes="76x76">
+<link rel="apple-touch-icon" href="icon76.png" sizes="76x76">
 <!-- retina iPhone pre iOS 7 -->
-<link rel="apple-touch-icon" href="images/icon114.png" sizes="114x114">
+<link rel="apple-touch-icon" href="icon114.png" sizes="114x114">
 <!-- retina iPhone iOS 7 -->
-<link rel="apple-touch-icon" href="images/icon120.png" sizes="120x120">
+<link rel="apple-touch-icon" href="icon120.png" sizes="120x120">
 <!-- retina iPad pre iOS 7 -->
-<link rel="apple-touch-icon" href="images/icon144.png" sizes="144x144">
+<link rel="apple-touch-icon" href="icon144.png" sizes="144x144">
 <!-- retina iPad iOS 7 -->
-<link rel="apple-touch-icon" href="images/icon152.png" sizes="152x152">
-<link rel="mask-icon" href="images/icon.svg" color="#333">
+<link rel="apple-touch-icon" href="icon152.png" sizes="152x152">
+<link rel="mask-icon" href="icon.svg" color="#333">
 <meta name="apple-mobile-web-app-status-bar-style" content="red">
-<link rel="icon" type="image/x-icon" href="images/favicon.ico">
+<link rel="icon" type="image/x-icon" href="favicon.ico">
 <style type="text/css">
 	.container{margin: 0px auto 0; max-width: 960px; padding: 10px}
 </style>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
 </head>
 <body>
 	<div class="container">
@@ -51,7 +52,11 @@
 		<hr>
 		<div>Tag button.btn2.selected & tag a.btn.btn2.selected: <button class="btn2 selected">Button</button><a href="#" class="btn btn2 selected">Button</a></div>
 		<hr>
+		<div>Tag button.btn3 & tag a.btn.btn3: <button class="btn3">Button</button><a href="#" class="btn btn3">Button</a></div>
 		<hr>
+		<div>Tag button.btn3.selected & tag a.btn.btn3.selected: <button class="btn3 selected">Button</button><a href="#" class="btn btn3 selected">Button</a></div>
+		<hr>
+		
 		<div>Code: <code>var a = [];</code></div>
 		<hr>
 		<div><h1>Header 1</h1><p>Lorem Ipsum</p></div>
@@ -91,6 +96,9 @@
 			  <p>Last name:</p>
 			  <input type="text" name="lastname" value="Mouse"><br><br>
 			  <input type="submit" value="Submit">
+			  <input type="submit" value="Submit" class="btn btn1">
+			  <input type="submit" value="Submit" class="btn btn2">
+			  <input type="submit" value="Submit" class="btn btn3">
 			</form>
 		</div>
 		<hr>
@@ -129,6 +137,9 @@
 		<hr>
 		<div>
 			<input type="button" onclick="alert('Hello World!')" value="This is a button">
+			<input type="button" onclick="alert('Hello World!')" value="This is a button" class="btn btn1">
+			<input type="button" onclick="alert('Hello World!')" value="This is a button" class="btn btn2">
+			<input type="button" onclick="alert('Hello World!')" value="This is a button" class="btn btn3">
 		</div>
 		<hr>
 		<h2>Label</h2>
