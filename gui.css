@@ -269,13 +269,19 @@ tr { }
 .textRight { text-align: right }
 .absRight { position: absolute; right: 0; top: 0; }
 
-button.btnGreen,.btn.btnGreen,a.btn.btnGreen,label.btn.btnGreen { background-color: #48B55C; border: 1px solid #327D40; color: #fff; text-shadow: 0 0.5px 2px rgba(0,0,0,.5); }
-button.btnGreenLight,.btn.btnGreenLight,a.btn.btnGreenLight,label.btn.btnGreenLight { background-color: #fff; border: 1px solid #327D40; color: #327D40; }
-button.btnBlue,.btn.btnBlue,a.btn.btnBlue,label.btn.btnBlue { background-color: #1087df; border: 1px solid #0c6ebe; color: #fff; text-shadow: 0 0.5px 2px rgba(0,0,0,.5); }
-button.btnBlueLight,.btn.btnBlueLight,a.btn.btnBlueLight,label.btn.btnBlueLight { background-color: #fff; border: 1px solid #70addb; color: #0d6cb5; text-shadow: none }
-button.btnRed,.btn.btnRed,a.btn.btnRed,label.btn.btnRed {background-color: #ec3c3c;border: 1px solid #b50d0d;color: #fff;text-shadow: 0 0.5px 2px rgba(0,0,0,.5);}
-button.btnRedLight,.btn.btnRedLight,a.btn.btnRedLight,label.btn.btnRedLight { background-color: #fff; border: 1px solid #db7070; color: #b50d0d; text-shadow: none }
+button.btnLight,.btn.btnLight,a.btn.btnLight,label.btn.btnLight { background-color: #fff; border: 1px solid #6d6d6d; color: #6d6d6d; }
+button.btnGreen,.btn.btnGreen,a.btn.btnGreen,label.btn.btnGreen { background-color: #48b55c; border: 1px solid #327d40; color: #fff; text-shadow: 0 0.5px 2px rgba(0,0,0,.5); }
+button.btnGreenLight,.btn.btnGreenLight,a.btn.btnGreenLight,label.btn.btnGreenLight { background-color: #fff; border: 1px solid #327d40; color: #327d40; }
+button.btnBlue,.btn.btnBlue,a.btn.btnBlue,label.btn.btnBlue { background-color: #009fe5; border: 1px solid #005691; color: #fff; text-shadow: 0 0.5px 2px rgba(0,0,0,.5); }
+button.btnBlueLight,.btn.btnBlueLight,a.btn.btnBlueLight,label.btn.btnBlueLight { background-color: #fff; border: 1px solid #005691; color: #005691; text-shadow: none }
+button.btnRed,.btn.btnRed,a.btn.btnRed,label.btn.btnRed {background-color: #f25757;border: 1px solid #b20000;color: #fff;text-shadow: 0 0.5px 2px rgba(0,0,0,.5);}
+button.btnRedLight,.btn.btnRedLight,a.btn.btnRedLight,label.btn.btnRedLight { background-color: #fff; border: 1px solid #b20000; color: #b20000; text-shadow: none }
 
+button.btnLight:hover,.btn.btnLight:hover,a.btn.btnLight:hover,
+button.btnLight:focus,.btn.btnLight:focus,a.btn.btnLight:focus,
+button.btnLight.selected,.btn.btnLight.selected,a.btn.btnLight.selected,
+button.btnLight:active:focus,.btn.btnLight:active:focus,
+a.btn.btnLight:active:focus { background-color: #f2f2f2; border-color: #222222; color: #222222; }
 button.btnGreen:hover,.btn.btnGreen:hover,a.btn.btnGreen:hover,button.btnGreen:focus,
 .btn.btnGreen:focus,a.btn.btnGreen:focus,button.btnGreen.selected,.btn.btnGreen.selected,
 a.btn.btnGreen.selected,button.btnGreen:active:focus,.btn.btnGreen:active:focus,
@@ -284,25 +290,25 @@ button.btnGreenLight:hover,.btn.btnGreenLight:hover,a.btn.btnGreenLight:hover,
 button.btnGreenLight:focus,.btn.btnGreenLight:focus,a.btn.btnGreenLight:focus,
 button.btnGreenLight.selected,.btn.btnGreenLight.selected,a.btn.btnGreenLight.selected,
 button.btnGreenLight:active:focus,.btn.btnGreenLight:active:focus,
-a.btn.btnGreenLight:active:focus { background-color: #f2f2f2; border-color: #327D40; color: #327D40; }
+a.btn.btnGreenLight:active:focus { background-color: #eff9ef; border-color: #327d40; color: #327d40; }
 button.btnBlue:hover,.btn.btnBlue:hover,a.btn.btnBlue:hover,button.btnBlue:focus,
 .btn.btnBlue:focus,a.btn.btnBlue:focus,button.btnBlue.selected,
 .btn.btnBlue.selected,a.btn.btnBlue.selected,button.btnBlue:active:focus,.btn.btnBlue:active:focus,
-a.btn.btnBlue:active:focus { background-color: #0d6cb5; border-color: #0c6ebe; color: #fff; }
+a.btn.btnBlue:active:focus { background-color: #005691; border-color: #005691; color: #fff; }
 button.btnBlueLight:hover,.btn.btnBlueLight:hover,a.btn.btnBlueLight:hover,
 button.btnBlueLight:focus,.btn.btnBlueLight:focus,a.btn.btnBlueLight:focus,
 button.btnBlueLight.selected,.btn.btnBlueLight.selected,a.btn.btnBlueLight.selected,
 button.btnBlueLight:active:focus,.btn.btnBlueLight:active:focus,
-a.btn.btnBlueLight:active:focus { background-color: #f2f8fd; border-color: #2b8bd4; color: #0d6cb5; }
+a.btn.btnBlueLight:active:focus { background-color: #e8f6f9; border-color: #005691; color: #005691; }
 button.btnRed:hover,.btn.btnRed:hover,a.btn.btnRed:hover,button.btnRed:focus,
 .btn.btnRed:focus,a.btn.btnRed:focus,button.btnRed.selected,
 .btn.btnRed.selected,a.btn.btnRed.selected,button.btnRed:active:focus,.btn.btnRed:active:focus,
-a.btn.btnRed:active:focus {background-color: #b50d0d;border-color: #b50d0d;color: #fff;}
+a.btn.btnRed:active:focus {background-color: #b20000;border-color: #b20000;color: #fff;}
 button.btnRedLight:hover,.btn.btnRedLight:hover,a.btn.btnRedLight:hover,
 button.btnRedLight:focus,.btn.btnRedLight:focus,a.btn.btnRedLight:focus,
 button.btnRedLight.selected,.btn.btnRedLight.selected,a.btn.btnRedLight.selected,
 button.btnRedLight:active:focus,.btn.btnRedLight:active:focus,
-a.btn.btnRedLight:active:focus { background-color: #fdf2f2; border-color: #d42b2b; color: #b50d0d; }
+a.btn.btnRedLight:active:focus { background-color: #fff3f3; border-color: #b20000; color: #b20000; }
 
 .btnGreen:link,.btnGreen:visited,.btnGreen:active { color: #eee }
 .btnGreen:hover { color: #fff }
