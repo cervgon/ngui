@@ -226,7 +226,8 @@ thead { }
 tr { }
 /* Layout */
 .ginner { padding: 1em 1em 0 }
-.matchparent { width: 100% }
+.matchparent,.matchParent { width: 100% }
+.overflowHidden{ overflow: hidden; max-height: 100%; max-width: 100%; }
 /* Font sizes */
 .micro { font-size: 0.25em }
 .xmicro { font-size: 0.33em }
@@ -256,6 +257,16 @@ tr { }
 .p08-0 { padding: 0.8em 0 }
 .p09-0 { padding: 0.9em 0 }
 .p1-0 { padding: 1em 0 }
+.p0-01 { padding: 0 0.1em }
+.p0-02 { padding: 0 0.2em }
+.p0-03 { padding: 0 0.3em }
+.p0-04 { padding: 0 0.4em }
+.p0-05 { padding: 0 0.5em }
+.p0-06 { padding: 0 0.6em }
+.p0-07 { padding: 0 0.7em }
+.p0-08 { padding: 0 0.8em }
+.p0-09 { padding: 0 0.9em }
+.p0-1 { padding: 0 1em }
 /* Margins */
 .m0 { margin: 0 !important}
 .mr05 { margin-right: 0.5em !important}
@@ -270,6 +281,11 @@ tr { }
 .floatLeft { float: left }
 .textRight { text-align: right }
 .absRight { position: absolute; right: 0; top: 0; }
+
+/* Borders */
+.borderRed{border:0.15em solid #F0A8A8;}
+.borderBlue{border:0.15em solid #9ccbea;}
+.borderGreen{border:0.15em solid #BDDBC1;}
 
 /* Button Classes */
 button.btnLight,.btn.btnLight,a.btn.btnLight,label.btn.btnLight { background-color: #f9f9f9; border: 1px solid #ccc; color: #555; }
