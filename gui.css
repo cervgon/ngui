@@ -100,7 +100,7 @@ html { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: 
 ::selection { background: rgba(0,0,0,0.1) }
 ::-moz-selection { background: rgba(0,0,0,0.1) }
 body { font-family: "Open Sans","lucida grande","Segoe UI",arial,verdana,"lucida sans unicode",tahoma,sans-serif; font-size: 15px; }
-a { text-decoration: none; cursor: pointer; outline: none; }
+a { text-decoration: none; cursor: pointer; outline: none; -webkit-hyphens: auto; -moz-hyphens: auto; -ms-hyphens: auto; hyphens: auto; word-break: break-all;}
 a:link,
 a:active,
 a:visited { color: #005e9d; outline: none; font-weight: 600; }
@@ -347,7 +347,9 @@ tr { }
 .msg.msg-green { background-color: #ddf0e2; border: 1px solid #86c49a; color: #3a8a54; }
 
 /* Tables */
-table th, table td{padding: 0.2em 0.3em}
+table th, table td{padding: 0.2em 0.3em;}
+table th{font-weight: 600;}
+table td{font-weight: 400;}
 table .label{margin-left:0;}
 table tr th,table tr td{text-align: left;}
 table tr th.textRight,table tr td.textRight{text-align: right; width: 2em; white-space: nowrap;}
@@ -366,7 +368,7 @@ table.bordered tr {border-bottom: .1em solid #ccc; border-right: .1em solid #ccc
 table.bordered tr:first-child {border-top: .1em solid #ccc;}
 table.bordered td, table.bordered th{border-left: .1em solid #ccc; border-bottom:none; border-right:none; border-top:none; border-collapse: collapse; text-align: left;}
 table.bordered td{ color: #666; padding: 0.3em 0.8em; height: 2.1em}
-table.bordered tr.withBG{ background-color: #f3f3f3; }
+table.bordered tr.withBG, table.bordered thead tr{ background-color: #f3f3f3; }
 table.bordered th, table.bordered tr.withBG td{color: #333; font-weight: 400; padding: 0.15em 0.8em; font-weight: 600}
 
 /* Slides and Checkbox */
