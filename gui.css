@@ -114,7 +114,8 @@ button,
 .btn,
 a.btn,
 input[type="submit"],
-input[type="button"] { background-color: #f2f2f2; border: 1px solid #aaa; color: #444; cursor: pointer; display: inline-block; display: -webkit-inline-box; padding: .55em .75em; font-size: 0.8em; letter-spacing: 0.01em; -webkit-border-radius: .3em; -moz-border-radius: .3em; border-radius: .3em; margin: 0; font-weight: 600; text-align: center;}
+input[type="button"] { background-color: #f2f2f2; border: 1px solid #aaa; color: #444; cursor: pointer; display: inline-block; padding: .55em .75em; font-size: 0.8em; letter-spacing: 0.01em; -webkit-border-radius: .3em; -moz-border-radius: .3em; border-radius: .3em; margin: 0; font-weight: 600; text-align: center;}
+a.btn{vertical-align: middle;}
 button.matchparent,
 .btn.matchparent,
 a.btn.matchparent,
@@ -255,13 +256,14 @@ label .material-icons { vertical-align: middle }
 .label.blackLabel { background-color: #666; color: #fff; border: 1px solid #000; text-shadow: 0 0px 2px #000; }
 .label.grayLabel { background-color: #bfbfbf; color: #333333; border: 1px solid #8c8c8c; }
 /* Lists */
-ul { }
-li { list-style: none }
+ul { list-style: none }
+li{}
 noscript { }
 ol { }
 pre{}
 select { }
 small { font-size: 80% }
+span{}
 strong { font-weight: 700 }
 table { border-collapse: collapse }
 tbody { }
