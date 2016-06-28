@@ -86,6 +86,9 @@ textarea { overflow: auto }
 [type=search]::-webkit-search-decoration { -webkit-appearance: none }
 ::-webkit-input-placeholder { color: inherit; opacity: .54; }
 ::-webkit-file-upload-button { -webkit-appearance: button; font: inherit; }
+
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700,800");
+
 /* Tags */
 html { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 *,
@@ -221,12 +224,11 @@ input,
 input[type="text"],
 input[type="number"],
 input[type="file"],
-textarea { background-color: #f9f9f9; border: 1px solid #ccc; color: #666; display:block; padding: 0.5em 0.75em; font-size: 0.85em; margin: 0.3em 0; max-width: 100%; font-weight: 600; }
+textarea { background-color: #f9f9f9; border: 1px solid #ccc; color: #666; display:block; padding: 0.5em 0.75em; font-size: 0.85em; margin: 0.3em 0; max-width: 100%; font-weight: 600; border-radius: 0;}
 input[type="text"],
-input[type="number"],
 input[type="file"],
 input[type="password"],
-textarea { width: 100% }
+textarea { width: 100%; -webkit-appearance: none; }
 input[type="text"],
 input[type="file"] { white-space: nowrap; text-overflow: ellipsis; overflow: hidden; }
 input:focus,
@@ -240,7 +242,7 @@ input[type="file"].file { width: 0.1px; height: 0.1px; opacity: 0; overflow: hid
 /* Labels */
 label { margin-bottom: 0.5em; font-size: 1em; font-weight: 600; }
 label .material-icons { vertical-align: middle }
-.label { background-color: #eee; border: 1px solid #ccc; border-radius: 0.2em; color: #666; display: inline; font-size: 60%; font-weight: 700; margin: 0 0.5em; padding: 0.25em 0.5em 0.26em; white-space: nowrap; -webkit-border-radius: 0.2em; -moz-border-radius: 0.2em; text-rendering: geometricPrecision; text-transform: uppercase; letter-spacing: 0.04em; }
+.label { background-color: #eee; border: 1px solid #ccc; border-radius: 0.2em; color: #666; display: inline; font-size: 60%; font-weight: 700; margin: 0 0.5em; padding: 0.25em 0.5em 0.26em; white-space: nowrap; -webkit-border-radius: 0.2em; -moz-border-radius: 0.2em; text-rendering: geometricPrecision; text-transform: uppercase; letter-spacing: 0.04em; text-shadow:none !important;}
 .label.redLabel { background-color: #ff7373; color: #330d0d; border: 1px solid #d83636; }
 .label.salmonLabel { background-color: #ff895a; color: #3f1610; border: 1px solid #cc5936; }
 .label.amberLabel { background-color: #ffd45a; color: #473313; border: 1px solid #e5a83c; }
@@ -253,10 +255,10 @@ label .material-icons { vertical-align: middle }
 .label.lavenderLabel { background-color: #9ea8f2; color: #0b163d; border: 1px solid #6771d8; }
 .label.violetLabel { background-color: #ba9ef2; color: #130933; border: 1px solid #8b56ef; }
 .label.pinkLabel { background-color: #ed8ed9; color: #3d1035; border: 1px solid #d84cae; }
-.label.blackLabel { background-color: #666; color: #fff; border: 1px solid #000; text-shadow: 0 0px 2px #000; }
+.label.blackLabel { background-color: #666; color: #fff; border: 1px solid #000; text-shadow: 0 0px 2px #000 !important; }
 .label.grayLabel { background-color: #bfbfbf; color: #333333; border: 1px solid #8c8c8c; }
 /* Lists */
-ul { list-style: none }
+ul { list-style: none; -webkit-margin-before: 0;-webkit-margin-after: 0;-webkit-margin-start: 0px;-webkit-margin-end: 0px; -webkit-padding-start: 0px; }
 li{}
 noscript { }
 ol { }
@@ -265,7 +267,7 @@ select { }
 small { font-size: 80% }
 span{}
 strong { font-weight: 700 }
-table { border-collapse: collapse }
+table {border-collapse: collapse;width: 100%;}
 tbody { }
 td { vertical-align: middle }
 tfoot { }
@@ -276,6 +278,7 @@ tr { }
 .ginner { padding: 1em 1em 0 }
 .matchparent,.matchParent { width: 100% }
 .overflowHidden{ overflow: hidden; max-height: 100%; max-width: 100%; }
+.hide{display: none !important}
 /* Font sizes */
 .micro { font-size: 0.25em }
 .xmicro { font-size: 0.33em }
@@ -320,7 +323,7 @@ tr { }
 .mr05 { margin-right: 0.5em !important}
 .ml05 { margin-left: 0.5em !important}
 /* Align */
-.center { text-align: center }
+.center { text-align: center !important }
 .capitalize { text-transform: capitalize }
 .uppercase { text-transform: uppercase }
 .pointer { cursor: pointer }
@@ -354,16 +357,16 @@ table th{font-weight: 600;}
 table td{font-weight: 400;}
 table .label{margin-left:0;}
 table tr th,table tr td{text-align: left;}
-table tr th.textRight,table tr td.textRight{text-align: right; width: 2em; white-space: nowrap;}
-table tr th.textRight .label,table tr td.textRight .label{margin-left: 0.5em; margin-right: 0}
+table tr th.textRight,table tr td.textRight{ text-align: right; width: 2em; white-space: nowrap; }
+table tr th.textRight .label,table tr td.textRight .label{ margin-left: 0.5em; margin-right: 0 }
 
-table.minimalistic{width: 100%; margin-bottom: 0.25em; color: #333}
-table.minimalistic tr {border-bottom: .1em solid #eee;}
-table.minimalistic tr:first-child {border-bottom: .1em solid #ddd;}
-table.minimalistic tr th{font-weight: 600}
+table.minimalistic{ width: 100%; margin-bottom: 0.25em; color: #333 }
+table.minimalistic tr { border-bottom: .1em solid #eee; }
+table.minimalistic tr:first-child { border-bottom: .1em solid #ddd; }
+table.minimalistic tr th{ font-weight: 600 }
 table.minimalistic tr th,table.minimalistic tr td{ padding: 0.3em 0.3em;}
-table.minimalistic tr th:last-child,table.minimalistic tr td:last-child{text-align: right; width: 2em; white-space: nowrap;}
-table.minimalistic tr th:last-child .label,table.minimalistic tr td:last-child .label{margin-left: 0.5em; margin-right: 0}
+table.minimalistic tr th.textRight,table.minimalistic tr td.textRight{ text-align: right; width: 2em; white-space: nowrap;}
+table.minimalistic tr th.textRight .label,table.minimalistic tr td.textRight .label{margin-left: 0.5em; margin-right: 0}
 
 table.bordered{width: 100%; margin-bottom: 0.25em;}
 table.bordered tr {border-bottom: .1em solid #ccc; border-right: .1em solid #ccc;}
