@@ -279,6 +279,8 @@ tr { }
 .matchparent,.matchParent { width: 100% }
 .overflowHidden{ overflow: hidden; max-height: 100%; max-width: 100%; }
 .hide{display: none !important}
+.block{display: block}
+.inline-block{display: inline-block}
 /* Font sizes */
 .micro { font-size: 0.25em }
 .xmicro { font-size: 0.33em }
