@@ -89,25 +89,25 @@
 
 		<h3>Inputs</h3>
 
-		<div><p>Input type:text </p><input type="text"/></div>
+		<div><p>Input type:text </p><input type="text" placeholder="sample text" style="width:250px"/></div>
 		<hr>
 		<div>
 			<form>
 			  <p>User name:</p>
-			  <input type="text" name="username"><br>
+			  <input type="text" name="username" placeholder="Username" style="width:250px"><br>
 			  <p>User password:</p>
-			  <input type="password" name="psw">
+			  <input type="password" name="psw" placeholder="Password" style="width:250px">
 			</form>
 		</div>
 		<hr>
-		<div><p>Input type:file </p><input type="file"/></div>
+		<div><p>Input type:file </p><input type="file" style="width:250px"/></div>
 		<hr>
 		<div>
 			<form action="action_page.php">
 			  <p>First name:</p>
-			  <input type="text" name="firstname" value="Mickey"><br>
+			  <input type="text" name="firstname" value="Mickey" style="width:250px"><br>
 			  <p>Last name:</p>
-			  <input type="text" name="lastname" value="Mouse"><br><br>
+			  <input type="text" name="lastname" value="Mouse" style="width:250px"><br><br>
 			  <input type="submit" value="Submit">
 			  <input type="submit" value="Submit" class="btn btnLight">
 			  <input type="submit" value="Submit" class="btn btnGreen">
@@ -234,9 +234,16 @@
 			</table>
 		</div>
 		<hr>
+		<h3>Select</h3>
+		<select style="width:150px">
+		  <option value="volvo">Volvo</option>
+		  <option value="saab">Saab</option>
+		  <option value="mercedes">Mercedes</option>
+		  <option value="audi">Audi</option>
+		</select>
+		<hr>
 		<hr class="transparent big">
 		<h3>Tables</h3>
-		<hr>
 		<hr class="transparent">
 		<h4>Minimalistic</h4>
 		<pre><code><<span class="pl-ent">table </span><span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>minimalistic<span class="pl-pds">"</span></span></<span class="pl-ent"></span></code>></pre>
@@ -319,6 +326,31 @@
             </div>
         </div>
         <div class="dropdownHover floatRight">
+            <label>pepe@mail.com</label>
+            <div class="list">
+            	<div class="inner">
+		            <ul>
+		                <li>Profile</li>
+		                <li>Log out</li>
+		            </ul>
+		        </div>
+            </div>
+        </div>
+		<hr>
+		<h3>Dropdown on click</h3>
+		<hr class="transparent">
+		<div class="dropdown">
+            <label>pepe@mail.com</label>
+            <div class="list">
+            	<div class="inner">
+		            <ul>
+		                <li>Profile</li>
+		                <li>Log out</li>
+		            </ul>
+		        </div>
+            </div>
+        </div>
+        <div class="dropdown floatRight">
             <label>pepe@mail.com</label>
             <div class="list">
             	<div class="inner">
@@ -437,7 +469,13 @@
 		  </div>
 		</div>
 		<hr>
-		<h3>Slide</h3>
+		<h3>Scroll Top</h3>
+		<div class="matchParent relative">
+			<button class="scrollToTop">Back to top</button>
+			<button class="scrollToTop round absolute"></button>
+		</div>
+		<hr>
+		<h3>Switch</h3>
 		<div>
 			<code>"&#60;switch id="switch1"&#62;&#60;/switch&#62;"</code>
 			<switch id="switch1"></switch>

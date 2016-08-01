@@ -27,7 +27,6 @@ SOFTWARE.
 
 function actions(){
     $('switch').each(function(){
-
         var content = $(this).html();
         var html  = '';
         var switchID = $(this).attr('id');
@@ -48,6 +47,22 @@ function actions(){
         else{
             $(this).parent().removeClass('checked');
         }    
+    });
+    $(".dropdown").click(function(){
+        console.log('dhadas');
+        if($(this).hasClass("open")){
+            $(this).removeClass("open");
+        }
+        else{
+            $(this).addClass("open");
+        }
+    });
+    $(".dropdown .inner .list").click(function(){
+        $(this).parent().parent().removeClass("open");
+    });
+    $(".scrollToTop").click(function(){
+        $("html, body").animate({ scrollTop: 0 }, "slow");
+        return false;
     });
 }
 
