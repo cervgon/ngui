@@ -222,6 +222,63 @@ thead { }
 tr { }
 video{}
 
+/* Animations */
+@-moz-keyframes fadeInBottom {
+    0% {
+        -moz-transform: translateY(150%);
+        -moz-opacity: 0;
+   }
+    100% {
+        -moz-transform: translateY(0);
+        -moz-opacity: 1;
+   }
+ }
+@-webkit-keyframes fadeInBottom {
+    0% {
+        -webkit-transform: translateY(150%);
+        -webkit-opacity: 0;
+   }
+    100% {
+        -webkit-transform: translateY(0);
+        -webkit-opacity: 1;
+   }
+ }
+@keyframes fadeInBottom {
+    0% {
+        transform: translateY(150%);
+        opacity: 0;
+   }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+   }
+ }
+ .fadeInBottom{
+ 	-moz-opacity: 0;
+ 	-webkit-opacity: 0;
+ 	opacity: 0;
+
+    -moz-animation-name: fadeInBottom;
+    -moz-animation-iteration-count: 1;
+    -moz-animation-timing-function: ease-out;
+    -moz-animation-duration: 0.5s;
+    -moz-animation-delay: 1s;
+    -moz-animation-fill-mode: forwards;
+
+    -webkit-animation-name: fadeInBottom;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-timing-function: ease-out;
+    -webkit-animation-duration: 0.5s;
+    -webkit-animation-delay: 1s;
+    -webkit-animation-fill-mode: forwards;
+
+    animation-name: fadeInBottom;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-out;
+    animation-duration: 0.5s;
+    animation-delay: : 1s;
+    animation-fill-mode: forwards;
+}
 /* Color */
 .color,.mainColor{color:#005e9d}
 .red{color:#f25757;}
@@ -393,14 +450,14 @@ input.wrong:focus, input[type="text"].wrong:focus, input[type="email"].wrong:foc
 /* Pagination */
 .pagination{display: inline-block;}
 .pagination *{display: inline-block; float: left}
-.pagination li{border:1px solid #ccc; border-right-width:0;}
-.pagination li.selected{color: white; background-color: #005e9d}
+.pagination li{margin-bottom:0.1em;}
+.pagination li.selected{color: #005e9d; font-weight: bold}
 .pagination li:first-child{border-radius: .3em 0 0 .3em}
 .pagination li:first-child:last-child{display: none}
 .pagination li:last-child{border-right-width:1px; border-radius: 0 .3em .3em 0}
 .pagination li a{padding:.55em .75em;}
-.pagination li a:hover{background-color: #f2f2f2}
-.pagination li.selected a:hover{background-color: #005e9d}
+.pagination li a:hover{background-color: #eee}
+.pagination li.selected a:hover{background-color: #eee}
 
 /* Pager */
 .pager{display: inline-block;}
