@@ -25,7 +25,7 @@ SOFTWARE.
 // Version 0.1
 // github.com/cervgon/gui-components
 
-function actions(){
+function guiComponentsFunctions(){
     $('switch').each(function(){
         var content = $(this).html();
         var html  = '';
@@ -60,9 +60,24 @@ function actions(){
     $(".dropdown .inner .list").click(function(){
         $(this).parent().parent().removeClass("open");
     });
+    // ScrollToTop
     $(".scrollToTop").click(function(){
-        $("html, body").animate({ scrollTop: 0 }, "slow");
-        return false;
+        $('html,body').animate({scrollTop: "0px"}, 500);
+    });
+    var hasScrolled = false;
+    $(window).scroll(function (event) {
+        var scroll = $(window).scrollTop();
+        if(scroll > 400){
+            $('.scrollToTop').removeClass('fadeOutBottom');
+            $('.scrollToTop').addClass('fadeInBottom');
+            hasScrolled = true;
+        }
+        else{
+            if(hasScrolled){
+                $('.scrollToTop').removeClass('fadeInBottom');
+                $('.scrollToTop').addClass('fadeOutBottom');
+            }
+        }
     });
 }
 
@@ -76,7 +91,7 @@ function loadJQ() {
     var t = 0;
     var timer = setInterval(function(){
       if (window.jQuery) {
-        actions();
+        guiComponentsFunctions();
         clearInterval(timer);
       }
       else {
@@ -92,7 +107,5 @@ function loadJQ() {
 document.addEventListener("DOMContentLoaded", function(event){
     // Check if jQuery is loaded.
     if (!window.jQuery){loadJQ();}
-    else {actions();}
+    else {guiComponentsFunctions();}
 });
-
-
