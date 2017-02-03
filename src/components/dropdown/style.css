@@ -1,0 +1,10 @@
+.dropdown {
+
+}
+
+.dropdown select {
+    border: 2px solid rgb(0, 75, 130);
+    width: 100%;
+    background-color: rgb(110, 194, 255);
+    outline: none;
+}
