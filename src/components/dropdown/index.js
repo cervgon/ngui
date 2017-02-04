@@ -1,6 +1,7 @@
 import App from '../../app.js';
 import Template from './template.html';
-import Styles from './style.css';
+import NGUI from '../../ngui.css';
+import Style from './style.css';
 
 export default App.component('dropdown', {
     template: Template,

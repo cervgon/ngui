@@ -7,7 +7,7 @@ App.component('app', {
     template: `
         <div>
             <h1>App</h1>
-            <spinner></spinner>
+            <loader class="xl"></loader>
             <dropdown p-options="$ctrl.countries"></dropdown>
             <hr>
             <dropdown p-options="$ctrl.names"></dropdown>
