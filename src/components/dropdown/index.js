@@ -10,13 +10,13 @@ export default App.component('dropdown', {
     },
     controller: function() {
         var $ctrl = this;
-        console.log($ctrl);
+        //console.log($ctrl);
 
         $ctrl.selectedOption = "";
-
+        /*
         $ctrl.onChange = function() {
             console.log("Selected option:",$ctrl.selectedOption);
         }
-
+        */
     }
 });

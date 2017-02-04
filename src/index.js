@@ -4,21 +4,12 @@ import App from './app';
 import { spinner, dropdown } from "./components";
 
 App.component('app', {
-    template: `
-        <div>
-            <h1>App</h1>
-            <loader class="xl"></loader>
-            <dropdown p-options="$ctrl.countries"></dropdown>
-            <hr>
-            <dropdown p-options="$ctrl.names"></dropdown>
-
-        </div>
-    `,
+    templateUrl: 'src/home.html',
     controller: function() {
         var $ctrl = this;
         console.log("App controller");
 
-        $ctrl.countries = ["Argentina", "United States"];
+        $ctrl.loading = 'loading..';
         $ctrl.names = ["John", "Doe", "Foo", "Bar"];
     }
 });
