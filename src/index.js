@@ -1,7 +1,7 @@
 import angular from 'angular';
 import App from './app';
 
-import { spinner, dropdown } from "./components";
+import { loader, dropdown } from "./components";
 
 App.component('app', {
     templateUrl: 'src/home.html',

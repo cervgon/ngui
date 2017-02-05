@@ -1,2 +1,2 @@
-export { spinner } from './loader';
+export { loader } from './loader';
 export { dropdown } from './dropdown';

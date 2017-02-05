@@ -13,6 +13,6 @@ export default App.component('loader', {
         $ctrl.show = true;
         $timeout(function () {
             $ctrl.show = false;
-        }, 1000);
+        }, 1600);
     }
 });
