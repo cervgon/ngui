@@ -6,17 +6,24 @@ import Style from './style.css';
 export default App.component('dropdown', {
     template: Template,
     bindings: {
-        pOptions: '='
+        nguiOptions: '=',
+        nguiPlaceholder: '@',
+        nguiBordered: '@'
     },
     controller: function() {
         var $ctrl = this;
-        //console.log($ctrl);
-
-        $ctrl.selectedOption = "";
-        /*
-        $ctrl.onChange = function() {
-            console.log("Selected option:",$ctrl.selectedOption);
+        $ctrl.toggle = function(){
+            $ctrl.opened = !$ctrl.opened;
         }
-        */
+        $ctrl.changeOption = function(option){
+            $ctrl.selectedOption = option;
+        }
+        $ctrl.$onInit = function (){
+            $ctrl.opened = false;
+            $ctrl.selectedOption = $ctrl.nguiPlaceholder;
+            if($ctrl.nguiBordered !== undefined){
+                $ctrl.bordered = true;
+            }
+        }
     }
 });

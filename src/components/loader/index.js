@@ -6,7 +6,7 @@ import Styles from './style.css';
 export default App.component('loader', {
     template: Template,
     bindings: {
-        pValue: '='
+        nguiLabel: '='
     },
     controller: function($timeout) {
         var $ctrl = this;

@@ -1,8 +1,7 @@
-dropdown { display: -webkit-box; display: -ms-flexbox; display: flex }
-dropdown .dropdown{ width: 100% }
 /* dropdown */
+dropdown { display: inline-block }
 dropdown .dropdown { display: inline-block }
-dropdown .dropdown label{ margin:0; cursor: pointer; padding: .55em 0; display: block }
+dropdown .dropdown label{ margin:0; cursor: pointer; padding: .55em 1.5em .55em 0; display: inline-block; width: auto }
 dropdown .dropdown .list { position: relative }
 dropdown .dropdown .list .inner{ display:none; top:0em; left: 0; padding-top: .24em; position: absolute; z-index: 999 }
 dropdown .dropdown .list ul { background-color: #fff; -webkit-box-shadow: 0 0px 0px 1px #eee; -moz-box-shadow: 0 0px 0px 1px #eee; box-shadow:0 0px 0px 1px #eee }
@@ -15,3 +14,7 @@ dropdown .dropdown .list ul li.selected { color: #005691 }
 dropdown .dropdown.open .list .inner { display: block }
 dropdown .floatRight.dropdown.open .list .inner,
 dropdown .floatRight .dropdown.open .list .inner { left: auto; right: 0 }
+dropdown .dropdown.bordered { border: 1px solid #aaa; background: url("data:image/svg+xml;charset=UTF-8, %3Csvg fill='%23999999' height='24' viewBox='0 0 24 24' width='32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z'/%3E%3Cpath d='M0-.75h24v24H0z' fill='none'/%3E%3C/svg%3E") #f2f2f2 no-repeat center right; display: block }
+dropdown .dropdown.bordered label { font-size: .85em; color: #666; padding: .55em .75em }
+dropdown .dropdown.bordered label::after { background: none }
+dropdown .dropdown.bordered.open { background-color: #ddd; border-color: #aaa; color: #222; }

@@ -572,7 +572,7 @@ video { }
 .xs { font-size: 0.75em } /* 12px */
 .m { font-size: 1em } /* 16px */
 .xm { font-size: 1.5em } /* 24px */
-.l { font-size: 1.8em } /* 24px */
+.l { font-size: 1.75em } /* 24px */
 .xl { font-size: 2.25em } /* 36px */
 .xxl { font-size: 2.5em } /* 40px */
 .xxxl { font-size: 3em } /* 48px */
@@ -783,7 +783,7 @@ table tr td.textRight { text-align: right; width: 2em; white-space: nowrap }
 table tr th.textRight .label,
 table tr td.textRight .label { margin-left: 0.5em; margin-right: 0; float: right }
 table .sortable { position: relative }
-table .sortable::after { content: ""; background: url("data:image/svg+xml, %3Csvg fill='%23333333' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z'/%3E%3C/svg%3E") no-repeat; background-size: 1.35em 1.35em; width: 1.35em; height: 1.35em; margin: 0.1em 0 0; position: absolute }
+table .sortable::after, .dropdown label::after { content: ""; background: url("data:image/svg+xml, %3Csvg fill='%23333333' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z'/%3E%3C/svg%3E") no-repeat; background-size: 1.35em 1.35em; width: 1.35em; height: 1.35em; margin: 0.1em 0 0; position: absolute }
 table .sortable.inverted::after { background-image: url("data:image/svg+xml, %3Csvg fill='%23333333' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z'/%3E%3C/svg%3E") }
 
 table.minimalistic { width: 100%; margin-bottom: 0.25em; color: #333 }

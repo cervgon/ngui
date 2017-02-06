@@ -1,5 +1,11 @@
 <div style="max-width: 1000px; position: relative; margin: 0 auto 0;">
     <h1>App</h1>
-    <loader p-value="$ctrl.loading" class="l"></loader>
-    <dropdown p-options="$ctrl.names" style="width:200px"></dropdown>
+    <loader ngui-label="$ctrl.loading" class="l"></loader>
+    <dropdown ngui-options="$ctrl.names" ngui-placeholder="Name" ngui-bordered style="width:100px"></dropdown>
+    <select style="width:100px">
+    	<option value="volvo">Volvo</option>
+    	<option value="saab">Saab</option>
+    	<option value="mercedes">Mercedes</option>
+    	<option value="audi">Audi</option>
+    </select>
 </div>
