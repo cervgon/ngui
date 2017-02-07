@@ -1,9 +1,9 @@
-import App from '../../app.js';
+import main from '../../main.js';
 import Template from './template.html';
 import NGUI from '../../ngui.css';
 import Styles from './style.css';
 
-export default App.component('loader', {
+export default main.component('loader', {
     template: Template,
     bindings: {
         nguiLabel: '='
