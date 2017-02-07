@@ -1,15 +1,15 @@
-import App from '../../app.js';
+import main from '../../main.js';
 import Template from './template.html';
 import NGUI from '../../ngui.css';
 import Styles from './style.css';
 
-export default App.component('progbar', {
+export default main.component('progbar', {
     template: Template,
     bindings: {
         nguiValue: '=',
         nguiColor: '@'
     },
-    controller: function($timeout) {
+    controller: function() {
         var $ctrl = this;
         $ctrl.$onInit = function (){
             $ctrl.nguiColorClass = '';
