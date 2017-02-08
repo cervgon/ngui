@@ -6,11 +6,17 @@ export default main.component('progbar', {
     template: Template,
     bindings: {
         nguiValue: '=',
-        nguiColor: '@'
+        nguiColor: '@',
+        nguiLabel: '@'
     },
     controller: function() {
         var $ctrl = this;
         $ctrl.$onInit = function (){
+            if($ctrl.nguiValue>100){$ctrl.nguiBarValue=100;}
+            else{$ctrl.nguiBarValue = $ctrl.nguiValue}
+            if($ctrl.nguiLabel !== undefined){
+                $ctrl.label = true;
+            }
             $ctrl.nguiColorClass = '';
             if($ctrl.nguiColor !== undefined){
                 switch($ctrl.nguiColor) {
