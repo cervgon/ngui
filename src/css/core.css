@@ -488,7 +488,7 @@ video { }
 .xs { font-size: 0.75em } /* 12px */
 .m { font-size: 1em } /* 16px */
 .xm { font-size: 1.5em } /* 24px */
-.l { font-size: 1.75em } /* 24px */
+.l { font-size: 1.75em } /* 28px */
 .xl { font-size: 2.25em } /* 36px */
 .xxl { font-size: 2.5em } /* 40px */
 .xxxl { font-size: 3em } /* 48px */
@@ -785,8 +785,8 @@ nav + .container { margin-top: 3em }
 	.s-s { font-size: 0.625em }
 	.s-xs { font-size: 0.75em }
 	.s-m { font-size: 1em }
-	.s-xm { font-size: 1.4em }
-	.s-l { font-size: 1.8em }
+	.s-xm { font-size: 1.5em }
+	.s-l { font-size: 1.75em }
 	.s-xl { font-size: 2.25em }
 	.s-xxl { font-size: 2.5em }
 	.s-xxxl { font-size: 3em }
@@ -804,8 +804,8 @@ nav + .container { margin-top: 3em }
 	.xs-s { font-size: 0.625em }
 	.xs-xs { font-size: 0.75em }
 	.xs-m { font-size: 1em }
-	.xs-xm { font-size: 1.4em }
-	.xs-l { font-size: 1.8em }
+	.xs-xm { font-size: 1.5em }
+	.xs-l { font-size: 1.75em }
 	.xs-xl { font-size: 2.25em }
 	.xs-xxl { font-size: 2.5em }
 	.xs-xxxl { font-size: 3em }
@@ -823,8 +823,8 @@ nav + .container { margin-top: 3em }
 	.m-s { font-size: 0.625em }
 	.m-xs { font-size: 0.75em }
 	.m-m { font-size: 1em }
-	.m-xm { font-size: 1.4em }
-	.m-l { font-size: 1.8em }
+	.m-xm { font-size: 1.5em }
+	.m-l { font-size: 1.75em }
 	.m-xl { font-size: 2.25em }
 	.m-xxl { font-size: 2.5em }
 	.m-xxxl { font-size: 3em }
@@ -842,8 +842,8 @@ nav + .container { margin-top: 3em }
 	.xm-s { font-size: 0.625em }
 	.xm-xs { font-size: 0.75em }
 	.xm-m { font-size: 1em }
-	.xm-xm { font-size: 1.4em }
-	.xm-l { font-size: 1.8em }
+	.xm-xm { font-size: 1.5em }
+	.xm-l { font-size: 1.75em }
 	.xm-xl { font-size: 2.25em }
 	.xm-xxl { font-size: 2.5em }
 	.xm-xxxl { font-size: 3em }
@@ -866,8 +866,8 @@ nav + .container { margin-top: 3em }
 	.l-s { font-size: 0.625em }
 	.l-xs { font-size: 0.75em }
 	.l-m { font-size: 1em }
-	.l-xm { font-size: 1.4em }
-	.l-l { font-size: 1.8em }
+	.l-xm { font-size: 1.5em }
+	.l-l { font-size: 1.75em }
 	.l-xl { font-size: 2.25em }
 	.l-xxl { font-size: 2.5em }
 	.l-xxxl { font-size: 3em }
@@ -889,8 +889,8 @@ nav + .container { margin-top: 3em }
 	.xl-s { font-size: 0.6em }
 	.xl-xs { font-size: 0.75em }
 	.xl-m { font-size: 1em }
-	.xl-xm { font-size: 1.4em }
-	.xl-l { font-size: 1.8em }
+	.xl-xm { font-size: 1.5em }
+	.xl-l { font-size: 1.75em }
 	.xl-xl { font-size: 2.25em }
 	.xl-xxl { font-size: 2.5em }
 	.xl-xxxl { font-size: 3em }

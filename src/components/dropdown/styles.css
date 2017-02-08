@@ -4,13 +4,12 @@ dropdown .dropdown { display: inline-block }
 dropdown .dropdown label{ margin:0; cursor: pointer; padding: .55em 1.5em .55em 0; display: inline-block; width: auto }
 dropdown .dropdown .list { position: relative }
 dropdown .dropdown .list .inner{ display:none; top:0em; left: 0; padding-top: 2px; position: absolute; z-index: 999 }
-dropdown .dropdown .list ul { overflow: hidden; overflow-y: auto; max-height: 320px;
-    background-color: #fff; -webkit-box-shadow: 0 0px 0px 1px #eee; -moz-box-shadow: 0 0px 0px 1px #eee; box-shadow:0 0px 0px 1px #eee }
-dropdown .dropdown .list ul li { padding: .55em .75em; cursor:pointer; border:1px solid #fff; border-bottom-color: #eee; min-width: 5em; color:#666; white-space: nowrap; text-align: left }
+dropdown .dropdown .list ul { overflow: hidden; overflow-y: auto; max-height: 320px; background-color: #fff; box-shadow: 0 4px 10px -1px rgba(0,0,0,0.1) }
+dropdown .dropdown .list ul li { padding: .55em .75em; cursor: pointer; /* border: 1px solid #fff; border-bottom-color: #eee; */ border-bottom: 1px solid #eee; min-width: 5em; color:#666; white-space: nowrap; text-align: left }
 dropdown .dropdown .list ul li:last-child { border-bottom: none }
 dropdown .dropdown .list ul li:hover,
-dropdown .dropdown .list ul li.selected { background-color: #e8f6f9; border-color: #005691; color: #005691 }
-dropdown .dropdown .list ul li:hover:last-child { border: 1px solid #005691 }
+dropdown .dropdown .list ul li.selected { background-color: #e8f6f9; /* border-color: #005691; */ color: #005691 }
+dropdown .dropdown .list ul li:hover:last-child { /* border: 1px solid #005691 */ }
 dropdown .dropdown .list ul li.selected { color: #005691 }
 dropdown .dropdown.open .list .inner { display: block }
 dropdown .floatRight.dropdown.open .list .inner,
@@ -19,3 +18,7 @@ dropdown .dropdown.bordered { border: 1px solid #aaa; display: block; background
 dropdown .dropdown.bordered label { font-size: .85em; color: #666; padding: .55em .75em }
 dropdown .dropdown.bordered label::after { background: none }
 dropdown .dropdown.bordered.open { background-color: #ddd; border-color: #aaa; color: #222; }
+dropdown.wrong .dropdown.bordered,
+dropdown.wrong .dropdown.bordered.open { border-color: #d48c8c; -webkit-animation-name: shake; animation-name: shake; -webkit-animation-duration: 0.8s; animation-duration: 0.8s; -webkit-animation-fill-mode: both; animation-fill-mode: both; background: url("data:image/svg+xml;charset=UTF-8, %3Csvg fill='%23a02222' height='24' viewBox='0 0 24 24' width='32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z'/%3E%3Cpath d='M0-.75h24v24H0z' fill='none'/%3E%3C/svg%3E") #f6eaea no-repeat center right }
+dropdown.wrong .dropdown.bordered label,
+dropdown.wrong .dropdown.bordered.open label { color: #a02222 }
