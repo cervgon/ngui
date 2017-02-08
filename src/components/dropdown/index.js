@@ -11,11 +11,15 @@ export default main.component('dropdown', {
     },
     controller: function() {
         var $ctrl = this;
-        $ctrl.toggle = function(){
-            $ctrl.opened = !$ctrl.opened;
+        $ctrl.onFocus = function() {
+            $ctrl.opened = true;
+        }
+        $ctrl.onBlur = function() {
+            $ctrl.opened = false;
         }
         $ctrl.changeOption = function(option){
             $ctrl.selectedOption = option;
+            $ctrl.opened = false;
         }
         $ctrl.$onInit = function (){
             $ctrl.opened = false;
