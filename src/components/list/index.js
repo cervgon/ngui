@@ -30,7 +30,7 @@ main.component('listItem', {
         </div>
     `,
     transclude : true,
-    controller: function() {
+    controller: function($timeout) {
         var $ctrl = this;
 
         $ctrl.expanded = false;
@@ -39,13 +39,13 @@ main.component('listItem', {
         $ctrl.onToggle = function() {
             if($ctrl.expanded){
                 $ctrl.expandedDiv = !$ctrl.expandedDiv;
-                setTimeout (function(){
+                $timeout (function(){
                     $ctrl.expanded = !$ctrl.expanded;
                 },500);
             }
             else{
                 $ctrl.expanded = !$ctrl.expanded;
-                setTimeout (function(){
+                $timeout (function(){
                     $ctrl.expandedDiv = !$ctrl.expandedDiv;
                 },100);
             }

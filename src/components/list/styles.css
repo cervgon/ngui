@@ -68,4 +68,5 @@ list list-item .list-item.open list-item-expand .list-item-expand {
 list list-item .list-item list-item-expand .list-item-expand ng-transclude {
     padding: 0.65em 5em .5em 0;
     display: inline-block;
+    width: 100%;
 }
