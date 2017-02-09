@@ -16,7 +16,8 @@ table .sortable.inverted::after { background-image: url("data:image/svg+xml, %3C
 
 table.minimalistic { width: 100%; margin-bottom: 0.25em; color: #333 }
 table.minimalistic tr { border-bottom: .1em solid #eee }
-table.minimalistic.even tr:nth-child(even) { background-color: #fafafa }
+table.minimalistic.even tr:nth-child(even),
+table.minimalistic.odd tr:nth-child(even) { background-color: #fafafa }
 table.minimalistic tr:first-child { border-bottom: .1em solid #ddd }
 table.minimalistic .uib-datepicker tr:first-child,
 table.minimalistic .uib-datepicker tr { border-bottom: none }

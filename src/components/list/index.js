@@ -23,8 +23,8 @@ main.component('listItem', {
         parentCtrl: '^list'
     },
     template: `
-        <div class="list-item">
-            <span ng-click="$ctrl.onToggle()" class="toggle"ng-class="{'open':$ctrl.expanded}"></span>
+        <div class="list-item" ng-class="{'open':$ctrl.expandedDiv}">
+            <span ng-click="$ctrl.onToggle()" class="toggle"></span>
             <span ng-click="$ctrl.onDelete()" class="delete"></span>
             <ng-transclude></ng-transclude>
         </div>
@@ -34,9 +34,21 @@ main.component('listItem', {
         var $ctrl = this;
 
         $ctrl.expanded = false;
+        $ctrl.expandedDiv = false;
 
         $ctrl.onToggle = function() {
-            $ctrl.expanded = !$ctrl.expanded;
+            if($ctrl.expanded){
+                $ctrl.expandedDiv = !$ctrl.expandedDiv;
+                setTimeout (function(){
+                    $ctrl.expanded = !$ctrl.expanded;
+                },500);
+            }
+            else{
+                $ctrl.expanded = !$ctrl.expanded;
+                setTimeout (function(){
+                    $ctrl.expandedDiv = !$ctrl.expandedDiv;
+                },100);
+            }
         }
 
         $ctrl.onDelete = function() {
