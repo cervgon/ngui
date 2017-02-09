@@ -1,0 +1,5 @@
+/* Layout */
+.ginner { padding: 1em 1em 0 }
+.matchparent,
+.matchParent { width: 100% }
+.overflowHidden { overflow: hidden; max-height: 100%; max-width: 100% }

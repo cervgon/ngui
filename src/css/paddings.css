@@ -1,0 +1,48 @@
+/* Paddings */
+.p01 { padding: 0.1em }
+.p01-0 { padding: 0.1em 0 }
+.p01-01 { padding: 0.1em 0.1em }
+.p01-02 { padding: 0.1em 0.2em }
+.p01-03 { padding: 0.1em 0.3em }
+.p01-04 { padding: 0.1em 0.4em }
+.p01-05 { padding: 0.1em 0.5em }
+.p01-06 { padding: 0.1em 0.6em }
+.p01-07 { padding: 0.1em 0.7em }
+.p01-08 { padding: 0.1em 0.8em }
+.p01-09 { padding: 0.1em 0.9em }
+.p01-1 { padding: 0.1em 1em }
+.p02 { padding: 0.2em }
+.p02-0 { padding: 0.2em 0 }
+.p02-02 { padding: 0.2em 0.2em }
+.p03 { padding: 0.3em }
+.p03-0 { padding: 0.3em 0 }
+.p03-03 { padding: 0.3em 0.3em }
+.p04 { padding: 0.4em }
+.p04-0 { padding: 0.4em 0 }
+.p04-04 { padding: 0.4em 0.4em }
+.p05 { padding: 0.5em }
+.p05-0 { padding: 0.5em 0 }
+.p05-05 { padding: 0.5em 0.5em }
+.p06 { padding: 0.6em }
+.p06-0 { padding: 0.6em 0 }
+.p06-06 { padding: 0.6em 0.6em }
+.p07 { padding: 0.7em }
+.p07-0 { padding: 0.7em 0 }
+.p07-07 { padding: 0.7em 0.7em }
+.p08 { padding: 0.8em }
+.p08-0 { padding: 0.8em 0 }
+.p08-08 { padding: 0.8em 0.8em }
+.p09 { padding: 0.9em }
+.p09-09 { padding: 0.9em 0.9em }
+.p1-0 { padding: 1em 0 }
+.p1-1 { padding: 1em 1em }
+.p0-01 { padding: 0 0.1em }
+.p0-02 { padding: 0 0.2em }
+.p0-03 { padding: 0 0.3em }
+.p0-04 { padding: 0 0.4em }
+.p0-05 { padding: 0 0.5em }
+.p0-06 { padding: 0 0.6em }
+.p0-07 { padding: 0 0.7em }
+.p0-08 { padding: 0 0.8em }
+.p0-09 { padding: 0 0.9em }
+.p0-1 { padding: 0 1em }

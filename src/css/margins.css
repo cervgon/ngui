@@ -1,0 +1,16 @@
+/* Margins */
+.m0 { margin: 0 !important }
+.m0-01 { margin: 0 0.1em }
+.m0-02 { margin: 0 0.2em }
+.m0-03 { margin: 0 0.3em }
+.m0-04 { margin: 0 0.4em }
+.m0-05 { margin: 0 0.5em }
+.m0-06 { margin: 0 0.6em }
+.m0-07 { margin: 0 0.7em }
+.m0-08 { margin: 0 0.8em }
+.m0-09 { margin: 0 0.9em }
+.m0-1 { margin: 0 1em }
+.m0-15 { margin: 0 1.5em }
+.m0-2 { margin: 0 2em }
+.mr05 { margin-right: 0.5em !important }
+.ml05 { margin-left: 0.5em !important }
