@@ -1,11 +1,12 @@
 import main from '../../main.js';
 // import Template from './template.html';
-// import Styles from './styles.css';
+import Styles from './styles.css';
 
 main.component('list', {
     template: `
         <div class="list">
             <ng-transclude></ng-transclude>
+            <br>
         </div>
     `,
     transclude : true,
@@ -22,12 +23,10 @@ main.component('listItem', {
         parentCtrl: '^list'
     },
     template: `
-        <div class="list-item" style="background-color: red;">
-            <span style="float: right; color: white; cursor: pointer;" ng-click="$ctrl.onToggle()">O</span>
-            <span style="float: right; color: white; cursor: pointer;" ng-click="$ctrl.onDelete()">X</span>
-
+        <div class="list-item">
+            <span ng-click="$ctrl.onToggle()" class="toggle"ng-class="{'open':$ctrl.expanded}"></span>
+            <span ng-click="$ctrl.onDelete()" class="delete"></span>
             <ng-transclude></ng-transclude>
-            <hr />
         </div>
     `,
     transclude : true,
@@ -50,8 +49,9 @@ main.component('listItem', {
 
 main.component('listItemFold', {
     template: `
-        <div class="list-item-fold" style="background-color: blue;">
+        <div class="list-item-fold">
             <ng-transclude></ng-transclude>
+            <br>
         </div>
     `,
     require: {
@@ -68,8 +68,9 @@ main.component('listItemExpand', {
         parentCtrl: '^listItem'
     },
     template: `
-        <div class="list-item-expand" ng-if="$ctrl.parentCtrl.expanded == true" style="background-color: green;">
+        <div class="list-item-expand" ng-if="$ctrl.parentCtrl.expanded == true">
             <ng-transclude></ng-transclude>
+            <br>
         </div>
     `,
     transclude : true,

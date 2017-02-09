@@ -14,7 +14,7 @@ html { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: 
 *,
 *:before,
 *:after { -webkit-box-sizing: inherit; -moz-box-sizing: inherit; box-sizing: inherit }
-* { -webkit-font-smoothing: antialiased }
+span, a, li, b, strong, em, i, p, td, th, input { -webkit-font-smoothing: antialiased }
 /* Scroll bar */
 ::-webkit-scrollbar { width: 5px; height: 5px }
 ::-webkit-scrollbar-track-piece { background-color: #fff }

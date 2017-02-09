@@ -47,43 +47,37 @@
     <list>
         <list-item ng-repeat="user in $ctrl.users" ngui-ondelete="$ctrl.ondelete()">
             <list-item-fold>
-                <div style="width: 20%; display: inline-block; color: white;">
+                <div class="g1-4 p0-05">
                     Name: {{user.name}}
                 </div>
-                <div style="width: 20%; display: inline-block; color: white;">
+                <div class="g1-4 p0-05">
                     Last Name: {{user.last}}
                 </div>
-                <div style="width: 20%; display: inline-block; color: white;">
+                <div class="g1-4 p0-05">
                     DOB: {{$ctrl.parseDate(user.dob)}}
                 </div>
-                <div style="width: 20%; display: inline-block; color: white;">
+                <div class="g1-4 p0-05">
                     Arrested: {{user.arrested}}
                 </div>
             </list-item-fold>
             <list-item-expand>
-                <div style="width:49%; display: inline-table;">
-                    <div>
-                        <label>Name</label>
-                        <input type="text" ng-model="user.name" />
-                    </div>
-                    <div>
-                        <label>Last Name</label>
-                        <input type="text" ng-model="user.last" />
-                    </div>
+                <div class="g1-4 p0-05">
+                    <input type="text" ng-model="user.name" />
                 </div>
-                <div style="width:49%; display: inline-table;">
-                    <div>
-                        <label>DOB</label>
-                        <input type="date" ng-model="user.dob" />
-                    </div>
-                    <div>
-                        <br>
-                        <input type="checkbox" ng-model="user.arrested" />
-                        <label>Arrested</label>
-                    </div>
+                <div class="g1-4 p0-05">
+                    <input type="text" ng-model="user.last" />
                 </div>
-
+                <div class="g1-4 p0-05">
+                    <input type="date" ng-model="user.dob" />
+                </div>
+                <div class="g1-4 p05">
+                    <input type="checkbox" ng-model="user.arrested" />
+                    <label>Arrested</label>
+                </div>
             </list-item-expand>
         </list-item>
     </list>
+
+    <hr class="transparent big">
+
 </div>
