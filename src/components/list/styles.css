@@ -48,8 +48,8 @@ list list-item .list-item span.delete:hover {
 }
 
 list list-item .list-item list-item-fold { width: 100% }
-list list-item .list-item list-item-fold .list-item-fold { width: 100%; padding: .55em 5em 0.55em 0; border-bottom: .1em solid #ddd }
-list list-item .list-item.open list-item-fold .list-item-fold { border-bottom: none }
+list list-item .list-item list-item-fold .list-item-fold { width: 100%; padding: .55em 5em 0.55em 0; border-bottom: .1em solid #ddd; transition: border-bottom-color 0.1s ease-out; }
+list list-item .list-item.open list-item-fold .list-item-fold { border-bottom-color: transparent }
 
 list list-item .list-item list-item-expand { }
 
@@ -58,13 +58,14 @@ list list-item .list-item list-item-expand .list-item-expand {
     box-shadow: inset 0 2px 7px -4px rgba(0,0,0,.2);
     overflow: hidden;
     max-height: 0;
-    padding: 0 5em 0 0;
-    transition: max-height 0.4s ease-out, padding 0.4s ease-out, border-bottom 0.4s ease-out;
-    border-bottom: none;
+    transition: max-height 0.5s ease-out, border-bottom-color 0.1s ease-out;
+    border-bottom-color: transparent
 }
 list list-item .list-item.open list-item-expand .list-item-expand {
     max-height: 80em;
-    padding: 0.65em 5em .5em 0;
     border-bottom: .1em solid #ddd
 }
-list list-item .list-item list-item-expand .list-item-expand ng-transclude { }
+list list-item .list-item list-item-expand .list-item-expand ng-transclude {
+    padding: 0.65em 5em .5em 0;
+    display: inline-block;
+}
