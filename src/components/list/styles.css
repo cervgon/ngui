@@ -49,7 +49,7 @@ list list-item .list-item span.delete:hover {
 
 list list-item .list-item list-item-fold { width: 100% }
 list list-item .list-item list-item-fold .list-item-fold { width: 100%; padding: .55em 5em 0.55em 0; border-bottom: .1em solid #ddd }
-list list-item .list-item list-item-fold .list-item-fold.open { border-bottom: none }
+list list-item .list-item.open list-item-fold .list-item-fold { border-bottom: none }
 
 list list-item .list-item list-item-expand { }
 
