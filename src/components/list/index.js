@@ -17,7 +17,7 @@ main.component('list', {
 
 main.component('listItem', {
     bindings: {
-        nguiOndelete: '&'
+        nguiOndelete: '&?'
     },
     require: {
         parentCtrl: '^list'
@@ -25,7 +25,7 @@ main.component('listItem', {
     template: `
         <div class="list-item" ng-class="{'open':$ctrl.expandedDiv}">
             <span ng-click="$ctrl.onToggle()" class="toggle"></span>
-            <span ng-click="$ctrl.onDelete()" class="delete"></span>
+            <span ng-click="$ctrl.onDelete()" ng-if="$ctrl.nguiOndelete" class="delete"></span>
             <ng-transclude></ng-transclude>
         </div>
     `,

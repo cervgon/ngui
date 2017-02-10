@@ -44,6 +44,12 @@
 
     <hr class="transparent big">
 
+    <pagination ngui-items="$ctrl.names">
+        <p>{{$parent.item}}</p>
+    </pagination>
+
+    <hr class="transparent big">
+
     <list>
         <list-item ng-repeat="user in $ctrl.users" ngui-ondelete="$ctrl.ondelete()">
             <list-item-fold>

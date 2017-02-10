@@ -1,0 +1,19 @@
+/* Pagination */
+.pagination{display: inline-block;}
+.pagination *{display: inline-block; float: left}
+.pagination li{margin-bottom:0.1em;}
+.pagination li.selected{color: #005e9d; font-weight: bold}
+.pagination li:first-child{border-radius: .3em 0 0 .3em}
+.pagination li:first-child:last-child{display: none}
+.pagination li:last-child{border-right-width:1px; border-radius: 0 .3em .3em 0}
+.pagination li a{padding:.55em .75em;}
+.pagination li a:hover{background-color: #eee}
+.pagination li.selected a:hover{background-color: #eee}
+.pagination .pages{padding:.55em .75em 0.55em 0}
+
+/* Pager */
+.pager{display: inline-block;}
+.pager li:first-child{float: left; margin-right: 0.25em}
+.pager li:last-child{float: right; margin-left: 0.25em}
+.pager li a{border-radius: .3em; border:1px solid #ccc;padding:.55em .75em; display: inline-block;}
+.pager li a:hover{background-color: #f2f2f2}

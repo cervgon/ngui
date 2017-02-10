@@ -25,6 +25,10 @@ App.component('app', {
         $ctrl.loading = 'loading..';
         $ctrl.names = ["John", "Doe", "Foo", "Bar"];
 
+        for (var i = 0; i < 200; i++) {
+            $ctrl.names.push("A"+i);
+        }
+
         $ctrl.ondelete = function() {
             console.log("bla");
         }
@@ -51,6 +55,6 @@ App.component('app', {
                 dob: new Date(),
                 arrested: false
             }
-        ]
+        ];
     }
 });

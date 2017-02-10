@@ -1,0 +1,16 @@
+<div>
+    <ng-transclude ng-repeat="item in $ctrl.nguiItems | startFrom: ($ctrl.currentPage * $ctrl.itemsPerPage) | limitTo: $ctrl.itemsPerPage"></ng-transclude>
+
+    <ul class="pagination">
+        <li ng-class="{'selected': $ctrl.currentPage == page}"
+            ng-repeat="page in $ctrl.totalPagesArr | startFrom: $ctrl.pagesStartFrom() | limitTo: $ctrl.maxPages"
+            ng-click="$ctrl.setPage(page)">
+            <a>{{page + 1}}</a>
+        </li>
+        <li ng-if="($ctrl.totalPages > $ctrl.maxPages) && ($ctrl.currentPage <= $ctrl.totalPages - $ctrl.maxPages - 1)"><a>...</a></li>
+        <li ng-if="($ctrl.totalPages > $ctrl.maxPages) && ($ctrl.currentPage <= $ctrl.totalPages - $ctrl.maxPages)" ng-class="{'selected': $ctrl.currentPage == $ctrl.totalPages-1}"><a ng-click="$ctrl.setPage($ctrl.totalPages-1)">{{$ctrl.totalPages}}</a></li>
+        <li class="pages">
+            <span>page{{$ctrl.totalPages > 0 ? 's': ''}}</span>
+        </li>
+    </ul>
+</div>
