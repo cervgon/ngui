@@ -4,3 +4,4 @@ export { progbar } from './progbar';
 export { list } from './list';
 export { pagination } from './pagination';
 export { datepicker } from './datepicker';
+export { tooltip } from './tooltip';

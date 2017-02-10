@@ -1,6 +1,6 @@
 import angular from 'angular';
 import main from './main';
-import {loader, dropdown} from "./components";
+import {loader, dropdown, list, pagination, tooltip} from "./components";
 
 import Template from './devServer.html';
 
