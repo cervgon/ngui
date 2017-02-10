@@ -1,0 +1,22 @@
+<div class="datepicker-container" ng-class="{ 'disabled': $ctrl.disabled }">
+    <div class="datepicker-input">
+        <div class="datepicker-fake-input" ng-click="$ctrl.open_calendar()">
+            <input type="number" placeholder="MM" min="1" max="12" ng-model="$ctrl.selected_month" ng-blur="$ctrl.update_selected_date()" ng-disabled="$ctrl.disabled" /> <span>/</span>
+            <input type="number" placeholder="DD" min="1" max="31" ng-model="$ctrl.selected_day" ng-blur="$ctrl.update_selected_date()" ng-disabled="$ctrl.disabled" /> <span>/</span>
+            <input type="number" placeholder="YYYY" min="1000" max="9999" ng-model="$ctrl.selected_year" ng-blur="$ctrl.update_selected_date()" ng-disabled="$ctrl.disabled" style="width:3em;"/>
+        </div>
+        <span class="datepicker-icon datepicker-icon-arrow" ng-click="$ctrl.toggle_calendar()"></span>
+        <span class="datepicker-icon datepicker-icon-clear" ng-if="$ctrl.date && !$ctrl.disabled" ng-click="$ctrl.clear()"></span>
+    </div>
+    <div class="datepicker-picker" ng-show="$ctrl.show_calendar">
+        <div class="datepicker-selector">
+            <button type="button" ng-click="$ctrl.change_month(-1)" style="float:left;"> « </button>
+            <span>{{$ctrl.get_calendar_date()}}</span>
+            <button type="button" ng-click="$ctrl.change_month(1)" style="float:right;"> » </button>
+        </div>
+
+        <div class="datepicker-calendar">
+            <div class="datepicker-day datepicker-weekday">Su</div><div class="datepicker-day datepicker-weekday">Mo</div><div class="datepicker-day datepicker-weekday">Tu</div><div class="datepicker-day datepicker-weekday">We</div><div class="datepicker-day datepicker-weekday">Th</div><div class="datepicker-day datepicker-weekday">Fr</div><div class="datepicker-day datepicker-weekday">Sa</div><div class="datepicker-day" ng-repeat="day in $ctrl.get_empty_days()">&#32;</div><div class="datepicker-day datepicker-date" ng-repeat="day in $ctrl.get_month_days()" ng-click="$ctrl.set_date(day)" ng-class="{ 'datepicker-today': $ctrl.is_day_today(day), 'datepicker-selected': $ctrl.is_day_selected(day)}">{{day}}</div>
+        </div>
+    </div>
+</div>

@@ -33,6 +33,8 @@ App.component('app', {
             console.log("bla");
         }
 
+        $ctrl.someDate = new Date();
+
         $ctrl.users = [
             {
                 name: "John",
