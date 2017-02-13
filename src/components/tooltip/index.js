@@ -25,7 +25,7 @@ export default main.component('tooltip', {
 
             $timeout(function() {
                 $ctrl.positionClass += ' fadeOut';
-                $ctrl.positionClass += $ctrl.fadeOutClass; 
+                $ctrl.positionClass += $ctrl.fadeOutClass;
             }, timeFadeOut)
             $timeout(function() {
                 $ctrl.showTooltip = false;
@@ -42,40 +42,50 @@ export default main.component('tooltip', {
                 var tooltipH = el.children[0].offsetHeight;
                 var bodyH = document.body.offsetHeight;
 
+                console.log($element)
+
+                function show() {
+                    $ctrl.visibility = 'initial';
+                }
+
                 function setLeft() {
                     $ctrl.positionClass = 'left';
-                    $ctrl.top = 'auto';
+                    $ctrl.top = (prevSibH - tooltipH) / 2 + 'px';
                     $ctrl.right = prevSibW + 8 + 'px';
-                    $ctrl.bottom = (prevSibH - tooltipH) / 2 + 'px';
+                    $ctrl.bottom = 'auto';
                     $ctrl.left = 'auto';
                     $ctrl.fadeOutClass = 'Left';
+                    show();
                 }
 
                 function setRight() {
                     $ctrl.positionClass = 'right';
-                    $ctrl.top = -prevSibH / 2 - tooltipH / 2 + 0.5 + 'px';
+                    $ctrl.top = (prevSibH - tooltipH) / 2 + 'px';
                     $ctrl.right = 'auto';
                     $ctrl.bottom = 'auto;'
                     $ctrl.left = '3.5px';
                     $ctrl.fadeOutClass = 'Right';
+                    show();
                 }
 
                 function setBottom() {
                     $ctrl.positionClass = 'bottom';
-                    $ctrl.top = '6px';
+                    $ctrl.top = prevSibH + 6 +'px';
                     $ctrl.right = 'auto';
                     $ctrl.bottom = 'auto';
                     $ctrl.left = '-' + (prevSibW / 2) - tooltipW / 2 - 1 + 'px';
                     $ctrl.fadeOutClass = 'Bottom';
+                    show();
                 }
 
                 function setTop() {
                     $ctrl.positionClass = 'top';
-                    $ctrl.top = -6 - tooltipH - prevSibH + 'px';
+                    $ctrl.top = -6 - tooltipH + 'px';
                     $ctrl.right = 'auto';
                     $ctrl.bottom = 'auto';
                     $ctrl.left = '-' + (prevSibW / 2) - tooltipW / 2 - 1 + 'px';
                     $ctrl.fadeOutClass = 'Top';
+                    show();
                 }
 
                 switch ($ctrl.nguiPosition) {

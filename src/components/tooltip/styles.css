@@ -3,8 +3,8 @@ tooltip {
     display:inline-block;
     position: relative;
     width: 0;
-    height: 0;
-    vertical-align: bottom;
+    height: 1px;
+    vertical-align: top;
 }
 .tourMsg {
     -webkit-font-smoothing: antialiased;
@@ -20,7 +20,8 @@ tooltip {
     white-space: nowrap;
     top: 0;
     left: 0;
-    z-index: 2
+    z-index: 2;
+    visibility: hidden;
 }
 .tourMsg .arrow { z-index: 99 }
 

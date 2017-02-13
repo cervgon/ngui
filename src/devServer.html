@@ -108,15 +108,16 @@
         <hr class="transparent big">
         <hr class="transparent big">
         <div>
-            <select style="width:100px">
+            <select style="width:100px" ng-mouseenter="showTooltipLeft = true" ng-mouseleave="showTooltipLeft = false" class="floatLeft">
+                <!--ng-mouseleave="showTooltipLeft = false"-->
             	<option value="volvo">Volvo</option>
             	<option value="saab">Saab</option>
             	<option value="mercedes">Mercedes</option>
             	<option value="audi">Audi</option>
             </select>
-            <tooltip ngui-message="Useful message das das" ngui-position="left" ngui-timeout="3"></tooltip>
-            <input type="text" value="hola" style="width:200px"/>
-            <input type="text" value="hola" style="width:200px"/>
+            <tooltip  class="floatLeft" ng-if="showTooltipLeft" ngui-message="Useful message das das" ngui-position="left" ngui-timeout="3"></tooltip>
+            <input  class="floatLeft" type="text" value="hola" style="width:200px"/>
+            <input  class="floatLeft" type="text" value="hola" style="width:200px"/>
         </div>
         <hr class="transparent big">
         <hr class="transparent big">
