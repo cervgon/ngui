@@ -1,14 +1,43 @@
 /* Tooltip */
-tooltip { position: relative }
-.tourMsg {
-    position: absolute; z-index: 97; background-color: #005e9d;
-    color: #fff; text-align: left;
-    border-radius: 0.1em;
-    font-size: 0.85em;
-    text-shadow: 0 1px 2px rgba(0,0,0,0.3);
-    box-shadow: 0 4px 10px -1px rgba(0,0,0,0.1);
-    padding: .5em .75em;
-    white-space: nowrap;
-    top: 1em;
+tooltip {
+    display:inline-block;
+    position: relative;
+    width: 0;
+    height: 0;
+    vertical-align: bottom;
 }
-.tourMsg::before { position: absolute; content:"a" }
+.tourMsg {
+    -webkit-font-smoothing: antialiased;
+    position: absolute;
+    background-color: #333333;
+    color: #fff;
+    display: block;
+    text-align: left;
+    border-radius: 3px;
+    font-size: 12px;
+    text-shadow: 0 1px 1px rgba(0,0,0,0.5);
+    padding: 6px 9px;
+    white-space: nowrap;
+    top: 0;
+    left: 0;
+    z-index: 2
+}
+.tourMsg .arrow { z-index: 99 }
+
+.tourMsg.bottom .arrow,
+.tourMsg.top .arrow{ content: ""; background: url("data:image/svg+xml, %3Csvg fill='%23333333' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='m0.374993,23.999994l11.625007,-12.661404l11.625008,12.661404l-23.250015,0z'/%3E%3C/svg%3E") no-repeat; background-size: 12px; width: 12px; height: 12px; position: absolute }
+
+.tourMsg.right .arrow,
+.tourMsg.left .arrow{ content: ""; background: url("data:image/svg+xml, %3Csvg fill='%23333333' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='m11.839502,11.9375l12.187369,11.812374l0,-23.499875l-12.187369,11.687501z'/%3E%3C/svg%3E") no-repeat; background-size: 12px; width: 12px; height: 12px; position: absolute }
+
+.tourMsg.bottom { top: 6px }
+.tourMsg.bottom .arrow,
+.tourMsg.top .arrow { left: calc(50% - 6px) }
+.tourMsg.bottom .arrow{ top: -11px }
+.tourMsg.top .arrow,
+.tourMsg.left .arrow { transform: rotate(180deg) }
+.tourMsg.left .arrow,
+.tourMsg.right .arrow { bottom: calc(50% - 6px) }
+.tourMsg.top .arrow { bottom: -11px }
+.tourMsg.left .arrow  { right: -11px }
+.tourMsg.right .arrow  { left: -11px }

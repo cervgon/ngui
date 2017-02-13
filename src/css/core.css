@@ -41,11 +41,11 @@ button,
 .btn,
 a.btn,
 input[type="submit"],
-input[type="button"] { background-color: #f2f2f2; border: 1px solid #aaa; color: #444; cursor: pointer; display: inline-block; padding: .55em .75em; letter-spacing: 0.01em; -webkit-border-radius: .3em; -moz-border-radius: .3em; border-radius: .3em; margin: 0; font-weight: 600; text-align: center }
+input[type="button"] { background-color: #f2f2f2; border: 1px solid #aaa; color: #444; cursor: pointer; display: inline-block; padding: .572em .75em; letter-spacing: 0.01em; -webkit-border-radius: .3em; -moz-border-radius: .3em; border-radius: .3em; margin: 0; font-weight: 600; text-align: center }
 input,
 button,
 .btn,
-textarea { font-size: 0.85em }
+textarea { font-size: 0.875em }
 a.btn { vertical-align: bottom }
 button.matchparent,
 .btn.matchparent,
@@ -148,7 +148,7 @@ input[type="email"],
 input[type="search"],
 input.search,
 select,
-textarea { background-color: #f9f9f9; border: 1px solid #ccc; color: #666; display: inline-block; padding: 0.55em 0.75em; margin: 0; max-width: 100%; font-weight: 600; border-radius: 0; vertical-align: bottom; opacity: 0.9; -webkit-opacity: 1; -moz-opacity: 1 }
+textarea { background-color: #f9f9f9; border: 1px solid #ccc; color: #666; display: inline-block; padding: .572em .75em; margin: 0; max-width: 100%; font-weight: 600; border-radius: 0; opacity: 0.9; -webkit-opacity: 1; -moz-opacity: 1 }
 input[type="text"],
 input[type="file"],
 input[type="password"],
@@ -169,7 +169,7 @@ input[type="file"].file { width: 0.1px; height: 0.1px; opacity: 0; overflow: hid
 [type="checkbox"]:not(:checked),
 [type="checkbox"]:checked { }
 input[type="search"],
-input.search { background-image: url("data:image/svg+xml;charset=UTF-8, %3Csvg fill='%23999999' height='20' viewBox='0 0 24 24' width='32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z'/%3E%3Cpath d='M0 0h24v24H0z' fill='none'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: center right; padding-right: 2.3em }
+input.search { background-image: url("data:image/svg+xml;charset=UTF-8, %3Csvg fill='%23999999' height='20' viewBox='0 0 24 24' width='32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z'/%3E%3Cpath d='M0 0h24v24H0z' fill='none'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: center right; background-size: 2em; padding-right: 2.3em }
 input[type="search"].animated,
 input.search.animated { border-color: transparent; background-color: transparent; background-position: center; width: 0; -moz-transition: width 0.4s, background-color 0.4s, border-color 0.4s, -moz-transform 0.4s; -webkit-transition: width 0.4s, background-color 0.4s, border-color 0.4s, -webkit-transform 0.4s; transition: width 0.4s, background-color 0.4s, border-color 0.4s, transform 0.4s }
 input[type="search"].animated::-ms-input-placeholder,
@@ -199,7 +199,8 @@ noscript { }
 ol { }
 pre { }
 section { }
-select { max-width: 100%; background: url("data:image/svg+xml;charset=UTF-8, %3Csvg fill='%23999999' height='24' viewBox='0 0 24 24' width='32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z'/%3E%3Cpath d='M0-.75h24v24H0z' fill='none'/%3E%3C/svg%3E") #f2f2f2 no-repeat center right; border: 1px solid #aaa; margin: 0; font-size: 0.85em }
+select, .arrowDown { background-image: url("data:image/svg+xml;charset=UTF-8, %3Csvg fill='%23999999' height='24' viewBox='0 -2 24 24' width='32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z'/%3E%3Cpath d='M0-.75h24v24H0z' fill='none'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: center right }
+select { max-width: 100%; margin: 0; font-size: .875em; background-size: 2em; padding: .572em 2em .572em .75em }
 small { font-size: 80% }
 span { font-weight: 400 }
 strong { font-weight: 700 }
@@ -260,17 +261,73 @@ video { }
 
 @-moz-keyframes fadeOutBottom {
 	0% { -moz-transform: translateY(0%); -moz-opacity: 1 }
-    100% { -moz-transform: translateY(150%); -moz-opacity: 0 }
+    100% { -moz-transform: translateY(50px); -moz-opacity: 0 }
 }
 @-webkit-keyframes fadeOutBottom {
     0% { -webkit-transform: translateY(0%); -webkit-opacity: 1 }
-    100% { -webkit-transform: translateY(150%); -webkit-opacity: 0 }
+    100% { -webkit-transform: translateY(50px); -webkit-opacity: 0 }
 }
 @keyframes fadeOutBottom {
     0% { transform: translateY(0%); opacity: 1 }
-    100% { transform: translateY(150%); opacity: 0 }
+    100% { transform: translateY(50px); opacity: 0 }
 }
 .fadeOutBottom { -moz-opacity: 1; -webkit-opacity: 1; opacity: 1; -moz-animation-name: fadeOutBottom; -moz-animation-iteration-count: 1; -moz-animation-timing-function: ease-out; -moz-animation-duration: 0.5s; -moz-animation-fill-mode: forwards; -webkit-animation-name: fadeOutBottom; -webkit-animation-iteration-count: 1; -webkit-animation-timing-function: ease-out; -webkit-animation-duration: 0.5s; -webkit-animation-fill-mode: forwards; animation-name: fadeOutBottom; animation-iteration-count: 1; animation-timing-function: ease-out; animation-duration: 0.5s; animation-fill-mode: forwards }
+
+@-moz-keyframes fadeOutTop {
+	0% { -moz-transform: translateY(0%); -moz-opacity: 1 }
+    100% { -moz-transform: translateY(-50px); -moz-opacity: 0 }
+}
+@-webkit-keyframes fadeOutTop {
+    0% { -webkit-transform: translateY(0%); -webkit-opacity: 1 }
+    100% { -webkit-transform: translateY(-50px); -webkit-opacity: 0 }
+}
+@keyframes fadeOutTop {
+    0% { transform: translateY(0%); opacity: 1 }
+    100% { transform: translateY(-50px); opacity: 0 }
+}
+.fadeOutTop { -moz-opacity: 1; -webkit-opacity: 1; opacity: 1; -moz-animation-name: fadeOutTop; -moz-animation-iteration-count: 1; -moz-animation-timing-function: ease-out; -moz-animation-duration: 0.5s; -moz-animation-fill-mode: forwards; -webkit-animation-name: fadeOutTop; -webkit-animation-iteration-count: 1; -webkit-animation-timing-function: ease-out; -webkit-animation-duration: 0.5s; -webkit-animation-fill-mode: forwards; animation-name: fadeOutTop; animation-iteration-count: 1; animation-timing-function: ease-out; animation-duration: 0.5s; animation-fill-mode: forwards }
+
+@-moz-keyframes fadeOutLeft {
+	0% { -moz-transform: translateX(0%); -moz-opacity: 1 }
+    100% { -moz-transform: translateX(-50px); -moz-opacity: 0 }
+}
+@-webkit-keyframes fadeOutLeft {
+    0% { -webkit-transform: translateX(0%); -webkit-opacity: 1 }
+    100% { -webkit-transform: translateX(-50px); -webkit-opacity: 0 }
+}
+@keyframes fadeOutLeft {
+    0% { transform: translateX(0%); opacity: 1 }
+    100% { transform: translateX(-50px); opacity: 0 }
+}
+.fadeOutLeft { -moz-opacity: 1; -webkit-opacity: 1; opacity: 1; -moz-animation-name: fadeOutLeft; -moz-animation-iteration-count: 1; -moz-animation-timing-function: ease-out; -moz-animation-duration: 0.5s; -moz-animation-fill-mode: forwards; -webkit-animation-name: fadeOutLeft; -webkit-animation-iteration-count: 1; -webkit-animation-timing-function: ease-out; -webkit-animation-duration: 0.5s; -webkit-animation-fill-mode: forwards; animation-name: fadeOutLeft; animation-iteration-count: 1; animation-timing-function: ease-out; animation-duration: 0.5s; animation-fill-mode: forwards }
+
+@-moz-keyframes fadeOutRight {
+	0% { -moz-transform: translateX(0%); -moz-opacity: 1 }
+    100% { -moz-transform: translateX(50px); -moz-opacity: 0 }
+}
+@-webkit-keyframes fadeOutRight {
+    0% { -webkit-transform: translateX(0%); -webkit-opacity: 1 }
+    100% { -webkit-transform: translateX(50px); -webkit-opacity: 0 }
+}
+@keyframes fadeOutRight {
+    0% { transform: translateX(0%); opacity: 1 }
+    100% { transform: translateX(50px); opacity: 0 }
+}
+.fadeOutRight { -moz-opacity: 1; -webkit-opacity: 1; opacity: 1; -moz-animation-name: fadeOutRight; -moz-animation-iteration-count: 1; -moz-animation-timing-function: ease-out; -moz-animation-duration: 0.5s; -moz-animation-fill-mode: forwards; -webkit-animation-name: fadeOutRight; -webkit-animation-iteration-count: 1; -webkit-animation-timing-function: ease-out; -webkit-animation-duration: 0.5s; -webkit-animation-fill-mode: forwards; animation-name: fadeOutRight; animation-iteration-count: 1; animation-timing-function: ease-out; animation-duration: 0.5s; animation-fill-mode: forwards }
+
+@-moz-keyframes fadeOut {
+	0% { -moz-opacity: 1 }
+    100% { -moz-opacity: 0 }
+}
+@-webkit-keyframes fadeOut {
+    0% { -webkit-opacity: 1 }
+    100% { -webkit-opacity: 0 }
+}
+@keyframes fadeOut {
+    0% { opacity: 1 }
+    100% { opacity: 0 }
+}
+.fadeOut { -moz-opacity: 1; -webkit-opacity: 1; opacity: 1; -moz-animation-name: fadeOut; -moz-animation-iteration-count: 1; -moz-animation-timing-function: ease-out; -moz-animation-duration: 0.5s; -moz-animation-fill-mode: forwards; -webkit-animation-name: fadeOut; -webkit-animation-iteration-count: 1; -webkit-animation-timing-function: ease-out; -webkit-animation-duration: 0.5s; -webkit-animation-fill-mode: forwards; animation-name: fadeOut; animation-iteration-count: 1; animation-timing-function: ease-out; animation-duration: 0.5s; animation-fill-mode: forwards }
 
 /* Position */
 .relative { position: relative }

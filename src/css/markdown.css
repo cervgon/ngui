@@ -1,5 +1,5 @@
 /* Markdown doc style */
-pre { padding: 12px 16px; overflow: auto; line-height: 1.45; background-color: #f7f7f7; border-radius: 3px; font: 0.85em Consolas, "Liberation Mono", Menlo, Courier, monospace }
+pre { padding: 12px 16px; overflow: auto; line-height: 1.45; background-color: #f7f7f7; border-radius: 3px; font: 0.875em Consolas, "Liberation Mono", Menlo, Courier, monospace }
 .pl-ent { color: #63a35c }
 .pl-e,
 .pl-en { color: #795da3 }

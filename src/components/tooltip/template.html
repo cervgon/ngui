@@ -1,3 +1,4 @@
-<div class="tourMsg">
+<div ng-if="$ctrl.showTooltip" class="tourMsg" ng-class="$ctrl.positionClass" style="top:{{$ctrl.top}}; right:{{$ctrl.right}}; bottom:{{$ctrl.bottom}}; left:{{$ctrl.left}}">
     {{$ctrl.nguiMessage}}
+    <div class="arrow"></div>
 </div>
