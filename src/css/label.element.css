@@ -1,5 +1,5 @@
 /* Labels */
-label { margin-bottom: 0.5em; font-size: 1em; font-weight: 600; display: block }
+label { font-size: 1em; font-weight: 600; display: block; margin-bottom: 0.5em }
 label .material-icons { vertical-align: middle }
 .label { background-color: #eee; border: 1px solid #ccc; border-radius: 0.2em; color: #666; display: inline; font-size: 60%; font-weight: 700; margin: 0; padding: 0.25em 0.5em 0.2em; white-space: nowrap; -webkit-border-radius: 0.2em; -moz-border-radius: 0.2em; text-rendering: geometricPrecision; text-transform: uppercase; letter-spacing: 0.04em; text-shadow: none !important; margin: 0 0.25em }
 .label.redLabel,

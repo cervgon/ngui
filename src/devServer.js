@@ -15,7 +15,7 @@ App.component('app', {
         nguiLoader.show("Loading...");
         $timeout(function(){
             nguiLoader.hide();
-        }, 1000);
+        }, 1400);
 
         $ctrl.parseDate = function(d) {
             var str = d.getMonth() + "/" + d.getDate() + "/" + d.getFullYear();
