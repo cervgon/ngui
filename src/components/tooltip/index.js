@@ -63,7 +63,7 @@ export default main.component('tooltip', {
                     $ctrl.top = (prevSibH - tooltipH) / 2 + 'px';
                     $ctrl.right = 'auto';
                     $ctrl.bottom = 'auto;'
-                    $ctrl.left = '3.5px';
+                    $ctrl.left = '8px';
                     $ctrl.fadeOutClass = 'Right';
                     show();
                 }

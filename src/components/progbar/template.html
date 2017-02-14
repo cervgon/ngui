@@ -1,6 +1,5 @@
 <div class="progress" ng-class="{'labeled':$ctrl.label}">
-  <div class="progressBar" role="progressbar" aria-valuenow="{{$ctrl.nguiBarValue}}"
-  aria-valuemin="0" aria-valuemax="100" ng-style="{'width': $ctrl.nguiBarValue + '%'}"
+  <div class="progressBar" ng-style="{'width': $ctrl.nguiBarValue + '%'}"
   ng-class="$ctrl.nguiColorClass">
     <span ng-if="$ctrl.label">
         <em ng-show="$ctrl.nguiBarValue > 9">{{$ctrl.nguiBarValue}}%</em>
