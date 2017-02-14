@@ -52,9 +52,17 @@ main.component('listItem', {
         }
 
         $ctrl.onDelete = function() {
-            $ctrl.expanded = false;
-            console.log("now delete");
-            $ctrl.nguiOndelete();
+            if($ctrl.expanded) {
+                $ctrl.expandedDiv = false;
+                $timeout (function(){
+                    $ctrl.expanded = false;
+                    console.log("now delete");
+                    $ctrl.nguiOndelete();
+                }, 500);
+            } else {
+                console.log("now delete");
+                $ctrl.nguiOndelete();
+            }
         }
     }
 });

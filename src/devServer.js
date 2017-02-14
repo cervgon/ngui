@@ -8,9 +8,15 @@ const App = angular.module('app', ["ngui"]);
 
 App.component('app', {
     template: Template,
-    controller: function($interval) {
+    controller: function($scope, $rootScope, $interval, $timeout, nguiLoader) {
         var $ctrl = this;
         console.log("App controller");
+
+        nguiLoader.show("Loading...");
+        $timeout(function(){
+            nguiLoader.hide();
+        }, 1000);
+
         $ctrl.parseDate = function(d) {
             var str = d.getMonth() + "/" + d.getDate() + "/" + d.getFullYear();
             return str;
@@ -22,15 +28,20 @@ App.component('app', {
             $ctrl.quantity += 10;
         }, 300);
 
-        $ctrl.loading = 'loading..';
         $ctrl.names = ["John", "Doe", "Foo", "Bar"];
 
         for (var i = 0; i < 200; i++) {
-            $ctrl.names.push("A"+i);
+            $ctrl.names.push("A" + i);
         }
 
-        $ctrl.ondelete = function() {
+        $ctrl.ondelete = function(i) {
             console.log("bla");
+            $ctrl.users.splice(i, 1);
+            nguiLoader.show("Deleting element");
+
+            $timeout(function () {
+                nguiLoader.hide();
+            }, 2000);
         }
 
         $ctrl.someDate = new Date();
