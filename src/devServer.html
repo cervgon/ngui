@@ -1,8 +1,6 @@
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <div style="max-width: 1000px; position: relative; margin: 0 auto 0;" class="p0-1">
+    <loader class="xm"></loader>
     <h1>App</h1>
-    <loader ngui-label="$ctrl.loading" class="xm"></loader>
     <hr class="transparent big">
     <div class="">
         <dropdown ngui-options="$ctrl.names" ngui-placeholder="Name" ngui-bordered style="width:8em" ng-class="{wrong: everythingisawesome}"></dropdown>
@@ -59,7 +57,7 @@
     <hr class="transparent big">
 
     <list>
-        <list-item ng-repeat="user in $ctrl.users" ngui-ondelete="$ctrl.ondelete()">
+        <list-item ng-repeat="user in $ctrl.users" ngui-ondelete="$ctrl.ondelete($index)">
             <list-item-fold>
                 <div class="g1-4 p0-05">
                     Name: {{user.name}}

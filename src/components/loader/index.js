@@ -2,16 +2,38 @@ import main from '../../main.js';
 import Template from './template.html';
 import Styles from './styles.css';
 
+main.service('nguiLoader', function($rootScope, $timeout) {
+    this.show = function(msg) {
+        $timeout(function() {
+            $rootScope.$broadcast('nguiLoader', {
+                show: true,
+                label: msg
+            });
+        });
+
+    };
+
+    this.hide = function() {
+        $timeout(function() {
+            $rootScope.$broadcast('nguiLoader', {
+                show: false
+            });
+        });
+    };
+});
+
 export default main.component('loader', {
     template: Template,
-    bindings: {
-        nguiLabel: '='
-    },
-    controller: function($timeout) {
+    controller: function($scope, $timeout) {
         var $ctrl = this;
-        $ctrl.show = true;
-        $timeout(function () {
-            $ctrl.show = false;
-        }, 1600);
+        $ctrl.show = false;
+
+        $scope.$on('nguiLoader', function(event, data) {
+            $timeout(function() {
+                console.log("nguiLoader", data);
+                $ctrl.show = data.show || false;
+                $ctrl.nguiLabel = data.label || "";
+            });
+        });
     }
 });
