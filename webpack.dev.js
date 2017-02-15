@@ -35,5 +35,9 @@ module.exports = {
             }
         ]
     },
-    devtool: 'inline-source-map'
+    devtool: 'inline-source-map',
+    devServer: {
+        // inline: true,
+        host: "0.0.0.0"
+    }
 };

@@ -82,4 +82,6 @@ textarea { overflow: auto }
 [type=search]::-webkit-search-decoration { -webkit-appearance: none }
 ::-webkit-input-placeholder { color: inherit; opacity: .54 }
 ::-webkit-file-upload-button { -webkit-appearance: button; font: inherit }
+select::-ms-expand { display: none }
+::-ms-clear { display: none }
 /* */

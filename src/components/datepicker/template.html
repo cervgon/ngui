@@ -10,9 +10,9 @@
     </div>
     <div class="datepicker-picker" ng-show="$ctrl.show_calendar">
         <div class="datepicker-selector">
-            <button type="button" ng-click="$ctrl.change_month(-1)" style="float:left;"> « </button>
+            <button type="button" class="prev" ng-click="$ctrl.change_month(-1)" style="float:left;"></button>
             <span>{{$ctrl.get_calendar_date()}}</span>
-            <button type="button" ng-click="$ctrl.change_month(1)" style="float:right;"> » </button>
+            <button type="button"  class="next" ng-click="$ctrl.change_month(1)" style="float:right;"></button>
         </div>
 
         <div class="datepicker-calendar">

@@ -1,6 +1,5 @@
 /* List */
 list { color: #333 }
-list label { font-weight: 400 }
 list list-item {}
 list list-item .list-item { position: relative; }
 list list-item:nth-child(even) .list-item{ background-color: #fcfcfc}
@@ -28,26 +27,26 @@ list list-item .list-item span.delete {
     right: 2.5em;
     width: 2em;
     height: 2.35em;
-    background: url("data:image/svg+xml;charset=UTF-8, %3Csvg fill='%23A02222' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'%3E' %3Cpath d='M0 0h24v24H0z' fill='none'/%3E' %3Cpath d='M14.59 8L12 10.59 9.41 8 8 9.41 10.59 12 8 14.59 9.41 16 12 13.41 14.59 16 16 14.59 13.41 12 16 9.41 14.59 8zM12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z'/%3E'%3C/svg%3E") no-repeat center;
+    background: url("data:image/svg+xml;charset=UTF-8, %3Csvg fill='%23333333' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'%3E' %3Cpath d='M0 0h24v24H0z' fill='none'/%3E' %3Cpath d='M14.59 8L12 10.59 9.41 8 8 9.41 10.59 12 8 14.59 9.41 16 12 13.41 14.59 16 16 14.59 13.41 12 16 9.41 14.59 8zM12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z'/%3E'%3C/svg%3E") no-repeat center;
     background-size: 1.25em;
     transition: all 0.5s cubic-bezier(.36,-0.64,.34,1.76);
     -ms-transform: rotate(0deg);
     -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
     opacity: 0.5;
-    -webkit-filter: grayscale(100%);
-    filter: grayscale(100%)
 }
 list list-item .list-item span.delete:hover,
 list list-item .list-item span.toggle:hover { opacity: 1 }
 
 list list-item .list-item span.delete:hover {
-    -webkit-filter: none;
-    filter: none
+    background: url("data:image/svg+xml;charset=UTF-8, %3Csvg fill='%23A02222' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'%3E' %3Cpath d='M0 0h24v24H0z' fill='none'/%3E' %3Cpath d='M14.59 8L12 10.59 9.41 8 8 9.41 10.59 12 8 14.59 9.41 16 12 13.41 14.59 16 16 14.59 13.41 12 16 9.41 14.59 8zM12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z'/%3E'%3C/svg%3E") no-repeat center;
+    background-size: 1.25em;
+    width: 2em;
+    height: 2.35em;
 }
 
 list list-item .list-item list-item-fold { width: 100% }
-list list-item .list-item list-item-fold .list-item-fold { width: 100%; padding: .55em 5em 0.55em 0; border-bottom: .1em solid #ddd; transition: border-bottom-color 0.1s ease-out; }
+list list-item .list-item list-item-fold .list-item-fold { width: 100%; padding: .55em 5em 0.55em 0; border-bottom: 1px solid #ddd; transition: border-bottom-color 0.1s ease-out; }
 list list-item .list-item.open list-item-fold .list-item-fold { border-bottom-color: transparent }
 
 list list-item .list-item list-item-expand { }
@@ -61,11 +60,14 @@ list list-item .list-item list-item-expand .list-item-expand {
     border-bottom-color: transparent
 }
 list list-item .list-item.open list-item-expand .list-item-expand {
-    max-height: 80em;
-    border-bottom: .1em solid #ddd
+    max-height: 200em;
+    border-bottom: 1px solid #ddd
 }
 list list-item .list-item list-item-expand .list-item-expand ng-transclude {
     padding: 0.65em 5em .5em 0;
     display: inline-block;
     width: 100%
+}
+list list-item .list-item list-item-expand .list-item-expand ng-transclude label{
+    margin-bottom: initial;
 }
