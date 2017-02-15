@@ -7,7 +7,7 @@ https: //github.com/cervgon/ngui/blob/master/LICENSE
 
 
 /* Import Source Sans Pro */
-@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,300,600,700,900'");
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,300,600,700'");
 
 /* Tags */
 html { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box }
@@ -41,7 +41,7 @@ button,
 .btn,
 a.btn,
 input[type="submit"],
-input[type="button"] { background-color: #f2f2f2; border: 1px solid #aaa; color: #444; cursor: pointer; display: inline-block; padding: .572em .75em; letter-spacing: 0.01em; -webkit-border-radius: .3em; -moz-border-radius: .3em; border-radius: .3em; margin: 0; font-weight: 600; text-align: center }
+input[type="button"] { background-color: #f9f9f9; border: 1px solid #aaa; color: #444; cursor: pointer; display: inline-block; padding: .572em .75em; letter-spacing: 0.01em; -webkit-border-radius: .3em; -moz-border-radius: .3em; border-radius: .3em; margin: 0; font-weight: 600; text-align: center }
 input,
 button,
 .btn,
@@ -86,14 +86,14 @@ label [type=checkbox],
 label [type=radio] { visibility: hidden; width: 1em; height: 1em }
 label [type=checkbox]::after,
 label [type=radio]::after { visibility:visible; display: inherit; position: relative }
-label input[type=checkbox]::after { content: ""; background: url("data:image/svg+xml, %3Csvg fill='%23333333' height='24' viewBox='0 -0.5 24 24' width='24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z'/%3E%3C/svg%3E") no-repeat center; background-size: 1em 1em; width: 1em; height: 1em; }
-label input[type=checkbox]:disabled::after { background-image: url("data:image/svg+xml, %3Csvg fill='%23999999' height='24' viewBox='0 -0.5 24 24' width='24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z'/%3E%3C/svg%3E") }
+label input[type=checkbox]::after { content: ""; background: url("data:image/svg+xml, %3Csvg fill='%23333333' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z'/%3E%3C/svg%3E") no-repeat center; background-size: 1em 1em; width: 1em; height: 1em; }
+label input[type=checkbox]:disabled::after { background-image: url("data:image/svg+xml, %3Csvg fill='%23999999' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z'/%3E%3C/svg%3E") }
 label input[type=checkbox]:checked::after,
-label input[type=checkbox]:checked:disabled { background-image: url("data:image/svg+xml, %3Csvg fill='%23333333' height='24' viewBox='0 -0.5 24 24' width='24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z'/%3E%3C/svg%3E") }
+label input[type=checkbox]:checked:disabled { background-image: url("data:image/svg+xml, %3Csvg fill='%23333333' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z'/%3E%3C/svg%3E") }
 label input[type=checkbox]:checked:disabled::after { opacity: 0.5 }
 label input[type=radio]::after,
-label input[type=radio]:disabled::after { content: ""; background: url("data:image/svg+xml, %3Csvg fill='%23333333' height='24' viewBox='0 -2 24 24' width='24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z'/%3E%3C/svg%3E") no-repeat center; background-size: 1em 1em; width: 1em; height: 1em }
-label input[type=radio]:checked::after { background-image: url("data:image/svg+xml, %3Csvg fill='%23333333' height='24' viewBox='0 -2 24 24' width='24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zm0-5C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z'/%3E%3C/svg%3E") }
+label input[type=radio]:disabled::after { content: ""; background: url("data:image/svg+xml, %3Csvg fill='%23333333' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z'/%3E%3C/svg%3E") no-repeat center; background-size: 1em 1em; width: 1em; height: 1em }
+label input[type=radio]:checked::after { background-image: url("data:image/svg+xml, %3Csvg fill='%23333333' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zm0-5C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z'/%3E%3C/svg%3E") }
 label input[type=radio]:disabled::after { opacity: 0.5}
 button i.material-icons { vertical-align: middle;margin: 0 }
 button i.material-icons,
@@ -143,7 +143,7 @@ input[type="email"],
 input[type="search"],
 input.search,
 select,
-textarea { background-color: #f9f9f9; border: 1px solid #ccc; color: #666; display: inline-block; padding: .572em .75em; margin: 0; max-width: 100%; font-weight: 600; border-radius: 0; opacity: 0.9; -webkit-opacity: 1; -moz-opacity: 1 }
+textarea { background-color: #f9f9f9; border: 1px solid #aaa; color: #666; display: inline-block; padding: .572em .75em; margin: 0; max-width: 100%; font-weight: 600; border-radius: 0; opacity: 0.9; -webkit-opacity: 1; -moz-opacity: 1 }
 input[type="text"],
 input[type="file"],
 input[type="password"],

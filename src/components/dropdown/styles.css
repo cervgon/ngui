@@ -15,7 +15,7 @@ dropdown { display: inline-block; vertical-align: bottom }
 .dropdown.open .list .inner { display: block }
 .floatRight.dropdown.open .list .inner,
 .floatRight .dropdown.open .list .inner { left: auto; right: 0 }
-.dropdown.bordered { border: 1px solid #ccc; display: block; background: url("data:image/svg+xml;charset=UTF-8, %3Csvg fill='%23999999' height='24' viewBox='0 -2 24 24' width='32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z'/%3E%3Cpath d='M0-.75h24v24H0z' fill='none'/%3E%3C/svg%3E") #f9f9f9 no-repeat center right;     background-size: 1.75em; }
+.dropdown.bordered { border: 1px solid #aaa; display: block; background: url("data:image/svg+xml;charset=UTF-8, %3Csvg fill='%23999999' height='24' viewBox='0 -2 24 24' width='32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z'/%3E%3Cpath d='M0-.75h24v24H0z' fill='none'/%3E%3C/svg%3E") #f9f9f9 no-repeat center right;     background-size: 1.75em; }
 .dropdown.bordered label { font-size: .875em; color: #666; padding: .572em .75em }
 .dropdown.bordered label::after { background: none }
 .dropdown.bordered.open { background-color: #f2f2f2; border-color: #aaa; color: #222; }

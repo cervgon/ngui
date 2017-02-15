@@ -2,7 +2,7 @@
 button.btnLight,
 .btn.btnLight,
 a.btn.btnLight,
-label.btn.btnLight { background-color: #f9f9f9; border: 1px solid #ccc; color: #555 }
+label.btn.btnLight { background-color: #fff; border: 1px solid #b2b2b2; color: #555 }
 button.btnGreen,
 .btn.btnGreen,
 a.btn.btnGreen,
@@ -36,7 +36,7 @@ button.btnLight.selected,
 a.btn.btnLight.selected,
 button.btnLight:active:focus,
 .btn.btnLight:active:focus,
-a.btn.btnLight:active:focus { background-color: #f2f2f2; border-color: #999; color: #222 }
+a.btn.btnLight:active:focus { background-color: #f4f4f4; border-color: #999; color: #222 }
 button.btnGreen:hover,
 .btn.btnGreen:hover,
 a.btn.btnGreen:hover,

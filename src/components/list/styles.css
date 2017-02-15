@@ -1,6 +1,5 @@
 /* List */
 list { color: #333 }
-list label { font-weight: 400 }
 list list-item {}
 list list-item .list-item { position: relative; }
 list list-item:nth-child(even) .list-item{ background-color: #fcfcfc}
@@ -61,11 +60,14 @@ list list-item .list-item list-item-expand .list-item-expand {
     border-bottom-color: transparent
 }
 list list-item .list-item.open list-item-expand .list-item-expand {
-    max-height: 80em;
+    max-height: 200em;
     border-bottom: .1em solid #ddd
 }
 list list-item .list-item list-item-expand .list-item-expand ng-transclude {
     padding: 0.65em 5em .5em 0;
     display: inline-block;
     width: 100%
+}
+list list-item .list-item list-item-expand .list-item-expand ng-transclude label{
+    margin-bottom: initial;
 }

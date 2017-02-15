@@ -1,7 +1,7 @@
 /* Labels */
-label { font-size: 1em; font-weight: 600; display: block; margin-bottom: 0.5em }
+label { font-size: 1em; display: block; margin-bottom: 0.5em }
 label .material-icons { vertical-align: middle }
-.label { background-color: #eee; border: 1px solid #ccc; border-radius: 0.2em; color: #666; display: inline; font-size: 60%; font-weight: 700; margin: 0; padding: 0.25em 0.5em 0.2em; white-space: nowrap; -webkit-border-radius: 0.2em; -moz-border-radius: 0.2em; text-rendering: geometricPrecision; text-transform: uppercase; letter-spacing: 0.04em; text-shadow: none !important; margin: 0 0.25em }
+.label { background-color: #eee; border: 1px solid #ccc; border-radius: 0.2em; color: #666; display: inline; font-size: 60%; font-weight: 700; margin: 0; padding: 0.25em 0.5em 0.2em; white-space: nowrap; -webkit-border-radius: 0.2em; -moz-border-radius: 0.2em; text-rendering: optimizeLegibility; text-transform: uppercase; letter-spacing: 0.04em; text-shadow: none !important; margin: 0 0.25em }
 .label.redLabel,
 .label.label-danger { background-color: #ff7373; color: #330d0d; border: 1px solid #d83636 }
 .label.salmonLabel { background-color: #ff895a; color: #3f1610; border: 1px solid #cc5936 }
@@ -18,7 +18,7 @@ label .material-icons { vertical-align: middle }
 .label.lavenderLabel { background-color: #9ea8f2; color: #0b163d; border: 1px solid #6771d8 }
 .label.violetLabel { background-color: #ba9ef2; color: #130933; border: 1px solid #8b56ef }
 .label.pinkLabel { background-color: #ed8ed9; color: #3d1035; border: 1px solid #d84cae }
-.label.blackLabel { background-color: #666; color: #fff; border: 1px solid #000; text-shadow: 0 0px 2px #000 !important }
+.label.blackLabel { background-color: #444; color: #fff; border: 1px solid #000; text-shadow: 0 0px 2px #000 !important }
 .label.grayLabel,
 .label.label-info,
 .label.label-default { background-color: #bfbfbf; color: #333333; border: 1px solid #8c8c8c }
