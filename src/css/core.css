@@ -41,7 +41,7 @@ button,
 .btn,
 a.btn,
 input[type="submit"],
-input[type="button"] { background-color: #f9f9f9; border: 1px solid #aaa; color: #444; cursor: pointer; display: inline-block; padding: .572em .75em; letter-spacing: 0.01em; -webkit-border-radius: .3em; -moz-border-radius: .3em; border-radius: .3em; margin: 0; font-weight: 600; text-align: center }
+input[type="button"] { background-color: #f9f9f9; border: 1px solid #aaa; color: #444; cursor: pointer; display: inline-block; padding: .572em .75em; letter-spacing: 0.01em; -webkit-border-radius: .3em; -moz-border-radius: .3em; border-radius: .3em; margin: 0; font-weight: 400; text-align: center }
 input,
 button,
 .btn,
@@ -84,19 +84,6 @@ a.btn[disabled="disabled"],
 input[type="submit"][disabled="disabled"],
 input[type="button"][disabled="disabled"] { background-color: #ddd !important; border-color: #aaa !important; color: #999 !important; text-decoration: none !important; text-shadow: none !important;  cursor:not-allowed }
 input[type=file].file { width: .1px; height: .1px; opacity: 0; overflow: hidden; position: absolute; z-index: -1 }
-label [type=checkbox],
-label [type=radio] { visibility: hidden; width: 1em; height: 1em }
-label [type=checkbox]::after,
-label [type=radio]::after { visibility:visible; display: inherit; position: relative }
-label input[type=checkbox]::after { content: ""; background: url("data:image/svg+xml, %3Csvg fill='%23333333' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z'/%3E%3C/svg%3E") no-repeat center; background-size: 1em 1em; width: 1em; height: 1em; }
-label input[type=checkbox]:disabled::after { background-image: url("data:image/svg+xml, %3Csvg fill='%23999999' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z'/%3E%3C/svg%3E") }
-label input[type=checkbox]:checked::after,
-label input[type=checkbox]:checked:disabled { background-image: url("data:image/svg+xml, %3Csvg fill='%23333333' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z'/%3E%3C/svg%3E") }
-label input[type=checkbox]:checked:disabled::after { opacity: 0.5 }
-label input[type=radio]::after,
-label input[type=radio]:disabled::after { content: ""; background: url("data:image/svg+xml, %3Csvg fill='%23333333' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z'/%3E%3C/svg%3E") no-repeat center; background-size: 1em 1em; width: 1em; height: 1em }
-label input[type=radio]:checked::after { background-image: url("data:image/svg+xml, %3Csvg fill='%23333333' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zm0-5C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z'/%3E%3C/svg%3E") }
-label input[type=radio]:disabled::after { opacity: 0.5}
 button i.material-icons { vertical-align: middle;margin: 0 }
 button i.material-icons,
 a i.material-icons,
@@ -145,7 +132,7 @@ input[type="email"],
 input[type="search"],
 input.search,
 select,
-textarea { background-color: #f9f9f9; border: 1px solid #aaa; color: #666; display: inline-block; padding: .572em .75em; margin: 0; max-width: 100%; font-weight: 600; border-radius: 0; opacity: 0.9; -webkit-opacity: 1; -moz-opacity: 1 }
+textarea { background-color: #f9f9f9; border: 1px solid #aaa; color: #666; display: inline-block; padding: .572em .75em; margin: 0; max-width: 100%; font-weight: 400; border-radius: 0; opacity: 0.9; -webkit-opacity: 1; -moz-opacity: 1 }
 input[type="text"],
 input[type="file"],
 input[type="password"],
@@ -198,7 +185,7 @@ ol { }
 pre { }
 section { }
 select, .arrowDown { background-image: url("data:image/svg+xml;charset=UTF-8, %3Csvg fill='%23999999' height='24' viewBox='0 -2 24 24' width='32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z'/%3E%3Cpath d='M0-.75h24v24H0z' fill='none'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: center right }
-select { max-width: 100%; margin: 0; font-size: .875em; background-size: 2em; padding: .572em 2em .572em .75em }
+select { max-width: 100%; margin: 0; font-size: .875em; background-size: 2em; padding: .572em 2em .572em .75em; height: 2.55em; -moz-appearance:none}
 small { font-size: .875em }
 span { font-weight: 400 }
 strong { font-weight: 700 }
@@ -381,4 +368,20 @@ nav + .container { margin-top: 3em }
 /* 1169px */
 @media screen and (min-width: 73.0625em) {
   .container { max-width: 73.0625em }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) and (min-resolution:.001dpcm) {
+	label [type=checkbox],
+    label [type=radio] { visibility: hidden; width: 1em; height: 1em }
+    label [type=checkbox]::after,
+    label [type=radio]::after { visibility:visible; display: inherit; position: relative }
+    label input[type=checkbox]::after { content: ""; background: url("data:image/svg+xml, %3Csvg fill='%23333333' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z'/%3E%3C/svg%3E") no-repeat center; background-size: 1em 1em; width: 1em; height: 1em; }
+    label input[type=checkbox]:disabled::after { background-image: url("data:image/svg+xml, %3Csvg fill='%23999999' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z'/%3E%3C/svg%3E") }
+    label input[type=checkbox]:checked::after,
+    label input[type=checkbox]:checked:disabled { background-image: url("data:image/svg+xml, %3Csvg fill='%23333333' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z'/%3E%3C/svg%3E") }
+    label input[type=checkbox]:checked:disabled::after { opacity: 0.5 }
+    label input[type=radio]::after,
+    label input[type=radio]:disabled::after { content: ""; background: url("data:image/svg+xml, %3Csvg fill='%23333333' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z'/%3E%3C/svg%3E") no-repeat center; background-size: 1em 1em; width: 1em; height: 1em }
+    label input[type=radio]:checked::after { background-image: url("data:image/svg+xml, %3Csvg fill='%23333333' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zm0-5C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z'/%3E%3C/svg%3E") }
+    label input[type=radio]:disabled::after { opacity: 0.5}
 }

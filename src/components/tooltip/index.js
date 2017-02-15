@@ -43,7 +43,7 @@ export default main.component('tooltip', {
                 var bodyH = document.body.offsetHeight;
 
                 function show() {
-                    $ctrl.visibility = 'initial';
+                    $ctrl.visibility = 'visible';
                 }
 
                 function setLeft() {
