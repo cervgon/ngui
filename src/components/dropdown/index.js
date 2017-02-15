@@ -9,16 +9,19 @@ export default main.component('dropdown', {
         nguiPlaceholder: '@',
         nguiBordered: '@'
     },
-    controller: function() {
+    controller: function($timeout) {
         var $ctrl = this;
         $ctrl.onFocus = function() {
             $ctrl.opened = true;
         }
         $ctrl.onBlur = function() {
-            $ctrl.opened = false;
+            $timeout(function(){
+                $ctrl.opened = false;
+            },200);
         }
         $ctrl.changeOption = function(option){
             $ctrl.selectedOption = option;
+            console.log($ctrl.selectedOption);
             $ctrl.opened = false;
         }
         $ctrl.$onInit = function (){
