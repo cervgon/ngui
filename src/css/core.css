@@ -66,6 +66,8 @@ button:focus,
 button:active:focus,
 button.selected,
 .btn.selected,
+.btn:hover,
+.btn.selected,
 a.btn:hover,
 a.btn.selected,
 input[type="submit"]:hover,
@@ -197,7 +199,7 @@ pre { }
 section { }
 select, .arrowDown { background-image: url("data:image/svg+xml;charset=UTF-8, %3Csvg fill='%23999999' height='24' viewBox='0 -2 24 24' width='32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z'/%3E%3Cpath d='M0-.75h24v24H0z' fill='none'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: center right }
 select { max-width: 100%; margin: 0; font-size: .875em; background-size: 2em; padding: .572em 2em .572em .75em }
-small { font-size: 80% }
+small { font-size: .875em }
 span { font-weight: 400 }
 strong { font-weight: 700 }
 table { border-collapse: collapse; width: 100% }
@@ -333,11 +335,6 @@ video { }
 .right0 { right: 0 }
 .bottom0 { bottom: 0 }
 .left0 { left: 0 }
-
-/* Borders */
-.borderRed { border: 0.15em solid #F0A8A8 }
-.borderBlue { border: 0.15em solid #9ccbea }
-.borderGreen { border: 0.15em solid #BDDBC1 }
 
 /** Components **/
 
