@@ -1,6 +1,6 @@
 import angular from 'angular';
 import main from './main';
-import {loader, dropdown, list, pagination, tooltip} from "./components";
+import {loader, dropdown, hamburger, list, pagination, tooltip} from "./components";
 
 import Template from './devServer.html';
 
@@ -29,6 +29,8 @@ App.component('app', {
         }, 300);
 
         $ctrl.names = ["John", "Doe", "Foo", "Bar"];
+
+        $ctrl.menu = false;
 
         for (var i = 0; i < 200; i++) {
             $ctrl.names.push("A" + i);
