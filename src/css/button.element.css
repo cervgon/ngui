@@ -22,7 +22,7 @@ label.btn.btnBlueLight { background-color: #f9f9f9; border: 1px solid #8cbad9; c
 button.btnRed,
 .btn.btnRed,
 a.btn.btnRed,
-label.btn.btnRed { background-color: #f25757;border: 1px solid #b20000;color: #fff;text-shadow: 0 0.5px 2px rgba(0, 0, 0, .5) }
+label.btn.btnRed { background-color: #f25757; border: 1px solid #b20000; color: #fff; text-shadow: 0 0.5px 2px rgba(0, 0, 0, .5) }
 button.btnRedLight,
 .btn.btnRedLight,
 a.btn.btnRedLight,
@@ -76,15 +76,12 @@ a.btn.btnBlueLight:active:focus { background-color: #e8f6f9; border-color: #0056
 button.btnRed:hover,
 .btn.btnRed:hover,
 a.btn.btnRed:hover,
-button.btnRed:focus,
-.btn.btnRed:focus,
-a.btn.btnRed:focus,
 button.btnRed.selected,
 .btn.btnRed.selected,
 a.btn.btnRed.selected,
 button.btnRed:active:focus,
 .btn.btnRed:active:focus,
-a.btn.btnRed:active:focus { background-color: #b20000; border-color: #b20000; color: #fff }
+a.btn.btnRed:active:focus  { background-color: #b20000; border-color: #b20000; color: #fff }
 button.btnRedLight:hover,
 .btn.btnRedLight:hover,
 a.btn.btnRedLight:hover,
