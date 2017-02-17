@@ -11,6 +11,7 @@ main.component('list', {
     `,
     transclude : true,
     controller: function() {
+        "ngInject";
         var $ctrl = this;
     }
 });
@@ -31,6 +32,7 @@ main.component('listItem', {
     `,
     transclude : true,
     controller: function($timeout) {
+        "ngInject";
         var $ctrl = this;
 
         $ctrl.expanded = false;
@@ -79,6 +81,7 @@ main.component('listItemFold', {
     },
     transclude : true,
     controller: function() {
+        "ngInject";
         var $ctrl = this;
     }
 });
@@ -95,6 +98,7 @@ main.component('listItemExpand', {
     `,
     transclude : true,
     controller: function() {
+        "ngInject";
         var $ctrl = this;
     }
 });

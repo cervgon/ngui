@@ -3,6 +3,7 @@ import Template from './template.html';
 import Styles from './styles.css';
 
 main.service('nguiLoader', function($rootScope, $timeout) {
+    "ngInject";
     this.show = function(msg) {
         $timeout(function() {
             $rootScope.$broadcast('nguiLoader', {
@@ -25,6 +26,7 @@ main.service('nguiLoader', function($rootScope, $timeout) {
 export default main.component('loader', {
     template: Template,
     controller: function($scope, $timeout) {
+        "ngInject";
         var $ctrl = this;
         $ctrl.show = false;
 

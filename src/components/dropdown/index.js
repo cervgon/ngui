@@ -10,6 +10,7 @@ export default main.component('dropdown', {
         nguiBordered: '@'
     },
     controller: function($timeout) {
+        "ngInject";
         var $ctrl = this;
         $ctrl.onFocus = function() {
             $ctrl.opened = true;

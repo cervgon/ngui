@@ -19,6 +19,7 @@ export default main.component('pagination', {
         nguiItems: '='
     },
     controller: function() {
+        "ngInject";
         var $ctrl = this;
 
         $ctrl.currentPage = 0;

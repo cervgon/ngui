@@ -10,6 +10,7 @@ export default main.component('datepicker', {
         disabled: '@'
     },
     controller: function($scope, $timeout, $element, $document) {
+        "ngInject";
         var $ctrl = this;
         Date.isLeapYear = function(year) {
             return (((year % 4 === 0) && (year % 100 !== 0)) || (year % 400 === 0));

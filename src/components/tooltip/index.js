@@ -10,6 +10,7 @@ export default main.component('tooltip', {
         nguiTimeout: '<'
     },
     controller: function($element, $timeout) {
+        "ngInject";
         var $ctrl = this;
 
         $ctrl.$onInit = function() {

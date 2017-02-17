@@ -1,5 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
+const ngAnnotatePlugin = require('ng-annotate-webpack-plugin');
 
 console.log("PRODUCTION BUILD");
 
@@ -19,8 +20,8 @@ module.exports = {
         rules: [
             {
                 test: /\.js$/,
-                loader: "babel-loader",
-                exclude: [/node_modules/]
+                loader: "babel-loader"
+                // exclude: [/node_modules/] // If node_modules is excluded, postinstall script don't work
             }, {
                 test: /\.html$/,
                 use: 'raw-loader'
@@ -39,4 +40,5 @@ module.exports = {
         ]
     },
     devtool: 'source-map',
+    plugins: [new ngAnnotatePlugin({add: true})]
 };

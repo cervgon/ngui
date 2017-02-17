@@ -12,7 +12,7 @@
   "keywords": [],
   "author": "",
   "license": "MIT",
-  "devDependencies": {
+  "dependencies": {
     "angular": "^1.6.2",
     "babel-core": "^6.22.1",
     "babel-loader": "^6.2.10",
@@ -20,12 +20,15 @@
     "css-loader": "^0.26.1",
     "extract-text-webpack-plugin": "2.0.0-rc.3",
     "ignore-loader": "^0.1.2",
+    "ng-annotate-webpack-plugin": "^0.2.1-pre",
     "raw-loader": "^0.5.1",
     "style-loader": "^0.13.1",
-    "webpack": "^2.2.0",
+    "webpack": "^2.2.0"
+  },
+  "devDependencies": {
     "webpack-dev-server": "^2.2.0"
   },
   "peerDependencies": {
-    "angular": "^1.6.1"
+    "angular": "^1.6.2"
   }
 }

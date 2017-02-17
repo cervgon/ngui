@@ -7,7 +7,8 @@ export default main.component('hamburger', {
     bindings: {
         nguiOpen: '=',
     },
-    controller: function($timeout) {
+    controller: function() {
+        "ngInject";
         var $ctrl = this;
         $ctrl.toggle = function() {
             $ctrl.nguiOpen = !$ctrl.nguiOpen;

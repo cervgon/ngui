@@ -10,6 +10,7 @@ export default main.component('progbar', {
         nguiLabel: '@'
     },
     controller: function() {
+        "ngInject";
         var $ctrl = this;
         $ctrl.$onInit = function (){
             if($ctrl.nguiValue>100){$ctrl.nguiBarValue=100;}
