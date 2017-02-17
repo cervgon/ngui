@@ -31,5 +31,5 @@ module.exports = {
         ]
     },
     // devtool: 'source-map',
-    plugins: [new ExtractTextPlugin("styles.css")]
+    plugins: [new ExtractTextPlugin("ngui.css")]
 };
