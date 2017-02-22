@@ -25,6 +25,7 @@ span, a, li, b, strong, em, i, p, td, th, input { -webkit-font-smoothing: antial
 /* */
 body { font-family: "Source Sans Pro", "lucida grande", "Segoe UI", arial, verdana, "lucida sans unicode", tahoma, sans-serif; font-size: 16px }
 a { text-decoration: none; cursor: pointer; outline: none; -webkit-hyphens: auto; -moz-hyphens: auto; -ms-hyphens: auto; hyphens: auto; word-break: break-all }
+a,
 a:link,
 a:active,
 a:visited { color: #005e9d; outline: none; font-weight: 600 }
