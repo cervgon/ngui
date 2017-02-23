@@ -1,16 +1,15 @@
 datepicker {
     display: inline-block;
 }
-
 datepicker .datepicker-container {
     width: 100%;
     position: relative
 }
-
-datepicker .datepicker-container.disabled, datepicker .datepicker-container.disabled .datepicker-input, datepicker .datepicker-container.disabled .datepicker-fake-input input {
-    background-color: #ebebe4 !important;
+datepicker .datepicker-container.disabled,
+datepicker .datepicker-container.disabled .datepicker-input,
+datepicker .datepicker-container.disabled .datepicker-fake-input input {
+    color: #999;
 }
-
 datepicker .datepicker-input {
     width: 100%;
     background-color: #f9f9f9;
@@ -25,7 +24,6 @@ datepicker .datepicker-input {
     box-sizing: border-box;
     text-align: left;
 }
-
 datepicker .datepicker-fake-input input {
     width: 1.5em;
     border: 0;
@@ -36,20 +34,15 @@ datepicker .datepicker-fake-input input {
     background-color: transparent;
     padding: 0;
 }
-
-datepicker .datepicker-fake-input input::-webkit-outer-spin-button, datepicker .datepicker-fake-input input::-webkit-inner-spin-button {
+datepicker .datepicker-fake-input input::-webkit-outer-spin-button,
+datepicker .datepicker-fake-input input::-webkit-inner-spin-button {
     display: none;
     -webkit-appearance: none;
     margin: 0;
 }
-
 datepicker .datepicker-fake-input input[type=number] {
-    -moz-appearance:textfield;
+    -moz-appearance: textfield;
 }
-
-datepicker .datepicker-icon {
-}
-
 datepicker .datepicker-icon-arrow {
     position: absolute;
     top: 0;
@@ -60,7 +53,6 @@ datepicker .datepicker-icon-arrow {
     height: 100%;
     width: 2em;
 }
-
 datepicker .datepicker-icon-clear {
     display: none;
     position: absolute;
@@ -72,15 +64,12 @@ datepicker .datepicker-icon-clear {
     height: 100%;
     width: 2em;
 }
-
 datepicker .datepicker-icon-clear:hover {
     color: red;
 }
-
 datepicker:hover .datepicker-icon-clear {
     display: block;
 }
-
 datepicker .datepicker-picker {
     border: 1px solid #ccc;
     background-color: white;
@@ -97,8 +86,7 @@ datepicker .datepicker-picker {
     -ms-box-sizing: border-box;
     box-sizing: border-box;
 }
-
-datepicker .datepicker-picker *{
+datepicker .datepicker-picker * {
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -khtml-user-select: none;
@@ -107,7 +95,6 @@ datepicker .datepicker-picker *{
     user-select: none;
     outline: 0;
 }
-
 datepicker .datepicker-selector {
     display: inline-block;
     text-align: center;
@@ -116,14 +103,13 @@ datepicker .datepicker-selector {
     font-size: 13px;
     color: #666;
     letter-spacing: 0.01em;
-    padding:0 9px;
+    padding: 0 9px;
     -webkit-box-sizing: border-box;
     -khtml-box-sizing: border-box;
     -moz-box-sizing: border-box;
     -ms-box-sizing: border-box;
     box-sizing: border-box;
 }
-
 datepicker .datepicker-selector button {
     background-color: transparent;
     border: 0;
@@ -135,23 +121,32 @@ datepicker .datepicker-selector button {
     margin: 0;
     opacity: 0.5
 }
-datepicker .datepicker-selector button:hover { opacity: 1 }
-datepicker .datepicker-selector button.prev { background: url("data:image/svg+xml;charset=UTF-8, %3Csvg fill='%23333333' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'%3E' %3Cpath d='M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z'/%3E'%3C/svg%3E") no-repeat center }
-datepicker .datepicker-selector button.next { background: url("data:image/svg+xml;charset=UTF-8, %3Csvg fill='%23333333' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'%3E' %3Cpath d='M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z'/%3E'%3C/svg%3E") no-repeat center }
+datepicker .datepicker-selector button:hover {
+    opacity: 1
+}
+datepicker .datepicker-selector button.prev {
+    background: url("data:image/svg+xml;charset=UTF-8, %3Csvg fill='%23333333' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'%3E' %3Cpath d='M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z'/%3E'%3C/svg%3E") no-repeat center
+}
+datepicker .datepicker-selector button.next {
+    background: url("data:image/svg+xml;charset=UTF-8, %3Csvg fill='%23333333' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'%3E' %3Cpath d='M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z'/%3E'%3C/svg%3E") no-repeat center
+}
 datepicker .datepicker-selector button.prev,
-datepicker .datepicker-selector button.next { background-size: 1.5em; width: 2em; height: 2.25em }
+datepicker .datepicker-selector button.next {
+    background-size: 1.5em;
+    width: 2em;
+    height: 2.25em
+}
 datepicker .datepicker-selector span {
     padding: 5px 0;
     display: inline-block;
     font-weight: bold;
 }
-
 datepicker .datepicker-calendar {
     margin-top: 10px;
     display: inline-table;
     width: 100%
 }
-datepicker .datepicker-calendar *{
+datepicker .datepicker-calendar * {
     -webkit-box-sizing: border-box;
     -khtml-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -160,15 +155,14 @@ datepicker .datepicker-calendar *{
     width: auto;
     width: initial;
 }
-
-datepicker .datepicker-date {
+datepicker .datepicker-date,
+datepicker .disabled .datepicker-date:hover {
     background-color: transparent;
     cursor: pointer;
     font-size: 13px;
     color: #666;
-    font-weight: 200;
 }
-datepicker .datepicker-day{
+datepicker .datepicker-day {
     display: inline-block;
     width: 14.2%;
     line-height: 36px;
@@ -179,22 +173,22 @@ datepicker .datepicker-day{
 datepicker .datepicker-date:hover {
     background-color: #e8f6f9;
     color: #005e9d;
-    font-weight: 600;
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
     border-radius: 4px;
 }
-
 datepicker .datepicker-today {
     background-color: #eee;
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
     border-radius: 4px;
 }
-
-datepicker .datepicker-selected, datepicker .datepicker-selected:hover {
+datepicker .datepicker-selected,
+datepicker .datepicker-selected:hover,
+datepicker .disabled .datepicker-selected,
+datepicker .disabled .datepicker-selected:hover {
     background-color: #005e9d;
-    text-shadow: 0 1px 2px rgba(0,0,0,0.8);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
     color: #fff;
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
@@ -203,16 +197,14 @@ datepicker .datepicker-selected, datepicker .datepicker-selected:hover {
     letter-spacing: .08em;
     text-align: center;
 }
-
 datepicker .datepicker-weekday {
     font-weight: bold;
     font-size: 10px;
     color: #666;
     cursor: default;
 }
-
-@media only screen
-and (max-device-width : 1024px)
-and (-webkit-min-device-pixel-ratio: 1.1){
-    datepicker:hover .datepicker-icon-clear{display: block}
+@media only screen and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1.1) {
+    datepicker:hover .datepicker-icon-clear {
+        display: block
+    }
 }

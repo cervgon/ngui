@@ -154,7 +154,7 @@ export default main.component('datepicker', {
         }
 
         self.set_date = function(n) {
-            if (self.disabled)
+            if($ctrl.disabled !== undefined)
                 return;
 
             self.date = new Date(self.visible_date);
