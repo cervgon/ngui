@@ -1,7 +1,7 @@
 /* Labels */
 label { font-size: 1em; display: block; margin-bottom: 0.5em }
 label .material-icons { vertical-align: middle }
-.label { background-color: #eee; border: 1px solid #ccc; border-radius: 0.2em; color: #666; display: inline; font-size: 60%; font-weight: 700; margin: 0; padding: 0.25em 0.5em 0.2em; white-space: nowrap; -webkit-border-radius: 0.2em; -moz-border-radius: 0.2em; text-rendering: optimizeLegibility; text-transform: uppercase; letter-spacing: 0.04em; text-shadow: none !important; margin: 0 0.25em }
+.label { background-color: #eee; border: 1px solid #ccc; border-radius: 0.2em; color: #666; display: inline; font-size: 60%; font-weight: 700; padding: 0.25em 0.5em 0.2em; white-space: nowrap; -webkit-border-radius: 0.2em; -moz-border-radius: 0.2em; text-rendering: optimizeLegibility; text-transform: uppercase; letter-spacing: 0.04em; text-shadow: none !important; margin: 0 0.25em }
 .label.redLabel,
 .label.label-danger { background-color: #ff7373; color: #330d0d; border: 1px solid #d83636 }
 .label.salmonLabel { background-color: #ff895a; color: #3f1610; border: 1px solid #cc5936 }

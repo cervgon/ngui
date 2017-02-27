@@ -97,6 +97,38 @@ a.btn.btnRedLight:active:focus { background-color: #fff3f3; border-color: #b2000
 .btnGreen:active { color: #eee }
 .btnGreen:hover { color: #fff }
 
+button:focus,.btn:focus{outline: none; -webkit-box-shadow: 0 2px 4px -1px rgba(0,0,0,0.3); -moz-box-shadow: 0 2px 4px -1px rgba(0,0,0,0.3); box-shadow: 0 2px 4px -1px rgba(0,0,0,0.3)}
+
+button.btnLight:disabled,
+.btn.btnLight:disabled,
+a.btn.btnLight:disabled,
+label.btn.btnLight:disabled { background-color: #fff; border: 1px solid #b2b2b2; color: #a6a6a6 }
+button.btnGreen:disabled,
+.btn.btnGreen:disabled,
+a.btn.btnGreen:disabled,
+label.btn.btnGreen:disabled { background-color: #dbebde; border: 1px solid #7ea986; color: #7ea986; text-shadow: none }
+button.btnGreenLight:disabled,
+.btn.btnGreenLight:disabled,
+a.btn.btnGreenLight:disabled,
+label.btn.btnGreenLight:disabled { background-color: #f9f9f9; border: 1px solid #94d19f; color: #8bcb97; text-shadow: none }
+button.btnBlue:disabled,
+.btn.btnBlue:disabled,
+a.btn.btnBlue:disabled,
+label.btn.btnBlue:disabled { background-color: #dee7ed; border: 1px solid #859dad; color: #859cad; text-shadow: none }
+button.btnBlueLight:disabled,
+.btn.btnBlueLight:disabled,
+a.btn.btnBlueLight:disabled,
+label.btn.btnBlueLight:disabled { background-color: #f9f9f9; border: 1px solid #8cbad9; color: #8cbad9; text-shadow: none }
+button.btnRed:disabled,
+.btn.btnRed:disabled,
+a.btn.btnRed:disabled,
+label.btn.btnRed:disabled { background-color: #ebdbdb; border: 1px solid #a97e7e; color: #a97e7e; text-shadow: none }
+button.btnRedLight:disabled,
+.btn.btnRedLight:disabled,
+a.btn.btnRedLight:disabled,
+label.btn.btnRedLight:disabled { background-color: #f9f9f9; border: 1px solid #ebadad; color: #ebb1b1; text-shadow: none }
+
+
 .material-icons.btnBlue { color: #2691d9 }
 .material-icons.btnBlue:hover,
 .material-icons.btnBlue:active:focus { color: #005691 }

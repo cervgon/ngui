@@ -82,7 +82,7 @@ button[disabled="disabled"],
 .btn[disabled="disabled"],
 a.btn[disabled="disabled"],
 input[type="submit"][disabled="disabled"],
-input[type="button"][disabled="disabled"] { background-color: #ddd !important; border-color: #aaa !important; color: #999 !important; text-decoration: none !important; text-shadow: none !important;  cursor:not-allowed }
+input[type="button"][disabled="disabled"] { background-color: #f9f9f9; border-color: #aaa; color: #999; text-decoration: none; text-shadow: none;  cursor:not-allowed }
 input[type=file].file { width: .1px; height: .1px; opacity: 0; overflow: hidden; position: absolute; z-index: -1 }
 button i.material-icons { vertical-align: middle;margin: 0 }
 button i.material-icons,
@@ -150,11 +150,22 @@ input[type="file"]:focus,
 input[type="email"]:focus,
 select:focus,
 textarea:focus { color: #333; -webkit-box-shadow: none; -moz-box-shadow: none; box-shadow: none; outline: 0 none; border-color: #999 }
+input:disabled,
+input[type="text"]:disabled,
+input[type="number"]:disabled,
+input[type="file"]:disabled,
+input[type="email"]:disabled,
+input[type="search"]:disabled,
+input.search:disabled,
+select:disabled,
+textarea:disabled { cursor: not-allowed; color: #999 }
 input[type="file"].file { width: 0.1px; height: 0.1px; display: none; opacity: 0; overflow: hidden; position: absolute; z-index: -1 }
 [type="checkbox"]:not(:checked),
 [type="checkbox"]:checked { }
 input[type="search"],
 input.search { background-image: url("data:image/svg+xml;charset=UTF-8, %3Csvg fill='%23999999' height='20' viewBox='0 0 24 24' width='32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z'/%3E%3Cpath d='M0 0h24v24H0z' fill='none'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: center right; background-size: 2em; padding-right: 2.3em }
+input[type="search"]:disabled,
+input.search:disabled { cursor: not-allowed; background-image: url("data:image/svg+xml;charset=UTF-8, %3Csvg fill='%23cccccc' height='20' viewBox='0 0 24 24' width='32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z'/%3E%3Cpath d='M0 0h24v24H0z' fill='none'/%3E%3C/svg%3E"); background-size: 2em; }
 input[type="search"].animated,
 input.search.animated { border-color: transparent; background-color: transparent; background-size: 2.5em; background-position: center; width: 0; -moz-transition: width 0.4s, background-color 0.4s, background-size 0.4s, border-color 0.4s, -moz-transform 0.4s; -webkit-transition: width 0.4s, background-color 0.4s, background-size 0.4s, border-color 0.4s, -webkit-transform 0.4s; transition: width 0.4s, background-color 0.4s, background-size 0.4s, border-color 0.4s, transform 0.4s }
 input[type="search"].animated::-ms-input-placeholder,
@@ -186,6 +197,7 @@ pre { }
 section { }
 select, .arrowDown { background-image: url("data:image/svg+xml;charset=UTF-8, %3Csvg fill='%23999999' height='24' viewBox='0 -2 24 24' width='32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z'/%3E%3Cpath d='M0-.75h24v24H0z' fill='none'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: center right }
 select { max-width: 100%; margin: 0; font-size: .875em; background-size: 2em; padding: .572em 2em .572em .75em; height: 2.55em; -moz-appearance:none}
+select:disabled { color:#999; background-image: url("data:image/svg+xml;charset=UTF-8, %3Csvg fill='%23cccccc' height='24' viewBox='0 -2 24 24' width='32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z'/%3E%3Cpath d='M0-.75h24v24H0z' fill='none'/%3E%3C/svg%3E"); background-size: 2em }
 small { font-size: .875em }
 span { font-weight: 400 }
 strong { font-weight: 700 }

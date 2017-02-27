@@ -7,12 +7,15 @@ export default main.component('dropdown', {
     bindings: {
         nguiOptions: '=',
         nguiPlaceholder: '@',
-        nguiBordered: '@'
+        nguiBordered: '@',
+        disabled: '@'
     },
     controller: function($timeout) {
         "ngInject";
         var $ctrl = this;
         $ctrl.onFocus = function() {
+            if($ctrl.disabled)
+                return;
             $ctrl.opened = true;
         }
         $ctrl.onBlur = function() {
