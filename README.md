@@ -2,7 +2,7 @@
 CSS and Angularjs components framework for developing your projects.
 
 
-## Instrutions
+## Instructions
 
 ### NPM
 Add to your `package.json` file:
