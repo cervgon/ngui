@@ -161,7 +161,17 @@
     <h3 class="fw300">Dropdown</h3>
     <hr>
     <div class="p05-0">
-        <dropdown ngui-options="$ctrl.names" ngui-placeholder="Name" ngui-bordered style="width:8em" ng-class="{wrong: everythingisawesome}"></dropdown>
+        <dropdown
+            ngui-model="$ctrl.selectedName"
+            ngui-options="{
+                options: $ctrl.names,
+                placeholder: 'Some names',
+                bordered: true
+            }"
+            ng-class="{wrong: everythingisawesome}"
+            style="width:8em"></dropdown>
+
+        <!-- <dropdown ngui-model="$ctrl.selectedName" ngui-options="{{$ctrl.names}}" ngui-placeholder="Name" ngui-bordered ng-class="{wrong: everythingisawesome}" style="width:8em"></dropdown> -->
         <select style="width:8em">
         	<option value="volvo">Volvo</option>
         	<option value="saab">Saab</option>
@@ -190,7 +200,16 @@
     <hr>
     <div class="p05-0">
         <datepicker date="$ctrl.someDate" style="width:12em"></datepicker>
-        <dropdown ngui-options="$ctrl.names" ngui-placeholder="Name" ngui-bordered style="width:8em" ng-class="{wrong: everythingisawesome}"></dropdown>
+        <!-- <dropdown ngui-model="$ctrl.selectedName" ngui-options="{{$ctrl.names}}" ngui-placeholder="Name" ngui-bordered ng-class="{wrong: everythingisawesome}" style="width:8em"></dropdown> -->
+        <dropdown
+            ngui-model="$ctrl.selectedName"
+            ngui-options="{
+                options: $ctrl.names,
+                placeholder: 'Name',
+                bordered: true
+            }"
+            ng-class="{wrong: everythingisawesome}"
+            style="width:8em"></dropdown>
         <select style="width:8em">
         	<option value="volvo">Volvo</option>
         	<option value="saab">Saab</option>
@@ -290,7 +309,12 @@
         <div>
             <h4 class="fw300">Top, default</h4>
             <input type="text" value="hola" style="width:200px"/>
-            <tooltip ngui-message="Useful message" ngui-timeout="2"></tooltip>
+            <!-- <tooltip ngui-message="{ value: 'perro' }" ngui-timeout="2"></tooltip> -->
+            <!-- <tooltip ngui-model="$ctrl.lalala" ngui-options="{
+                timeout: $ctrl.testb,
+                message: 'holacomo'
+            }"></tooltip> -->
+
             <select style="width:100px">
             	<option value="volvo">Volvo</option>
             	<option value="saab">Saab</option>
@@ -307,7 +331,7 @@
             	<option value="mercedes">Mercedes</option>
             	<option value="audi">Audi</option>
             </select>
-            <tooltip ngui-message="Useful message das das" ngui-position="left" ngui-timeout="3"></tooltip>
+            <!-- <tooltip ngui-message="Useful message das das" ngui-position="left" ngui-timeout="3"></tooltip> -->
             <input type="text" value="hola" style="width:200px"/>
             <input type="text" value="hola" style="width:200px"/>
         </div>
@@ -315,14 +339,14 @@
         <div>
             <h4 class="fw300">Right</h4>
             <input type="text" value="hola" style="width:230px"/>
-            <tooltip ngui-message="Use fulmess aged das das das das d asd ad a" ngui-position="right" ngui-timeout="4"></tooltip>
+            <!-- <tooltip ngui-message="Use fulmess aged das das das das d asd ad a" ngui-position="right" ngui-timeout="4"></tooltip> -->
             <input type="text" value="hola" style="width:200px"/>
         </div>
         <hr class="transparent">
         <div>
             <h4 class="fw300">Bottom</h4>
             <input type="text" value="hola" style="width:200px" />
-            <tooltip ngui-message="Useful message dasdas dsadso" ngui-position="bottom" ngui-timeout="5"></tooltip>
+            <!-- <tooltip ngui-message="Useful message dasdas dsadso" ngui-position="bottom" ngui-timeout="5"></tooltip> -->
             <input type="text" value="hola" style="width:200px"/>
             <input type="text" value="hola" style="width:200px"/>
         </div>
@@ -335,7 +359,8 @@
             	<option value="saab">Saab</option>
             	<option value="mercedes">Mercedes</option>
             	<option value="audi">Audi</option>
-            </select><tooltip ng-if="showTooltipLeft" ngui-message="Useful message das das" ngui-position="left"</tooltip>
+            </select>
+            <!-- <tooltip ng-if="showTooltipLeft" ngui-message="Useful message das das" ngui-position="left"</tooltip> -->
             <input type="text" value="hola" style="width:200px"/>
             <input type="text" value="hola" style="width:200px"/>
         </div>

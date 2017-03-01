@@ -1,9 +1,9 @@
-<div class="dropdown" ng-model="$ctrl.selectedOption" ng-blur="$ctrl.onBlur()" ng-focus="$ctrl.onFocus()" ng-class="{'open': $ctrl.opened, 'bordered': $ctrl.bordered, 'disabled': $ctrl.disabled }" tabindex="1">
-    <label>{{$ctrl.selectedOption}}</label>
+<div class="dropdown" ng-blur="$ctrl.onBlur()" ng-focus="$ctrl.onFocus()" ng-class="{'open': $ctrl.opened, 'bordered': $ctrl.bordered, 'disabled': $ctrl.disabled }" tabindex="1">
+    <label>{{$ctrl.nguiModel || $ctrl.placeholder}}</label>
     <div class="list">
         <div class="inner">
             <ul>
-                <li ng-repeat="option in $ctrl.nguiOptions" ng-click="$ctrl.changeOption(option)">{{option}}</li>
+                <li ng-repeat="option in $ctrl.options track by $index" ng-click="$ctrl.changeOption(option)">{{option}}</li>
             </ul>
         </div>
     </div>
