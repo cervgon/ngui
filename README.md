@@ -2,7 +2,7 @@
 CSS and Angularjs components framework for developing your projects.
 
 
-## Instructions
+## Installation
 
 ### NPM
 Add to your `package.json` file:
@@ -16,7 +16,7 @@ Add to your `package.json` file:
 or 
 
 ```
-npm install github:cervgon/ngui --save
+npm install cervgon/ngui --save
 ```
 
 #### Test
@@ -63,3 +63,7 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+
+Made with ♥ for the people of the internet
+
