@@ -1,5 +1,5 @@
 datepicker {
-    display: inline-block;
+    display: inline-block; width: 100%;
 }
 datepicker .datepicker-container {
     width: 100%;
