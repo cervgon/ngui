@@ -1,8 +1,9 @@
-export { loader } from './loader';
+export { datepicker } from './datepicker';
 export { dropdown } from './dropdown';
 export { hamburger } from './hamburger';
-export { progbar } from './progbar';
 export { list } from './list';
+export { loader } from './loader';
+export { modal } from './modal';
 export { pagination } from './pagination';
-export { datepicker } from './datepicker';
+export { progbar } from './progbar';
 export { tooltip } from './tooltip';

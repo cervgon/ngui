@@ -6,7 +6,7 @@
             <input type="number" placeholder="YYYY" min="1000" max="9999" ng-model="$ctrl.selected_year" ng-blur="$ctrl.update_selected_date()" ng-disabled="$ctrl.disabled" style="width:2.5em;"/>
         </div>
         <span class="datepicker-icon datepicker-icon-arrow" ng-click="$ctrl.toggle_calendar()"></span>
-        <span class="datepicker-icon datepicker-icon-clear" ng-if="$ctrl.date && !$ctrl.disabled" ng-click="$ctrl.clear()"></span>
+        <span class="datepicker-icon datepicker-icon-clear" ng-if="$ctrl.nguiModel && !$ctrl.disabled" ng-click="$ctrl.clear()"></span>
     </div>
     <div class="datepicker-picker" ng-show="$ctrl.show_calendar">
         <div class="datepicker-selector">

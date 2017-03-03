@@ -33,8 +33,8 @@ export default main.component('dropdown', {
         }
 
         function updateOptions(options) {
-            console.log("[DROPDOWN] updateOptions", options, $ctrl);
             if(!options) return;
+            console.log("[DROPDOWN] updateOptions", options, $ctrl);
             $ctrl.options = options.options || [];
             $ctrl.opened = options.opened || false;
             $ctrl.placeholder = options.placeholder || "Select";
@@ -47,6 +47,7 @@ export default main.component('dropdown', {
         }
 
         $ctrl.$onInit = function (){
+            if(!this.nguiOptions) this.nguiOptions = {};
             updateOptions(this.nguiOptions);
         }
     }

@@ -15,9 +15,14 @@ const App = angular.module('app', ["ngui"]);
 
 App.component('app', {
     template: Template,
-    controller: function($scope, $rootScope, $interval, $timeout, nguiLoader) {
+    controller: function($scope, $rootScope, $interval, $timeout, nguiLoader, nguiModal) {
         var $ctrl = this;
         console.log("App controller");
+
+        // Datepicker
+        $ctrl.datepickerData = {
+            model: ""
+        }
 
         // Dropdown
         $ctrl.dropdownData = {
@@ -69,6 +74,29 @@ App.component('app', {
                 $timeout(function() {
                     nguiLoader.hide();
                 }, 5000);
+            }
+        }
+
+        // Modal
+        $ctrl.modalData = {
+            alert: function() {
+                nguiModal.alert({
+                    message: "Hello from alert",
+                    yesCallback: function() {
+                        console.log("accepted alert");
+                    }
+                });
+            },
+            prompt: function() {
+                nguiModal.prompt({
+                    message: "Hello from prompt",
+                    yesCallback: function() {
+                        console.log("clicked yes");
+                    },
+                    noCallback: function() {
+                        console.log("clicked no");
+                    }
+                });
             }
         }
 

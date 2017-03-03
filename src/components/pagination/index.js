@@ -50,8 +50,8 @@ export default main.component('pagination', {
         }
 
         function updateOptions(options) {
-            console.log("[PAGINATION] updateOptions", options, $ctrl);
             if(!options) return;
+            console.log("[PAGINATION] updateOptions", options, $ctrl);
 
             $ctrl.items = options.items || [];
             $ctrl.currentPage = options.currentPage || 0;
@@ -65,6 +65,7 @@ export default main.component('pagination', {
         }
 
         $ctrl.$onInit = function() {
+            if(!this.nguiOptions) this.nguiOptions = {};
             updateOptions(this.nguiOptions);
         }
     }

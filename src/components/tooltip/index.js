@@ -12,8 +12,8 @@ export default main.component('tooltip', {
         var $ctrl = this;
 
         function updateOptions(options) {
-            console.log("[TOOLTIP] updateOptions", options, $ctrl);
             if(!options) return;
+            console.log("[TOOLTIP] updateOptions", options, $ctrl);
 
             $ctrl.message = options.message || "";
             $ctrl.position = options.position || 'top';
@@ -26,6 +26,7 @@ export default main.component('tooltip', {
         }
 
         $ctrl.$onInit = function (){
+            if(!this.nguiOptions) this.nguiOptions = {};
             updateOptions(this.nguiOptions);
 
             if($ctrl.timeout > 0){

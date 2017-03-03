@@ -5,12 +5,7 @@
 
     <div class="p1-0">
         <h3>Datepicker</h3>
-        <!-- <datepicker ngui-options="{
-            items: $ctrl.paginationItems,
-            itemsPerPage: 3
-        }">
-            <p>{{$parent.item}}</p>
-        </datepicker> -->
+        <datepicker ngui-model="$ctrl.datepickerData.model"></datepicker>
         <hr>
     </div>
 
@@ -76,6 +71,14 @@
         <h3>Loader</h3>
         <loader></loader>
         <button ng-click="$ctrl.loaderData.show()">Show loader for 5 seconds</button>
+        <hr>
+    </div>
+
+    <div class="p1-0">
+        <h3>Modal</h3>
+        <modal></modal>
+        <button ng-click="$ctrl.modalData.alert()">Show alert</button>
+        <button ng-click="$ctrl.modalData.prompt()">Show prompt</button>
         <hr>
     </div>
 

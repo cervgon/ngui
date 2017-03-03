@@ -6,7 +6,7 @@ list list-item:nth-child(even) .list-item{ background-color: #fcfcfc}
 list list-item .list-item ng-transclude { display: block }
 list list-item .list-item span {}
 list list-item .list-item span.toggle,
-list list-item .list-item span.delete { position: absolute; top: 0 }
+list list-item .list-item span.delete { position: absolute; top: 0; cursor: pointer; }
 list list-item .list-item span.toggle {
     right: 0em;
     width: 2.25em;

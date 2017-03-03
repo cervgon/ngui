@@ -13,8 +13,8 @@ export default main.component('progbar', {
         var $ctrl = this;
 
         function updateOptions(options) {
-            console.log("[PROGBAR] updateOptions", options, $ctrl);
             if(!options) return;
+            console.log("[PROGBAR] updateOptions", options, $ctrl);
             $ctrl.color = options.color || 'gray';
             $ctrl.label = options.label || false;
             switch($ctrl.color) {
@@ -70,6 +70,7 @@ export default main.component('progbar', {
         }
 
         $ctrl.$onInit = function (){
+            if(!this.nguiOptions) this.nguiOptions = {};
             updateOptions(this.nguiOptions);
         }
     }
