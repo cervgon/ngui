@@ -61,7 +61,8 @@ list list-item .list-item list-item-expand .list-item-expand {
 }
 list list-item .list-item.open list-item-expand .list-item-expand {
     max-height: 200em;
-    border-bottom: 1px solid #ddd
+    border-bottom: 1px solid #ddd;
+    overflow: visible
 }
 list list-item .list-item list-item-expand .list-item-expand ng-transclude {
     padding: 0.65em 5em .5em 0;
