@@ -1,0 +1,121 @@
+<div style="max-width: 1000px; position: relative; margin: 0 auto 0;" class="p0-1">
+    <h1>NGUI</h1>
+
+    <hr>
+
+    <div class="p1-0">
+        <h3>Datepicker</h3>
+        <!-- <datepicker ngui-options="{
+            items: $ctrl.paginationItems,
+            itemsPerPage: 3
+        }">
+            <p>{{$parent.item}}</p>
+        </datepicker> -->
+        <hr>
+    </div>
+
+    <div class="p1-0">
+        <h3>Dropdown</h3>
+        <dropdown ngui-model="$ctrl.dropdownData.model" ngui-options="{
+            options: $ctrl.dropdownData.items,
+            placeholder: 'Pick something good',
+            bordered: true
+        }"></dropdown>
+            <hr>
+    </div>
+
+    <div class="p1-0">
+        <h3>Hamburger</h3>
+        <hamburger ngui-model="$ctrl.hamburgerData"></hamburger>
+        <p>Hamburger state is: {{$ctrl.hamburgerData}}</p>
+        <hr>
+    </div>
+
+    <div class="p1-0">
+        <h3>List</h3>
+        <list>
+            <list-item ng-repeat="item in $ctrl.listData.items" ngui-ondelete="$ctrl.listData.onDelete($index)">
+                <list-item-fold>
+                    <div class="g1-3 p0-05">
+                        {{$index + 1}}
+                    </div>
+                    <div class="g1-3 p0-05">
+                        {{item.name}} {{item.last}}
+                    </div>
+                    <div class="g1-3 p0-05">
+                        {{item.sex}}
+                    </div>
+                </list-item-fold>
+                <list-item-expand>
+                    <div class="g1-4 p0-05">
+                        <input type="text" ng-model="item.name" />
+                    </div>
+                    <div class="g1-4 p0-05">
+                        <input type="text" ng-model="item.last" />
+                    </div>
+                    <div class="g1-4 p0-05">
+                        <select ng-model="item.sex">
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                        </select>
+                    </div>
+                    <div class="g1-4 p0-05">
+                        <select ng-model="item.race">
+                            <option value="White">White</option>
+                            <option value="Black">Black</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                </list-item-expand>
+            </list-item>
+        </list>
+        <hr>
+    </div>
+
+    <div class="p1-0">
+        <h3>Loader</h3>
+        <loader></loader>
+        <button ng-click="$ctrl.loaderData.show()">Show loader for 5 seconds</button>
+        <hr>
+    </div>
+
+    <div class="p1-0">
+        <h3>Pagination</h3>
+        <pagination ngui-options="{
+            items: $ctrl.paginationData.items,
+            itemsPerPage: 6
+        }">
+            <p>{{$parent.item}}</p>
+        </pagination>
+        <hr>
+    </div>
+
+    <div class="p1-0">
+        <h3>Progbar</h3>
+        <progbar
+            ngui-model="$ctrl.progbarData.value",
+            ngui-options="{
+                label: true,
+                color: $ctrl.progbarData.color
+            }">
+        </progbar>
+        <hr>
+    </div>
+
+    <div class="p1-0">
+        <h3>Tooltip</h3>
+        <select ng-mouseenter="$ctrl.tooltipData.show = true" ng-mouseleave="$ctrl.tooltipData.show = false">
+            <option value="volvo">Volvo</option>
+            <option value="saab">Saab</option>
+            <option value="mercedes">Mercedes</option>
+            <option value="audi">Audi</option>
+        </select>
+        <tooltip ng-if="$ctrl.tooltipData.show" ngui-options="{
+            message: 'This is a sample tooltip',
+            position: 'top',
+            timeout: 3
+        }"></tooltip>
+        <hr>
+    </div>
+
+</div>

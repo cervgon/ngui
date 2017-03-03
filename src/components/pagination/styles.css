@@ -2,7 +2,7 @@
 .pagination{display: inline-block;}
 .pagination *{display: inline-block; float: left}
 .pagination li{margin-bottom:0.1em;}
-.pagination li.selected{color: #005e9d; font-weight: bold}
+.pagination li.selected{background-color: red; }
 .pagination li:first-child{border-radius: .3em 0 0 .3em}
 .pagination li:first-child:last-child{display: none}
 .pagination li:last-child{border-right-width:1px; border-radius: 0 .3em .3em 0}

@@ -1,3 +1,6 @@
+
+<!--  This is the old template -->
+
 <div style="max-width: 1000px; position: relative; margin: 0 auto 0;" class="p0-1">
 
     <h1 class="color fw300">NGUI</h1>
@@ -185,7 +188,7 @@
     <h3 class="fw300">Hamburguer</h3>
     <hr>
     <div class="p05-0">
-        <hamburger ngui-open="$ctrl.menu"></hamburger>
+        <hamburger ngui-model="$ctrl.menu"></hamburger>
         <div class="sidemenu p05" ng-show="$ctrl.menu">
             <ul>
                 <li>option 1</li>
@@ -206,7 +209,8 @@
             ngui-options="{
                 options: $ctrl.names,
                 placeholder: 'Name',
-                bordered: true
+                bordered: true,
+                disabled: true
             }"
             ng-class="{wrong: everythingisawesome}"
             style="width:8em"></dropdown>
@@ -259,7 +263,10 @@
     <h3 class="fw300">Pagination</h3>
     <hr>
     <div class="p05-0">
-        <pagination ngui-items="$ctrl.names">
+        <pagination ngui-options="{
+            items: $ctrl.names,
+            itemsPerPage: 3
+        }">
             <p>{{$parent.item}}</p>
         </pagination>
     </div>

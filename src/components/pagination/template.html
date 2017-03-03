@@ -1,5 +1,5 @@
 <div>
-    <ng-transclude ng-repeat="item in $ctrl.nguiItems | startFrom: ($ctrl.currentPage * $ctrl.itemsPerPage) | limitTo: $ctrl.itemsPerPage"></ng-transclude>
+    <ng-transclude ng-repeat="item in $ctrl.items | startFrom: ($ctrl.currentPage * $ctrl.itemsPerPage) | limitTo: $ctrl.itemsPerPage"></ng-transclude>
 
     <ul class="pagination">
         <li ng-class="{'selected': $ctrl.currentPage == page}"

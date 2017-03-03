@@ -5,15 +5,13 @@ import Styles from './styles.css';
 export default main.component('hamburger', {
     template: Template,
     bindings: {
-        nguiOpen: '=',
+        nguiModel: '=',
     },
     controller: function() {
         "ngInject";
         var $ctrl = this;
         $ctrl.toggle = function() {
-            $ctrl.nguiOpen = !$ctrl.nguiOpen;
-        }
-        $ctrl.$onInit = function (){
+            $ctrl.nguiModel = !$ctrl.nguiModel;
         }
     }
 });

@@ -1,5 +1,19 @@
 /* Tooltip */
 tooltip {
+    position: relative;
+}
+
+tooltip div{
+    position: absolute;
+    top: -25px;
+    left: 0;
+    width: 200px;
+    background-color: black;
+    color: white;
+}
+
+
+/*tooltip {
     display:inline-block;
     position: relative;
     width: 0;
@@ -41,4 +55,4 @@ tooltip {
 .tourMsg.right .arrow { bottom: calc(50% - 6px) }
 .tourMsg.top .arrow { bottom: -11px }
 .tourMsg.left .arrow  { right: -11px }
-.tourMsg.right .arrow  { left: -11px }
+.tourMsg.right .arrow  { left: -11px }*/

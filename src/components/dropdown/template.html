@@ -4,6 +4,7 @@
         <div class="inner">
             <ul>
                 <li ng-repeat="option in $ctrl.options track by $index" ng-click="$ctrl.changeOption(option)">{{option}}</li>
+                <li ng-if="$ctrl.options.length == 0">No options</li>
             </ul>
         </div>
     </div>

@@ -5,15 +5,41 @@ import Styles from './styles.css';
 export default main.component('tooltip', {
     template: Template,
     bindings: {
-        nguiMessage: '@',
-        nguiPosition: '@',
-        nguiTimeout: '<'
+        nguiOptions: '<'
     },
     controller: function($element, $timeout) {
         "ngInject";
         var $ctrl = this;
 
+        function updateOptions(options) {
+            console.log("[TOOLTIP] updateOptions", options, $ctrl);
+            if(!options) return;
+
+            $ctrl.message = options.message || "";
+            $ctrl.position = options.position || 'top';
+            $ctrl.timeout = options.timeout || 0;
+            $ctrl.show = options.show || true;
+        }
+
+        $ctrl.$onChanges = function(changes) {
+            updateOptions(changes.nguiOptions.currentValue);
+        }
+
+        $ctrl.$onInit = function (){
+            updateOptions(this.nguiOptions);
+
+            if($ctrl.timeout > 0){
+                $timeout(function() {
+                    $ctrl.show = false;
+                }, $ctrl.timeout * 1000);
+            }
+        }
+
+        return;
+
         $ctrl.$onInit = function() {
+
+
 
             var timeFadeOut = 4000;
             if ($ctrl.nguiTimeout != undefined) {

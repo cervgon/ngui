@@ -1,7 +1,7 @@
 /* Progress Bar */
 .progress { margin-bottom: 1em; overflow: hidden; background-color: transparent; border-radius: 0.25em; border: 1px solid #e9e9e9; padding: 0 }
 .progress-bar,
-.progressBar { float: left; width: 0; font-size: 0.75em; line-height: 1em; height: 0.75em; color: #666; text-align: right; background-color: #eee; outline: 1px solid #ddd; margin: -1px -1px -1px 0px; -webkit-transition: width .6s ease; -o-transition: width .6s ease; transition: width .6s ease; overflow: hidden }
+.progressBar { float: left; width: 0; font-size: 0.75em; line-height: 1em; height: 0.75em; color: #666; text-align: right; background-color: #eee; outline: 1px solid #ddd; margin: -1px -1px -1px 0px; -webkit-transition: width .6s ease; -o-transition: width .6s ease; transition: width .6s ease; overflow: hidden; max-width: 100%; }
 .labeled .progress-bar,
 .labeled .progressBar { line-height: 1.5em; height: 1.5em }
 .progress-bar span,

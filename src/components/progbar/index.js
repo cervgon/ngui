@@ -5,68 +5,72 @@ import Styles from './styles.css';
 export default main.component('progbar', {
     template: Template,
     bindings: {
-        nguiValue: '=',
-        nguiColor: '@',
-        nguiLabel: '@'
+        nguiModel: '=',
+        nguiOptions: '<'
     },
     controller: function() {
         "ngInject";
         var $ctrl = this;
+
+        function updateOptions(options) {
+            console.log("[PROGBAR] updateOptions", options, $ctrl);
+            if(!options) return;
+            $ctrl.color = options.color || 'gray';
+            $ctrl.label = options.label || false;
+            switch($ctrl.color) {
+                case 'red':
+                    $ctrl.colorClass = 'redProgress';
+                    break;
+                case 'salmon':
+                    $ctrl.colorClass = 'salmonProgress';
+                    break;
+                case 'orange':
+                    $ctrl.colorClass = 'orangeProgress';
+                    break;
+                case 'amber':
+                    $ctrl.colorClass = 'amberProgress';
+                    break;
+                case 'yellow':
+                    $ctrl.colorClass = 'yellowProgress';
+                    break;
+                case 'lemon':
+                    $ctrl.colorClass = 'lemonProgress';
+                    break;
+                case 'green':
+                    $ctrl.colorClass = 'greenProgress';
+                    break;
+                case 'emerald':
+                    $ctrl.colorClass = 'emeraldProgress';
+                    break;
+                case 'blue':
+                    $ctrl.colorClass = 'blueProgress';
+                    break;
+                case 'lavender':
+                    $ctrl.colorClass = 'lavenderProgress';
+                    break;
+                case 'violet':
+                    $ctrl.colorClass = 'violetProgress';
+                    break;
+                case 'pink':
+                    $ctrl.colorClass = 'pinkProgress';
+                    break;
+                case 'black':
+                    $ctrl.colorClass = 'blackProgress';
+                    break;
+                case 'gray':
+                    $ctrl.colorClass = 'grayProgress';
+                    break;
+                default:
+                    $ctrl.colorClass = '';
+            }
+        }
+
+        $ctrl.$onChanges = function(changes) {
+            updateOptions(changes.nguiOptions.currentValue);
+        }
+
         $ctrl.$onInit = function (){
-            if($ctrl.nguiValue>100){$ctrl.nguiBarValue=100;}
-            else{$ctrl.nguiBarValue = $ctrl.nguiValue}
-            if($ctrl.nguiLabel !== undefined){
-                $ctrl.label = true;
-            }
-            $ctrl.nguiColorClass = '';
-            if($ctrl.nguiColor !== undefined){
-                switch($ctrl.nguiColor) {
-                    case 'red':
-                        $ctrl.nguiColorClass = 'redProgress';
-                        break;
-                    case 'salmon':
-                        $ctrl.nguiColorClass = 'salmonProgress';
-                        break;
-                    case 'orange':
-                        $ctrl.nguiColorClass = 'orangeProgress';
-                        break;
-                    case 'amber':
-                        $ctrl.nguiColorClass = 'amberProgress';
-                        break;
-                    case 'yellow':
-                        $ctrl.nguiColorClass = 'yellowProgress';
-                        break;
-                    case 'lemon':
-                        $ctrl.nguiColorClass = 'lemonProgress';
-                        break;
-                    case 'green':
-                        $ctrl.nguiColorClass = 'greenProgress';
-                        break;
-                    case 'emerald':
-                        $ctrl.nguiColorClass = 'emeraldProgress';
-                        break;
-                    case 'blue':
-                        $ctrl.nguiColorClass = 'blueProgress';
-                        break;
-                    case 'lavender':
-                        $ctrl.nguiColorClass = 'lavenderProgress';
-                        break;
-                    case 'violet':
-                        $ctrl.nguiColorClass = 'violetProgress';
-                        break;
-                    case 'pink':
-                        $ctrl.nguiColorClass = 'pinkProgress';
-                        break;
-                    case 'black':
-                        $ctrl.nguiColorClass = 'blackProgress';
-                        break;
-                    case 'gray':
-                        $ctrl.nguiColorClass = 'grayProgress';
-                        break;
-                    default:
-                    $ctrl.nguiColorClass = '';
-                }
-            }
+            updateOptions(this.nguiOptions);
         }
     }
 });

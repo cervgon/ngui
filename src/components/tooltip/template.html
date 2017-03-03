@@ -1,4 +1,13 @@
-<div ng-if="$ctrl.showTooltip" class="tourMsg" ng-class="$ctrl.positionClass" ng-style="{ visibility: $ctrl.visibility, top: $ctrl.top, right: $ctrl.right, bottom: $ctrl.bottom, left: $ctrl.left }">
-    {{$ctrl.nguiMessage}}
-    <div class="arrow"></div>
+<!-- <div
+    ng-if="$ctrl.show"
+    class="tourMsg"
+    ng-class="$ctrl.positionClass"
+    ng-style="{ visibility: $ctrl.visibility, top: $ctrl.top, right: $ctrl.right, bottom: $ctrl.bottom, left: $ctrl.left }">
+        {{$ctrl.nguiMessage}}
+        <div class="arrow"></div>
+</div> -->
+
+
+<div ng-if="$ctrl.show">
+    {{$ctrl.message}}
 </div>

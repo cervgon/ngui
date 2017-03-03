@@ -1,8 +1,15 @@
 import angular from 'angular';
 import main from './main';
-import {loader, dropdown, hamburger, list, pagination, tooltip} from "./components";
+import {
+    loader,
+    dropdown,
+    hamburger,
+    list,
+    pagination,
+    tooltip
+} from "./components";
 
-import Template from './devServer.html';
+import Template from './devServer2.html';
 
 const App = angular.module('app', ["ngui"]);
 
@@ -12,8 +19,96 @@ App.component('app', {
         var $ctrl = this;
         console.log("App controller");
 
+        // Dropdown
+        $ctrl.dropdownData = {
+            model: "",
+            items: []
+        }
+        for (var i = 0; i < 50; i++) {
+            $ctrl.dropdownData.items.push("Option " + i);
+        }
+
+        // Hamburger
+        $ctrl.hamburgerData = false;
+
+        // List
+        $ctrl.listData = {
+            items: [
+                {
+                    name: "John",
+                    last: "Doe",
+                    sex: "Male",
+                    race: "White"
+                }, {
+                    name: "Foo",
+                    last: "Bar",
+                    sex: "Male",
+                    race: "Black"
+                }, {
+                    name: "Jim",
+                    last: "Carrey",
+                    sex: "Male",
+                    race: "White"
+                }, {
+                    name: "Oprah",
+                    last: "Winfrey",
+                    sex: "Female",
+                    race: "Black"
+                }
+            ],
+            onDelete: function(i) {
+                console.log("delete", i);
+                $ctrl.listData.items.splice(i, 1);
+            }
+        }
+
+        // Loader
+        $ctrl.loaderData = {
+            show: function() {
+                nguiLoader.show("I will hide in 5 seconds");
+                $timeout(function() {
+                    nguiLoader.hide();
+                }, 5000);
+            }
+        }
+
+        // Pagination
+        $ctrl.paginationData = {
+            items: []
+        };
+        for (var i = 0; i < 100; i++) {
+            $ctrl.paginationData.items.push("Item " + i);
+        }
+
+        // Progbar
+        $ctrl.progbarData = {
+            value: 50,
+            color: 'red'
+        };
+
+        return;
+
+
+        // Next is old
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         nguiLoader.show("Loading...");
-        $timeout(function(){
+        $timeout(function() {
             nguiLoader.hide();
         }, 1400);
 
@@ -41,7 +136,7 @@ App.component('app', {
             $ctrl.users.splice(i, 1);
             nguiLoader.show("Deleting element");
 
-            $timeout(function () {
+            $timeout(function() {
                 nguiLoader.hide();
             }, 2000);
         }

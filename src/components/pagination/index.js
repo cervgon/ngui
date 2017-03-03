@@ -16,18 +16,15 @@ export default main.component('pagination', {
     template: Template,
     transclude: true,
     bindings: {
-        nguiItems: '='
+        nguiOptions: '<'
     },
     controller: function() {
         "ngInject";
+
         var $ctrl = this;
 
-        $ctrl.currentPage = 0;
-        $ctrl.itemsPerPage = 10;
-        $ctrl.maxPages = 10;
-
         function updatePages() {
-            $ctrl.totalPages = Math.ceil($ctrl.nguiItems.length / $ctrl.itemsPerPage);
+            $ctrl.totalPages = Math.ceil($ctrl.items.length / $ctrl.itemsPerPage);
             $ctrl.totalPagesArr = [];
             for (var i = 0; i < $ctrl.totalPages; i++) {
                 $ctrl.totalPagesArr.push(i);
@@ -52,8 +49,23 @@ export default main.component('pagination', {
             }
         }
 
-        $ctrl.$onInit = function(){
+        function updateOptions(options) {
+            console.log("[PAGINATION] updateOptions", options, $ctrl);
+            if(!options) return;
+
+            $ctrl.items = options.items || [];
+            $ctrl.currentPage = options.currentPage || 0;
+            $ctrl.itemsPerPage = options.itemsPerPage || 10;
+            $ctrl.maxPages = options.maxPages || 10;
             updatePages();
+        }
+
+        $ctrl.$onChanges = function(changes) {
+            updateOptions(changes);
+        }
+
+        $ctrl.$onInit = function() {
+            updateOptions(this.nguiOptions);
         }
     }
 });

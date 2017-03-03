@@ -1,9 +1,9 @@
 <div class="progress" ng-class="{'labeled':$ctrl.label}">
-  <div class="progressBar" ng-style="{'width': $ctrl.nguiBarValue + '%'}"
-  ng-class="$ctrl.nguiColorClass">
+  <div class="progressBar" ng-style="{'width': $ctrl.nguiModel + '%'}"
+  ng-class="$ctrl.colorClass">
     <span ng-if="$ctrl.label">
-        <em ng-show="$ctrl.nguiBarValue > 9">{{$ctrl.nguiBarValue}}%</em>
-        <em ng-show="$ctrl.nguiBarValue > 29">Complete</em>
+        <em ng-show="$ctrl.nguiModel > 9">{{$ctrl.nguiModel}}%</em>
+        <em ng-show="$ctrl.nguiModel > 29">Complete</em>
     </span>
   </div>
 </div>
