@@ -96,12 +96,13 @@ export default main.component('datepicker', {
                 return false;
             if (n !== $ctrl.today.getDate())
                 return false;
-
+            
             return true;
         }
 
         $ctrl.is_day_selected = function(n) {
-            if (!$ctrl.nguiModel) return;
+            if (!$ctrl.nguiModel)
+                return;
 
             if ($ctrl.visible_date.getMonth() !== $ctrl.nguiModel.getMonth())
                 return false;
@@ -114,7 +115,8 @@ export default main.component('datepicker', {
         }
 
         $ctrl.clear = function() {
-            if ($ctrl.disabled) return;
+            if ($ctrl.disabled)
+                return;
             $ctrl.nguiModel = null;
             $ctrl.selected_day = null;
             $ctrl.selected_month = null;
@@ -146,7 +148,8 @@ export default main.component('datepicker', {
         }
 
         $ctrl.set_date = function(n) {
-            if($ctrl.disabled) return;
+            if ($ctrl.disabled)
+                return;
             $ctrl.nguiModel = new Date($ctrl.visible_date);
             $ctrl.nguiModel.setDate(n);
             $ctrl.show_calendar = false;
@@ -269,7 +272,8 @@ export default main.component('datepicker', {
         }
 
         function updateOptions(options) {
-            if(!options) return;
+            if (!options)
+                return;
             console.log("[DATEPICKER] updateOptions", options, $ctrl);
 
             $ctrl.show_calendar = options.show_calendar || false;
@@ -283,8 +287,9 @@ export default main.component('datepicker', {
             updateOptions(changes.nguiOptions.currentValue);
         }
 
-        $ctrl.$onInit = function (){
-            if(!this.nguiOptions) this.nguiOptions = {};
+        $ctrl.$onInit = function() {
+            if (!this.nguiOptions)
+                this.nguiOptions = {};
             updateOptions(this.nguiOptions);
         }
     }

@@ -29,20 +29,22 @@ export default main.component('pagination', {
             for (var i = 0; i < $ctrl.totalPages; i++) {
                 $ctrl.totalPagesArr.push(i);
             }
-            if($ctrl.totalPages < $ctrl.maxPages) {
+            if ($ctrl.totalPages < $ctrl.maxPages) {
                 $ctrl.totalPages = $ctrl.maxPages;
             }
         }
 
         $ctrl.pagesStartFrom = function() {
             var remainingPages = $ctrl.totalPages - $ctrl.currentPage;
-            if(remainingPages < $ctrl.maxPages) return $ctrl.totalPages - $ctrl.maxPages;
-            if($ctrl.currentPage == 0) return $ctrl.currentPage;
+            if (remainingPages < $ctrl.maxPages)
+                return $ctrl.totalPages - $ctrl.maxPages;
+            if ($ctrl.currentPage == 0)
+                return $ctrl.currentPage;
             return $ctrl.currentPage - 1
         }
 
-        $ctrl.setPage = function(n){
-            if($ctrl.totalPagesArr[n] !== undefined){
+        $ctrl.setPage = function(n) {
+            if ($ctrl.totalPagesArr[n] !== undefined) {
                 $ctrl.currentPage = n;
             } else {
                 console.error("Page not found", n);
@@ -50,7 +52,8 @@ export default main.component('pagination', {
         }
 
         function updateOptions(options) {
-            if(!options) return;
+            if (!options)
+                return;
             console.log("[PAGINATION] updateOptions", options, $ctrl);
 
             $ctrl.items = options.items || [];
@@ -65,7 +68,8 @@ export default main.component('pagination', {
         }
 
         $ctrl.$onInit = function() {
-            if(!this.nguiOptions) this.nguiOptions = {};
+            if (!this.nguiOptions)
+                this.nguiOptions = {};
             updateOptions(this.nguiOptions);
         }
     }

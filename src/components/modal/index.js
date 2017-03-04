@@ -41,15 +41,17 @@ export default main.component('modal', {
         $ctrl.noCallback = function() {};
         $ctrl.options = false;
 
-        $ctrl.onYes = function () {
+        $ctrl.onYes = function() {
             $ctrl.show = false;
-            if($ctrl.yesCallback) $ctrl.yesCallback();
-        }
+            if ($ctrl.yesCallback)
+                $ctrl.yesCallback();
+            }
 
-        $ctrl.onNo = function () {
+        $ctrl.onNo = function() {
             $ctrl.show = false;
-            if($ctrl.noCallback) $ctrl.noCallback();
-        }
+            if ($ctrl.noCallback)
+                $ctrl.noCallback();
+            }
 
         $scope.$on('nguiModal', function(event, data) {
             $timeout(function() {

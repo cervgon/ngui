@@ -9,7 +9,7 @@ main.component('list', {
             <br>
         </div>
     `,
-    transclude : true,
+    transclude: true,
     controller: function() {
         "ngInject";
         var $ctrl = this;
@@ -30,7 +30,7 @@ main.component('listItem', {
             <ng-transclude></ng-transclude>
         </div>
     `,
-    transclude : true,
+    transclude: true,
     controller: function($timeout) {
         "ngInject";
         var $ctrl = this;
@@ -39,24 +39,23 @@ main.component('listItem', {
         $ctrl.expandedDiv = false;
 
         $ctrl.onToggle = function() {
-            if($ctrl.expanded){
+            if ($ctrl.expanded) {
                 $ctrl.expandedDiv = !$ctrl.expandedDiv;
-                $timeout (function(){
+                $timeout(function() {
                     $ctrl.expanded = !$ctrl.expanded;
-                },500);
-            }
-            else{
+                }, 500);
+            } else {
                 $ctrl.expanded = !$ctrl.expanded;
-                $timeout (function(){
+                $timeout(function() {
                     $ctrl.expandedDiv = !$ctrl.expandedDiv;
-                },100);
+                }, 100);
             }
         }
 
         $ctrl.onDelete = function() {
-            if($ctrl.expanded) {
+            if ($ctrl.expanded) {
                 $ctrl.expandedDiv = false;
-                $timeout (function(){
+                $timeout(function() {
                     $ctrl.expanded = false;
                     console.log("now delete");
                     $ctrl.nguiOndelete();
@@ -79,7 +78,7 @@ main.component('listItemFold', {
     require: {
         parentCtrl: '^listItem'
     },
-    transclude : true,
+    transclude: true,
     controller: function() {
         "ngInject";
         var $ctrl = this;
@@ -96,7 +95,7 @@ main.component('listItemExpand', {
             <br>
         </div>
     `,
-    transclude : true,
+    transclude: true,
     controller: function() {
         "ngInject";
         var $ctrl = this;

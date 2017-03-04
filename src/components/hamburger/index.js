@@ -5,7 +5,7 @@ import Styles from './styles.css';
 export default main.component('hamburger', {
     template: Template,
     bindings: {
-        nguiModel: '=',
+        nguiModel: '='
     },
     controller: function() {
         "ngInject";

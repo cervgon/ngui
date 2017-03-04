@@ -9,11 +9,11 @@ Add to your `package.json` file:
 
 ```
 "dependencies": {
-"angular": "1.6.2",
-"ngui": "github:cervgon/ngui"
+    "angular": "1.6.2",
+    "ngui": "github:cervgon/ngui"
 }
 ```
-or 
+or
 
 ```
 npm install cervgon/ngui --save
@@ -66,4 +66,3 @@ SOFTWARE.
 
 
 Made with ♥ for the people of the internet
-

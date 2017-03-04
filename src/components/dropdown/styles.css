@@ -1,5 +1,5 @@
 /* dropdown */
-dropdown { display: inline-block; vertical-align: bottom }
+dropdown { display: inline-block; vertical-align: bottom; width: 100%; }
 .dropdown { display: block }
 .dropdown:focus {outline: 0 none }
 .dropdown label{ margin:0; cursor: pointer; padding: .552em 1.5em .552em 0; display: flex; width: auto }

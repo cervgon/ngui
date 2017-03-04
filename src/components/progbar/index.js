@@ -13,11 +13,12 @@ export default main.component('progbar', {
         var $ctrl = this;
 
         function updateOptions(options) {
-            if(!options) return;
+            if (!options)
+                return;
             console.log("[PROGBAR] updateOptions", options, $ctrl);
             $ctrl.color = options.color || 'gray';
             $ctrl.label = options.label || false;
-            switch($ctrl.color) {
+            switch ($ctrl.color) {
                 case 'red':
                     $ctrl.colorClass = 'redProgress';
                     break;
@@ -69,8 +70,9 @@ export default main.component('progbar', {
             updateOptions(changes.nguiOptions.currentValue);
         }
 
-        $ctrl.$onInit = function (){
-            if(!this.nguiOptions) this.nguiOptions = {};
+        $ctrl.$onInit = function() {
+            if (!this.nguiOptions)
+                this.nguiOptions = {};
             updateOptions(this.nguiOptions);
         }
     }

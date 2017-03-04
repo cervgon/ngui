@@ -33,7 +33,8 @@ export default main.component('dropdown', {
         }
 
         function updateOptions(options) {
-            if(!options) return;
+            if (!options)
+                return;
             console.log("[DROPDOWN] updateOptions", options, $ctrl);
             $ctrl.options = options.options || [];
             $ctrl.opened = options.opened || false;
@@ -46,8 +47,9 @@ export default main.component('dropdown', {
             updateOptions(changes.nguiOptions.currentValue);
         }
 
-        $ctrl.$onInit = function (){
-            if(!this.nguiOptions) this.nguiOptions = {};
+        $ctrl.$onInit = function() {
+            if (!this.nguiOptions)
+                this.nguiOptions = {};
             updateOptions(this.nguiOptions);
         }
     }

@@ -16,9 +16,7 @@ main.service('nguiLoader', function($rootScope, $timeout) {
 
     this.hide = function() {
         $timeout(function() {
-            $rootScope.$broadcast('nguiLoader', {
-                show: false
-            });
+            $rootScope.$broadcast('nguiLoader', {show: false});
         });
     };
 });

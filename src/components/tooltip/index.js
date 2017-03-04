@@ -12,7 +12,8 @@ export default main.component('tooltip', {
         var $ctrl = this;
 
         function updateOptions(options) {
-            if(!options) return;
+            if (!options)
+                return;
             console.log("[TOOLTIP] updateOptions", options, $ctrl);
 
             $ctrl.message = options.message || "";
@@ -25,11 +26,12 @@ export default main.component('tooltip', {
             updateOptions(changes.nguiOptions.currentValue);
         }
 
-        $ctrl.$onInit = function (){
-            if(!this.nguiOptions) this.nguiOptions = {};
+        $ctrl.$onInit = function() {
+            if (!this.nguiOptions)
+                this.nguiOptions = {};
             updateOptions(this.nguiOptions);
 
-            if($ctrl.timeout > 0){
+            if ($ctrl.timeout > 0) {
                 $timeout(function() {
                     $ctrl.show = false;
                 }, $ctrl.timeout * 1000);
@@ -39,8 +41,6 @@ export default main.component('tooltip', {
         return;
 
         $ctrl.$onInit = function() {
-
-
 
             var timeFadeOut = 4000;
             if ($ctrl.nguiTimeout != undefined) {
@@ -96,7 +96,7 @@ export default main.component('tooltip', {
 
                 function setBottom() {
                     $ctrl.positionClass = 'bottom';
-                    $ctrl.top = prevSibH + 6 +'px';
+                    $ctrl.top = prevSibH + 6 + 'px';
                     $ctrl.right = 'auto';
                     $ctrl.bottom = 'auto';
                     $ctrl.left = '-' + (prevSibW / 2) - tooltipW / 2 - 1 + 'px';
