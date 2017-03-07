@@ -84,7 +84,8 @@ App.component('app', {
                     message: "Hello from alert",
                     yesCallback: function() {
                         console.log("accepted alert");
-                    }
+                    },
+                    yesButton: 'Affirmative'
                 });
             },
             prompt: function() {
@@ -95,7 +96,9 @@ App.component('app', {
                     },
                     noCallback: function() {
                         console.log("clicked no");
-                    }
+                    },
+                    yesButton: 'Let\'s do it',
+                    noButton: 'I don\'t want to'
                 });
             }
         }

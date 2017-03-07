@@ -1,22 +1,8 @@
-modal {}
-
-.modalPopup {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.75);
-}
-
-.modalContent {
-    background-color: #fff;
-    margin: 40px auto;
-    width: 500px;
-    padding: 10px;
-    border-radius: 5px;
-}
-
-.modalContent .modalButtons {
-    text-align: right;
-}
+modal { }
+modal .modalPopup { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.75) }
+modal .modalContent { margin: 40px auto; max-width: 500px; min-width: 288px; padding: 1em }
+modal .modalContent .ginner { background-color: #fff; padding: 1em; border-radius: 2px; width: 100% }
+modal .modalContent .ginner .modalButtons { text-align: right }
+modal .modalContent.left .ginner .modalButtons { text-align: left }
+modal .modalContent.center .ginner p,
+modal .modalContent.center .ginner .modalButtons { text-align: center }

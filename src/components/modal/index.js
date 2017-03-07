@@ -9,7 +9,8 @@ main.service('nguiModal', function($rootScope, $timeout) {
             $rootScope.$broadcast('nguiModal', {
                 message: data.message,
                 yesButton: data.yesButton || "Ok",
-                yesCallback: data.yesCallback
+                yesCallback: data.yesCallback,
+                align: data.align
             });
         });
     };
@@ -22,6 +23,7 @@ main.service('nguiModal', function($rootScope, $timeout) {
                 noButton: data.noButton || "No",
                 yesCallback: data.yesCallback,
                 noCallback: data.noCallback,
+                align: data.align,
                 options: true
             });
         });
@@ -37,6 +39,7 @@ export default main.component('modal', {
         $ctrl.message = "";
         $ctrl.yesButton = "Yes";
         $ctrl.noButton = "No";
+        $ctrl.align = "right";
         $ctrl.yesCallback = function() {};
         $ctrl.noCallback = function() {};
         $ctrl.options = false;
@@ -63,6 +66,7 @@ export default main.component('modal', {
                 $ctrl.yesCallback = data.yesCallback || null;
                 $ctrl.noCallback = data.noCallback || null;
                 $ctrl.options = data.options || false;
+                $ctrl.align = data.align || "right";
             });
         });
     }
