@@ -4,6 +4,7 @@
 .red { color: #f25757 }
 .darkRed { color: #a02222 }
 .gray { color: #888 }
+.white { color: #fff }
 
 /* Borders */
 .borderRed { border: 0.15em solid #F0A8A8 }
