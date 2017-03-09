@@ -40,7 +40,8 @@ input[type="text"].wrong:focus,
 input[type="email"].wrong:focus,
 input[type="number"].wrong:focus,
 input[type="file"].wrong:focus,
-textarea.wrong:focus { background-color: #f6eaea; border-color: #d48c8c; color: #a02222; -webkit-animation-name: shake; animation-name: shake; -webkit-animation-duration: 0.8s; animation-duration: 0.8s; -webkit-animation-fill-mode: both; animation-fill-mode: both }
+textarea.wrong:focus,
+datepicker.wrong .datepicker-input { background-color: #f6eaea; border-color: #d48c8c; color: #a02222; -webkit-animation-name: shake; animation-name: shake; -webkit-animation-duration: 0.8s; animation-duration: 0.8s; -webkit-animation-fill-mode: both; animation-fill-mode: both }
 .msg-default,
 .msg-green,
 .msg-red { padding: 0.5em }
