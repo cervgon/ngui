@@ -42,7 +42,8 @@ main.service('nguiModal', function($rootScope, $timeout) {
                 align: data.align,
                 options: data.options,
                 customHtml: data.customHtml,
-                blackBg: data.blackBg,                
+                blackBg: data.blackBg,
+                modalData: data.modalData
             });
         });
     };
@@ -91,6 +92,8 @@ export default main.component('modal', {
                 $ctrl.options = data.options || false;
                 $ctrl.align = data.align || "right";
                 $ctrl.blackBg = data.blackBg || false;
+                
+                $scope.$modalData = data.modalData || {};
                 if(data.customHtml) {
                     $timeout(function(){
                         $ctrl.customHtml = $compile(data.customHtml)($scope);

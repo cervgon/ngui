@@ -104,8 +104,8 @@ App.component('app', {
             custom: function() {
                 nguiModal.custom({
                     message: "Hello from custom",
-                    yesCallback: function() {
-                        console.log("clicked yes");
+                    yesCallback: function(data) {
+                        console.log("clicked yes", data);
                     },
                     noCallback: function() {
                         console.log("clicked no");
@@ -113,6 +113,10 @@ App.component('app', {
                     yesButton: 'Let\'s do it',
                     noButton: 'I don\'t want to',
                     options: true,
+                    modalData: {
+                        name: "Some name",
+                        date: new Date()
+                    },
                     customHtml: `
                         <div>
                             <input type="text" ng-model="$modalData.name" />
