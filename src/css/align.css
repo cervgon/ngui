@@ -10,3 +10,4 @@
 *.textLeft { text-align: left !important }
 *.textRight { text-align: right !important }
 .absRight { position: absolute; right: 0; top: 0 }
+.middle { vertical-align: middle }
