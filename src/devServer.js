@@ -100,6 +100,33 @@ App.component('app', {
                     yesButton: 'Let\'s do it',
                     noButton: 'I don\'t want to'
                 });
+            },
+            custom: function() {
+                nguiModal.custom({
+                    message: "Hello from custom",
+                    yesCallback: function(data) {
+                        console.log("clicked yes", data);
+                    },
+                    noCallback: function() {
+                        console.log("clicked no");
+                    },
+                    yesButton: 'Let\'s do it',
+                    noButton: 'I don\'t want to',
+                    options: true,
+                    modalData: {
+                        name: "Some name",
+                        date: new Date()
+                    },
+                    customHtml: `
+                        <div>
+                            <input type="text" ng-model="$modalData.name" />
+                            <p>{{$modalData.name}}</p>
+                            <p>{{$modalData.date}}</p>
+                            
+                            <datepicker ngui-model="$modalData.date"></datepicker>
+                        </div>
+                    `
+                });
             }
         }
 

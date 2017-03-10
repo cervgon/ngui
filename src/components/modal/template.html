@@ -1,7 +1,8 @@
-<div class="modalPopup" ng-if="$ctrl.show">
+<div class="modalPopup" ng-if="$ctrl.show" ng-class="{ 'modalBlack': $ctrl.blackBg }">
     <div class="modalContent" ng-class="{'center':$ctrl.align === 'center','left':$ctrl.align === 'left'}">
         <div class="ginner">
             <p>{{$ctrl.message}}</p>
+            <custom-modal-html></custom-modal-html>
             <hr class="transparent">
             <div class="modalButtons">
                 <button type="button" ng-click="$ctrl.onYes()" class="btnLight">{{$ctrl.yesButton}}</button>

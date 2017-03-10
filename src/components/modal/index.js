@@ -10,7 +10,8 @@ main.service('nguiModal', function($rootScope, $timeout) {
                 message: data.message,
                 yesButton: data.yesButton || "Ok",
                 yesCallback: data.yesCallback,
-                align: data.align
+                align: data.align,
+                blackBg: data.blackBg,
             });
         });
     };
@@ -24,7 +25,25 @@ main.service('nguiModal', function($rootScope, $timeout) {
                 yesCallback: data.yesCallback,
                 noCallback: data.noCallback,
                 align: data.align,
-                options: true
+                options: true,
+                blackBg: data.blackBg,                
+            });
+        });
+    };
+
+    this.custom = function(data) {
+        $timeout(function() {
+            $rootScope.$broadcast('nguiModal', {
+                message: data.message,
+                yesButton: data.yesButton || "Yes",
+                noButton: data.noButton || "No",
+                yesCallback: data.yesCallback,
+                noCallback: data.noCallback,
+                align: data.align,
+                options: data.options,
+                customHtml: data.customHtml,
+                blackBg: data.blackBg,
+                modalData: data.modalData
             });
         });
     };
@@ -32,7 +51,7 @@ main.service('nguiModal', function($rootScope, $timeout) {
 
 export default main.component('modal', {
     template: Template,
-    controller: function($scope, $timeout) {
+    controller: function($scope, $timeout, $element, $compile) {
         "ngInject";
         var $ctrl = this;
         $ctrl.show = false;
@@ -43,22 +62,27 @@ export default main.component('modal', {
         $ctrl.yesCallback = function() {};
         $ctrl.noCallback = function() {};
         $ctrl.options = false;
+        $ctrl.customHtml = "";
+
+        $scope.$modalData = {};
 
         $ctrl.onYes = function() {
+            console.log("[MODAL] $modalData:", $scope.$modalData);
             $ctrl.show = false;
             if ($ctrl.yesCallback)
-                $ctrl.yesCallback();
-            }
+                $ctrl.yesCallback($scope.$modalData);
+        }
 
         $ctrl.onNo = function() {
+            console.log("[MODAL] $modalData:", $scope.$modalData);
             $ctrl.show = false;
             if ($ctrl.noCallback)
-                $ctrl.noCallback();
-            }
+                $ctrl.noCallback($scope.$modalData);
+        }
 
         $scope.$on('nguiModal', function(event, data) {
             $timeout(function() {
-                console.log("nguiModal", data);
+                console.log("[MODAL] nguiModal event", data);
                 $ctrl.show = true;
                 $ctrl.message = data.message || "";
                 $ctrl.yesButton = data.yesButton || "Yes";
@@ -67,6 +91,17 @@ export default main.component('modal', {
                 $ctrl.noCallback = data.noCallback || null;
                 $ctrl.options = data.options || false;
                 $ctrl.align = data.align || "right";
+                $ctrl.blackBg = data.blackBg || false;
+                
+                $scope.$modalData = data.modalData || {};
+                if(data.customHtml) {
+                    $timeout(function(){
+                        $ctrl.customHtml = $compile(data.customHtml)($scope);
+                        $element.find("custom-modal-html").replaceWith($ctrl.customHtml);
+                    });
+                } else {
+                    $ctrl.customHtml = "";
+                }
             });
         });
     }
