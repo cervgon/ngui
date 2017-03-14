@@ -9,6 +9,7 @@ import cssDisplay from './css/display.css';
 import cssFontSize from './css/fontsize.css';
 import cssFontWeight from './css/fontweight.css';
 import cssGradients from './css/gradients.css';
+import cssIcons from './css/icons.css';
 import cssLayout from './css/layout.css';
 import cssLineHeight from './css/lineheight.css';
 import cssMargins from './css/margins.css';
