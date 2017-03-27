@@ -11,7 +11,6 @@ main.service('nguiLoader', function($rootScope, $timeout) {
                 label: msg
             });
         });
-
     };
 
     this.hide = function() {

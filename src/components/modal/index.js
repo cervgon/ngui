@@ -26,7 +26,7 @@ main.service('nguiModal', function($rootScope, $timeout) {
                 noCallback: data.noCallback,
                 align: data.align,
                 options: true,
-                blackBg: data.blackBg,                
+                blackBg: data.blackBg,
             });
         });
     };
@@ -51,7 +51,7 @@ main.service('nguiModal', function($rootScope, $timeout) {
 
 export default main.component('modal', {
     template: Template,
-    controller: function($scope, $timeout, $element, $compile) {
+    controller: function($scope, $rootScope, $timeout, $element, $compile) {
         "ngInject";
         var $ctrl = this;
         $ctrl.show = false;
@@ -83,6 +83,7 @@ export default main.component('modal', {
         $scope.$on('nguiModal', function(event, data) {
             $timeout(function() {
                 console.log("[MODAL] nguiModal event", data);
+                $rootScope.$broadcast('nguiLoader', {show: false}); // If there is an open preloader, remove it.
                 $ctrl.show = true;
                 $ctrl.message = data.message || "";
                 $ctrl.yesButton = data.yesButton || "Yes";
