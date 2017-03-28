@@ -18,7 +18,7 @@ App.component('app', {
     controller: function($scope, $rootScope, $interval, $timeout, nguiLoader, nguiModal) {
         var $ctrl = this;
         console.log("App controller");
-
+        
         // Datepicker
         $ctrl.datepickerData = {
             model: ""
@@ -88,9 +88,40 @@ App.component('app', {
                     yesButton: 'Affirmative'
                 });
             },
+            success: function() {
+                nguiModal.success({
+                    message: "Successfully shown alert",
+                    yesCallback: function() {
+                        console.log("accepted alert");
+                    },
+                    yesButton: 'Awesome'
+                });
+            },
+            error: function() {
+                nguiModal.error({
+                    message: "Some bad error",
+                    yesCallback: function() {
+                        console.log("accepted error");
+                    },
+                    yesButton: 'Okay :('
+                });
+            },
             prompt: function() {
                 nguiModal.prompt({
                     message: "Hello from prompt",
+                    yesCallback: function() {
+                        console.log("clicked yes");
+                    },
+                    noCallback: function() {
+                        console.log("clicked no");
+                    },
+                    yesButton: 'Let\'s do it',
+                    noButton: 'I don\'t want to'
+                });
+            },
+            danger: function() {
+                nguiModal.danger({
+                    message: "Wanna do something dangerous?",
                     yesCallback: function() {
                         console.log("clicked yes");
                     },

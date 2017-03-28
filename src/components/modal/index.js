@@ -9,6 +9,33 @@ main.service('nguiModal', function($rootScope, $timeout) {
             $rootScope.$broadcast('nguiModal', {
                 message: data.message,
                 yesButton: data.yesButton || "Ok",
+                yesClass: data.yesClass || "btnLight",
+                yesCallback: data.yesCallback,
+                align: data.align,
+                blackBg: data.blackBg,
+            });
+        });
+    };
+
+    this.success = function(data) {
+        $timeout(function() {
+            $rootScope.$broadcast('nguiModal', {
+                message: data.message,
+                yesButton: data.yesButton || "Ok",
+                yesClass: data.yesClass || "btnGreenLight",
+                yesCallback: data.yesCallback,
+                align: data.align,
+                blackBg: data.blackBg,
+            });
+        });
+    };
+
+    this.error = function(data) {
+        $timeout(function() {
+            $rootScope.$broadcast('nguiModal', {
+                message: data.message,
+                yesButton: data.yesButton || "Ok",
+                yesClass: data.yesClass || "btnRedLight",
                 yesCallback: data.yesCallback,
                 align: data.align,
                 blackBg: data.blackBg,
@@ -21,8 +48,27 @@ main.service('nguiModal', function($rootScope, $timeout) {
             $rootScope.$broadcast('nguiModal', {
                 message: data.message,
                 yesButton: data.yesButton || "Yes",
-                noButton: data.noButton || "No",
+                yesClass: data.yesClass || "btnGreenLight",
                 yesCallback: data.yesCallback,
+                noButton: data.noButton || "No",
+                noClass: data.noClass || "btnLight",
+                noCallback: data.noCallback,
+                align: data.align,
+                options: true,
+                blackBg: data.blackBg,
+            });
+        });
+    };
+
+    this.danger = function(data) {
+        $timeout(function() {
+            $rootScope.$broadcast('nguiModal', {
+                message: data.message,
+                yesButton: data.yesButton || "Yes",
+                yesClass: data.yesClass || "btnRedLight",
+                yesCallback: data.yesCallback,
+                noButton: data.noButton || "No",
+                noClass: data.noClass || "btnLight",
                 noCallback: data.noCallback,
                 align: data.align,
                 options: true,
@@ -36,8 +82,10 @@ main.service('nguiModal', function($rootScope, $timeout) {
             $rootScope.$broadcast('nguiModal', {
                 message: data.message,
                 yesButton: data.yesButton || "Yes",
-                noButton: data.noButton || "No",
+                yesClass: data.yesClass || "btnLight",
                 yesCallback: data.yesCallback,
+                noButton: data.noButton || "No",
+                noClass: data.noClass || "btnLight",
                 noCallback: data.noCallback,
                 align: data.align,
                 options: data.options,
@@ -56,10 +104,12 @@ export default main.component('modal', {
         var $ctrl = this;
         $ctrl.show = false;
         $ctrl.message = "";
-        $ctrl.yesButton = "Yes";
-        $ctrl.noButton = "No";
         $ctrl.align = "right";
+        $ctrl.yesButton = "Yes";
+        $ctrl.yesClass = "btnLight";
         $ctrl.yesCallback = function() {};
+        $ctrl.noButton = "No";
+        $ctrl.noClass = "btnLight";
         $ctrl.noCallback = function() {};
         $ctrl.options = false;
         $ctrl.customHtml = "";
@@ -87,8 +137,10 @@ export default main.component('modal', {
                 $ctrl.show = true;
                 $ctrl.message = data.message || "";
                 $ctrl.yesButton = data.yesButton || "Yes";
-                $ctrl.noButton = data.noButton || "No";
                 $ctrl.yesCallback = data.yesCallback || null;
+                $ctrl.yesClass = data.yesClass || "btnLight";
+                $ctrl.noButton = data.noButton || "No";
+                $ctrl.noClass = data.noClass || "btnLight";
                 $ctrl.noCallback = data.noCallback || null;
                 $ctrl.options = data.options || false;
                 $ctrl.align = data.align || "right";

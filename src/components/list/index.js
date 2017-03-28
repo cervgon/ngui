@@ -18,7 +18,8 @@ main.component('list', {
 
 main.component('listItem', {
     bindings: {
-        nguiOndelete: '&?'
+        nguiOndelete: '&?',
+        nguiOptions: '<'
     },
     require: {
         parentCtrl: '^list'
@@ -26,7 +27,7 @@ main.component('listItem', {
     template: `
         <div class="list-item" ng-class="{'open':$ctrl.expandedDiv}">
             <span ng-click="$ctrl.onToggle()" class="toggle"></span>
-            <span ng-click="$ctrl.onDelete()" ng-if="$ctrl.nguiOndelete" class="delete"></span>
+            <span ng-click="$ctrl.onDelete()" ng-if="$ctrl.nguiOndelete && !$ctrl.disabled" class="delete"></span>
             <ng-transclude></ng-transclude>
         </div>
     `,
@@ -64,6 +65,28 @@ main.component('listItem', {
                 console.log("now delete");
                 $ctrl.nguiOndelete();
             }
+        }
+
+        function updateOptions(options) {
+            if (!options)
+                return;
+            console.log("[LIST] updateOptions", options, $ctrl);
+            $ctrl.opened = options.opened || false;
+            $ctrl.disabled = options.disabled || false;
+
+            if($ctrl.opened != $ctrl.expanded){
+                $ctrl.onToggle()
+            }
+        }
+
+        $ctrl.$onChanges = function(changes) {
+            updateOptions(changes.nguiOptions.currentValue);
+        }
+
+        $ctrl.$onInit = function() {
+            if (!this.nguiOptions)
+                this.nguiOptions = {};
+            updateOptions(this.nguiOptions);
         }
     }
 });
