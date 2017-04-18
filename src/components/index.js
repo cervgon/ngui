@@ -1,9 +1,0 @@
-export { datepicker } from './datepicker';
-export { dropdown } from './dropdown';
-export { hamburger } from './hamburger';
-export { list } from './list';
-export { loader } from './loader';
-export { modal } from './modal';
-export { pagination } from './pagination';
-export { progbar } from './progbar';
-export { tooltip } from './tooltip';
