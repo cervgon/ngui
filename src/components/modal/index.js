@@ -1,6 +1,5 @@
 import angular from 'angular';
 import Template from './template.html';
-import cssReset from '../../css/reset.css';
 import cssCoreButton from '../../css/core_button.css';
 import cssButton from '../../css/button.element.css';
 import Styles from './styles.css';

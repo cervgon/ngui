@@ -1,4 +1,5 @@
 /* Pagination */
+pagination { font-family: "Source Sans Pro", "lucida grande", "Segoe UI", arial, verdana, "lucida sans unicode", tahoma, sans-serif }
 pagination .pagination{ display: inline-block }
 pagination .pagination *{ display: inline-block; float: left }
 pagination .pagination li{ margin-bottom:0.1em; overflow: hidden; cursor: pointer }
@@ -10,10 +11,3 @@ pagination .pagination li a{ padding:.572em .75em }
 pagination .pagination li a:hover{ background-color: #eee }
 pagination .pagination li.selected a:hover { background-color: #eee }
 pagination .pagination .pages{padding:.572em .75em 0.55em 0}
-
-/* Pager */
-.pager{ display: inline-block }
-.pager li:first-child{ float: left; margin-right: 0.25em }
-.pager li:last-child{ float: right; margin-left: 0.25em }
-.pager li a{ border-radius: .3em; border:1px solid #ccc; padding:.572em .75em; display: inline-block }
-.pager li a:hover{ background-color: #f2f2f2 }
