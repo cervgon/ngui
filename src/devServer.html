@@ -31,30 +31,30 @@
         <list>
             <list-item ng-repeat="item in $ctrl.listData.items" ngui-ondelete="$ctrl.listData.onDelete($index)">
                 <list-item-fold>
-                    <div class="g1-3 p0-05">
+                    <div style="width: 33.33%; padding-left: 0.5em; float:left">
                         {{$index + 1}}
                     </div>
-                    <div class="g1-3 p0-05">
+                    <div style="width: 33.33%; padding-left: 0.5em; float:left">
                         {{item.name}} {{item.last}}
                     </div>
-                    <div class="g1-3 p0-05">
+                    <div style="width: 33.33%; padding-left: 0.5em; float:left">
                         {{item.sex}}
                     </div>
                 </list-item-fold>
                 <list-item-expand>
-                    <div class="g1-4 p0-05">
+                    <div style="width: 25%; padding-left: 0.5em; float:left">
                         <input type="text" ng-model="item.name" />
                     </div>
-                    <div class="g1-4 p0-05">
+                    <div style="width: 25%; padding-left: 0.5em; float:left">
                         <input type="text" ng-model="item.last" />
                     </div>
-                    <div class="g1-4 p0-05">
+                    <div style="width: 25%; padding-left: 0.5em; float:left">
                         <select ng-model="item.sex">
                             <option value="Male">Male</option>
                             <option value="Female">Female</option>
                         </select>
                     </div>
-                    <div class="g1-4 p0-05">
+                    <div style="width: 25%; padding-left: 0.5em; float:left">
                         <select ng-model="item.race">
                             <option value="White">White</option>
                             <option value="Black">Black</option>

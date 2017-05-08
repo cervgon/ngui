@@ -1,0 +1,47 @@
+button,
+.btn,
+a.btn,
+input[type="submit"],
+input[type="button"] { background-color: #f9f9f9; border: 1px solid #aaa; color: #444; cursor: pointer; display: inline-block; padding: .572em .75em; letter-spacing: 0.01em; -webkit-border-radius: .3em; -moz-border-radius: .3em; border-radius: .3em; margin: 0; font-weight: 400; text-align: center }
+input,
+button,
+.btn,
+textarea { font-size: 0.875em }
+a.btn { vertical-align: bottom }
+button.matchparent,
+.btn.matchparent,
+a.btn.matchparent,
+input[type="submit"].matchparent,
+input[type="button"].matchparent { display: block }
+button.active:focus,
+button:active,
+button:active:focus,
+button:focus,
+button:hover,
+input[type="submit"]:focus,
+input[type="submit"]:hover,
+input[type="button"]:focus,
+input[type="button"]:hover { -webkit-box-shadow: none; -moz-box-shadow: none; box-shadow: none; outline: 0 none }
+button:hover,
+button:focus,
+button:active:focus,
+button.selected,
+.btn.selected,
+.btn:hover,
+.btn.selected,
+a.btn:hover,
+a.btn.selected,
+input[type="submit"]:hover,
+input[type="submit"].selected:hover,
+input[type="button"]:hover,
+input[type="button"].selected:hover { background-color: #ddd; border-color: #aaa; color: #222; text-decoration: none }
+button.selected,
+.btn.selected,
+input[type="submit"].selected,
+input[type="button"].selected { cursor: default }
+button[disabled="disabled"],
+.btn[disabled="disabled"],
+a.btn[disabled="disabled"],
+input[type="submit"][disabled="disabled"],
+input[type="button"][disabled="disabled"] { background-color: #f9f9f9; border-color: #aaa; color: #999; text-decoration: none; text-shadow: none;  cursor:not-allowed }
+input[type=file].file { width: .1px; height: .1px; opacity: 0; overflow: hidden; position: absolute; z-index: -1 }

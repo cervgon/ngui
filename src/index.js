@@ -1,7 +1,8 @@
 import angular from 'angular';
-
+/*
 import cssReset from './css/reset.css';
 import cssCore from './css/core.css';
+import cssCoreButton from './css/core_button.css';
 import cssGrid from './css/grid.css';
 import cssAlign from './css/align.css';
 import cssColors from './css/colors.css';
@@ -21,7 +22,7 @@ import cssLabel from './css/label.element.css';
 import cssFormCentered from './css/formcentered.element.css';
 import cssDropdownHover from './css/dropdownHover.element.css';
 import cssTable from './css/table.element.css';
-
+*/
 import datepicker from './components/datepicker';
 import dropdown from './components/dropdown';
 import hamburger from './components/hamburger';
@@ -32,7 +33,7 @@ import pagination from './components/pagination';
 import progbar from './components/progbar';
 import tooltip from './components/tooltip';
 
-export { 
+export {
     datepicker,
     dropdown,
     hamburger,

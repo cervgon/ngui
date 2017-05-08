@@ -1,42 +1,42 @@
 /* Progress Bar */
-.progress { margin-bottom: 1em; overflow: hidden; background-color: transparent; border-radius: 0.25em; border: 1px solid #e9e9e9; padding: 0 }
-.progress-bar,
-.progressBar { float: left; width: 0; font-size: 0.75em; line-height: 1em; height: 0.75em; color: #666; text-align: right; background-color: #eee; outline: 1px solid #ddd; margin: -1px -1px -1px 0px; -webkit-transition: width .6s ease; -o-transition: width .6s ease; transition: width .6s ease; overflow: hidden; max-width: 100%; }
-.labeled .progress-bar,
-.labeled .progressBar { line-height: 1.5em; height: 1.5em }
-.progress-bar span,
-.progressBar span { font-weight: 700; margin: 0 0.25em }
-.progress-bar span:last-child,
-.progressBar span:last-child { margin-left: 0 }
-.progress-bar-danger,
-.progress-bar-red,
-.redProgress { color: #330d0d; outline-color: #d83636; background: #ff7373; background: -moz-linear-gradient(-90deg, #ff7373 0%, #ff895a 100%); background: -webkit-linear-gradient(-90deg, #ff7373 0%, #ff895a 100%); background: linear-gradient(-90deg, #ff7373 0%, #ff895a 100%) }
-.progress-bar-salmon,
-.salmonProgress { color: #3f1610; outline-color: #cc5936; background: #ff895a; background: -moz-linear-gradient(-90deg, #ff895a 0%, #ffb45a 100%); background: -webkit-linear-gradient(-90deg, #ff895a 0%, #ffb45a 100%); background: linear-gradient(-90deg, #ff895a 0%, #ffb45a 100%) }
-.progress-bar-warning,
-.progress-bar-orange,
-.orangeProgress { color: #3f2710; outline-color: #d88b36; background: #ffb45a; background: -moz-linear-gradient(-90deg, #ffb45a 0%, #ffd45a 100%); background: -webkit-linear-gradient(-90deg, #ffb45a 0%, #ffd45a 100%); background: linear-gradient(-90deg, #ffb45a 0%, #ffd45a 100%) }
-.progress-bar-amber,
-.amberProgress { color: #473313; outline-color: #e5a83c; background: #ffd45a; background: -moz-linear-gradient(-90deg, #ffd45a 0%, #fff15a 100%); background: -webkit-linear-gradient(-90deg, #ffd45a 0%, #fff15a 100%); background: linear-gradient(-90deg, #ffd45a 0%, #fff15a 100%) }
-.progress-bar-yellow,
-.yellowProgress { color: #473d13; outline-color: #e5d142; background: #fff15a; background: -moz-linear-gradient(-90deg, #fff15a 0%, #fff68f 100%); background: -webkit-linear-gradient(-90deg, #fff15a 0%, #fff68f 100%); background: linear-gradient(-90deg, #fff15a 0%, #fff68f 100%) }
-.progress-bar-lemon,
-.lemonProgress { color: #2e330d; outline-color: #95a340; background: #bcd877; background: -moz-linear-gradient(-90deg, #bcd877 0%, #d0e3a0 100%); background: -webkit-linear-gradient(-90deg, #bcd877 0%, #d0e3a0 100%); background: linear-gradient(-90deg, #bcd877 0%, #d0e3a0 100%) }
-.progress-bar-success,
-.progress-bar-green,
-.greenProgress { color: #0d330d; outline-color: #3da33d; background: #8dd892; background: -moz-linear-gradient(-90deg, #8dd892 0%, #b3e5b6 100%); background: -webkit-linear-gradient(-90deg, #8dd892 0%, #b3e5b6 100%); background: linear-gradient(-90deg, #8dd892 0%, #b3e5b6 100%) }
-.progress-bar-emerald,
-.emeraldProgress { color: #0c2d1f; outline-color: #379378; background: #8ed6c3; background: -moz-linear-gradient(-90deg, #8ed6c3 0%, #b4e4d7 100%); background: -webkit-linear-gradient(-90deg, #8ed6c3 0%, #b4e4d7 100%); background: linear-gradient(-90deg, #8ed6c3 0%, #b4e4d7 100%) }
-.progress-bar-info,
-.progress-bar-blue,
-.blueProgress { color: #0d2833; outline-color: #4c96d8; background: #9ecef2; background: -moz-linear-gradient(-90deg, #9ecef2 0%, #c9e4f8 100%); background: -webkit-linear-gradient(-90deg, #9ecef2 0%, #c9e4f8 100%); background: linear-gradient(-90deg, #9ecef2 0%, #c9e4f8 100%) }
-.progress-bar-lavender,
-.lavenderProgress { color: #0b163d; outline-color: #6771d8; background: #9ea8f2; background: -moz-linear-gradient(-90deg, #9ea8f2 0%, #c9cff8 100%); background: -webkit-linear-gradient(-90deg, #9ea8f2 0%, #c9cff8 100%); background: linear-gradient(-90deg, #9ea8f2 0%, #c9cff8 100%) }
-.progress-bar-violet,
-.violetProgress { color: #130933; outline-color: #8b56ef; background: #ba9ef2; background: -moz-linear-gradient(-90deg, #ba9ef2 0%, #d9c9f8 100%); background: -webkit-linear-gradient(-90deg, #ba9ef2 0%, #d9c9f8 100%); background: linear-gradient(-90deg, #ba9ef2 0%, #d9c9f8 100%) }
-.progress-bar-pink,
-.pinkProgress { color: #3d1035; outline-color: #d84cae; background: #ed8ed9; background: -moz-linear-gradient(-90deg, #ed8ed9 0%, #f4b8e7 100%); background: -webkit-linear-gradient(-90deg, #ed8ed9 0%, #f4b8e7 100%); background: linear-gradient(-90deg, #ed8ed9 0%, #f4b8e7 100%) }
-.progress-bar-black,
-.blackProgress { color: #fff; outline-color: #000; text-shadow: 0 0px 2px #000 !important; background: #444; background: -moz-linear-gradient(-90deg, #444 0%, #808080 100%); background: -webkit-linear-gradient(-90deg, #444 0%, #808080 100%); background: linear-gradient(-90deg, #444 0%, #808080 100%) }
-.progress-bar-gray,
-.grayProgress { color: #333333; outline-color: #8c8c8c; background: #bfbfbf; background: -moz-linear-gradient(-90deg, #bfbfbf 0%, #d9d9d9 100%); background: -webkit-linear-gradient(-90deg, #bfbfbf 0%, #d9d9d9 100%); background: linear-gradient(-90deg, #bfbfbf 0%, #d9d9d9 100%) }
+progbar .progress { margin-bottom: 1em; overflow: hidden; background-color: transparent; border-radius: 0.25em; border: 1px solid #e9e9e9; padding: 0 }
+progbar .progress-bar,
+progbar .progressBar { float: left; width: 0; font-size: 0.75em; line-height: 1em; height: 0.75em; color: #666; text-align: right; background-color: #eee; outline: 1px solid #ddd; margin: -1px -1px -1px 0px; -webkit-transition: width .6s ease; -o-transition: width .6s ease; transition: width .6s ease; overflow: hidden; max-width: 100%; }
+progbar .labeled .progress-bar,
+progbar .labeled .progressBar { line-height: 1.5em; height: 1.5em }
+progbar .progress-bar span,
+progbar .progressBar span { font-weight: 700; margin: 0 0.25em }
+progbar .progress-bar span:last-child,
+progbar .progressBar span:last-child { margin-left: 0 }
+progbar .progress-bar-danger,
+progbar .progress-bar-red,
+progbar .redProgress { color: #330d0d; outline-color: #d83636; background: #ff7373; background: -moz-linear-gradient(-90deg, #ff7373 0%, #ff895a 100%); background: -webkit-linear-gradient(-90deg, #ff7373 0%, #ff895a 100%); background: linear-gradient(-90deg, #ff7373 0%, #ff895a 100%) }
+progbar .progress-bar-salmon,
+progbar .salmonProgress { color: #3f1610; outline-color: #cc5936; background: #ff895a; background: -moz-linear-gradient(-90deg, #ff895a 0%, #ffb45a 100%); background: -webkit-linear-gradient(-90deg, #ff895a 0%, #ffb45a 100%); background: linear-gradient(-90deg, #ff895a 0%, #ffb45a 100%) }
+progbar .progress-bar-warning,
+progbar .progress-bar-orange,
+progbar .orangeProgress { color: #3f2710; outline-color: #d88b36; background: #ffb45a; background: -moz-linear-gradient(-90deg, #ffb45a 0%, #ffd45a 100%); background: -webkit-linear-gradient(-90deg, #ffb45a 0%, #ffd45a 100%); background: linear-gradient(-90deg, #ffb45a 0%, #ffd45a 100%) }
+progbar .progress-bar-amber,
+progbar .amberProgress { color: #473313; outline-color: #e5a83c; background: #ffd45a; background: -moz-linear-gradient(-90deg, #ffd45a 0%, #fff15a 100%); background: -webkit-linear-gradient(-90deg, #ffd45a 0%, #fff15a 100%); background: linear-gradient(-90deg, #ffd45a 0%, #fff15a 100%) }
+progbar .progress-bar-yellow,
+progbar .yellowProgress { color: #473d13; outline-color: #e5d142; background: #fff15a; background: -moz-linear-gradient(-90deg, #fff15a 0%, #fff68f 100%); background: -webkit-linear-gradient(-90deg, #fff15a 0%, #fff68f 100%); background: linear-gradient(-90deg, #fff15a 0%, #fff68f 100%) }
+progbar .progress-bar-lemon,
+progbar .lemonProgress { color: #2e330d; outline-color: #95a340; background: #bcd877; background: -moz-linear-gradient(-90deg, #bcd877 0%, #d0e3a0 100%); background: -webkit-linear-gradient(-90deg, #bcd877 0%, #d0e3a0 100%); background: linear-gradient(-90deg, #bcd877 0%, #d0e3a0 100%) }
+progbar .progress-bar-success,
+progbar .progress-bar-green,
+progbar .greenProgress { color: #0d330d; outline-color: #3da33d; background: #8dd892; background: -moz-linear-gradient(-90deg, #8dd892 0%, #b3e5b6 100%); background: -webkit-linear-gradient(-90deg, #8dd892 0%, #b3e5b6 100%); background: linear-gradient(-90deg, #8dd892 0%, #b3e5b6 100%) }
+progbar .progress-bar-emerald,
+progbar .emeraldProgress { color: #0c2d1f; outline-color: #379378; background: #8ed6c3; background: -moz-linear-gradient(-90deg, #8ed6c3 0%, #b4e4d7 100%); background: -webkit-linear-gradient(-90deg, #8ed6c3 0%, #b4e4d7 100%); background: linear-gradient(-90deg, #8ed6c3 0%, #b4e4d7 100%) }
+progbar .progress-bar-info,
+progbar .progress-bar-blue,
+progbar .blueProgress { color: #0d2833; outline-color: #4c96d8; background: #9ecef2; background: -moz-linear-gradient(-90deg, #9ecef2 0%, #c9e4f8 100%); background: -webkit-linear-gradient(-90deg, #9ecef2 0%, #c9e4f8 100%); background: linear-gradient(-90deg, #9ecef2 0%, #c9e4f8 100%) }
+progbar .progress-bar-lavender,
+progbar .lavenderProgress { color: #0b163d; outline-color: #6771d8; background: #9ea8f2; background: -moz-linear-gradient(-90deg, #9ea8f2 0%, #c9cff8 100%); background: -webkit-linear-gradient(-90deg, #9ea8f2 0%, #c9cff8 100%); background: linear-gradient(-90deg, #9ea8f2 0%, #c9cff8 100%) }
+progbar .progress-bar-violet,
+progbar .violetProgress { color: #130933; outline-color: #8b56ef; background: #ba9ef2; background: -moz-linear-gradient(-90deg, #ba9ef2 0%, #d9c9f8 100%); background: -webkit-linear-gradient(-90deg, #ba9ef2 0%, #d9c9f8 100%); background: linear-gradient(-90deg, #ba9ef2 0%, #d9c9f8 100%) }
+progbar .progress-bar-pink,
+progbar .pinkProgress { color: #3d1035; outline-color: #d84cae; background: #ed8ed9; background: -moz-linear-gradient(-90deg, #ed8ed9 0%, #f4b8e7 100%); background: -webkit-linear-gradient(-90deg, #ed8ed9 0%, #f4b8e7 100%); background: linear-gradient(-90deg, #ed8ed9 0%, #f4b8e7 100%) }
+progbar .progress-bar-black,
+progbar .blackProgress { color: #fff; outline-color: #000; text-shadow: 0 0px 2px #000 !important; background: #444; background: -moz-linear-gradient(-90deg, #444 0%, #808080 100%); background: -webkit-linear-gradient(-90deg, #444 0%, #808080 100%); background: linear-gradient(-90deg, #444 0%, #808080 100%) }
+progbar .progress-bar-gray,
+progbar .grayProgress { color: #333333; outline-color: #8c8c8c; background: #bfbfbf; background: -moz-linear-gradient(-90deg, #bfbfbf 0%, #d9d9d9 100%); background: -webkit-linear-gradient(-90deg, #bfbfbf 0%, #d9d9d9 100%); background: linear-gradient(-90deg, #bfbfbf 0%, #d9d9d9 100%) }
