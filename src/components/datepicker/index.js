@@ -1,5 +1,6 @@
 import angular from 'angular';
 import Template from './template.html';
+//import cssReset from '../../css/reset.css';
 import Styles from './styles.css';
 
 export default angular
@@ -98,7 +99,7 @@ export default angular
                     return false;
                 if (n !== $ctrl.today.getDate())
                     return false;
-                
+
                 return true;
             }
 

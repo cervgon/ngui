@@ -1,5 +1,7 @@
 datepicker {
     display: inline-block; width: 100%;
+    font-family: "Source Sans Pro", "lucida grande", "Segoe UI", arial, verdana, "lucida sans unicode", tahoma, sans-serif;
+    -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box
 }
 datepicker .datepicker-container {
     width: 100%;
@@ -25,7 +27,7 @@ datepicker .datepicker-input {
     text-align: left;
 }
 datepicker .datepicker-fake-input input {
-    width: 1.5em;
+    width: 1.75em;
     border: 0;
     font-size: 1em;
     outline: 0;

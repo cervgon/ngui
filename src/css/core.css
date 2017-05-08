@@ -5,25 +5,10 @@ The MIT License (MIT)
 https://github.com/cervgon/ngui/blob/master/LICENSE
 */
 
-/* Import Source Sans Pro */
-@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,300,600,700");
-
-/* Tags */
-html { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box }
-*,
-*:before,
-*:after { -webkit-box-sizing: inherit; -moz-box-sizing: inherit; box-sizing: inherit }
-span, a, li, b, strong, em, i, p, td, th, input { -webkit-font-smoothing: antialiased }
-/* Scroll bar */
-::-webkit-scrollbar { width: 5px; height: 5px }
-::-webkit-scrollbar-track-piece { background-color: #fff }
-::-webkit-scrollbar-thumb:vertical { height: 5px; background-color: #ccc }
-::-webkit-scrollbar-thumb:horizontal { width: 5px; background-color: #ccc }
 /* Selection */
 ::selection { background: rgba(0, 0, 0, 0.1) }
 ::-moz-selection { background: rgba(0, 0, 0, 0.1) }
 /* */
-body { font-family: "Source Sans Pro", "lucida grande", "Segoe UI", arial, verdana, "lucida sans unicode", tahoma, sans-serif; font-size: 16px }
 a { text-decoration: none; cursor: pointer; outline: none; -webkit-hyphens: auto; -moz-hyphens: auto; -ms-hyphens: auto; hyphens: auto; word-break: break-all }
 a,
 a:link,
@@ -37,53 +22,6 @@ a.withIcon i:hover { text-decoration: none; color: #003456 }
 b,
 .bold { font-weight: 700 }
 br { clear: both }
-button,
-.btn,
-a.btn,
-input[type="submit"],
-input[type="button"] { background-color: #f9f9f9; border: 1px solid #aaa; color: #444; cursor: pointer; display: inline-block; padding: .572em .75em; letter-spacing: 0.01em; -webkit-border-radius: .3em; -moz-border-radius: .3em; border-radius: .3em; margin: 0; font-weight: 400; text-align: center }
-input,
-button,
-.btn,
-textarea { font-size: 0.875em }
-a.btn { vertical-align: bottom }
-button.matchparent,
-.btn.matchparent,
-a.btn.matchparent,
-input[type="submit"].matchparent,
-input[type="button"].matchparent { display: block }
-button.active:focus,
-button:active,
-button:active:focus,
-button:focus,
-button:hover,
-input[type="submit"]:focus,
-input[type="submit"]:hover,
-input[type="button"]:focus,
-input[type="button"]:hover { -webkit-box-shadow: none; -moz-box-shadow: none; box-shadow: none; outline: 0 none }
-button:hover,
-button:focus,
-button:active:focus,
-button.selected,
-.btn.selected,
-.btn:hover,
-.btn.selected,
-a.btn:hover,
-a.btn.selected,
-input[type="submit"]:hover,
-input[type="submit"].selected:hover,
-input[type="button"]:hover,
-input[type="button"].selected:hover { background-color: #ddd; border-color: #aaa; color: #222; text-decoration: none }
-button.selected,
-.btn.selected,
-input[type="submit"].selected,
-input[type="button"].selected { cursor: default }
-button[disabled="disabled"],
-.btn[disabled="disabled"],
-a.btn[disabled="disabled"],
-input[type="submit"][disabled="disabled"],
-input[type="button"][disabled="disabled"] { background-color: #f9f9f9; border-color: #aaa; color: #999; text-decoration: none; text-shadow: none;  cursor:not-allowed }
-input[type=file].file { width: .1px; height: .1px; opacity: 0; overflow: hidden; position: absolute; z-index: -1 }
 button i.material-icons { vertical-align: middle;margin: 0 }
 button i.material-icons,
 a i.material-icons,
@@ -121,7 +59,7 @@ hr.maincolor { border-top: .0625em solid #6fa1c3 }
 hr.half { width: 50% }
 i { }
 iframe { border: 0 none }
-img { }
+img { -ms-interpolation-mode: bicubic }
 
 /* Inputs */
 input,
@@ -189,7 +127,7 @@ nav ul li.active { background-color: #e8f6f9 }
 nav ul li.active a { cursor: default }
 
 /* Lists */
-ul { list-style: none; -webkit-margin-before: 0; -webkit-margin-after: 0; -webkit-margin-start: 0px; -webkit-margin-end: 0px; -webkit-padding-start: 0px; -moz-margin-before: 0; -moz-margin-after: 0; -moz-margin-start: 0px; -moz-margin-end: 0px; -moz-padding-start: 0px; margin-before: 0; margin-after: 0; margin-start: 0px; margin-end: 0px; padding-start: 0px; padding-left: 0 }
+ul { }
 li { }
 noscript { }
 ol { }

@@ -1,5 +1,8 @@
 import angular from 'angular';
 import Template from './template.html';
+import cssReset from '../../css/reset.css';
+import cssCoreButton from '../../css/core_button.css';
+import cssButton from '../../css/button.element.css';
 import Styles from './styles.css';
 
 export default angular
@@ -146,7 +149,7 @@ export default angular
                     $ctrl.options = data.options || false;
                     $ctrl.align = data.align || "right";
                     $ctrl.blackBg = data.blackBg || false;
-                    
+
                     $scope.$modalData = data.modalData || {};
                     if(data.customHtml) {
                         $timeout(function(){

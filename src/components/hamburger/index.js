@@ -1,5 +1,6 @@
 import angular from 'angular';
 import Template from './template.html';
+//import cssReset from '../../css/reset.css';
 import Styles from './styles.css';
 
 export default angular
@@ -7,7 +8,8 @@ export default angular
     .component('hamburger', {
         template: Template,
         bindings: {
-            nguiModel: '='
+            nguiModel: '=',
+            nguiOptions: '<'
         },
         controller: function() {
             "ngInject";
