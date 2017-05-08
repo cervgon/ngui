@@ -1,17 +1,9 @@
 import angular from 'angular';
-import main from './main';
-import {
-    loader,
-    dropdown,
-    hamburger,
-    list,
-    pagination,
-    tooltip
-} from "./components";
+import ngui from './index';
 
-import Template from './devServer2.html';
+import Template from './devServer.html';
 
-const App = angular.module('app', ["ngui"]);
+const App = angular.module('app', [ngui]);
 
 App.component('app', {
     template: Template,

@@ -1,6 +1,6 @@
 /* List */
-list { color: #333 }
-list list-item {}
+list { color: #333; font-family: "Source Sans Pro", "lucida grande", "Segoe UI", arial, verdana, "lucida sans unicode", tahoma, sans-serif; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box }
+list list-item { }
 list list-item .list-item { position: relative; }
 list list-item:nth-child(even) .list-item{ background-color: #fcfcfc}
 list list-item .list-item ng-transclude { display: block }
@@ -46,7 +46,8 @@ list list-item .list-item span.delete:hover {
 }
 
 list list-item .list-item list-item-fold { width: 100% }
-list list-item .list-item list-item-fold .list-item-fold { width: 100%; padding: .55em 5em 0.55em 0; border-bottom: 1px solid #ddd; transition: border-bottom-color 0.1s ease-out; }
+list list-item .list-item list-item-fold .list-item-fold { width: 100%; padding: .55em 5em 0.55em 0; border-bottom: 1px solid #ddd; transition: border-bottom-color 0.1s ease-out; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box }
+list list-item .list-item list-item-fold .list-item-fold * { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box }
 list list-item .list-item.open list-item-fold .list-item-fold { border-bottom-color: transparent }
 
 list list-item .list-item list-item-expand { }
@@ -72,3 +73,4 @@ list list-item .list-item list-item-expand .list-item-expand ng-transclude {
 list list-item .list-item list-item-expand .list-item-expand ng-transclude label{
     margin-bottom: initial;
 }
+list list-item .list-item list-item-expand .list-item-expand ng-transclude * { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box }

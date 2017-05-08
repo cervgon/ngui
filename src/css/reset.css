@@ -85,3 +85,16 @@ textarea { overflow: auto }
 select::-ms-expand { display: none }
 ::-ms-clear { display: none }
 /* */
+
+/* Import Source Sans Pro */
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,300,600,700");
+
+/* Tags */
+html { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box }
+*,
+*:before,
+*:after { -webkit-box-sizing: inherit; -moz-box-sizing: inherit; box-sizing: inherit }
+body { font-family: "Source Sans Pro", "lucida grande", "Segoe UI", arial, verdana, "lucida sans unicode", tahoma, sans-serif; font-size: 16px }
+span, a, li, b, strong, em, i, p, td, th, input { -webkit-font-smoothing: antialiased }
+/* Lists */
+ul { list-style: none; -webkit-margin-before: 0; -webkit-margin-after: 0; -webkit-margin-start: 0px; -webkit-margin-end: 0px; -webkit-padding-start: 0px; -moz-margin-before: 0; -moz-margin-after: 0; -moz-margin-start: 0px; -moz-margin-end: 0px; -moz-padding-start: 0px; margin-before: 0; margin-after: 0; margin-start: 0px; margin-end: 0px; padding-start: 0px; padding-left: 0 }
