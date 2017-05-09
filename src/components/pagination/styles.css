@@ -1,6 +1,6 @@
 /* Pagination */
 pagination { font-family: "Source Sans Pro", "lucida grande", "Segoe UI", arial, verdana, "lucida sans unicode", tahoma, sans-serif }
-pagination .pagination{ display: inline-block }
+pagination .pagination { padding: 0; display: inline-block }
 pagination .pagination *{ display: inline-block; float: left }
 pagination .pagination li{ margin-bottom:0.1em; overflow: hidden; cursor: pointer }
 pagination .pagination li.selected{ background-color: #f2f2f2; cursor: default }

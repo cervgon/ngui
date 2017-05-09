@@ -7,6 +7,7 @@ export default angular
     .component('tooltip', {
         template: Template,
         bindings: {
+            nguiModel: '=',
             nguiOptions: '<'
         },
         controller: function($element, $timeout) {
@@ -18,51 +19,26 @@ export default angular
                     return;
                 console.log("[TOOLTIP] updateOptions", options, $ctrl);
 
-                $ctrl.message = options.message || "";
+                $ctrl.message = options.message || "Your message goes here";
                 $ctrl.position = options.position || 'top';
-                $ctrl.timeout = options.timeout || 0;
-                $ctrl.show = options.show || true;
+                $ctrl.timeout = options.timeout || 3;
             }
 
             $ctrl.$onChanges = function(changes) {
                 updateOptions(changes.nguiOptions.currentValue);
             }
-
-            $ctrl.$onInit = function() {
-                if (!this.nguiOptions)
-                    this.nguiOptions = {};
-                updateOptions(this.nguiOptions);
-
-                if ($ctrl.timeout > 0) {
-                    $timeout(function() {
-                        $ctrl.show = false;
-                    }, $ctrl.timeout * 1000);
-                }
+            function show() {
+                $ctrl.visibility = 'visible';
             }
 
-            return;
+            function show() {
+                $timeout(function(){
+                    $ctrl.visibility = 'visible';
+                },200)
+            }
 
-            $ctrl.$onInit = function() {
-
-                var timeFadeOut = 4000;
-                if ($ctrl.nguiTimeout != undefined) {
-                    if ($ctrl.nguiTimeout < 1) {
-                        $ctrl.nguiTimeout = 1
-                    }
-                    timeFadeOut = $ctrl.nguiTimeout * 1000;
-                }
-                var timeRemove = timeFadeOut + 1000;
-
-                $timeout(function() {
-                    $ctrl.positionClass += ' fadeOut';
-                    $ctrl.positionClass += $ctrl.fadeOutClass;
-                }, timeFadeOut)
-                $timeout(function() {
-                    $ctrl.showTooltip = false;
-                }, timeRemove)
-
+            $ctrl.timeoutThis = function(){
                 $element.ready(function() {
-
                     var el = $element[0];
                     var prevSib = el.previousElementSibling;
                     var prevSibW = prevSib.offsetWidth;
@@ -72,9 +48,6 @@ export default angular
                     var tooltipH = el.children[0].offsetHeight;
                     var bodyH = document.body.offsetHeight;
 
-                    function show() {
-                        $ctrl.visibility = 'visible';
-                    }
 
                     function setLeft() {
                         $ctrl.positionClass = 'left';
@@ -115,47 +88,59 @@ export default angular
                         $ctrl.fadeOutClass = 'Top';
                         show();
                     }
-
-                    switch ($ctrl.nguiPosition) {
-                        case 'left':
-                            if (rect.left - prevSibW - tooltipW < 0) {
-                                // Doesn't fit on the left
-                                setRight();
-                            } else {
-                                // Fits on the left
-                                setLeft();
-                            }
-                            break;
-                        case 'right':
-                            if (window.innerWidth - rect.right - tooltipW < 0) {
-                                // Doesn't fit on the right
-                                setBottom();
-                            } else {
-                                // Fits on the right
-                                setRight();
-                            }
-                            break;
-                        case 'bottom':
-                            if (bodyH - el.offsetTop - tooltipH < 0) {
-                                // Doesn't fit on the bottom
-                                setTop();
-                            } else {
-                                // Fits on the bottom
-                                setBottom();
-                            }
-                            break;
-                        case 'top':
-                        default:
-                            if (rect.top - prevSibH - tooltipH < 0) {
-                                // Doesn't fit on the top
-                                setBottom();
-                            } else {
-                                // Fits on the top
-                                setTop();
-                            }
-                    }
+                    $timeout(function(){
+                        switch ($ctrl.nguiOptions.position) {
+                            case 'left':
+                                if (rect.left - prevSibW - tooltipW < 0) {
+                                    // Doesn't fit on the left
+                                    setRight();
+                                } else {
+                                    // Fits on the left
+                                    setLeft();
+                                }
+                                break;
+                            case 'right':
+                                if (window.innerWidth - rect.right - tooltipW < 0) {
+                                    // Doesn't fit on the right
+                                    setBottom();
+                                } else {
+                                    // Fits on the right
+                                    setRight();
+                                }
+                                break;
+                            case 'bottom':
+                                if (bodyH - el.offsetTop - tooltipH < 0) {
+                                    // Doesn't fit on the bottom
+                                    setTop();
+                                } else {
+                                    // Fits on the bottom
+                                    setBottom();
+                                }
+                                break;
+                            case 'top':
+                            default:
+                                if (rect.top - prevSibH - tooltipH < 0) {
+                                    // Doesn't fit on the top
+                                    setBottom();
+                                } else {
+                                    // Fits on the top
+                                    setTop();
+                                }
+                        }
+                    },400)
                 });
-                $ctrl.showTooltip = true;
+
+                $timeout(function(){
+                    $ctrl.nguiModel = false;
+                },$ctrl.timeout*1000);
+
+            }
+
+            $ctrl.$onInit = function() {
+
+                if (!this.nguiOptions)
+                    this.nguiOptions = {};
+                updateOptions(this.nguiOptions);
             }
         }
     })

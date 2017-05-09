@@ -17,7 +17,7 @@ export default angular
             function updateOptions(options) {
                 if (!options)
                     return;
-                console.log("[PROGBAR] updateOptions", options, $ctrl);
+                //console.log("[PROGBAR] updateOptions", options, $ctrl);
                 $ctrl.color = options.color || 'gray';
                 $ctrl.label = options.label || false;
                 switch ($ctrl.color) {

@@ -30,14 +30,14 @@ export default angular
             $ctrl.changeOption = function(option) {
                 $ctrl.nguiModel = option;
                 $ctrl.opened = false;
-                console.log("DROPDOWN model", $ctrl.nguiModel);
+                //console.log("DROPDOWN model", $ctrl.nguiModel);
                 document.activeElement.blur();
             }
 
             function updateOptions(options) {
                 if (!options)
                     return;
-                console.log("[DROPDOWN] updateOptions", options, $ctrl);
+                //console.log("[DROPDOWN] updateOptions", options, $ctrl);
                 $ctrl.options = options.options || [];
                 $ctrl.opened = options.opened || false;
                 $ctrl.placeholder = options.placeholder || "Select";

@@ -56,7 +56,7 @@ export default angular
             function updateOptions(options) {
                 if (!options)
                     return;
-                console.log("[PAGINATION] updateOptions", options, $ctrl);
+                //console.log("[PAGINATION] updateOptions", options, $ctrl);
 
                 $ctrl.items = options.items || [];
                 $ctrl.currentPage = options.currentPage || 0;

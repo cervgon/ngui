@@ -120,14 +120,14 @@ export default angular
             $scope.$modalData = {};
 
             $ctrl.onYes = function() {
-                console.log("[MODAL] $modalData:", $scope.$modalData);
+                //console.log("[MODAL] $modalData:", $scope.$modalData);
                 $ctrl.show = false;
                 if ($ctrl.yesCallback)
                     $ctrl.yesCallback($scope.$modalData);
             }
 
             $ctrl.onNo = function() {
-                console.log("[MODAL] $modalData:", $scope.$modalData);
+                //console.log("[MODAL] $modalData:", $scope.$modalData);
                 $ctrl.show = false;
                 if ($ctrl.noCallback)
                     $ctrl.noCallback($scope.$modalData);
@@ -135,7 +135,7 @@ export default angular
 
             $scope.$on('nguiModal', function(event, data) {
                 $timeout(function() {
-                    console.log("[MODAL] nguiModal event", data);
+                    //console.log("[MODAL] nguiModal event", data);
                     $rootScope.$broadcast('nguiLoader', {show: false}); // If there is an open preloader, remove it.
                     $ctrl.show = true;
                     $ctrl.message = data.message || "";

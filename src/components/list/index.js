@@ -70,7 +70,7 @@ export default angular
             function updateOptions(options) {
                 if (!options)
                     return;
-                console.log("[LIST] updateOptions", options, $ctrl);
+                //console.log("[LIST] updateOptions", options, $ctrl);
                 $ctrl.opened = options.opened || false;
                 $ctrl.disabled = options.disabled || false;
 

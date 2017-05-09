@@ -276,7 +276,7 @@ export default angular
             function updateOptions(options) {
                 if (!options)
                     return;
-                console.log("[DATEPICKER] updateOptions", options, $ctrl);
+                //console.log("[DATEPICKER] updateOptions", options, $ctrl);
 
                 $ctrl.show_calendar = options.show_calendar || false;
                 $ctrl.today = options.today || new Date();
