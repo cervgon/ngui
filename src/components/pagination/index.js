@@ -1,6 +1,5 @@
 import angular from 'angular';
 import Template from './template.html';
-//import cssReset from '../../css/reset.css';
 import Styles from './styles.css';
 
 export default angular

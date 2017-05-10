@@ -127,7 +127,7 @@ export default angular
                                     setTop();
                                 }
                         }
-                    },400)
+                    },100)
                 });
 
                 $timeout(function(){

@@ -1,0 +1,6 @@
+<div class="toggle" ng-click="$ctrl.toggle()" ng-class="{'true': $ctrl.nguiModel, 'mouseover':$ctrl.mouseover}"
+     ng-swipe-right="$ctrl.changeStatus(true)" ng-swipe-left="$ctrl.changeStatus(false)"
+     ng-style="$ctrl.nguiModel && {'background-color':$ctrl.oncolor}
+     || !$ctrl.nguiModel && {'background-color':$ctrl.offcolor}">
+    <div class="circle" ng-style="{'background-color':$ctrl.circlecolor}"></div>
+</div>

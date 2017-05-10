@@ -1,0 +1,31 @@
+/* toggle */
+
+toggle {display: inline-block; background-color: transparent;
+
+}
+toggle .toggle {
+    cursor: pointer;
+    display: block;
+    -webkit-transition: background .4s ease-in-out;
+    -moz-transition: background .4s ease-in-out;
+    -o-transition: background .4s ease-in-out;
+    transition: background .4s ease-in-out;
+    width: 3em; height: 1.75em; position: relative; cursor: pointer;
+    background-color: #ddd; border-radius: 1em;
+    -moz-box-shadow:    inset 0 .0625em .125em rgba(0,0,0,.2);
+    -webkit-box-shadow: inset 0 .0625em .125em rgba(0,0,0,.2);
+    box-shadow:         inset 0 .0625em .125em rgba(0,0,0,.2);
+    padding: .125em;
+}
+toggle .toggle.true { background-color: #4bd763; text-align: right}
+toggle .toggle .circle{
+    -webkit-transition: margin .4s ease-in-out;
+    -moz-transition: margin .4s ease-in-out;
+    -o-transition: margin .4s ease-in-out;
+    transition: margin .4s ease-in-out;
+    width: 1.5em; height: 1.5em; background-color: #fff; display: block; border-radius: .75em;
+    -moz-box-shadow:    0px .125em .125em rgba(0,0,0,.2);
+    -webkit-box-shadow: 0px .125em .125em rgba(0,0,0,.2);
+    box-shadow:         0px .125em .125em rgba(0,0,0,.2);
+}
+toggle .toggle.true .circle { margin-left: 1.25em }

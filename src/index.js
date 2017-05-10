@@ -31,6 +31,7 @@ import loader from './components/loader';
 import modal from './components/modal';
 import pagination from './components/pagination';
 import progbar from './components/progbar';
+import toggle from './components/toggle';
 import tooltip from './components/tooltip';
 
 export {
@@ -42,6 +43,7 @@ export {
     modal,
     pagination,
     progbar,
+    toggle,
     tooltip
 }
 
@@ -55,6 +57,7 @@ export default angular
         modal,
         pagination,
         progbar,
+        toggle,
         tooltip
     ])
     .name;

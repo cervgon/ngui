@@ -112,6 +112,18 @@
     </div>
 
     <div class="p1-0">
+        <h3>Toggle</h3>
+        <toggle ngui-model="$ctrl.toggleData"
+                ngui-options="{
+                    oncolor: '#005e9d',
+                    offcolor: '#eeeeee',
+                    circlecolor: '#fff'
+                }"></toggle>
+        <p>Toggle state is: {{$ctrl.toggleData}}</p>
+        <hr>
+    </div>
+
+    <div class="p1-0">
         <h3>Tooltip</h3>
         <select ng-mouseover="$ctrl.tooltip = true" style="width: 200px">
             <option value="White">White</option>
@@ -120,10 +132,10 @@
         </select>
         <tooltip ngui-model="$ctrl.tooltip" ngui-options="{
             message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-            position: 'right',
+            position: 'left',
             timeout: 3
         }"></tooltip>
         <hr>
     </div>
-
+    <hr class="big transparent">
 </div>
