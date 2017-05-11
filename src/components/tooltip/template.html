@@ -7,8 +7,16 @@
         top: $ctrl.top,
         right: $ctrl.right,
         bottom: $ctrl.bottom,
-        left: $ctrl.left
-     }">
+        left: $ctrl.left,
+        'background-color': $ctrl.bgcolor,
+        'color': $ctrl.color
+     }"
+    ng-click="$ctrl.clear()">
     {{$ctrl.message}}
-    <div class="arrow"></div>
+    <div class="arrow">
+        <svg fill='{{$ctrl.bgcolor}}' height='12' viewBox='0 0 24 24' width='12' xmlns='http://www.w3.org/2000/svg'>
+            <path ng-if="$ctrl.positionClass == 'top' || $ctrl.positionClass == 'bottom'" d='m0.374993,23.999994l11.625007,-12.661404l11.625008,12.661404l-23.250015,0z'/>
+            <path ng-if="$ctrl.positionClass == 'right' || $ctrl.positionClass == 'left'" d='m11.839502,11.9375l12.187369,11.812374l0,-23.499875l-12.187369,11.687501z'/>
+        </svg>
+    </div>
 </div>

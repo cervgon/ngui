@@ -13,6 +13,13 @@ export default angular
         controller: function($element, $timeout) {
             "ngInject";
             var $ctrl = this;
+            var promise;
+
+            $ctrl.start = function(){
+                promise = $timeout(function(){
+                        $ctrl.nguiModel = false;
+                    },$ctrl.timeout*1000)
+            }
 
             function updateOptions(options) {
                 if (!options)
@@ -21,12 +28,17 @@ export default angular
 
                 $ctrl.message = options.message || "Your message goes here";
                 $ctrl.position = options.position || 'top';
-                $ctrl.timeout = options.timeout || 3;
+                $ctrl.color = options.color || '#fff';
+                $ctrl.bgcolor = options.bgcolor || '#005e9d';
+                if(options.timeout > 0) {
+                    $ctrl.timeout = options.timeout;
+                }
             }
 
             $ctrl.$onChanges = function(changes) {
                 updateOptions(changes.nguiOptions.currentValue);
             }
+
             function show() {
                 $ctrl.visibility = 'visible';
             }
@@ -35,6 +47,10 @@ export default angular
                 $timeout(function(){
                     $ctrl.visibility = 'visible';
                 },200)
+            }
+            $ctrl.clear = function (){
+                $timeout.cancel(promise);
+                $ctrl.nguiModel = false;
             }
 
             $ctrl.timeoutThis = function(){
@@ -129,15 +145,13 @@ export default angular
                         }
                     },100)
                 });
-
-                $timeout(function(){
-                    $ctrl.nguiModel = false;
-                },$ctrl.timeout*1000);
-
+                if($ctrl.timeout > 0){
+                    $timeout.cancel(promise);
+                    $ctrl.start();
+                }
             }
 
             $ctrl.$onInit = function() {
-
                 if (!this.nguiOptions)
                     this.nguiOptions = {};
                 updateOptions(this.nguiOptions);

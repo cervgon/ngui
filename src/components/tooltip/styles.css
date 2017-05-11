@@ -19,6 +19,7 @@ tooltip {
     width: 0;
     height: 1px;
     vertical-align: top;
+    cursor: pointer;
 }
 .tourMsg {
     -webkit-font-smoothing: antialiased;
@@ -29,6 +30,7 @@ tooltip {
     text-align: left;
     border-radius: 3px;
     font-size: 12px;
+    font-weight: 400;
     text-shadow: 0 1px 1px rgba(0,0,0,0.5);
     padding: 6px 9px;
     white-space: nowrap;
@@ -37,13 +39,13 @@ tooltip {
     z-index: 2;
     visibility: hidden;
 }
-.tourMsg .arrow { z-index: 99; min-width: 0; max-width: 12px }
+.tourMsg .arrow { z-index: 99; min-width: 0; max-width: 12px; background-color: transparent }
 
 .tourMsg.bottom .arrow,
-.tourMsg.top .arrow{ content: ""; background: url("data:image/svg+xml, %3Csvg fill='%23333333' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='m0.374993,23.999994l11.625007,-12.661404l11.625008,12.661404l-23.250015,0z'/%3E%3C/svg%3E") no-repeat; background-size: 12px; width: 12px; height: 12px; position: absolute }
+.tourMsg.top .arrow{ width: 12px; height: 12px; position: absolute }
 
 .tourMsg.right .arrow,
-.tourMsg.left .arrow{ content: ""; background: url("data:image/svg+xml, %3Csvg fill='%23333333' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='m11.839502,11.9375l12.187369,11.812374l0,-23.499875l-12.187369,11.687501z'/%3E%3C/svg%3E") no-repeat; background-size: 12px; width: 12px; height: 12px; position: absolute }
+.tourMsg.left .arrow{ width: 12px; height: 12px; position: absolute }
 
 .tourMsg.bottom { top: 6px }
 .tourMsg.bottom .arrow,
