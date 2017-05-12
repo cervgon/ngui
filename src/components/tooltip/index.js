@@ -64,6 +64,15 @@ export default angular
                     var tooltipH = el.children[0].offsetHeight;
                     var bodyH = document.body.offsetHeight;
 
+                    if(el.offsetTop - prevSib.offsetTop > 1){
+                        console.log(bodyH,el.offsetTop,tooltipH);
+                        if (bodyH - el.offsetTop - tooltipH < 0) {
+                            // Doesn't fit on the bottom
+                            $ctrl.nguiOptions.position = 'forceTop';
+                        } else {
+                            $ctrl.nguiOptions.position = 'forceBottom';
+                        }
+                    }
 
                     function setLeft() {
                         $ctrl.positionClass = 'left';
@@ -95,6 +104,16 @@ export default angular
                         show();
                     }
 
+                    function setForcedBottom(){
+                        $ctrl.positionClass = 'bottom';
+                        $ctrl.top = '6px';
+                        $ctrl.right = 'auto';
+                        $ctrl.bottom = 'auto';
+                        $ctrl.left = (prevSibW / 2) - tooltipW / 2 - 1 + 'px';
+                        $ctrl.fadeOutClass = 'Bottom';
+                        show();
+                    }
+
                     function setTop() {
                         $ctrl.positionClass = 'top';
                         $ctrl.top = -6 - tooltipH + 'px';
@@ -104,6 +123,17 @@ export default angular
                         $ctrl.fadeOutClass = 'Top';
                         show();
                     }
+
+                    function setForcedTop() {
+                        $ctrl.positionClass = 'top';
+                        $ctrl.top = -6 - prevSibH - tooltipH + 'px';
+                        $ctrl.right = 'auto';
+                        $ctrl.bottom = 'auto';
+                        $ctrl.left = (prevSibW / 2) - tooltipW / 2 - 1 + 'px';
+                        $ctrl.fadeOutClass = 'Top';
+                        show();
+                    }
+
                     $timeout(function(){
                         switch ($ctrl.nguiOptions.position) {
                             case 'left':
@@ -118,7 +148,7 @@ export default angular
                             case 'right':
                                 if (window.innerWidth - rect.right - tooltipW < 0) {
                                     // Doesn't fit on the right
-                                    setBottom();
+                                    setLeft();
                                 } else {
                                     // Fits on the right
                                     setRight();
@@ -132,6 +162,14 @@ export default angular
                                     // Fits on the bottom
                                     setBottom();
                                 }
+                                break;
+                            case 'forceBottom':
+                                setForcedBottom()
+                                console.log('forceBottom');
+                                break;
+                            case 'forceTop':
+                                setForcedTop()
+                                console.log('forceTop');
                                 break;
                             case 'top':
                             default:
