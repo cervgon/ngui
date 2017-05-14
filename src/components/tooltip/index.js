@@ -24,8 +24,7 @@ export default angular
             function updateOptions(options) {
                 if (!options)
                     return;
-                console.log("[TOOLTIP] updateOptions", options, $ctrl);
-
+                //console.log("[TOOLTIP] updateOptions", options, $ctrl);
                 $ctrl.message = options.message || "Your message goes here";
                 $ctrl.position = options.position || 'top';
                 $ctrl.color = options.color || '#fff';
@@ -42,18 +41,13 @@ export default angular
             function show() {
                 $ctrl.visibility = 'visible';
             }
-
-            function show() {
-                $timeout(function(){
-                    $ctrl.visibility = 'visible';
-                },200)
-            }
             $ctrl.clear = function (){
                 $timeout.cancel(promise);
                 $ctrl.nguiModel = false;
             }
 
             $ctrl.timeoutThis = function(){
+                $ctrl.visibility = 'hidden';
                 $element.ready(function() {
                     var el = $element[0];
                     var prevSib = el.previousElementSibling;
@@ -138,8 +132,13 @@ export default angular
                         switch ($ctrl.nguiOptions.position) {
                             case 'left':
                                 if (rect.left - prevSibW - tooltipW < 0) {
-                                    // Doesn't fit on the left
-                                    setRight();
+                                    if (window.innerWidth - rect.right - tooltipW < 0) {
+                                        // Does not fit on the right either
+                                        setTop();
+                                    } else {
+                                        // Doesn't fit on the left
+                                        setRight();
+                                    }
                                 } else {
                                     // Fits on the left
                                     setLeft();
@@ -147,8 +146,14 @@ export default angular
                                 break;
                             case 'right':
                                 if (window.innerWidth - rect.right - tooltipW < 0) {
-                                    // Doesn't fit on the right
-                                    setLeft();
+                                    if (rect.left - prevSibW - tooltipW < 0) {
+                                        // Does not fit on the left either
+                                        setTop();
+                                    }
+                                    else {
+                                        // Doesn't fit on the right
+                                        setLeft();
+                                    }
                                 } else {
                                     // Fits on the right
                                     setRight();
