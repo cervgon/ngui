@@ -47,7 +47,9 @@ export default angular
             }
 
             $ctrl.timeoutThis = function(){
+
                 $ctrl.visibility = 'hidden';
+
                 $element.ready(function() {
                     var el = $element[0];
                     var prevSib = el.previousElementSibling;
@@ -58,22 +60,22 @@ export default angular
                     var tooltipH = el.children[0].offsetHeight;
                     var bodyH = document.body.offsetHeight;
 
-                    if(el.offsetTop - prevSib.offsetTop > 1){
-                        console.log(bodyH,el.offsetTop,tooltipH);
-                        if (bodyH - el.offsetTop - tooltipH < 0) {
-                            // Doesn't fit on the bottom
-                            $ctrl.nguiOptions.position = 'forceTop';
-                        } else {
-                            $ctrl.nguiOptions.position = 'forceBottom';
-                        }
-                    }
-
                     function setLeft() {
                         $ctrl.positionClass = 'left';
                         $ctrl.top = (prevSibH - tooltipH) / 2 + 'px';
                         $ctrl.right = prevSibW + 8 + 'px';
                         $ctrl.bottom = 'auto';
                         $ctrl.left = 'auto';
+                        $ctrl.fadeOutClass = 'Left';
+                        show();
+                    }
+
+                    function setLeftSL() {
+                        $ctrl.positionClass = 'left';
+                        $ctrl.top = -(tooltipH + prevSibH)/2 + 'px';
+                        $ctrl.right = 'auto';
+                        $ctrl.bottom = 'auto';
+                        $ctrl.left = -tooltipW - 4 + 'px';
                         $ctrl.fadeOutClass = 'Left';
                         show();
                     }
@@ -88,6 +90,16 @@ export default angular
                         show();
                     }
 
+                    function setRightSL() {
+                        $ctrl.positionClass = 'right';
+                        $ctrl.top = -(tooltipH + prevSibH)/2 + 'px';
+                        $ctrl.right = 'auto';
+                        $ctrl.bottom = 'auto;'
+                        $ctrl.left = prevSibW + 8 + 'px';
+                        $ctrl.fadeOutClass = 'Right';
+                        show();
+                    }
+
                     function setBottom() {
                         $ctrl.positionClass = 'bottom';
                         $ctrl.top = prevSibH + 6 + 'px';
@@ -98,7 +110,7 @@ export default angular
                         show();
                     }
 
-                    function setForcedBottom(){
+                    function setBottomSL(){
                         $ctrl.positionClass = 'bottom';
                         $ctrl.top = '6px';
                         $ctrl.right = 'auto';
@@ -118,7 +130,7 @@ export default angular
                         show();
                     }
 
-                    function setForcedTop() {
+                    function setTopSL() {
                         $ctrl.positionClass = 'top';
                         $ctrl.top = -6 - prevSibH - tooltipH + 'px';
                         $ctrl.right = 'auto';
@@ -128,63 +140,167 @@ export default angular
                         show();
                     }
 
+                    function fitLeft(){
+                        if (rect.left - prevSibW - tooltipW < 0) {
+                            return false;
+                        }
+                        return true;
+                    }
+
+                    function fitRight(){
+                        if (window.innerWidth - rect.right - tooltipW < 0) {
+                            return false;
+                        }
+                        return true;
+                    }
+
+                    function fitBottom(){
+                        if (bodyH - el.offsetTop - tooltipH - prevSibH - 6 < 0) {
+                            return false;
+                        }
+                        return true;
+                    }
+
+                    function fitBottomSL(){
+                        if (bodyH - el.offsetTop - tooltipH < 0) {
+                            return false;
+                        }
+                        return true;
+                    }
+
+                    function fitTop(){
+                        if (rect.top - tooltipH -6 < 0) {
+                            return false;
+                        }
+                        return true;
+                    }
+
+                    function fitLeftSL(){
+                        if (rect.left - tooltipW < 0) {
+                            return false;
+                        }
+                        return true;
+                    }
+
+                    function fitRightSL(){
+                        if (rect.left - tooltipW < 0) {
+                            return false;
+                        }
+                        return true;
+                    }
+
+                    function fitTopSL(){
+                        if (rect.top - prevSibH - tooltipH - 6 < 0) {
+                            return false;
+                        }
+                        return true;
+                    }
+
                     $timeout(function(){
-                        switch ($ctrl.nguiOptions.position) {
+                        var pos = $ctrl.nguiOptions.position;
+                        if(el.offsetTop - prevSib.offsetTop > 1){
+                            // prev Sibling width = 100%
+                            switch ($ctrl.nguiOptions.position) {
+                                case 'left':
+                                    pos = 'leftSL';
+                                    break;
+                                case 'right':
+                                    pos = 'rightSL';
+                                    break;
+                                case 'bottom':
+                                    pos = 'bottomSL';
+                                    break;
+                                case 'top':
+                                default:
+                                    pos = 'topSL';
+                                    break;
+                            }
+                        }
+
+                        switch (pos) {
                             case 'left':
-                                if (rect.left - prevSibW - tooltipW < 0) {
-                                    if (window.innerWidth - rect.right - tooltipW < 0) {
-                                        // Does not fit on the right either
-                                        setTop();
-                                    } else {
-                                        // Doesn't fit on the left
-                                        setRight();
-                                    }
-                                } else {
-                                    // Fits on the left
+                                if (fitLeft()) {
                                     setLeft();
+                                } else {
+                                    if (fitRight()) {
+                                        setRight();
+                                    } else {
+                                        setTop();
+                                    }
                                 }
                                 break;
                             case 'right':
-                                if (window.innerWidth - rect.right - tooltipW < 0) {
-                                    if (rect.left - prevSibW - tooltipW < 0) {
-                                        // Does not fit on the left either
-                                        setTop();
-                                    }
-                                    else {
-                                        // Doesn't fit on the right
+                                if (fitRight()) {
+                                    setRight();
+
+                                } else {
+                                    if (fitLeft()) {
                                         setLeft();
                                     }
-                                } else {
-                                    // Fits on the right
-                                    setRight();
+                                    else {
+                                        setTop();
+                                    }
                                 }
                                 break;
                             case 'bottom':
-                                if (bodyH - el.offsetTop - tooltipH < 0) {
-                                    // Doesn't fit on the bottom
-                                    setTop();
-                                } else {
-                                    // Fits on the bottom
+                                if (fitBottom()) {
                                     setBottom();
+                                } else {
+                                    setTop();
                                 }
                                 break;
-                            case 'forceBottom':
-                                setForcedBottom()
-                                console.log('forceBottom');
+                            case 'leftSL':
+                                if(fitLeftSL()){
+                                    setLeftSL();
+                                } else {
+                                    if(fitRightSL()) {
+                                        setRightSL();
+                                    } else {
+                                        if(fitTopSL()){
+                                            setTopSL();
+                                        } else {
+                                            setBottomSL();
+                                        }
+                                    }
+                                }
                                 break;
-                            case 'forceTop':
-                                setForcedTop()
-                                console.log('forceTop');
+                            case 'rightSL':
+                                if(fitRightSL()) {
+                                    setRightSL();
+                                } else {
+                                    if(fitLeftSL()) {
+                                        setLeftSL();
+                                    } else {
+                                        if(fitTopSL()){
+                                            setTopSL();
+                                        } else {
+                                            setBottomSL();
+                                        }
+                                    }
+                                }
+                                break;
+                            case 'bottomSL':
+                                if(fitBottomSL()){
+                                    setBottomSL();
+                                } else {
+                                    setTopSL();
+                                }
+                                break;
+                            case 'topSL':
+                                if(fitTopSL()){
+                                    setTopSL();
+                                } else {
+                                    setBottomSL();
+                                }
                                 break;
                             case 'top':
                             default:
-                                if (rect.top - prevSibH - tooltipH < 0) {
-                                    // Doesn't fit on the top
-                                    setBottom();
-                                } else {
-                                    // Fits on the top
+                                if (fitTop()) {
                                     setTop();
+                                } else {
+                                    setBottom();
                                 }
+                                break;
                         }
                     },100)
                 });
@@ -192,7 +308,7 @@ export default angular
                     $timeout.cancel(promise);
                     $ctrl.start();
                 }
-            }
+            };
 
             $ctrl.$onInit = function() {
                 if (!this.nguiOptions)
