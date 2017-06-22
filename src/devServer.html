@@ -136,4 +136,25 @@
             timeout: 2
         }"></tooltip>
     </div>
+
+
+    <div class="p1-0">
+        <h3>Radar</h3>
+        <radar ngui-model="$ctrl.radar"
+                ngui-options="{
+                    data: [
+                        [10,50,60,90,45,40],
+                        [100,80,40,70,55,90],
+                        [70,20,70,30,35,70],
+                        [40,40,50,55,90,40],
+                        [20,20,70,65,50,20]
+                    ],
+                    max: 100,
+                    min:0,
+                    backgroundsteps: 5,
+                    colors:['#8ed6c3','#9ecef2','#9ea8f2','#ba9ef2','#ed8ed9','#f00'],
+                    labels:['Altura','Peso','Capacidad','Edad','Cansancio','Locura']
+                }"></radar>
+        <hr>
+    </div>
 </div>

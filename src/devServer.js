@@ -10,7 +10,7 @@ App.component('app', {
     controller: function($scope, $rootScope, $interval, $timeout, nguiLoader, nguiModal) {
         var $ctrl = this;
         console.log("App controller");
-        
+
         // Datepicker
         $ctrl.datepickerData = {
             model: ""
