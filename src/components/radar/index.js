@@ -74,7 +74,7 @@ export default angular
                     var cang = (ang * i + 90) * (pi / 180);
                     var px = Math.trunc((cx - (Math.cos(cang) * radius)) * 1000) / 1000;
                     var py = Math.trunc((cy - (Math.sin(cang) * radius)) * 1000) / 1000;
-                    lines += "<line x1='"+cx+"' y1='"+cy+"' x2='"+px+"' y2='"+py+"' style='stroke:rgba(0,0,0,0.05);stroke-width:1'/>"
+                    lines += "<line x1='"+cx+"' y1='"+cy+"' x2='"+px+"' y2='"+py+"' style='stroke:rgba(0,0,0,0.1);stroke-width:1'/>"
                 }
                 $ctrl.lines = lines;
 

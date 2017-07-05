@@ -53,7 +53,7 @@ p { font-size: 1em; line-height: 1.25 }
 p { margin: 0.3em 0 }
 header { }
 hr { margin: .5em 0; border: none; border-top: 1px solid #e3e3e3; clear: both }
-hr.transparent { border-top: 1px solid transparent }
+hr.transparent, .night hr.transparent { border-top: 1px solid transparent }
 hr.big { margin: 2em 0 }
 hr.maincolor { border-top: .0625em solid #6fa1c3 }
 hr.half { width: 50% }
