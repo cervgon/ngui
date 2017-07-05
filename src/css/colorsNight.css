@@ -1,0 +1,12 @@
+/* Colors */
+.night .color,
+.night .mainColor { color: #005e9d }
+.night .red { color: #f25757 }
+.night .darkRed { color: #a02222 }
+.night .gray { color: #888 }
+.night .white { color: #fff }
+
+/* Borders */
+.night .borderRed { border-color: #F0A8A8 }
+.night .borderBlue { border-color: #9ccbea }
+.night .borderGreen { border-color: #BDDBC1 }

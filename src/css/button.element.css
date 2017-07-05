@@ -2,7 +2,7 @@
 button.btnLight,
 .btn.btnLight,
 a.btn.btnLight,
-label.btn.btnLight { background-color: #fff; border: 1px solid #b2b2b2; color: #555 }
+label.btn.btnLight { background-color: #fff; border: 1px solid #b2b2b2; color: #555; text-shadow: none }
 button.btnGreen,
 .btn.btnGreen,
 a.btn.btnGreen,
@@ -10,7 +10,7 @@ label.btn.btnGreen { background-color: #48b55c; border: 1px solid #327d40; color
 button.btnGreenLight,
 .btn.btnGreenLight,
 a.btn.btnGreenLight,
-label.btn.btnGreenLight { background-color: #f9f9f9; border: 1px solid #94d19f; color: #327d40 }
+label.btn.btnGreenLight { background-color: #f9f9f9; border: 1px solid #94d19f; color: #327d40; text-shadow: none }
 button.btnBlue,
 .btn.btnBlue,
 a.btn.btnBlue,

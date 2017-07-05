@@ -1,0 +1,96 @@
+/* night */
+.night{background-color:#222; color:#aaa}
+
+/* Selection */
+.night ::selection { background: rgba(255, 255, 255, 0.1) }
+.night ::-moz-selection { background: rgba(255, 255, 255, 0.1) }
+/* */
+.night a,
+.night a:link,
+.night a:active,
+.night a:visited { color: #ccc }
+.night a.withIcon i:hover { color: #eee }
+.night hr { border-top-color: #000}
+.night hr.maincolor { border-top-color: #000 }
+/* Inputs */
+.night input,
+.night input[type="text"],
+.night input[type="number"],
+.night input[type="file"],
+.night input[type="email"],
+.night input[type="search"],
+.night input.search,
+.night select,
+.night textarea { background-color: #333; border-color: #111; color: #ccc }
+.night input:focus,
+.night input[type="text"]:focus,
+.night input[type="number"]:focus,
+.night input[type="file"]:focus,
+.night input[type="email"]:focus,
+.night select:focus,
+.night textarea:focus { color: #eee; border-color: #000 }
+.night input:disabled,
+.night input[type="text"]:disabled,
+.night input[type="number"]:disabled,
+.night input[type="file"]:disabled,
+.night input[type="email"]:disabled,
+.night input[type="search"]:disabled,
+.night input.search:disabled,
+.night select:disabled,
+.night textarea:disabled { color: #eee }
+.night [type="checkbox"]:not(:checked),
+.night [type="checkbox"]:checked { }
+.night input[type="search"],
+.night input.search { background-image: url("data:image/svg+xml;charset=UTF-8, %3Csvg fill='%23999999' height='20' viewBox='0 0 24 24' width='32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z'/%3E%3Cpath d='M0 0h24v24H0z' fill='none'/%3E%3C/svg%3E") }
+.night input[type="search"]:disabled,
+.night input.search:disabled { background-image: url("data:image/svg+xml;charset=UTF-8, %3Csvg fill='%23cccccc' height='20' viewBox='0 0 24 24' width='32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z'/%3E%3Cpath d='M0 0h24v24H0z' fill='none'/%3E%3C/svg%3E") }
+.night input[type="search"].animated,
+.night input[type="search"].animated:focus,
+.night input.search.animated:focus { border-color: transparent; background-color: transparent }
+.night input[type="search"].animated:focus::-ms-input-placeholder,
+.night input.search.animated:focus::-ms-input-placeholder { color: #666 }
+
+/* Autofill */
+.night input:-webkit-autofill { -webkit-box-shadow: 0 0 0px 1000px #ffd inset }
+.night input:-webkit-autofill:focus { -webkit-box-shadow: 0 0 0px 1000px #f9f9f9 inset }
+
+.night nav { background-color: #fff; border-bottom-color: #eee }
+.night nav ul li:hover { background-color: #f3f3f3 }
+.night nav ul li.active { background-color: #e8f6f9 }
+
+/* Lists */
+.night select, .arrowDown { background-image: url("data:image/svg+xml;charset=UTF-8, %3Csvg fill='%23999999' height='24' viewBox='0 -2 24 24' width='32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z'/%3E%3Cpath d='M0-.75h24v24H0z' fill='none'/%3E%3C/svg%3E") }
+.night select:disabled { color:#999; background-image: url("data:image/svg+xml;charset=UTF-8, %3Csvg fill='%23cccccc' height='24' viewBox='0 -2 24 24' width='32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z'/%3E%3Cpath d='M0-.75h24v24H0z' fill='none'/%3E%3C/svg%3E") }
+
+/* Backgrounds */
+.night .grayLight { background-color: #fcfcfc }
+
+/* Shadow */
+.night .shadow { -webkit-box-shadow: 0px 10px 15px -5px #000; -moz-box-shadow: 0px 10px 15px -5px #000; box-shadow: 0px 10px 15px -5px #000 }
+
+/* Popup */
+.night .gpopup { background-color: rgba(0, 0, 0, 0.75) }
+.night .gpopup .ginner { background-color: #fff; border-color: #999;  -webkit-box-shadow: 0px 10px 10px -5px rgba(0, 0, 0, 0.3); -moz-box-shadow: 0px 10px 10px -5px rgba(0, 0, 0, 0.3); box-shadow: 0px 10px 10px -5px rgba(0, 0, 0, 0.3) }
+
+/* Scroll to Top */
+.night .scrollToTop { background-image: url("data:image/svg+xml, %3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='32' height='32' fill='%23ffffff' %3E%3Cpath d='M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z'/%3E%3C/svg%3E"); background-color: rgba(0, 0, 0, 0.75) }
+.night .scrollToTop:hover { background-color: rgba(0, 0, 0, 0.85) }
+
+/* Side Menu */
+.night .sideMenu ul li,
+.night .sideMenu label { color: #ccc }
+.night .sideMenu ul li.selected,
+.night .sideMenu label:hover,
+.night .sideMenu label.selected,
+.night .sideMenu label + ul li:hover { color: #fff }
+
+
+@media screen and (-webkit-min-device-pixel-ratio:0) and (min-resolution:.001dpcm) {
+    .night label input[type=checkbox]::after { background-image: url("data:image/svg+xml, %3Csvg fill='%23cccccc' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z'/%3E%3C/svg%3E") }
+    .night label input[type=checkbox]:disabled::after { background-image: url("data:image/svg+xml, %3Csvg fill='%23999999' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z'/%3E%3C/svg%3E") }
+    .night label input[type=checkbox]:checked::after,
+    .night label input[type=checkbox]:checked:disabled { background-image: url("data:image/svg+xml, %3Csvg fill='%23cccccc' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z'/%3E%3C/svg%3E") }
+    .night label input[type=radio]::after,
+    .night label input[type=radio]:disabled::after { background-image: url("data:image/svg+xml, %3Csvg fill='%23cccccc' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z'/%3E%3C/svg%3E") }
+    .night label input[type=radio]:checked::after { background-image: url("data:image/svg+xml, %3Csvg fill='%23cccccc' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zm0-5C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z'/%3E%3C/svg%3E") }
+}

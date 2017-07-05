@@ -1,0 +1,13 @@
+<div class="pie">
+    <svg width="250" height="250" class="chart" ng-if="$ctrl.values">
+        <circle ng-repeat="value in $ctrl.values"
+                cx="125"
+                cy="125"
+                r="80"
+                stroke="{{value.color}}"
+                stroke-width="10"
+                stroke-dasharray="{{value.dasharray[0]}} {{value.dasharray[1]}}"
+                transform-origin="50% 50%"
+                ng-style="{'transform':'rotate('+value.angle+'deg)'}"></circle>
+    </svg>
+</div>

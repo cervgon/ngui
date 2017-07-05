@@ -1,0 +1,15 @@
+/* pie */
+
+pie {
+    display: block; position:relative
+}
+
+pie circle {
+    fill:none;
+    transition: stroke-dasharray .9s ease
+}
+
+pie svg {
+    transform: rotate(-90deg);
+    display: block
+}

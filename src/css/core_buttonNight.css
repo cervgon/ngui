@@ -1,0 +1,23 @@
+.night button,
+.night .btn,
+.night a.btn,
+.night input[type="submit"],
+.night input[type="button"] { background-color: #333; border-color: #111; color: #ccc }
+.night button:hover,
+.night button:focus,
+.night button:active:focus,
+.night button.selected,
+.night .btn.selected,
+.night .btn:hover,
+.night .btn.selected,
+.night a.btn:hover,
+.night a.btn.selected,
+.night input[type="submit"]:hover,
+.night input[type="submit"].selected:hover,
+.night input[type="button"]:hover,
+.night input[type="button"].selected:hover { background-color: #111; border-color: #111; color: #ccc }
+.night button[disabled="disabled"],
+.night .btn[disabled="disabled"],
+.night a.btn[disabled="disabled"],
+.night input[type="submit"][disabled="disabled"],
+.night input[type="button"][disabled="disabled"] { background-color: #222; border-color: #111; color: #666 }
