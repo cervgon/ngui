@@ -35,7 +35,7 @@ export default angular
                 var radarH = 300;
                 var cx = radarW/2;
                 var cy = radarH/2;
-                var radius = 140;
+                var radius = 130;
 
                 var pi = Math.PI;
 
@@ -85,20 +85,34 @@ export default angular
                     var cang = (deg + 90) * (pi / 180);
                     var px = Math.trunc((cx - (Math.cos(cang) * radius)) * 1000) / 1000;
                     var py = Math.trunc((cy - (Math.sin(cang) * radius)) * 1000) / 1000;
-                    px += 3;
+
+
+                    let textAnchor = 'start';
+                    let alignmentBaseline = 'middle';
+
                     if(i==0){
-                        py -= 2;
+                        textAnchor = 'middle';
+                        alignmentBaseline = 'baseline';
+                        py -= 4;
                     }
-                    if(deg > 90 && deg < 270){
-                        py += 8;
+                    if(deg > 0 && deg < 180){
+                        px += 4;
+                    }
+                    if(deg > 150 && deg < 210){
+                        alignmentBaseline = 'hanging';
+                        py += 4;
+                    }
+                    if(deg > 175 && deg < 185){
+                        textAnchor = 'middle';
                     }
                     // true if text should be right aligned
                     if(deg >180){
-                        px -= $ctrl.labels[i].length * 5.5;
+                        textAnchor = 'end';
+                        px -= 4;
                     }
 
 
-                    texts += "<text x='"+px+"' y='"+py+"' fill='#666' style='font: 55% sans-serif'>"+$ctrl.labels[i]+"</text>"
+                    texts += "<text x='"+px+"' y='"+py+"' text-anchor='"+textAnchor+"' alignment-baseline='"+alignmentBaseline+"' fill='#666' style='font: 55% sans-serif'>"+$ctrl.labels[i]+"</text>"
                 }
                 $ctrl.texts = texts;
 
