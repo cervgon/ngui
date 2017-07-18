@@ -20,6 +20,7 @@ export default angular
                 $ctrl.data = options.data.values || [{'radius':50}];
                 $ctrl.frontValue = options.data.value || '';
                 $ctrl.colors = options.colors || ['#8ed6c3','#9ecef2','#9ea8f2','#ba9ef2','#ed8ed9'];
+                $ctrl.totalTime = options.time || 2;
             }
 
             $ctrl.$onChanges = function(changes) {
@@ -32,6 +33,11 @@ export default angular
 
                 var pi = Math.PI;
                 var pieces = $ctrl.data.length;
+
+                console.log($ctrl.totalTime);
+
+                $ctrl.time = $ctrl.totalTime/pieces;
+
                 var piece = Math.trunc(360/pieces);
 
                 var radius = 80;
@@ -51,7 +57,7 @@ export default angular
 
                 $timeout(function(){
                     var acum = 0;
-                    for (var i = 0; i <= pieces; i++){
+                    for (var i = 0; i < pieces; i++){
                         var v = $ctrl.data[i];
                         var currentValue = Math.trunc(((v)/max)*per*10)/10;
                         values[i].dasharray[0] = currentValue -1;
