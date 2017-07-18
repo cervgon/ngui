@@ -17,7 +17,8 @@ export default angular
             function updateOptions(options) {
                 if (!options)
                     return;
-                $ctrl.data = options.data || [{'radius':50}];
+                $ctrl.data = options.data.values || [{'radius':50}];
+                $ctrl.frontValue = options.data.value || '';
                 $ctrl.colors = options.colors || ['#8ed6c3','#9ecef2','#9ea8f2','#ba9ef2','#ed8ed9'];
             }
 
@@ -42,7 +43,7 @@ export default angular
                 var h = 160;
                 for (var i=0; i < pieces; i++){
                     h -= piece;
-                    var color = 'hsl('+h+',100%,72%)';
+                    var color = 'hsl('+h+',100%,62%)';
                     values.unshift({'color':color,'dasharray':[0,per],'angle':0});
                 }
 
@@ -50,15 +51,15 @@ export default angular
 
                 $timeout(function(){
                     var acum = 0;
-                    for (var i = pieces - 1; i >= 0; i--){
+                    for (var i = 0; i <= pieces; i++){
                         var v = $ctrl.data[i];
                         var currentValue = Math.trunc(((v)/max)*per*10)/10;
-                        values[i].dasharray[0] = currentValue;
-                        values[i].angle = 360*acum/max;
+                        values[i].dasharray[0] = currentValue -1;
+                        values[i].angle = 360*acum/max -90;
                         acum += v;
                     }
                     $ctrl.values = values;
-                },400);
+                },600);
 
                 if (!this.nguiOptions)
                     this.nguiOptions = {};

@@ -1,5 +1,12 @@
 <div class="pie">
     <svg width="250" height="250" class="chart" ng-if="$ctrl.values">
+        <circle
+                class="bgcircle"
+                cx="125"
+                cy="125"
+                r="80"
+                stroke-width="12"
+                stroke-dasharray="{{value.dasharray[1]}} {{value.dasharray[1]}}"></circle>
         <circle ng-repeat="value in $ctrl.values"
                 cx="125"
                 cy="125"
@@ -8,6 +15,7 @@
                 stroke-width="10"
                 stroke-dasharray="{{value.dasharray[0]}} {{value.dasharray[1]}}"
                 transform-origin="50% 50%"
-                ng-style="{'transform':'rotate('+value.angle+'deg)'}"></circle>
+                ng-style="{'transform':'rotate('+value.angle+'deg)','transition-delay':$index*0.3+'s'}"></circle>
+        <text class="pieText" x="125" y="124" text-anchor="middle" alignment-baseline="central">{{$ctrl.frontValue}}</text>
     </svg>
 </div>

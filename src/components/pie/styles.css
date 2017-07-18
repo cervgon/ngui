@@ -1,15 +1,28 @@
 /* pie */
 
 pie {
-    display: block; position:relative
+    display: inline-block; position:relative; width: auto;
 }
 
 pie circle {
     fill:none;
-    transition: stroke-dasharray .9s ease
+    transition: stroke-dasharray .3s ease;
+}
+pie circle.bgcircle{
+    fill:#f9f9f9;
+    stroke:#aaa;
+}
+.night pie circle.bgcircle{
+    fill:#111;
+    stroke:#000;
 }
 
 pie svg {
-    transform: rotate(-90deg);
     display: block
 }
+pie svg #circles{
+    transform: rotate(-90deg);
+}
+
+pie .pieText{font-size:48px; fill: #333}
+.night pie .pieText{ fill: #ccc; font-weight: 300}

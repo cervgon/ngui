@@ -161,7 +161,10 @@
         <h3>Pie</h3>
         <pie ngui-model="$ctrl.pie"
                ngui-options="{
-                    data: [80,20,10,40,60],
+                    data: {
+                        values:[70,20,30,50,20,30,40,10],
+                        value:'40%'
+                    },
                     colors:['#8ed6c3','#9ecef2','#9ea8f2','#ba9ef2','#ed8ed9','#f00']
                 }"></pie>
         <hr>
