@@ -30,7 +30,6 @@ export default angular
             }
 
             $ctrl.$onInit = function() {
-
                 var radarW = 400;
                 var radarH = 300;
                 var cx = radarW/2;
@@ -60,12 +59,12 @@ export default angular
                     return drawvar;
                 }
 
-                $ctrl.poligon = drawpol($ctrl.data[0],1,$ctrl.min,$ctrl.max,true);
+                $ctrl.poligon = "<polygon class='poligon' points='"+ drawpol($ctrl.data[0],1,$ctrl.min,$ctrl.max,true) +"' opacity='0.05'/>";
 
                 var steps = '';
                 for(var i = 0; i < $ctrl.backgroundsteps; i++){
                     var backgroundsteps = (1/$ctrl.backgroundsteps)* (i+1);
-                    steps += "<polygon points='"+ drawpol($ctrl.data[0],backgroundsteps,$ctrl.min,$ctrl.max,true) +"' fill='none' stroke='black' stroke-width='1' opacity='0.05'/>"
+                    steps += "<polygon class='steps' points='"+ drawpol($ctrl.data[0],backgroundsteps,$ctrl.min,$ctrl.max,true) +"' fill='none' stroke-width='1' opacity='0.05'/>"
                 }
                 $ctrl.steps = steps;
 
@@ -74,12 +73,13 @@ export default angular
                     var cang = (ang * i + 90) * (pi / 180);
                     var px = Math.trunc((cx - (Math.cos(cang) * radius)) * 1000) / 1000;
                     var py = Math.trunc((cy - (Math.sin(cang) * radius)) * 1000) / 1000;
-                    lines += "<line x1='"+cx+"' y1='"+cy+"' x2='"+px+"' y2='"+py+"' style='stroke:rgba(0,0,0,0.1);stroke-width:1'/>"
+                    lines += "<line class='lines' x1='"+cx+"' y1='"+cy+"' x2='"+px+"' y2='"+py+"' stroke-width='1' opacity='0.15'/>"
                 }
                 $ctrl.lines = lines;
 
-
                 var texts = '';
+                var centerPolygon = '';
+
                 for(var i = 0; i < n; i++){
                     var deg = ang * i;
                     var cang = (deg + 90) * (pi / 180);
@@ -111,17 +111,20 @@ export default angular
                         px -= 4;
                     }
 
-
                     texts += "<text x='"+px+"' y='"+py+"' text-anchor='"+textAnchor+"' alignment-baseline='"+alignmentBaseline+"' fill='#666' style='font: 55% sans-serif'>"+$ctrl.labels[i]+"</text>"
+                    centerPolygon += radarW/2 + ',' + radarH/2 + ' ';
                 }
                 $ctrl.texts = texts;
+
+                $ctrl.centerPolygon = centerPolygon;
 
                 var draws = '';
                 for(var i = 0; i < $ctrl.data.length; i++){
                     var cl = $ctrl.colors.length;
                     var color = $ctrl.colors[i- Math.trunc(i/cl)*cl];
-                    draws += "<polygon points='"+ drawpol($ctrl.data[i],1,$ctrl.min,$ctrl.max,false) +"' fill='"+color+"' opacity='0.1'/>"
-                    draws += "<polygon points='"+ drawpol($ctrl.data[i],1,$ctrl.min,$ctrl.max,false) +"' fill='none' stroke='"+color+"' stroke-width='1' opacity='0.9'/>"
+                    draws += "<polygon points='' fill='"+color+"' opacity='0.1'><animate attributeName='points' dur='0.3s' begin='"+(i+1)*0.4+"s' fill='freeze' from='"+ $ctrl.centerPolygon +"' to='"+ drawpol($ctrl.data[i],1,$ctrl.min,$ctrl.max,false) +"'/></polygon>";
+                    draws += "<polygon points='' fill='none' stroke='"+color+"' stroke-width='1' opacity='0.9'><animate attributeName='points' dur='0.3s' begin='"+(i+1)*0.4+"s' fill='freeze' from='"+ $ctrl.centerPolygon +"' to='"+ drawpol($ctrl.data[i],1,$ctrl.min,$ctrl.max,false) +"'/></polygon>";
+
                 }
                 $ctrl.draws = draws;
 
@@ -131,4 +134,5 @@ export default angular
             }
         }
     })
+    .filter('unsafe', function($sce) { return $sce.trustAsHtml })
     .name
