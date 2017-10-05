@@ -31,6 +31,7 @@ import cssTableNight from './css/table.elementNight.css';
 import datepicker from './components/datepicker';
 import dropdown from './components/dropdown';
 import hamburger from './components/hamburger';
+import line from './components/line';
 import list from './components/list';
 import loader from './components/loader';
 import modal from './components/modal';
@@ -45,6 +46,7 @@ export {
     datepicker,
     dropdown,
     hamburger,
+    line,
     list,
     loader,
     modal,
@@ -61,6 +63,7 @@ export default angular
         datepicker,
         dropdown,
         hamburger,
+        line,
         list,
         loader,
         modal,
