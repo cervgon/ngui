@@ -4,6 +4,7 @@
 .uppercase { text-transform: uppercase }
 .lowercase { text-transform: lowercase !important }
 .pointer { cursor: pointer }
+.default { cursor: default }
 .clear { clear: both }
 .floatRight { float: right }
 .floatLeft { float: left }

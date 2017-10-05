@@ -1,6 +1,7 @@
 /* Display */
 .hide { display: none !important }
 .block { display: block }
+.inline {display: inline}
 .sBlock,
 .xsBlock,
 .mBlock,
