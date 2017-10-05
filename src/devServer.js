@@ -25,6 +25,12 @@ App.component('app', {
             $ctrl.dropdownData.items.push("Option " + i);
         }
 
+        // Tabs
+        $ctrl.tabsData = {
+            model: "Third",
+            items: ["First","Second","Third","Forth","Fifth"]
+        }
+
         // Hamburger
         $ctrl.hamburgerData = false;
 
@@ -166,6 +172,15 @@ App.component('app', {
             value: 50,
             color: 'red'
         };
+
+        // Radar
+        $ctrl.radarData = [
+            [10,50,60,90,45,40],
+            [100,80,40,70,55,90],
+            [70,20,70,30,35,70],
+            [40,40,50,55,90,40],
+            [20,20,70,65,50,20]
+        ];
 
         return;
 

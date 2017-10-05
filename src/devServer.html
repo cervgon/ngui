@@ -112,6 +112,17 @@
     </div>
 
     <div class="p1-0">
+        <h3>Tabs</h3>
+        <tabs  ngui-model="$ctrl.tabsData.model" ngui-options="{
+            options: $ctrl.tabsData.items,
+            placeholder: 'Pick something good',
+            bordered: true
+        }"></tabs>
+        <hr class="transparent big">
+        <hr>
+    </div>
+
+    <div class="p1-0">
         <h3>Toggle</h3>
         <toggle ngui-model="$ctrl.toggleData"
                 ngui-options="{
@@ -141,19 +152,13 @@
         <h3>Radar</h3>
         <radar ngui-model="$ctrl.radar"
                 ngui-options="{
-                    data: [
-                        [10,50,60,90,45,40],
-                        [100,80,40,70,55,90],
-                        [70,20,70,30,35,70],
-                        [40,40,50,55,90,40],
-                        [20,20,70,65,50,20]
-                    ],
+                    data: $ctrl.radarData,
                     max: 100,
                     min:0,
-                    backgroundsteps: 5,
+                    backgroundsteps: 10,
                     colors:['#8ed6c3','#9ecef2','#9ea8f2','#ba9ef2','#ed8ed9','#f00'],
                     labels:['Admin','MKT','Tech','Support','Dev','Sales']
-                }" style="max-width:450px"></radar>
+                }" style="max-width: 500px"></radar>
         <hr>
     </div>
 
@@ -162,16 +167,37 @@
         <pie ngui-model="$ctrl.pie"
                ngui-options="{
                     data: {
-                        values: [10,100,70,40,20],
-                        value: 'D1',
-                        type: '%'
+                        values: [10,102,30,40,20,50],
+                        labels:['Admin','MKT','Tech','Support','Dev','Sales'],
+                        default: 2
                     },
+                    type: '%',
                     time: .5,
                     colors:['#8ed6c3','#9ecef2','#9ea8f2','#ba9ef2','#ed8ed9','#f00']
-                }"></pie>
+                }" style="max-width: 500px"></pie>
         <hr>
     </div>
 
+
+    <div class="p1-0">
+        <h3 ng-init="$ctrl.pepe = [1,2,3,5,8,13,21,34,55,89,144]">Line</h3>
+        <line ngui-model="$ctrl.myLine"
+             ngui-options="{
+                    data: {
+                        values: $ctrl.pepe,
+                        min: 0,
+                        max: 201
+                    },
+                    width: 150,
+                    height: 100,
+                    strokeWidth: 3,
+                    time: .5
+                }"></line>
+        <hr class="transparent">
+        <button ng-click="$ctrl.pepe = [1,2,3,5,8,13,21,34,55,89,144]">clear</button>
+        <button ng-click="$ctrl.pepe = [1,2,3,5,8,13,21,34,55,89,144,150,155,160,170,175,178,180,181,180,178,175,170,160,155,150]">other</button>
+        <hr>
+    </div>
     <div>
         <div class="p05-0">
             <div class="g1 gxm1-2 p05">

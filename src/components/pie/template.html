@@ -1,24 +1,43 @@
 <div class="pie">
-    <svg width="250" height="250" class="chart" ng-if="$ctrl.values">
-        <circle
-                class="bgcircle"
-                cx="125"
-                cy="125"
-                r="80"
-                stroke-width="12"
-                stroke-dasharray="{{value.dasharray[1]}} {{value.dasharray[1]}}"></circle>
-        <circle ng-repeat="value in $ctrl.values"
-                cx="125"
-                cy="125"
-                r="80"
-                stroke="{{value.color}}"
-                stroke-width="10"
-                stroke-dasharray="{{value.dasharray[0]}} {{value.dasharray[1]}}"
-                transform-origin="50% 50%"
-                ng-style="{'transform':'rotate('+value.angle+'deg)','transition':'stroke-dasharray '+ $ctrl.time +'s linear','transition-delay':$index*$ctrl.time+'s'}"
-                ng-mouseover="$ctrl.hoverValue = $ctrl.data[$index]"
-                ng-mouseleave="$ctrl.hoverValue = ''"
-        ></circle>
-        <text class="pieText" x="125" y="124" text-anchor="middle" alignment-baseline="central" ng-bind="$ctrl.hoverValue || $ctrl.frontValue"></text>
+    <svg viewBox="0 0 280 200" class="chart" ng-if="$ctrl.data">
+
+        <g ng-if="$ctrl.valuesl1">
+            <!--
+            <circle
+                    class="bgcircle"
+                    cx="125"
+                    cy="125"
+                    r="70"
+                    stroke-width="22"></circle>
+            -->
+            <circle
+                    class="bgcircle"
+                    cx="140"
+                    cy="100"
+                    r="90"
+                    stroke-width="3"></circle>
+            <circle ng-repeat="value in $ctrl.valuesl1"
+                    cx="140"
+                    cy="100"
+                    r="90"
+                    stroke="{{value.color}}"
+                    stroke-width="{{($ctrl.currentValue == $index) ? 10:3}}"
+                    stroke-dasharray="{{value.dasharray[0]}} {{value.dasharray[1]}}"
+                    transform-origin="50% 50%"
+                    ng-style="{'transform':'rotate('+value.angle+'deg)','transition':'stroke-dasharray '+ $ctrl.time1 +'s linear','transition-delay':$index*$ctrl.time1+'s'}"
+                    ng-click="$ctrl.currentValue = $index"
+            ></circle>
+        </g>
+        <g ng-if="$ctrl.currentValue > -1">
+            <text  class="pieText" x="140" y="120" font-size="80" text-anchor="middle" alignment-baseline="bottom" ng-bind="$ctrl.l1[$ctrl.currentValue]"></text>
+            <text class="pieTextBottom" x="140" y="140" font-size="12" text-anchor="middle" alignment-baseline="bottom">{{$ctrl.total}}</text>
+        </g>
+
     </svg>
+    <ul class="pieLabels">
+        <li ng-repeat="label in $ctrl.labels" ng-click="$ctrl.currentValue = $index" ng-class="{'current':$ctrl.currentValue == $index}">
+            <svg class="middle inline" width="1em" height="1em"><circle cx=".5em" cy=".5em" r=".25em" stroke-width="0.15em" stroke="{{$ctrl.valuesl1[$index].color}}"></circle></svg>
+            <span class="default">{{label}}</span>
+        </li>
+    </ul>
 </div>

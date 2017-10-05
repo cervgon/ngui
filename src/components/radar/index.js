@@ -20,7 +20,7 @@ export default angular
                 $ctrl.data = options.data;
                 $ctrl.min = options.min || 0;
                 $ctrl.max = options.max || 100;
-                $ctrl.backgroundsteps = options.backgroundsteps || 5;
+                $ctrl.backgroundsteps = options.backgroundsteps || 10;
                 $ctrl.colors = options.colors || ['#8ed6c3','#9ecef2','#9ea8f2','#ba9ef2','#ed8ed9'];
                 $ctrl.labels = options.labels || [''];
             }
@@ -30,7 +30,7 @@ export default angular
             }
 
             $ctrl.$onInit = function() {
-                var radarW = 400;
+                var radarW = 360;
                 var radarH = 300;
                 var cx = radarW/2;
                 var cy = radarH/2;
@@ -59,12 +59,12 @@ export default angular
                     return drawvar;
                 }
 
-                $ctrl.poligon = "<polygon class='poligon' points='"+ drawpol($ctrl.data[0],1,$ctrl.min,$ctrl.max,true) +"' opacity='0.05'/>";
+                $ctrl.poligon = "<polygon class='poligon' points='"+ drawpol($ctrl.data[0],1,$ctrl.min,$ctrl.max,true) +"' />";
 
                 var steps = '';
                 for(var i = 0; i < $ctrl.backgroundsteps; i++){
                     var backgroundsteps = (1/$ctrl.backgroundsteps)* (i+1);
-                    steps += "<polygon class='steps' points='"+ drawpol($ctrl.data[0],backgroundsteps,$ctrl.min,$ctrl.max,true) +"' fill='none' stroke-width='1' opacity='0.05'/>"
+                    steps += "<polygon class='steps' points='"+ drawpol($ctrl.data[0],backgroundsteps,$ctrl.min,$ctrl.max,true) +"' fill='none' stroke-width='1' />"
                 }
                 $ctrl.steps = steps;
 
@@ -73,7 +73,7 @@ export default angular
                     var cang = (ang * i + 90) * (pi / 180);
                     var px = Math.trunc((cx - (Math.cos(cang) * radius)) * 1000) / 1000;
                     var py = Math.trunc((cy - (Math.sin(cang) * radius)) * 1000) / 1000;
-                    lines += "<line class='lines' x1='"+cx+"' y1='"+cy+"' x2='"+px+"' y2='"+py+"' stroke-width='1' opacity='0.15'/>"
+                    lines += "<line class='lines' x1='"+cx+"' y1='"+cy+"' x2='"+px+"' y2='"+py+"' stroke-width='1'/>"
                 }
                 $ctrl.lines = lines;
 
@@ -90,12 +90,11 @@ export default angular
                     let textAnchor = 'start';
                     let alignmentBaseline = 'middle';
 
-                    if(i==0){
+                    if(deg<5){
                         textAnchor = 'middle';
-                        alignmentBaseline = 'baseline';
-                        py -= 4;
+                        py -= 10;
                     }
-                    if(deg > 0 && deg < 180){
+                    if(deg >= 5 && deg < 180){
                         px += 4;
                     }
                     if(deg > 150 && deg < 210){
@@ -108,10 +107,10 @@ export default angular
                     // true if text should be right aligned
                     if(deg >180){
                         textAnchor = 'end';
-                        px -= 4;
+                        px -= 10;
                     }
 
-                    texts += "<text x='"+px+"' y='"+py+"' text-anchor='"+textAnchor+"' alignment-baseline='"+alignmentBaseline+"' fill='#666' style='font: 55% sans-serif'>"+$ctrl.labels[i]+"</text>"
+                    texts += "<text x='"+px+"' y='"+py+"' text-anchor='"+textAnchor+"' alignment-baseline='"+alignmentBaseline+"' fill='#666' font-size='12' font-weight='300'>"+$ctrl.labels[i]+"</text>"
                     centerPolygon += radarW/2 + ',' + radarH/2 + ' ';
                 }
                 $ctrl.texts = texts;
@@ -122,8 +121,8 @@ export default angular
                 for(var i = 0; i < $ctrl.data.length; i++){
                     var cl = $ctrl.colors.length;
                     var color = $ctrl.colors[i- Math.trunc(i/cl)*cl];
-                    draws += "<polygon points='' fill='"+color+"' opacity='0.1'><animate attributeName='points' dur='0.3s' begin='"+(i+1)*0.4+"s' fill='freeze' from='"+ $ctrl.centerPolygon +"' to='"+ drawpol($ctrl.data[i],1,$ctrl.min,$ctrl.max,false) +"'/></polygon>";
-                    draws += "<polygon points='' fill='none' stroke='"+color+"' stroke-width='1' opacity='0.9'><animate attributeName='points' dur='0.3s' begin='"+(i+1)*0.4+"s' fill='freeze' from='"+ $ctrl.centerPolygon +"' to='"+ drawpol($ctrl.data[i],1,$ctrl.min,$ctrl.max,false) +"'/></polygon>";
+                    draws += "<polygon points='' fill='"+color+"' opacity='0.15'><animate attributeName='points' dur='0.3s' begin='"+(i+1)*0.4+"s' fill='freeze' from='"+ $ctrl.centerPolygon +"' to='"+ drawpol($ctrl.data[i],1,$ctrl.min,$ctrl.max,false) +"'/></polygon>";
+                    draws += "<polygon points='' fill='none' stroke='"+color+"' stroke-width='1'><animate attributeName='points' dur='0.3s' begin='"+(i+1)*0.4+"s' fill='freeze' from='"+ $ctrl.centerPolygon +"' to='"+ drawpol($ctrl.data[i],1,$ctrl.min,$ctrl.max,false) +"'/></polygon>";
 
                 }
                 $ctrl.draws = draws;

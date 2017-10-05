@@ -1,0 +1,14 @@
+/* dropdown */
+tabs { display: inline-block; vertical-align: bottom; width: 100%; font-family: "Source Sans Pro", "lucida grande", "Segoe UI", arial, verdana, "lucida sans unicode", tahoma, sans-serif; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box }
+tabs .tabs { display: block; width: 100%; font-size: 0.9em; margin-bottom: -2px; margin-right: 0.25em; background-color: transparent !important; padding: 0 !important }
+tabs .tabs:focus {outline: 0 none }
+tabs .tabs ul { width: 100%; border-bottom: 1px solid #ccc; }
+.night tabs .tabs ul { border-bottom-color: #111; }
+tabs .tabs li { list-style: none; cursor: default; width: auto; text-decoration: none; margin: 0; color: #777; padding: 12px 12px 0; background-color: #eee; border: 1px solid #ccc; border-bottom: none; border-right: none; height: 44px; -webkit-height: 44px; vertical-align: middle; margin-top: 6px; display: inline-block; font-size: 1em; font-weight: 600; font-family: 'Source Sans Pro', sans-serif; border-radius: 5px 5px 0 0; }
+.night tabs .tabs li { color:#ccc; background-color: #2c2c2c; border-color: #111; border-bottom: none; }
+tabs .tabs li:last-child { border-right: 1px solid #ccc; }
+.night tabs .tabs li:last-child { border-right-color: #111 }
+tabs .tabs li:hover { background-color: #f6f6f6; }
+.night tabs .tabs li:hover { background-color: #2e2e2e; }
+tabs .tabs li.current { border-bottom: 1px solid #fff; background-color: #fff; color: #005189; border-bottom: none; margin-bottom: -1px; height: 45px; -webkit-height: 45px; }
+.night tabs .tabs li.current { border-bottom-color: #222; background-color: #222; color: #fff; border-bottom: none }

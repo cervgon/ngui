@@ -1,7 +1,7 @@
 /* pie */
 
 pie {
-    display: inline-block; position:relative; width: auto;
+    display: block; position:relative; width: auto; margin: 0 auto 0;
 }
 
 pie circle {
@@ -9,20 +9,36 @@ pie circle {
     transition: stroke-dasharray .3s ease;
 }
 pie circle.bgcircle{
-    fill:#f9f9f9;
-    stroke:#aaa;
+    fill: none;
+    stroke: #eee;
 }
 .night pie circle.bgcircle{
-    fill:#111;
+    fill: none;
     stroke:#000;
 }
 
 pie svg {
     display: block
 }
+
+pie svg.chart {margin: 0 auto 0; max-width: 100%}
+
 pie svg #circles{
     transform: rotate(-90deg);
 }
 
-pie .pieText{font-size:48px; fill: #333}
+pie .pieText{ fill: #777; font-weight: lighter}
+pie .pieTextBottom { fill: #ccc; font-weight: lighter;}
+.night pie .pieTextBottom {fill: #999}
 .night pie .pieText{ fill: #ccc; font-weight: 300}
+
+pie .pieLabels {text-align: center}
+pie .pieLabels li { display: inline-block; margin: 0.5em 0.5em; color:#999 }
+.night pie .pieLabels li {color:#666}
+pie .pieLabels svg {opacity: 0.5}
+pie .pieLabels li.current svg,
+pie .pieLabels li:hover svg{opacity: 1}
+pie .pieLabels li.current span,
+pie .pieLabels li:hover span { color:#000 }
+.night pie .pieLabels li.current span,
+.night pie .pieLabels li:hover span { color:#ccc }

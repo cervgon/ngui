@@ -1,10 +1,12 @@
 /* radar */
 
-radar { display: block; position:relative }
+radar { display: block; position:relative; margin: 0 auto 0 }
+radar .radar { text-align: center }
+radar .radar .chart { margin: 0 auto 0; max-width: 100% }
 radar poligon { transition: all 2s ease }
-radar .poligon {fill:#f3f3f3}
-.night radar .poligon {fill:#000}
-radar .steps,
-radar .lines{stroke:#000}
-.night radar .steps,
-.night radar .lines{stroke:#fff}
+radar .poligon {fill:none}
+.night radar .poligon {fill:none}
+radar .steps{stroke:#f4f4f4}
+radar .lines{stroke:#ccc}
+.night radar .steps{stroke:#1d1d1d}
+.night radar .lines{stroke:#333}
