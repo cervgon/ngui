@@ -162,6 +162,7 @@ export default angular
             $ctrl.$onInit = function() {
 
                 $ctrl.pieReady = false;
+                $ctrl.currentValue = 0;
 
                 switch($ctrl.type){
                     case '%':

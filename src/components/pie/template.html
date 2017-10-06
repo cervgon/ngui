@@ -31,7 +31,7 @@
 
         </svg>
         <ul class="pieLabels">
-            <li ng-repeat="data in $ctrl.data" ng-click="$ctrl.currentValue = $index" ng-class="{'current':$ctrl.currentValue == $index}">
+            <li ng-repeat="data in $ctrl.data" ng-click="$ctrl.currentValue = $index" ng-class="{'current':$ctrl.currentValue == $index}" ng-if="($ctrl.data[$index].hasOwnProperty('label'))">
                 <svg class="middle inline" width="1em" height="1em"><circle cx=".5em" cy=".5em" r=".25em" stroke-width="0.15em" stroke="{{$ctrl.valuesl1[$index].color}}"></circle></svg>
                 <span class="default">{{data.label}}</span>
             </li>

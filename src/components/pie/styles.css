@@ -35,8 +35,8 @@ pie .pieTextBottom { fill: #aeaeae; font-weight: 100; font-family: 'Roboto'}
 .night pie .pieTextBottom {fill: #888}
 .night pie  .pieTextCent { fill: #aaa }
 
-pie .pieLabels {text-align: center; margin: 0.5em 0 0}
-pie .pieLabels li { display: inline-block; margin: 0.5em 0.5em; color:#999 }
+pie .pieLabels {text-align: center }
+pie .pieLabels li { display: inline-block; margin: 0.5em 0.8em; color:#999 }
 .night pie .pieLabels li {color:#666}
 pie .pieLabels svg {opacity: 0.5}
 pie .pieLabels li.current svg,
