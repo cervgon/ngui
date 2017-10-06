@@ -83,37 +83,38 @@ export default angular
                 var centerPolygon = '';
 
                 for(var i = 0; i < n; i++){
-                    var deg = ang * i;
-                    var cang = (deg + 90) * (pi / 180);
-                    var px = Math.trunc((cx - (Math.cos(cang) * radius)) * 1000) / 1000;
-                    var py = Math.trunc((cy - (Math.sin(cang) * radius)) * 1000) / 1000;
+                    if($ctrl.labels[i]){
+                        var deg = ang * i;
+                        var cang = (deg + 90) * (pi / 180);
+                        var px = Math.trunc((cx - (Math.cos(cang) * radius)) * 1000) / 1000;
+                        var py = Math.trunc((cy - (Math.sin(cang) * radius)) * 1000) / 1000;
 
 
-                    let textAnchor = 'start';
-                    let alignmentBaseline = 'middle';
+                        let textAnchor = 'start';
+                        let alignmentBaseline = 'middle';
 
-                    if(deg<5){
-                        textAnchor = 'middle';
-                        py -= 10;
+                        if(deg<5){
+                            textAnchor = 'middle';
+                            py -= 10;
+                        }
+                        if(deg >= 5 && deg < 180){
+                            px += 4;
+                        }
+                        if(deg > 150 && deg < 210){
+                            alignmentBaseline = 'hanging';
+                            py += 4;
+                        }
+                        if(deg > 175 && deg < 185){
+                            textAnchor = 'middle';
+                        }
+                        // true if text should be right aligned
+                        if(deg >180){
+                            textAnchor = 'end';
+                            px -= 10;
+                        }
+                        texts += "<text x='"+px+"' y='"+py+"' text-anchor='"+textAnchor+"' alignment-baseline='"+alignmentBaseline+"' fill='#666' font-size='12' font-weight='300'>"+$ctrl.labels[i]+"</text>"
+                        centerPolygon += radarW/2 + ',' + radarH/2 + ' ';
                     }
-                    if(deg >= 5 && deg < 180){
-                        px += 4;
-                    }
-                    if(deg > 150 && deg < 210){
-                        alignmentBaseline = 'hanging';
-                        py += 4;
-                    }
-                    if(deg > 175 && deg < 185){
-                        textAnchor = 'middle';
-                    }
-                    // true if text should be right aligned
-                    if(deg >180){
-                        textAnchor = 'end';
-                        px -= 10;
-                    }
-
-                    texts += "<text x='"+px+"' y='"+py+"' text-anchor='"+textAnchor+"' alignment-baseline='"+alignmentBaseline+"' fill='#666' font-size='12' font-weight='300'>"+$ctrl.labels[i]+"</text>"
-                    centerPolygon += radarW/2 + ',' + radarH/2 + ' ';
                 }
                 $ctrl.texts = texts;
 
