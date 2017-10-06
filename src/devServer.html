@@ -166,33 +166,54 @@
         <h3>Pie</h3>
         <pie ngui-model="$ctrl.pie"
                ngui-options="{
-                    data: {
-                        values: [10,102,30,40,20,50],
-                        labels:['Admin','MKT','Tech','Support','Dev','Sales'],
-                        default: 2
-                    },
+                    data: [
+                        {
+                            value: 10.8,
+                            label: 'Admin'
+                        },
+                        {
+                            value: 8,
+                            label: 'MKT'
+                        },
+                        {
+                            value: 5.2,
+                            label: 'Tech',
+                            default: true
+                        },
+                        {
+                            value: 15.5,
+                            label: 'Support'
+                        },
+                        {
+                            value: 20.1,
+                            label: 'Dev'
+                        },
+                        {
+                            value: 5.25,
+                            label: 'Sales'
+                        }
+                    ],
                     type: '%',
-                    time: .5,
-                    colors:['#8ed6c3','#9ecef2','#9ea8f2','#ba9ef2','#ed8ed9','#f00']
+                    time: .5
                 }" style="max-width: 500px"></pie>
         <hr>
     </div>
 
 
     <div class="p1-0">
-        <h3 ng-init="$ctrl.pepe = [1,2,3,5,8,13,21,34,55,89,144]">Line</h3>
+        <h3 ng-init="$ctrl.pepe = [1,2,3,5,8,13,21,34,55,89,144,233,377,610]">Line</h3>
         <line ngui-model="$ctrl.myLine"
              ngui-options="{
                     data: {
                         values: $ctrl.pepe,
                         min: 0,
-                        max: 201
+                        max: 610
                     },
-                    width: 150,
-                    height: 100,
-                    strokeWidth: 3,
+                    width: 100,
+                    height: 50,
+                    strokeWidth: .5,
                     time: .5
-                }"></line>
+                }" style="max-width: 500px"></line>
         <hr class="transparent">
         <button ng-click="$ctrl.pepe = [1,2,3,5,8,13,21,34,55,89,144]">clear</button>
         <button ng-click="$ctrl.pepe = [1,2,3,5,8,13,21,34,55,89,144,150,155,160,170,175,178,180,181,180,178,175,170,160,155,150]">other</button>

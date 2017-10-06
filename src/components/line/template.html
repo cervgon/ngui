@@ -1,5 +1,1 @@
-<div class="line">
-    <svg class="chart" ng-if="$ctrl.data" ng-style="{width:$ctrl.width, height:$ctrl.height}">
-        <g ng-bind-html="$ctrl.line | unsafe"></g>
-    </svg>
-</div>
+<div class="line" ng-if="$ctrl.data" ng-bind-html="$ctrl.line | unsafe"></div>

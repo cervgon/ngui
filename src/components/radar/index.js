@@ -10,7 +10,7 @@ export default angular
             nguiModel: '=',
             nguiOptions: '<'
         },
-        controller: function() {
+        controller: function($timeout) {
             "ngInject";
             var $ctrl = this;
 
@@ -30,6 +30,8 @@ export default angular
             }
 
             $ctrl.$onInit = function() {
+                $ctrl.radarReady = false;
+
                 var radarW = 360;
                 var radarH = 300;
                 var cx = radarW/2;
@@ -122,10 +124,14 @@ export default angular
                     var cl = $ctrl.colors.length;
                     var color = $ctrl.colors[i- Math.trunc(i/cl)*cl];
                     draws += "<polygon points='' fill='"+color+"' opacity='0.15'><animate attributeName='points' dur='0.3s' begin='"+(i+1)*0.4+"s' fill='freeze' from='"+ $ctrl.centerPolygon +"' to='"+ drawpol($ctrl.data[i],1,$ctrl.min,$ctrl.max,false) +"'/></polygon>";
-                    draws += "<polygon points='' fill='none' stroke='"+color+"' stroke-width='1'><animate attributeName='points' dur='0.3s' begin='"+(i+1)*0.4+"s' fill='freeze' from='"+ $ctrl.centerPolygon +"' to='"+ drawpol($ctrl.data[i],1,$ctrl.min,$ctrl.max,false) +"'/></polygon>";
+                    draws += "<polygon points='' fill='none' stroke='"+color+"' stroke-width='1.5' stroke-linejoin='round'><animate attributeName='points' dur='0.3s' begin='"+(i+1)*0.4+"s' fill='freeze' from='"+ $ctrl.centerPolygon +"' to='"+ drawpol($ctrl.data[i],1,$ctrl.min,$ctrl.max,false) +"'/></polygon>";
 
                 }
                 $ctrl.draws = draws;
+
+                $timeout(function(){
+                    $ctrl.radarReady = true;
+                },50);
 
                 if (!this.nguiOptions)
                     this.nguiOptions = {};

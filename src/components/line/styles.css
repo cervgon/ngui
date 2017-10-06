@@ -1,8 +1,7 @@
 /* line */
 
-line {
-    display: block; position:relative; width: auto;
-}
-line .line {text-align: center;}
+line { display: block; position:relative; margin: 0 auto 0 }
+line .line { text-align: center; width: 100%; }
+line .line .chart { margin: 0 auto 0; max-width: 100% }
 line svg {margin: 0 auto 0}
 

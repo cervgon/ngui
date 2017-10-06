@@ -60,7 +60,7 @@ export default angular
                 }
 
                 let dots = '';
-                let step = Math.round(($ctrl.width-linestroke)/data.length);
+                let step = Math.round(($ctrl.width/(data.length-1))-(2*linestroke));
                 if(oldDots === ''){
                     for(let i=0; i < data.length; i++){
                         let x = linestroke + i*step;
@@ -74,9 +74,10 @@ export default angular
                     dots+= x + ' ' + y + ' ';
                 }
                 $ctrl.line =
+                    '<svg class="chart" viewBox="0 0 '+$ctrl.width+' '+$ctrl.height+'">'+
                     '<polyline id="poly" points="" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke="'+$ctrl.strokeColor+'" style="stroke-width: '+$ctrl.strokeWidth+'">' +
                     '<animate attributeName="points" dur="'+$ctrl.time+'s" fill="freeze" from="'+oldDots+'" to="'+dots+'" />' +
-                    '</polyline>';
+                    '</polyline></svg>';
                 oldDots = dots;
             }
 
@@ -87,6 +88,8 @@ export default angular
 
 
             $ctrl.$onInit = function() {
+
+                $ctrl.viewBox = '0 0 '+ $ctrl.width + ' ' + $ctrl.height;
 
                 if (!this.nguiOptions)
                     this.nguiOptions = {};
