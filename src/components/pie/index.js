@@ -30,6 +30,8 @@ export default angular
                 $ctrl.data = options.data || [];
                 $ctrl.type = options.type || '#';
                 $ctrl.totalTime = options.time || 2;
+                $ctrl.strokeWidth = options.strokeWidth || 3;
+                $ctrl.radius = options.radius || 90;
             }
 
             $ctrl.$onChanges = function(changes) {
@@ -47,7 +49,7 @@ export default angular
                 let pi = Math.PI;
                 let pieces = $ctrl.l1.length;
                 $ctrl.time1 = $ctrl.totalTime/pieces;
-                let radius = 90;
+                let radius = $ctrl.radius;
                 let max = 0;
                 for (let i = 0; i < pieces; i++) {
                     let v = $ctrl.l1[i];
@@ -81,7 +83,7 @@ export default angular
                 let pi = Math.PI;
                 let pieces = $ctrl.l1.length;
                 $ctrl.time1 = $ctrl.totalTime/pieces;
-                let radius = 90;
+                let radius = $ctrl.radius;
                 let max = 0;
                 for (let i = 0; i < pieces; i++) {
                     let v = $ctrl.l1[i];
@@ -118,7 +120,6 @@ export default angular
             }
 
             function drawNumericPie(){
-                //console.log('numeric');
                 // get data layers
                 let layers = 0;
                 let ndata = $ctrl.data;
@@ -138,7 +139,6 @@ export default angular
                 showPie();
             }
             function drawPercentagePie(){
-                console.log('percentage');
                 // get data layers
                 let layers = 0;
                 let ndata = $ctrl.data;

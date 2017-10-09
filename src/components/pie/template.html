@@ -14,7 +14,7 @@
                         cy="100"
                         r="90"
                         stroke="{{value.color}}"
-                        stroke-width="{{($ctrl.currentValue == $index) ? 10:3}}"
+                        stroke-width="{{($ctrl.currentValue == $index) ? $ctrl.strokeWidth*2:$ctrl.strokeWidth}}"
                         stroke-dasharray="{{value.dasharray[0]}} {{value.dasharray[1]}}"
                         transform-origin="50% 50%"
                         ng-style="{'transform':'rotate('+value.angle+'deg)','transition':'stroke-dasharray '+ $ctrl.time1 +'s linear','transition-delay':$index*$ctrl.time1+'s'}"

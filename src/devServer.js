@@ -182,6 +182,15 @@ App.component('app', {
             [20,20,70,65,50,20]
         ];
 
+        let ditext = '';
+        let lineData = [];
+        for (var i = 0; i < 100; i++) {
+            let pppp = Math.sin(i/5)*i;
+            ditext +=  pppp + ',';
+            lineData[i] = pppp
+        }
+        $ctrl.lineData = lineData;
+
         return;
 
 

@@ -194,29 +194,35 @@
                         }
                     ],
                     type: '%',
-                    time: .5
+                    time: .5,
+                    strokeWidth: 6,
+                    radius: 90
                 }" style="max-width: 500px"></pie>
         <hr>
     </div>
 
 
     <div class="p1-0">
-        <h3 ng-init="$ctrl.pepe = [1,2,3,5,8,13,21,34,55,89,144,233,377,610]">Line</h3>
+        <h3>Line</h3>
         <line ngui-model="$ctrl.myLine"
              ngui-options="{
                     data: {
-                        values: $ctrl.pepe,
-                        min: 0,
-                        max: 610
+                        values: $ctrl.lineData,
+                        line: {
+                            show: true,
+                            y: 0,
+                            color: '#111',
+                            strokeWidth: 1
+                        }
                     },
-                    width: 100,
-                    height: 50,
-                    strokeWidth: 1,
+                    width: 300,
+                    height: 80,
+                    strokeWidth: 2,
                     time: .5
                 }" style="max-width: 500px"></line>
         <hr class="transparent">
-        <button ng-click="$ctrl.pepe = [1,2,3,5,8,13,21,34,55,89,144,233,377,610]">clear</button>
-        <button ng-click="$ctrl.pepe = [1,2,3,5,8,13,21,34,55,89,144,600,155,160,170,175,178,180,181,180,178,175,170,160,155,150]">other</button>
+        <button ng-click="$ctrl.lineData = [1,2,3,5,8,13,21,34,55,89,144,233,377,610]">clear</button>
+        <button ng-click="$ctrl.lineData = [1,2,3,5,8,13,21,34,55,89,144,600,155,160,170,175,178,180,181,180,178,175,170,160,155,150]">other</button>
         <hr>
     </div>
     <div>
