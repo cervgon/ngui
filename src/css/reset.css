@@ -87,7 +87,8 @@ select::-ms-expand { display: none }
 /* */
 
 /* Import Source Sans Pro */
-@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,300,600,700&text=ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890-%C3%91%C3%B1%E2%84%A2%7C%C2%BA%40%24%25%26%2F%28%29%27%27%3F%C2%BF%3D%2B%2A%5B%5D%7B%7D_%3B%2C.%3A%21%25");
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,300,600,700&text=ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890-%C3%91%C3%B1%E2%84%A2%7C%C2%BA%40%24%25%23%3C%3E%26%2F%28%29%27%27%3F%C2%BF%3D%2B%2A%5B%5D%7B%7D_%3B%2C.%3A%21%25");
+/* ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890-Ññ™|º@$%#<>&/()''?¿=+*[]{}_;,.:!%  --> To add or remove chars, go to https://www.url-encode-decode.com/ */
 
 /* Tags */
 html { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box }
