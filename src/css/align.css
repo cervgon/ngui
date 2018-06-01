@@ -12,3 +12,5 @@
 *.textRight { text-align: right !important }
 .absRight { position: absolute; right: 0; top: 0 }
 .middle { vertical-align: middle }
+.top { vertical-align: top }
+.bottom {vertical-align: bottom }
