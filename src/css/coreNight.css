@@ -51,8 +51,8 @@
 .night input.search.animated:focus::-ms-input-placeholder { color: #666 }
 
 /* Autofill */
-.night input:-webkit-autofill { -webkit-box-shadow: 0 0 0px 1000px #ffd inset }
-.night input:-webkit-autofill:focus { -webkit-box-shadow: 0 0 0px 1000px #f9f9f9 inset }
+.night input:-webkit-autofill { -webkit-box-shadow: 0 0 0px 1000px #332 inset; -webkit-text-fill-color: #ccc !important; }
+.night input:-webkit-autofill:focus { -webkit-box-shadow: 0 0 0px 1000px #222 inset; -webkit-text-fill-color: #ccc !important;  }
 
 .night nav { background-color: #fff; border-bottom-color: #eee }
 .night nav ul li:hover { background-color: #f3f3f3 }

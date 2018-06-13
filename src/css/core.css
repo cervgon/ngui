@@ -117,6 +117,9 @@ input.search.animated:focus::-ms-input-placeholder { color: #666 }
 input:-webkit-autofill { -webkit-box-shadow: 0 0 0px 1000px #ffd inset }
 input:-webkit-autofill:focus { -webkit-box-shadow: 0 0 0px 1000px #f9f9f9 inset }
 
+/* Input range */
+::-ms-tooltip { display: none; }
+
 nav { width: 100%; position: fixed; top: 0; left: 0; z-index: 1000; background-color: #fff; border-bottom: 1px solid #eee }
 nav ul { }
 nav ul li { display: inline-block; float: left }
