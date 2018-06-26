@@ -91,6 +91,7 @@
 }
 /* 1280px */
 @media screen and (min-width: 80em) {
+	.container { max-width: 80em }
 	.xlBlock { display: block }
 	.xlInline-block { display: inline-block }
 	.xlTable { display: table }
