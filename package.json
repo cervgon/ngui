@@ -13,7 +13,7 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "angular": "^1.6.2",
+    "angular": "1.6.2",
     "angular-touch": "^1.6.4",
     "babel-core": "6.22.1",
     "babel-loader": "6.2.10",
@@ -33,6 +33,6 @@
     "webpack-dev-server": "2.2.0"
   },
   "peerDependencies": {
-    "angular": "^1.6.2"
+    "angular": "1.6.2"
   }
 }
