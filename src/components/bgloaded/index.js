@@ -34,7 +34,7 @@ export default angular
                     var now = new Date().valueOf();
                     var compare = now - prev;
                     $scope.$apply(function(){
-                        if(compare >= 400){
+                        if(compare >= 800){
                             $ctrl.fadeInBG = true;
                         }
                         $ctrl.showBG = true;
@@ -50,7 +50,7 @@ export default angular
             $ctrl.$onInit = function() {
                 if (!this.nguiOptions)
                     this.nguiOptions = {};
-                updateOptions(this.nguiOptions);
+                //updateOptions(this.nguiOptions);
             }
         }
     })
