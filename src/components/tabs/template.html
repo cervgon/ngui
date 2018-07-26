@@ -1,4 +1,4 @@
-<div class="tabs" ng-blur="$ctrl.onBlur()" ng-focus="$ctrl.onFocus()" ng-class="{'open': $ctrl.opened, 'bordered': $ctrl.bordered, 'disabled': $ctrl.disabled }" tabindex="1">
+<div class="tabs" ng-blur="$ctrl.onBlur()" ng-focus="$ctrl.onFocus()" ng-class="{'open': $ctrl.opened, 'bordered': $ctrl.bordered, 'disabled': $ctrl.disabled }">
     <ul>
         <li ng-repeat="option in $ctrl.options track by $index"
             ng-click="$ctrl.changeOption(option)"
