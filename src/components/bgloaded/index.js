@@ -38,6 +38,7 @@ export default angular
                             $ctrl.fadeInBG = true;
                         }
                         $ctrl.showBG = true;
+                        $ctrl.prebgcss = '';
                     });
                 };
                 image.src = $ctrl.bgurl;
