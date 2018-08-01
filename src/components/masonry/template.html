@@ -1,7 +1,7 @@
 <div class="masonry">
     <div class="inner">
         <div class="brick" ng-repeat="brick in $ctrl.bricks">
-            <div class="template" ng-bind-html="brick.template | unsafe"></div>
+            <div class="template" ng-bind-html="brick.template | trusted"></div>
         </div>
     </div>
 </div>

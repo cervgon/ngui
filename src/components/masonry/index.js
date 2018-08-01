@@ -90,5 +90,9 @@ export default angular
             }
         }
     })
-    .filter('unsafe', function($sce) { return $sce.trustAsHtml })
-    .name
+    .filter('trusted', function($sce){
+        return function(html){
+            return $sce.trustAsHtml(html);
+        };
+    })
+    .name;
