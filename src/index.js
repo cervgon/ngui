@@ -35,6 +35,7 @@ import hamburger from './components/hamburger';
 import line from './components/line';
 import list from './components/list';
 import loader from './components/loader';
+import masonry from './components/masonry';
 import modal from './components/modal';
 import pagination from './components/pagination';
 import pie from './components/pie';
@@ -52,6 +53,7 @@ export {
     line,
     list,
     loader,
+    masonry,
     modal,
     pagination,
     pie,
@@ -71,6 +73,7 @@ export default angular
         line,
         list,
         loader,
+        masonry,
         modal,
         pagination,
         pie,
