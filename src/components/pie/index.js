@@ -15,7 +15,7 @@ export default angular
             var $ctrl = this;
 
             $ctrl.removeDecimal = function(number){
-                let returnNumber = Math.trunc(number);
+                let returnNumber = Math.round(number);
                 return returnNumber;
             }
             $ctrl.getDecimal = function(number){
@@ -55,11 +55,11 @@ export default angular
                     let v = $ctrl.l1[i];
                     max += v;
                 }
-                let per = Math.trunc(2*radius*pi*10)/10;
+                let per = Math.round(2*radius*pi*10)/10;
                 let hue = 0;
                 for (let i=0; i < pieces; i++){
                     let color = 'hsl('+hue+', 70%, 62%)';
-                    hue += Math.trunc(360*$ctrl.l1[i]/max);
+                    hue += Math.round(360*$ctrl.l1[i]/max);
                     values.push({'color':color,'dasharray':[0,per],'angle':0});
                 }
                 $ctrl.valuesl1 = values;
@@ -68,7 +68,7 @@ export default angular
                     let acum = 0;
                     for (let i = 0; i < pieces; i++){
                         let v = $ctrl.l1[i];
-                        let currentValue = Math.trunc(((v)/max)*per*10)/10;
+                        let currentValue = Math.round(((v)/max)*per*10)/10;
                         values[i].dasharray[0] = currentValue -1;
                         values[i].angle = 360*acum/max -90;
                         acum += v;
@@ -96,11 +96,11 @@ export default angular
                 } else {
                     max = 100;
                 }
-                let per = Math.trunc(2*radius*pi*10)/10;
+                let per = Math.round(2*radius*pi*10)/10;
                 let hue = 0;
                 for (let i=0; i < pieces; i++){
                     let color = 'hsl('+hue+', 70%, 62%)';
-                    hue += Math.trunc(360*$ctrl.l1[i]/max);
+                    hue += Math.round(360*$ctrl.l1[i]/max);
                     values.push({'color':color,'dasharray':[0,per],'angle':0});
                 }
                 $ctrl.valuesl1 = values;
@@ -109,7 +109,7 @@ export default angular
                     let acum = 0;
                     for (let i = 0; i < pieces; i++){
                         let v = $ctrl.l1[i];
-                        let currentValue = Math.trunc(((v)/max)*per*10)/10;
+                        let currentValue = Math.round(((v)/max)*per*10)/10;
                         values[i].dasharray[0] = currentValue - 1;
                         values[i].angle = 360*acum/max -90;
                         acum += v;

@@ -6,7 +6,7 @@ export default angular
     .module('ngui.bgloaded', [])
     .component('bgloaded', {
         template: `
-        <div class="main" style="{{$ctrl.prebgcss}}; background-size: cover;">
+        <div class="main" ng-style="{'background': $ctrl.prebgcss, 'background-size': 'cover', 'background-position': 'top center'}" style="; background-size: cover;">
             <div ng-show="$ctrl.showBG" ng-class="{'fadeIn':$ctrl.fadeInBG}" style="background-image: url({{$ctrl.bgurl}})">
                 <ng-transclude></ng-transclude>
             </div>
@@ -38,7 +38,7 @@ export default angular
                             $ctrl.fadeInBG = true;
                         }
                         $ctrl.showBG = true;
-                        $ctrl.prebgcss = '';
+                        //$ctrl.prebgcss = '';
                     });
                 };
                 image.src = $ctrl.bgurl;
@@ -54,5 +54,10 @@ export default angular
                 //updateOptions(this.nguiOptions);
             }
         }
+    })
+    .filter('trusted', function($sce){
+        return function(css){
+            return $sce.trustAsCss(css);
+        };
     })
     .name

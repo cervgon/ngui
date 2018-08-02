@@ -54,8 +54,8 @@ export default angular
                         } else {
                             var v = (array[i] - min) / (max - min);
                         }
-                        var px = Math.trunc((cx - (Math.cos(cang) * radius) * v * s) * 1000) / 1000;
-                        var py = Math.trunc((cy- (Math.sin(cang) * radius) * v * s) * 1000) / 1000;
+                        var px = Math.round((cx - (Math.cos(cang) * radius) * v * s) * 1000) / 1000;
+                        var py = Math.round((cy- (Math.sin(cang) * radius) * v * s) * 1000) / 1000;
                         drawvar += px + ',' + py + ' ';
                     }
                     return drawvar;
@@ -73,8 +73,8 @@ export default angular
                 var lines = '';
                 for(var i = 0; i < n; i++){
                     var cang = (ang * i + 90) * (pi / 180);
-                    var px = Math.trunc((cx - (Math.cos(cang) * radius)) * 1000) / 1000;
-                    var py = Math.trunc((cy - (Math.sin(cang) * radius)) * 1000) / 1000;
+                    var px = Math.round((cx - (Math.cos(cang) * radius)) * 1000) / 1000;
+                    var py = Math.round((cy - (Math.sin(cang) * radius)) * 1000) / 1000;
                     lines += "<line class='lines' x1='"+cx+"' y1='"+cy+"' x2='"+px+"' y2='"+py+"' stroke-width='1'/>"
                 }
                 $ctrl.lines = lines;
@@ -86,8 +86,8 @@ export default angular
                     if($ctrl.labels[i]){
                         var deg = ang * i;
                         var cang = (deg + 90) * (pi / 180);
-                        var px = Math.trunc((cx - (Math.cos(cang) * radius)) * 1000) / 1000;
-                        var py = Math.trunc((cy - (Math.sin(cang) * radius)) * 1000) / 1000;
+                        var px = Math.round((cx - (Math.cos(cang) * radius)) * 1000) / 1000;
+                        var py = Math.round((cy - (Math.sin(cang) * radius)) * 1000) / 1000;
 
 
                         let textAnchor = 'start';
@@ -123,7 +123,7 @@ export default angular
                 var draws = '';
                 for(var i = 0; i < $ctrl.data.length; i++){
                     var cl = $ctrl.colors.length;
-                    var color = $ctrl.colors[i- Math.trunc(i/cl)*cl];
+                    var color = $ctrl.colors[i- Math.round(i/cl)*cl];
                     draws += "<polygon points='' fill='"+color+"' opacity='0.15'><animate attributeName='points' dur='0.3s' begin='"+(i+1)*0.4+"s' fill='freeze' from='"+ $ctrl.centerPolygon +"' to='"+ drawpol($ctrl.data[i],1,$ctrl.min,$ctrl.max,false) +"'/></polygon>";
                     draws += "<polygon points='' fill='none' stroke='"+color+"' stroke-width='1.5' stroke-linejoin='round'><animate attributeName='points' dur='0.3s' begin='"+(i+1)*0.4+"s' fill='freeze' from='"+ $ctrl.centerPolygon +"' to='"+ drawpol($ctrl.data[i],1,$ctrl.min,$ctrl.max,false) +"'/></polygon>";
 

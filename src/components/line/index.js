@@ -68,12 +68,12 @@ export default angular
                 let step = Math.round(usableWidth/(data.length)*100)/100;
 
                 // firstPointY;
-                let firstPointY = usableHeight - Math.trunc(((data[0] - min) / (max - min)) * usableHeight*100)/100 + linestroke/2;
+                let firstPointY = usableHeight - Math.round(((data[0] - min) / (max - min)) * usableHeight*100)/100 + linestroke/2;
 
                 // zeroPointY
                 let zeroPointY = usableHeight;
                 zeroPointY = firstPointY;
-                if($ctrl.lineDataY) zeroPointY = usableHeight - Math.trunc((($ctrl.lineDataY - min) / (max - min)) * usableHeight*100)/100 + linestroke/2;
+                if($ctrl.lineDataY) zeroPointY = usableHeight - Math.round((($ctrl.lineDataY - min) / (max - min)) * usableHeight*100)/100 + linestroke/2;
 
                 if(oldDots === ''){
                     for(let i=0; i < data.length; i++){
@@ -84,7 +84,7 @@ export default angular
                 }
                 for(let i=0; i < data.length; i++){
                     let x = (linestroke/2) + i*step;
-                    let y =  usableHeight - Math.trunc(((data[i] - min) / (max - min)) * usableHeight*100)/100 + linestroke/2;
+                    let y =  usableHeight - Math.round(((data[i] - min) / (max - min)) * usableHeight*100)/100 + linestroke/2;
                     dots+= x + ' ' + y + ' ';
                 }
                 // Check stroke
