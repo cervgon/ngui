@@ -3,8 +3,8 @@ import Template from './template.html';
 import Styles from './styles.css';
 
 export default angular
-    .module('ngui.bgloaded', [])
-    .component('bgloaded', {
+    .module('ngui.bgloader', [])
+    .component('bgloader', {
         template: `
         <div class="main" ng-style="{'background': $ctrl.prebgcss, 'background-size': 'cover', 'background-position': 'top center'}" style="; background-size: cover;">
             <div ng-show="$ctrl.showBG" ng-class="{'fadeIn':$ctrl.fadeInBG}" style="background-image: url({{$ctrl.bgurl}})">

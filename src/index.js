@@ -28,7 +28,7 @@ import cssDropdownHover from './css/dropdownHover.element.css';
 import cssTable from './css/table.element.css';
 import cssTableNight from './css/table.elementNight.css';
 
-import bgloaded from './components/bgloaded';
+import bgloader from './components/bgloader';
 import datepicker from './components/datepicker';
 import dropdown from './components/dropdown';
 import hamburger from './components/hamburger';
@@ -46,7 +46,7 @@ import toggle from './components/toggle';
 import tooltip from './components/tooltip';
 
 export {
-    bgloaded,
+    bgloader,
     datepicker,
     dropdown,
     hamburger,
@@ -66,7 +66,7 @@ export {
 
 export default angular
     .module('ngui', [
-        bgloaded,
+        bgloader,
         datepicker,
         dropdown,
         hamburger,
