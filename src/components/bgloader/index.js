@@ -16,7 +16,7 @@ export default angular
         bindings: {
             nguiOptions: '<'
         },
-        controller: function($scope) {
+        controller: function($scope,$timeout) {
             "ngInject";
             var $ctrl = this;
             function updateOptions(options) {
@@ -38,7 +38,9 @@ export default angular
                             $ctrl.fadeInBG = true;
                         }
                         $ctrl.showBG = true;
-                        $ctrl.prebgcss = '';
+                        $timeout(function(){
+                            $ctrl.prebgcss = '';
+                        },1000);
                     });
                 };
                 image.src = $ctrl.bgurl;
