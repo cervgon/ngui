@@ -32,11 +32,11 @@ export default angular
 
                         // build
                         var columns = 1;
-                        if(innerWidth > 768){
+                        if(innerWidth >= 768){
                             columns=2;
-                            if(innerWidth > 1024){columns=3}
-                            if(innerWidth > 1280){columns=4}
-                            if(innerWidth > 1500){columns=5}
+                            if(innerWidth >= 1024){columns=3}
+                            if(innerWidth >= 1280){columns=4}
+                            if(innerWidth >= 1500){columns=5}
                             for(var i=0; i<columns; i++){lastHeights[i] = 0;}
                             var percWidth = Math.round(10000 / columns)/100;
                             for(var i=0; i< masornyElements.length;i++){
