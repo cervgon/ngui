@@ -10,18 +10,22 @@ export default angular
             nguiModel: '=',
             nguiOptions: '<'
         },
+        transclude: true,
         controller: function($timeout,$window) {
             "ngInject";
             var $ctrl = this;
             function updateOptions(options) {
-                if (!options)
-                    return;
-                $ctrl.bricks = options.bricks || '';
+                if (options){
+                    $ctrl.bricks = options.bricks || '';
+                }
 
                 $timeout(function(){
                     function masorny(innerWidth){
                         // Masorny Elements
-                        var masornyElements = angular.element(document.querySelectorAll('.masonry .inner > div'));
+                        var masornyElements = angular.element(document.querySelectorAll('.masonry .inner > .brick'));
+                        var masornyElementsTransclude = angular.element(document.querySelectorAll('.masonry .inner ng-transclude > *'));
+
+                        if(!masornyElements && !masornyElementsTransclude) return;
 
                         var lastHeights = [];
                         var targetLoc = 0;
@@ -35,13 +39,19 @@ export default angular
                             if(innerWidth > 1500){columns=5}
                             for(var i=0; i<columns; i++){lastHeights[i] = 0;}
                             var percWidth = Math.round(10000 / columns)/100;
-                            for(var i=0; i<masornyElements.length;i++){
+                            for(var i=0; i< masornyElements.length;i++){
                                 masornyElements[i].style.width = percWidth + "%";
+                            }
+                            for(var i=0; i< masornyElementsTransclude.length;i++){
+                                masornyElementsTransclude[i].style.width = percWidth + "%";
                             }
                         } else {
                             // not masorny
                             for(var i=0; i<masornyElements.length;i++){
                                 masornyElements[i].style.width = 'auto';
+                            }
+                            for(var i=0; i<masornyElementsTransclude.length;i++){
+                                masornyElementsTransclude[i].style.width = 'auto';
                             }
                         }
 
@@ -54,6 +64,29 @@ export default angular
 
                             // current height
                             var iHeight = masornyElements[i].clientHeight;
+                            // set new lastHeight
+                            lastHeights[targetLoc] += iHeight;
+
+                            // check targetLoc
+                            var compHeight = 5000000;
+                            for (var j = lastHeights.length - 1; j >= 0; j--)
+                            {
+                                if(lastHeights[j] <= compHeight){
+                                    compHeight = lastHeights[j];
+                                    targetLoc = j;
+                                }
+                            }
+                        }
+
+                        // Draw transclude
+                        for(var i = 0; i < masornyElementsTransclude.length; i++){
+                            var iTop = lastHeights[targetLoc];
+                            var iLeft = targetLoc * masornyElementsTransclude[i].clientWidth;
+                            masornyElementsTransclude[i].style.top = iTop+'px';
+                            masornyElementsTransclude[i].style.left = iLeft+'px';
+
+                            // current height
+                            var iHeight = masornyElementsTransclude[i].clientHeight;
                             // set new lastHeight
                             lastHeights[targetLoc] += iHeight;
 
