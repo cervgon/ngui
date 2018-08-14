@@ -11,19 +11,26 @@ export default angular
             nguiOptions: '<'
         },
         transclude: true,
-        controller: function($timeout,$window) {
+        controller: function($timeout,$window,$element) {
             "ngInject";
             var $ctrl = this;
+
+            var lastInnerWidth = -1;
+
             function updateOptions(options) {
                 if (options){
                     $ctrl.bricks = options.bricks || '';
                 }
 
+                var masornyDiv = $element[0].children[0];
+                var innerWidth = masornyDiv.clientWidth;
+
                 $timeout(function(){
-                    function masorny(innerWidth){
+                    function masorny(){
+
                         // Masorny Elements
-                        var masornyElements = angular.element(document.querySelectorAll('.masonry .inner > .brick'));
-                        var masornyElementsTransclude = angular.element(document.querySelectorAll('.masonry .inner ng-transclude > *'));
+                        var masornyElements = masornyDiv.children[0].children;
+                        var masornyElementsTransclude = masornyDiv.children[0].lastElementChild.children;
 
                         if(!masornyElements && !masornyElementsTransclude) return;
 
@@ -32,26 +39,32 @@ export default angular
 
                         // build
                         var columns = 1;
-                        if(innerWidth >= 768){
+                        if(innerWidth >= 568){
                             columns=2;
-                            if(innerWidth >= 1024){columns=3}
-                            if(innerWidth >= 1280){columns=4}
-                            if(innerWidth >= 1500){columns=5}
+                            if(innerWidth >= 768){columns=3}
+                            if(innerWidth >= 1024){columns=4}
+                            if(innerWidth >= 1280){columns=5}
                             for(var i=0; i<columns; i++){lastHeights[i] = 0;}
                             var percWidth = Math.round(10000 / columns)/100;
                             for(var i=0; i< masornyElements.length;i++){
-                                masornyElements[i].style.width = percWidth + "%";
+                                if(masornyElements[i].localName != 'ng-transclude'){
+                                    masornyElements[i].style.width = percWidth + "%";
+                                    masornyElements[i].style.position = 'absolute';
+                                }
                             }
                             for(var i=0; i< masornyElementsTransclude.length;i++){
                                 masornyElementsTransclude[i].style.width = percWidth + "%";
+                                masornyElementsTransclude[i].style.position = 'absolute';
                             }
                         } else {
                             // not masorny
                             for(var i=0; i<masornyElements.length;i++){
                                 masornyElements[i].style.width = 'auto';
+                                masornyElements[i].style.position = 'static';
                             }
                             for(var i=0; i<masornyElementsTransclude.length;i++){
                                 masornyElementsTransclude[i].style.width = 'auto';
+                                masornyElementsTransclude[i].style.position = 'static';
                             }
                         }
 
@@ -103,11 +116,15 @@ export default angular
                         var masornyMaxHeight = lastHeights.reduce(function(a, b) {
                             return Math.max(a, b);
                         });
-                        angular.element(document.querySelector('.masonry'))[0].style.minHeight = 'calc('+ masornyMaxHeight + 'px + 5em)';
+                        masornyDiv.style.minHeight = 'calc('+ masornyMaxHeight + 'px + 1em)';
                     }
-                    masorny($window.innerWidth);
+                    masorny();
                     angular.element($window).bind('resize', function(){
-                        masorny($window.innerWidth);
+                        innerWidth = masornyDiv.clientWidth;
+                        if(innerWidth != lastInnerWidth){
+                            masorny();
+                            lastInnerWidth = innerWidth;
+                        }
                     });
                 },200);
             }
