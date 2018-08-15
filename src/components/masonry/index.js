@@ -30,7 +30,7 @@ export default angular
                     function masorny(){
                         console.log($element);
                         masornyDiv = $element[0].children[0];
-                        innerWidth = masornyDiv.clientWidth;
+                        innerWidth = masornyDiv.children[0].clientWidth;
 
                         // Masorny Elements
                         var masornyElements = masornyDiv.children[0].children;
