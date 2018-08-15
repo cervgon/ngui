@@ -28,7 +28,7 @@ export default angular
 
                 $timeout(function(){
                     function masorny(){
-
+                        console.log($element);
                         masornyDiv = $element[0].children[0];
                         innerWidth = masornyDiv.clientWidth;
 
@@ -64,7 +64,7 @@ export default angular
                             }
                             if($ctrl.alignment == 'center'){
                                 if(items < columns){
-                                    masornyDiv.style.maxWidth = innerWidth/columns*items + 'px';
+                                    masornyDiv.children[0].style.maxWidth = innerWidth/columns*items + 'px';
                                 }
                             }
 
@@ -116,7 +116,7 @@ export default angular
                             var masornyMaxHeight = lastHeights.reduce(function(a,b) {
                                 return Math.max(a,b);
                             });
-                            masornyDiv.style.minHeight = 'calc('+ masornyMaxHeight + 'px + 1em)';
+                            masornyDiv.children[0].style.minHeight = 'calc('+ masornyMaxHeight + 'px + 1em)';
 
                         } else {
                             // not masorny

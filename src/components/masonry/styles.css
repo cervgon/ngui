@@ -1,6 +1,6 @@
 
-masonry .masonry{padding: 0px; overflow: hidden; margin: 0 auto;}
-masonry .masonry .inner{position: relative;}
+masonry .masonry{padding: 0; overflow: hidden; margin: 0 auto;}
+masonry .masonry .inner{position: relative; margin: 0 auto; padding: 0 !important;}
 masonry .masonry .inner > .brick,
 masonry .masonry .inner > ng-transclude > *{ position: absolute; padding:.5em; transition:transform 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);}
 masonry .masonry .inner > .brick > div,
