@@ -86,21 +86,24 @@
         <button ng-click="$ctrl.loaderData.show()">Show loader for 5 seconds</button>
         <hr>
     </div>
-
+</div>
+<div class="matchParent">
     <div class="p1-0">
-        <h3>Masonry</h3>
+        <h3 class="center">Masonry</h3>
         <div>
-            <masonry ngui-options="{bricks: $ctrl.bricks}">
+            <masonry ngui-options="{bricks: $ctrl.bricks, alignment: 'center'}">
+                <!--
                 <div><div>Rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequu</div></div>
                 <div>To odio dignissimos ducimus qui blanditiis praesentium.</div>
+                -->
             </masonry>
-            <masonry ngui-options="{bricks: $ctrl.bricks}">
-                <div>Rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequu</div>
+            <masonry ngui-options="{bricks: $ctrl.bricks}"><div>Rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequu</div>
             </masonry>
         </div>
         <hr>
     </div>
-
+</div>
+<div style="max-width: 1000px; position: relative; margin: 0 auto 0;" class="p0-1">
     <div class="p1-0">
         <h3>Modal</h3>
         <modal></modal>

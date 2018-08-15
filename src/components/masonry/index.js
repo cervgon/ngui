@@ -20,13 +20,17 @@ export default angular
             function updateOptions(options) {
                 if (options){
                     $ctrl.bricks = options.bricks || '';
+                    $ctrl.alignment = options.alignment || '';
                 }
 
-                var masornyDiv = $element[0].children[0];
-                var innerWidth = masornyDiv.clientWidth;
+                var masornyDiv;
+                var innerWidth;
 
                 $timeout(function(){
                     function masorny(){
+
+                        masornyDiv = $element[0].children[0];
+                        innerWidth = masornyDiv.clientWidth;
 
                         // Masorny Elements
                         var masornyElements = masornyDiv.children[0].children;
@@ -39,23 +43,81 @@ export default angular
 
                         // build
                         var columns = 1;
+                        var items = 0;
                         if(innerWidth >= 568){
                             columns=2;
                             if(innerWidth >= 768){columns=3}
                             if(innerWidth >= 1024){columns=4}
                             if(innerWidth >= 1280){columns=5}
                             for(var i=0; i<columns; i++){lastHeights[i] = 0;}
-                            var percWidth = Math.round(10000 / columns)/100;
                             for(var i=0; i< masornyElements.length;i++){
                                 if(masornyElements[i].localName != 'ng-transclude'){
-                                    masornyElements[i].style.width = percWidth + "%";
+                                    masornyElements[i].style.width = innerWidth/columns + 'px';
                                     masornyElements[i].style.position = 'absolute';
+                                    items++;
                                 }
                             }
                             for(var i=0; i< masornyElementsTransclude.length;i++){
-                                masornyElementsTransclude[i].style.width = percWidth + "%";
+                                masornyElementsTransclude[i].style.width = innerWidth/columns + 'px';
                                 masornyElementsTransclude[i].style.position = 'absolute';
+                                items++;
                             }
+                            if($ctrl.alignment == 'center'){
+                                if(items < columns){
+                                    masornyDiv.style.maxWidth = innerWidth/columns*items + 'px';
+                                }
+                            }
+
+                            // Draw
+                            for(var i = 0; i < masornyElements.length; i++){
+                                var iTop = lastHeights[targetLoc];
+                                var iLeft = targetLoc * masornyElements[i].clientWidth;
+                                masornyElements[i].style.top = iTop+'px';
+                                masornyElements[i].style.left = iLeft+'px';
+
+                                // current height
+                                var iHeight = masornyElements[i].clientHeight;
+                                // set new lastHeight
+                                lastHeights[targetLoc] += iHeight;
+
+                                // check targetLoc
+                                var compHeight = 5000000;
+                                for (var j = lastHeights.length - 1; j >= 0; j--)
+                                {
+                                    if(lastHeights[j] <= compHeight){
+                                        compHeight = lastHeights[j];
+                                        targetLoc = j;
+                                    }
+                                }
+                            }
+
+                            // Draw transclude
+                            for(var i = 0; i < masornyElementsTransclude.length; i++){
+                                var iTop = lastHeights[targetLoc];
+                                var iLeft = targetLoc * masornyElementsTransclude[i].clientWidth;
+                                masornyElementsTransclude[i].style.top = iTop+'px';
+                                masornyElementsTransclude[i].style.left = iLeft+'px';
+
+                                // current height
+                                var iHeight = masornyElementsTransclude[i].clientHeight;
+                                // set new lastHeight
+                                lastHeights[targetLoc] += iHeight;
+
+                                // check targetLoc
+                                var compHeight = 5000000;
+                                for (var j = lastHeights.length - 1; j >= 0; j--)
+                                {
+                                    if(lastHeights[j] <= compHeight){
+                                        compHeight = lastHeights[j];
+                                        targetLoc = j;
+                                    }
+                                }
+                            }
+                            var masornyMaxHeight = lastHeights.reduce(function(a,b) {
+                                return Math.max(a,b);
+                            });
+                            masornyDiv.style.minHeight = 'calc('+ masornyMaxHeight + 'px + 1em)';
+
                         } else {
                             // not masorny
                             for(var i=0; i<masornyElements.length;i++){
@@ -66,57 +128,8 @@ export default angular
                                 masornyElementsTransclude[i].style.width = 'auto';
                                 masornyElementsTransclude[i].style.position = 'static';
                             }
+                            masornyDiv.style.minHeight = 'auto';
                         }
-
-                        // Draw
-                        for(var i = 0; i < masornyElements.length; i++){
-                            var iTop = lastHeights[targetLoc];
-                            var iLeft = targetLoc * masornyElements[i].clientWidth;
-                            masornyElements[i].style.top = iTop+'px';
-                            masornyElements[i].style.left = iLeft+'px';
-
-                            // current height
-                            var iHeight = masornyElements[i].clientHeight;
-                            // set new lastHeight
-                            lastHeights[targetLoc] += iHeight;
-
-                            // check targetLoc
-                            var compHeight = 5000000;
-                            for (var j = lastHeights.length - 1; j >= 0; j--)
-                            {
-                                if(lastHeights[j] <= compHeight){
-                                    compHeight = lastHeights[j];
-                                    targetLoc = j;
-                                }
-                            }
-                        }
-
-                        // Draw transclude
-                        for(var i = 0; i < masornyElementsTransclude.length; i++){
-                            var iTop = lastHeights[targetLoc];
-                            var iLeft = targetLoc * masornyElementsTransclude[i].clientWidth;
-                            masornyElementsTransclude[i].style.top = iTop+'px';
-                            masornyElementsTransclude[i].style.left = iLeft+'px';
-
-                            // current height
-                            var iHeight = masornyElementsTransclude[i].clientHeight;
-                            // set new lastHeight
-                            lastHeights[targetLoc] += iHeight;
-
-                            // check targetLoc
-                            var compHeight = 5000000;
-                            for (var j = lastHeights.length - 1; j >= 0; j--)
-                            {
-                                if(lastHeights[j] <= compHeight){
-                                    compHeight = lastHeights[j];
-                                    targetLoc = j;
-                                }
-                            }
-                        }
-                        var masornyMaxHeight = lastHeights.reduce(function(a, b) {
-                            return Math.max(a, b);
-                        });
-                        masornyDiv.style.minHeight = 'calc('+ masornyMaxHeight + 'px + 1em)';
                     }
                     masorny();
                     angular.element($window).bind('resize', function(){
