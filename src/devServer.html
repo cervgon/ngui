@@ -9,9 +9,7 @@
                         bgurl: $ctrl.bgurl,
                         prebgcss: $ctrl.prebgcss
                     }">
-                <!-- HTML example -->
                 <p style="font-size: 1em; color: #fff; text-align: center; padding-top: 254px;">HTML example</p>
-                <!-- -->
             </bgloader>
         </div>
         <hr>
@@ -91,14 +89,27 @@
     <div class="p1-0">
         <h3 class="center">Masonry</h3>
         <div>
+            <masonry ngui-options="{bricks: $ctrl.bricks}"></masonry>
             <masonry ngui-options="{bricks: $ctrl.bricks, alignment: 'center'}">
-                <!--
+                <div>Rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequu</div>
                 <div><div>Rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequu</div></div>
                 <div>To odio dignissimos ducimus qui blanditiis praesentium.</div>
-                -->
+                <div><div>Rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequu</div></div>
+                <div>To odio dignissimos ducimus qui blanditiis praesentium.</div>
             </masonry>
-            <masonry ngui-options="{bricks: $ctrl.bricks}"><div>Rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequu</div>
+            <masonry ngui-options="{bricks: $ctrl.bricks, width:280}">
+                <div><div>Rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequu</div></div>
+                <div>To odio dignissimos ducimus qui blanditiis praesentium.</div>
+                <div><div>Rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequu</div></div>
+                <div>To odio dignissimos ducimus qui blanditiis praesentium.</div>
+                <div><div>Rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequu</div></div>
+                <div>To odio dignissimos ducimus qui blanditiis praesentium.</div>
             </masonry>
+            <masonry ngui-options="{bricks: $ctrl.bricks, alignment: 'center', width:280}">
+                <div><div>Rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequu</div></div>
+                <div>To odio dignissimos ducimus qui blanditiis praesentium.</div>
+            </masonry>
+
         </div>
         <hr>
     </div>
