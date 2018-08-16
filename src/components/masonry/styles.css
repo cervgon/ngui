@@ -1,4 +1,4 @@
-masonry{display: block; padding: 2em}
+masonry{display: block}
 masonry .masonry{padding: 0 !important; overflow: hidden; margin: 0 auto;}
 masonry .masonry .inner{padding: 0 !important; min-width: 280px; position: relative; margin: 0 auto;}
 masonry .masonry .inner > .brick,
