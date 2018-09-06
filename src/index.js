@@ -41,6 +41,7 @@ import pagination from './components/pagination';
 import pie from './components/pie';
 import progbar from './components/progbar';
 import radar from './components/radar';
+import scrollable from './components/scrollable';
 import tabs from './components/tabs';
 import toggle from './components/toggle';
 import tooltip from './components/tooltip';
@@ -59,6 +60,7 @@ export {
     pie,
     progbar,
     radar,
+    scrollable,
     tabs,
     toggle,
     tooltip
@@ -79,6 +81,7 @@ export default angular
         pie,
         progbar,
         radar,
+        scrollable,
         tabs,
         toggle,
         tooltip
