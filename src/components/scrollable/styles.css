@@ -1,7 +1,7 @@
 scrollable{}
 scrollable .scrollable{position: fixed; bottom:1em; left: 0; width: 100%; height: 96px; text-align: center; z-index: 999}
 scrollable .scrollable svg{height: 96px; margin: 0 auto 0}
-scrollable .scrollable svg .mouse{fill:#fff; stroke:#ccc}
-scrollable .scrollable svg .wheel{fill:#ccc}
+scrollable .scrollable svg .mouse{fill:#fff; stroke:#ccc;}
+scrollable .scrollable svg .wheel{fill:#ccc; transition: unset}
 .night scrollable .scrollable svg .mouse{fill:#222; stroke:#fff}
 .night scrollable .scrollable svg .wheel{fill:#fff}
