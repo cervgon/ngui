@@ -1,24 +1,13 @@
 <div class="scrollable" ng-class="{'fadeOut': $ctrl.scrolled }">
-    <!-- This is an example -->
-    <svg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg" height="96px">
-        <rect class="mouse" x="10" y="5" width="10" height="20" rx="5"></rect>
-        <g>
-            <circle class="wheel" cx="15px" cy="8" r="1" fill="#334149">
-                <animate id="anim2" attributeName="cy" from="8" to="11" dur="0.7" begin="anim1.end" fill="freeze"/>
-                <animate id="anim4" attributeName="cy" from="11" to="8" dur="0.7" begin="anim3.end" fill="freeze"/>
-            </circle>
-            <rect class="wheel" x="14" y="8" width="2" height="2" fill="#334149">
-                <animate attributeName="height" from="0" to="3" dur="0.7" begin="anim1.begin" fill="freeze"/>
-                <animateTransform attributeName="transform" attributeType="XML" type="translate" from="0 0" to="0 3" dur="0.7" begin="anim1.end" fill="freeze"/>
-                <animate attributeName="height" from="3" to="0" dur="0.7" begin="anim1.end" fill="freeze"/>
-                <animateTransform attributeName="transform" attributeType="XML" type="translate" from="0 3" to="0 0" dur="0.7" begin="anim2.end" fill="freeze"/>
-                <animate attributeName="height" from="0" to="3" dur="0.7" begin="anim2.end" fill="freeze"/>
-                <animate attributeName="height" from="3" to="0" dur="0.7" begin="anim3.end" fill="freeze"/>
-            </rect>
-            <circle class="wheel" cx="15px" cy="8" r="1" fill="#334149">
-                <animate id="anim1" attributeName="cy" from="8" to="11" dur="0.7" begin="0s; anim4.end" fill="freeze"/>
-                <animate id="anim3" attributeName="cy" from="11" to="8" dur="0.7" begin="anim2.end" fill="freeze"/>
-            </circle>
-        </g>
+    <svg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">
+        <rect class="mouse" x="10" y="5" width="10" height="18" rx="5" ry="5"></rect>
+        <rect class="wheel" x="14" y="8" width="2" height="2" rx="1" ry="1">
+            <animate id="anim1" attributeName="height" from="2" to="4" dur="0.7" begin="1; anim5.end" fill="freeze"/>
+            <animateTransform attributeName="transform" attributeType="XML" type="translate" from="0 0" to="0 4" dur="0.7" begin="anim1.end" fill="freeze"/>
+            <animate id="anim2" attributeName="height" from="4" to="2" dur="0.7" begin="anim1.end" fill="freeze"/>
+            <animateTransform id="anim4" attributeName="transform" attributeType="XML" type="translate" from="0 4" to="0 0" dur="0.1s" begin="anim3.end" fill="freeze"/>
+            <animate id="anim3" attributeName="opacity" values="1;0" dur="0.2s" begin="anim2.end" fill="freeze"/>
+            <animate id="anim5" attributeName="opacity" values="0;1" dur="0.1s" begin="anim4.end" fill="freeze"/>
+        </rect>
     </svg>
 </div>
