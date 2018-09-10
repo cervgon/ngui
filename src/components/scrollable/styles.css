@@ -1,7 +1,31 @@
 scrollable{}
 scrollable .scrollable{position: fixed; bottom:1em; left: 0; width: 100%; height: 96px; text-align: center; z-index: 999}
 scrollable .scrollable svg{height: 96px; margin: 0 auto 0}
+
+@-webkit-keyframes wheel {
+    0% { -webkit-transform: translateY(0); -webkit-opacity: 1; height: 6.66% }
+    25% { -webkit-transform: translateY(0); -webkit-opacity: 1; height: 6.66% }
+    70% { -webkit-transform: translateY(0%); -webkit-opacity: 1; height: 13.33% }
+    85% { -webkit-transform: translateY(10%); -webkit-opacity: 1; height: 6.66% }
+    100% { -webkit-transform: translateY(10%); -webkit-opacity: 0; height: 6.66% }
+}
+@-moz-keyframes wheel {
+    0% { -moz-transform: translateY(0); -moz-opacity: 1; height: 6.66% }
+    25% { -moz-transform: translateY(0); -moz-opacity: 1; height: 6.66% }
+    70% { -moz-transform: translateY(0%); -moz-opacity: 1; height: 13.33% }
+    85% { -moz-transform: translateY(10%); -moz-opacity: 1; height: 6.66% }
+    100% { -moz-transform: translateY(10%); -moz-opacity: 0; height: 6.66% }
+}
+@keyframes wheel {
+    0% { transform: translateY(0); opacity: 1; height: 6.66% }
+    25% { transform: translateY(0); opacity: 1; height: 6.66% }
+    70% { transform: translateY(0%); opacity: 1; height: 13.33% }
+    85% { transform: translateY(10%); opacity: 1; height: 6.66% }
+    100% { transform: translateY(10%); opacity: 0; height: 6.66% }
+}
+
 scrollable .scrollable svg .mouse{fill:#fff; stroke:#ccc;}
-scrollable .scrollable svg .wheel{fill:#ccc; transition: unset}
+scrollable .scrollable svg .wheel{fill:#ccc; animation: wheel 3s infinite}
 .night scrollable .scrollable svg .mouse{fill:#222; stroke:#fff}
 .night scrollable .scrollable svg .wheel{fill:#fff}
+
