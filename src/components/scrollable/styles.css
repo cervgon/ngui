@@ -50,5 +50,5 @@ scrollable .scrollable svg .wheel{fill:#ccc; animation: wheel 3s infinite}
 }
 
 scrollable .finger { animation: finger 3s infinite }
-scrollable .finger path{fill:#fff; stroke:#334149}
+scrollable .finger path{fill:#fff; stroke:#ccc}
 .night scrollable .finger path{fill:#222; stroke:#ccc}
