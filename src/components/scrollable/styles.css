@@ -31,30 +31,24 @@ scrollable .scrollable svg .wheel{fill:#ccc; animation: wheel 3s infinite}
 
 
 @-webkit-keyframes finger {
-    0%  { -webkit-transform: translateY(20%);   -webkit-opacity: 1 }
-    20% { -webkit-transform: translateY(20%);   -webkit-opacity: 1 }
-    60% { -webkit-transform: translateY(0%);    -webkit-opacity: 1 }
-    100%{ -webkit-transform: translateY(0%);    -webkit-opacity: 0 }
+    0%  { -webkit-transform: translate(10%,20%);   -webkit-opacity: 1 }
+    20% { -webkit-transform: translate(10%,20%);   -webkit-opacity: 1 }
+    60% { -webkit-transform: translate(10%,0%);    -webkit-opacity: 1 }
+    100%{ -webkit-transform: translate(10%,0%);    -webkit-opacity: 0 }
 }
 @-moz-keyframes finger {
-    0%  { -moz-transform: translateY(20%);  -moz-opacity: 1 }
-    20% { -moz-transform: translateY(20%);  -moz-opacity: 1 }
-    60% { -moz-transform: translateY(0%);   -moz-opacity: 1 }
-    100%{ -moz-transform: translateY(0%);   -moz-opacity: 0 }
+    0%  { -moz-transform: translate(10%,20%);  -moz-opacity: 1 }
+    20% { -moz-transform: translate(10%,20%);  -moz-opacity: 1 }
+    60% { -moz-transform: translate(10%,0%);   -moz-opacity: 1 }
+    100%{ -moz-transform: translate(10%,0%);   -moz-opacity: 0 }
 }
 @keyframes finger {
-    0%  { transform: translateY(20%);   opacity: 1 }
-    20% { transform: translateY(20%);   opacity: 1 }
-    60% { transform: translateY(0%);    opacity: 1 }
-    100%{ transform: translateY(0%);    opacity: 0 }
+    0%  { transform: translate(10%,20%);   opacity: 1 }
+    20% { transform: translate(10%,20%);   opacity: 1 }
+    60% { transform: translate(10%,0%);    opacity: 1 }
+    100%{ transform: translate(10%,0%);    opacity: 0 }
 }
 
 scrollable .finger { animation: finger 3s infinite }
-scrollable .path1,
-scrollable .path1{fill:#fff; stroke:#334149}
-scrollable .line1,
-scrollable .line2{stroke:#334149}
-.night scrollable .path1,
-.night scrollable .path1{fill:#222; stroke:#ccc}
-.night scrollable .line1,
-.night scrollable .line2{stroke:#ccc}
+scrollable .finger path{fill:#fff; stroke:#334149}
+.night scrollable .finger path{fill:#222; stroke:#ccc}
