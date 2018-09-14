@@ -3,8 +3,8 @@ import Template from './template.html';
 import Styles from './styles.css';
 
 export default angular
-    .module('ngui.line', [])
-    .component('line', {
+    .module('ngui.chartLine', [])
+    .component('chartLine', {
         template: Template,
         bindings: {
             nguiModel: '=',
@@ -93,13 +93,13 @@ export default angular
 
                 let backgroundLine ='';
                 if($ctrl.lineDataShow){
-                    // Check line stroke
+                    // Check chartLine stroke
                     let newLineStroke = '';
                     if($ctrl.lineDataColor) newLineStroke = 'stroke:'+$ctrl.lineDataColor+ ';';
-                    backgroundLine = '<line class="zeroLine" x1="'+(linestroke/2)+'" y1="'+zeroPointY+'" x2="'+usableWidth+'" y2="'+zeroPointY+'" stroke-width="'+$ctrl.lineDataStrokeWidth +'" style="'+newLineStroke+'"/>'
+                    backgroundLine = '<chartLine class="zeroLine" x1="'+(linestroke/2)+'" y1="'+zeroPointY+'" x2="'+usableWidth+'" y2="'+zeroPointY+'" stroke-width="'+$ctrl.lineDataStrokeWidth +'" style="'+newLineStroke+'"/>'
                 }
 
-                // Populate line
+                // Populate chartLine
                 $ctrl.line =
                     '<svg class="chart" viewBox="0 0 '+$ctrl.width+' '+$ctrl.height+'">'+
                     backgroundLine +

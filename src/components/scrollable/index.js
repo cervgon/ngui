@@ -18,6 +18,9 @@ export default angular
                         $scope.$apply();
                     }
                 });
+                if ("ontouchstart" in document.documentElement) {
+                    $ctrl.finger = true;
+                }
             }
         }
     })

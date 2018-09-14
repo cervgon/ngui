@@ -2,7 +2,7 @@
     <h1>NGUI</h1>
     <div class="p1-0">
         <h3>BGLoader</h3>
-        <div style="width: 400px; height: 300px">
+        <div style="width: 320px; height: 240px">
             <bgloader
                     ngui-options="{
                         bgurl: $ctrl.bgurl,
@@ -246,7 +246,7 @@
 
     <div class="p1-0">
         <h3>Line</h3>
-        <line ngui-model="$ctrl.myLine"
+        <chart-line ngui-model="$ctrl.myLine"
              ngui-options="{
                     data: {
                         values: $ctrl.lineData,
@@ -261,7 +261,7 @@
                     height: 80,
                     strokeWidth: 2,
                     time: .5
-                }" style="max-width: 500px"></line>
+                }" style="max-width: 500px"></chart-line>
         <hr class="transparent">
         <button ng-click="$ctrl.lineData = [1,2,3,5,8,13,21,34,55,89,144,233,377,610]">clear</button>
         <button ng-click="$ctrl.lineData = [1,2,3,5,8,13,21,34,55,89,144,600,155,160,170,175,178,180,181,180,178,175,170,160,155,150]">other</button>
@@ -368,6 +368,7 @@
                 <label class="label grayLabel">Unassigned</label>
                 <hr class="transparent">
             </div>
+            <!--
             <div class="g1 p05">
                 <table class="minimalistic even">
                     <tr>
@@ -411,6 +412,7 @@
                     </tr>
                 </table>
             </div>
+            -->
         </div>
         <hr class="transparent big">
     </div>

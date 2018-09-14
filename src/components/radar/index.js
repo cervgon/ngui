@@ -75,7 +75,7 @@ export default angular
                     var cang = (ang * i + 90) * (pi / 180);
                     var px = Math.round((cx - (Math.cos(cang) * radius)) * 1000) / 1000;
                     var py = Math.round((cy - (Math.sin(cang) * radius)) * 1000) / 1000;
-                    lines += "<line class='lines' x1='"+cx+"' y1='"+cy+"' x2='"+px+"' y2='"+py+"' stroke-width='1'/>"
+                    lines += "<chartLine class='lines' x1='"+cx+"' y1='"+cy+"' x2='"+px+"' y2='"+py+"' stroke-width='1'/>"
                 }
                 $ctrl.lines = lines;
 

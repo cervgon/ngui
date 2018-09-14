@@ -29,3 +29,32 @@ scrollable .scrollable svg .wheel{fill:#ccc; animation: wheel 3s infinite}
 .night scrollable .scrollable svg .mouse{fill:#222; stroke:#fff}
 .night scrollable .scrollable svg .wheel{fill:#fff}
 
+
+@-webkit-keyframes finger {
+    0%  { -webkit-transform: translateY(20%);   -webkit-opacity: 1 }
+    20% { -webkit-transform: translateY(20%);   -webkit-opacity: 1 }
+    60% { -webkit-transform: translateY(0%);    -webkit-opacity: 1 }
+    100%{ -webkit-transform: translateY(0%);    -webkit-opacity: 0 }
+}
+@-moz-keyframes finger {
+    0%  { -moz-transform: translateY(20%);  -moz-opacity: 1 }
+    20% { -moz-transform: translateY(20%);  -moz-opacity: 1 }
+    60% { -moz-transform: translateY(0%);   -moz-opacity: 1 }
+    100%{ -moz-transform: translateY(0%);   -moz-opacity: 0 }
+}
+@keyframes finger {
+    0%  { transform: translateY(20%);   opacity: 1 }
+    20% { transform: translateY(20%);   opacity: 1 }
+    60% { transform: translateY(0%);    opacity: 1 }
+    100%{ transform: translateY(0%);    opacity: 0 }
+}
+
+scrollable .finger { animation: finger 3s infinite }
+scrollable .path1,
+scrollable .path1{fill:#fff; stroke:#334149}
+scrollable .line1,
+scrollable .line2{stroke:#334149}
+.night scrollable .path1,
+.night scrollable .path1{fill:#222; stroke:#ccc}
+.night scrollable .line1,
+.night scrollable .line2{stroke:#ccc}

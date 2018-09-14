@@ -18,7 +18,7 @@ export default angular
                 if ($ctrl.disabled)
                     return;
                 $ctrl.opened = true;
-                console.log("open");
+                //console.log("open");
             }
 
             $ctrl.onBlur = function() {

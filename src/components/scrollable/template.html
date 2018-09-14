@@ -1,6 +1,14 @@
 <div class="scrollable" ng-class="{'fadeOut': $ctrl.scrolled }">
-    <svg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">
+    <svg ng-hide="$ctrl.finger" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">
         <rect class="mouse" x="10" y="5" width="10" height="18" rx="5" ry="5"></rect>
         <rect class="wheel" x="14" y="8" width="2" height="2" rx="1" ry="1"></rect>
+    </svg>
+    <svg ng-show="$ctrl.finger" viewBox="0 0 11 30" xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(0, 6)" class="finger">
+            <path class="path1" d="M0.5,18.0001 L0.5,5.0001 C0.5,2.2381 2.738,0.0001 5.5,0.0001 C8.262,0.0001 10.5,2.2381 10.5,5.0001 L10.5,18.0001" transform="translate(0, 0.5)" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path class="path1" d="M8.5244,7.9025 L8.5244,5.0805 C8.5244,3.4105 7.1704,2.0565 5.5004,2.0565 C3.8304,2.0565 2.4754,3.4105 2.4754,5.0805 L2.4754,7.9025 L8.5244,7.9025 Z" stroke-linecap="round" stroke-linejoin="round"></path>
+            <line class="line1" x1="3" y1="12" x2="8" y2="12" stroke-linecap="round" stroke-linejoin="round"></line>
+            <line class="line2" x1="3" y1="14" x2="8" y2="14" stroke-linecap="round" stroke-linejoin="round"></line>
+        </g>
     </svg>
 </div>

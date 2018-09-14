@@ -29,10 +29,10 @@ import cssTable from './css/table.element.css';
 import cssTableNight from './css/table.elementNight.css';
 
 import bgloader from './components/bgloader';
+import chartLine from './components/chartLine';
 import datepicker from './components/datepicker';
 import dropdown from './components/dropdown';
 import hamburger from './components/hamburger';
-import line from './components/line';
 import list from './components/list';
 import loader from './components/loader';
 import masonry from './components/masonry';
@@ -48,10 +48,10 @@ import tooltip from './components/tooltip';
 
 export {
     bgloader,
+    chartLine,
     datepicker,
     dropdown,
     hamburger,
-    line,
     list,
     loader,
     masonry,
@@ -69,10 +69,10 @@ export {
 export default angular
     .module('ngui', [
         bgloader,
+        chartLine,
         datepicker,
         dropdown,
         hamburger,
-        line,
         list,
         loader,
         masonry,
