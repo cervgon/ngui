@@ -1,0 +1,279 @@
+datepicker {
+    font-family: "Source Sans Pro", "lucida grande", "Segoe UI", arial, verdana, "lucida sans unicode", tahoma, sans-serif; 
+    .datepicker-container{
+        width: 100%; position: relative;
+        &.disabled{
+            cursor: not-allowed;
+            color: #999; border-color: #ddd;
+            .datepicker-input{
+                color: #999; border-color: #ddd;
+                .datepicker-icon{
+                    &.datepicker-icon-arrow{
+                        cursor:not-allowed; opacity: 0.3;
+                    }
+                    &.datepicker-icon-clear{
+                        position: absolute; top: 0; right: 3em; cursor: pointer; background: url("data:image/svg+xml;charset=UTF-8, %3Csvg fill='%23999999' height='24' viewBox='0 0 24 24' width='32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z'/%3E%3Cpath d='M0-.75h24v24H0z' fill='none'/%3E%3C/svg%3E") no-repeat center; background-size: 2em; height: 100%; width: 3em;
+                    }
+                }
+                .datepicker-fake-input{
+                    input{
+                        color: #999;
+                    }
+                }
+            }
+        }
+        .datepicker-input{
+            width: 100%; background-color: #f9f9f9; padding: .572em .75em; border: 1px solid #aaa; font-size: .875em; color: #666; -webkit-box-sizing: border-box; -khtml-box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; box-sizing: border-box; text-align: left;
+            &.focus{
+                border-color:#000;
+            }
+            * {
+                font-size: .875em;
+            }
+            .datepicker-fake-input{
+                font-size: 1em;
+                input{
+                    width: 3em; border: 0; font-size: 1em; outline: 0; text-align: center; color: #333; background-color: transparent; padding: 0 .75em;
+                    &::-webkit-outer-spin-button,
+                    &::-webkit-inner-spin-button{
+                        display: none; -webkit-appearance: none; margin: 0;
+                    }
+                    &[type=number]{
+                        -moz-appearance: textfield; background-color:transparent;
+                    }
+                    &:first-child{text-align: right; padding-right: .75em; padding-left:0; width: 2.5em;}
+                    &:last-child{text-align: left; padding-left: .75em; padding-right:0; width: 3.5em;}
+                }
+            }
+            .datepicker-icon{
+                &.datepicker-icon-arrow{
+                    position: absolute; top: 0; right: 0; cursor: pointer; background: url("data:image/svg+xml;charset=UTF-8, %3Csvg fill='%23999999' height='24' viewBox='0 -1 24 24' width='32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z'/%3E%3Cpath d='M0-.75h24v24H0z' fill='none'/%3E%3C/svg%3E") no-repeat center; background-size: 2.25em; height: 100%; width: 3em;
+                }
+                &.datepicker-icon-clear{
+                    display: none; position: absolute; top: 0; right: 3em; cursor: pointer; background: url("data:image/svg+xml;charset=UTF-8, %3Csvg fill='%23999999' height='24' viewBox='0 0 24 24' width='32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z'/%3E%3Cpath d='M0-.75h24v24H0z' fill='none'/%3E%3C/svg%3E") no-repeat center; background-size: 2em; height: 100%; width: 3em;
+                    &:hover{
+                        background-image: url("data:image/svg+xml;charset=UTF-8, %3Csvg fill='%23cc0000' height='24' viewBox='0 0 24 24' width='32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z'/%3E%3Cpath d='M0-.75h24v24H0z' fill='none'/%3E%3C/svg%3E");
+                    }
+                }
+            }
+        }
+    }
+    &:hover{
+        .datepicker-container{
+            .datepicker-input{
+                .datepicker-icon{
+                    &.datepicker-icon-clear{
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.night{
+    datepicker{
+        .datepicker-container{
+            .datepicker-input{
+                background-color: #333; border-color: #111;
+                &.focus {
+                    border-color:#ccc;
+                }
+                span{
+                    color:#666
+                }
+                .datepicker-fake-input{
+                    input{
+                        color:#ccc;
+                    }
+                }
+                .datepicker-icon{
+                    &.datepicker-icon-arrow{}
+                    &.datepicker-icon-clear{}
+                }
+            }
+            &.disabled{
+                color: #666; border-color: #181818;
+                .datepicker-input{
+                    color: #666;
+                    .datepicker-fake-input {
+                        input {
+                            color: #666;
+                          }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1.1) {
+    datepicker .datepicker-container .datepicker-input .datepicker-icon.datepicker-icon-clear {
+        display: block;
+    }
+}
+
+
+/* iPhone 6 Plus */
+@media screen and (min-width: 25.875em) {
+    datepicker {
+        .datepicker-icon-clear {
+            display: none; right: 2em; width: 2em;
+        }
+        &:hover .datepicker-icon-clear {
+            display: block;
+        }
+        .datepicker-icon-arrow {
+            width: 2.5em;
+        }
+    }
+}
+
+
+.calendarToRight .datepicker-picker .datepicker-picker {
+    left: auto; right: 0;
+}
+
+.datepicker-picker {
+    background-color: white; position: absolute; top: 2.4em; left: 0; width: 100%; padding: 6px; max-width: 272px; z-index: 1; -webkit-box-sizing: border-box; -khtml-box-sizing: border-box;  -moz-box-sizing: border-box; -ms-box-sizing: border-box; box-sizing: border-box; box-shadow: 0 4px 10px -1px rgba(0, 0, 0, 0.1);
+    * {
+        -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; outline: 0;
+    }
+    .datepicker-selector {
+        display: inline-block; text-align: center; width: 100%; font-weight: bolder; font-size: 0.875em; color: #666; letter-spacing: 0.01em; padding: 0; -webkit-box-sizing: border-box; -khtml-box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; box-sizing: border-box;
+        button {
+            background-color: transparent; border: 0; font-weight: bold; outline: 0; cursor: pointer; color: #666; padding: 0.5em 0.6em; margin: 0; opacity: 0.5;
+            &:hover {
+                opacity: 1;
+            }
+            &.prev {
+                background: url("data:image/svg+xml;charset=UTF-8, %3Csvg fill='%23333333' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'%3E' %3Cpath d='M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z'/%3E'%3C/svg%3E") no-repeat center;
+            }
+            &.next {
+                background: url("data:image/svg+xml;charset=UTF-8, %3Csvg fill='%23333333' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'%3E' %3Cpath d='M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z'/%3E'%3C/svg%3E") no-repeat center;
+            }
+            &.prev, &.next {
+                background-size: 1.5em; width: 15%; height: 3em; vertical-align: middle;
+            }
+        }
+        select {
+            border: none; background-color: transparent;
+            &.month-select {
+                width: calc( 40% - 0.25em );
+            }
+            &.year-select {
+                width: calc( 30% - 0.25em );
+            }
+        }
+        span {
+            padding: 0.4em 0; display: inline-block; font-weight: bold;
+        }
+    }
+    .datepicker-calendar {
+        display: inline-table; width: 100%; font-size: 0.875em;
+        * {
+            -webkit-box-sizing: border-box; -khtml-box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; box-sizing: border-box;
+        }
+    }
+    .datepicker-date, .disabled .datepicker-date:hover {
+        background-color: transparent; cursor: pointer; color: #666;
+    }
+    .datepicker-day {
+        display: inline-block; width: 14.2%; line-height: 2.75em; text-align: center; font-weight: 400; border: 0 none;
+    }
+    .datepicker-date:hover {
+        background-color: #ddd; color: #000; -webkit-border-radius: 0.25em; -moz-border-radius: 0.25em; border-radius: 0.25em;
+    }
+    .datepicker-weekday {
+        font-weight: bold; font-size: 10px; color: #666; cursor: default;
+    }
+    .datepicker-today{
+        background-color: #eee; -webkit-border-radius: 0.25em; -moz-border-radius: 0.25em; border-radius: 0.25em;
+    }
+    .datepicker-selected, .disabled .datepicker-selected {
+        background-color: #000; text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8); color: #fff; -webkit-border-radius: 0.25em; -moz-border-radius: 0.25em; border-radius: 0.25em; font-weight: 700; letter-spacing: 0.08em; text-align: center;
+        &:hover {
+            background-color: #000; text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8); color: #fff; -webkit-border-radius: 0.25em; -moz-border-radius: 0.25em; border-radius: 0.25em; font-weight: 700; letter-spacing: 0.08em; text-align: center;
+        }
+    }
+}
+
+.night{
+        .datepicker-picker {
+            border-color: #111; background-color: #333;
+            * {
+                -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; outline: 0;
+            }
+            .datepicker-selector {
+                color: #999;
+                button {
+                    color: #999;
+                    &:hover {
+                    }
+                    &.prev {
+                        background-image: url("data:image/svg+xml;charset=UTF-8, %3Csvg fill='%23cccccc' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'%3E' %3Cpath d='M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z'/%3E'%3C/svg%3E");
+                    }
+                    &.next {
+                        background-image: url("data:image/svg+xml;charset=UTF-8, %3Csvg fill='%23cccccc' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'%3E' %3Cpath d='M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z'/%3E'%3C/svg%3E");
+                    }
+                    &.prev, &.next {
+                    }
+                }
+                select {
+                    &.month-select {
+                    }
+                    &.year-select {
+                    }
+                }
+                span {
+                }
+            }
+            .datepicker-calendar {
+                * {
+                }
+            }
+            .datepicker-date, .disabled .datepicker-date:hover {
+                color: #ccc;
+            }
+            .datepicker-day {
+                border-color: #333;
+            }
+            .datepicker-date:hover {
+                background-color: #222; color: #fff;
+            }
+            .datepicker-weekday {
+                color: #999;
+            }
+            .datepicker-today {
+                background-color: #282828;
+            }
+            .datepicker-selected, .disabled .datepicker-selected {
+                background-color: #111; color: #fff;
+                &:hover {
+                    background-color: #111; color: #fff;
+                }
+            }
+        }
+}
+
+/* iPhone 6/7/8 */
+@media screen and (min-width: 23.4375em) {
+    .datepicker-picker .datepicker-picker {
+        max-width: 326px;
+    }
+}
+  
+/* iPhone 6 Plus */
+@media screen and (min-width: 25.875em) {
+    .datepicker-picker {
+        .datepicker-picker {
+            max-width: 364px;
+        }
+    }
+}
+  
+@media screen and (min-width: 28em) {
+    .datepicker-picker .datepicker-picker {
+        width: 294px;
+    }
+}

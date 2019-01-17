@@ -3,7 +3,7 @@
         <div class="datepicker-fake-input" ng-click="$ctrl.open_calendar()">
             <input type="number" placeholder="MM" min="1" max="12" ng-model="$ctrl.selected_month" ng-blur="$ctrl.update_selected_date()" ng-disabled="$ctrl.disabled" /> <span>/</span>
             <input type="number" placeholder="DD" min="1" max="31" ng-model="$ctrl.selected_day" ng-blur="$ctrl.update_selected_date()" ng-disabled="$ctrl.disabled" /> <span>/</span>
-            <input type="number" placeholder="YYYY" min="1000" max="9999" ng-model="$ctrl.selected_year" ng-blur="$ctrl.update_selected_date()" ng-disabled="$ctrl.disabled" style="width:2.6em;"/>
+            <input type="number" placeholder="YYYY" min="1000" max="9999" ng-model="$ctrl.selected_year" ng-blur="$ctrl.update_selected_date()" ng-disabled="$ctrl.disabled"/>
         </div>
         <span class="datepicker-icon datepicker-icon-arrow" ng-click="$ctrl.toggle_calendar()"></span>
         <span class="datepicker-icon datepicker-icon-clear" ng-if="$ctrl.nguiModel && !$ctrl.disabled" ng-click="$ctrl.clear()"></span>
