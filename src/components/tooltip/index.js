@@ -1,6 +1,6 @@
 import angular from 'angular';
 import Template from './template.html';
-import Styles from './styles.css';
+import Styles from './styles.scss';
 
 export default angular
     .module('ngui.tooltip', [])

@@ -1,0 +1,68 @@
+.night {
+  button, .btn, a.btn {
+    background-color: #333;
+    border-color: #111;
+    color: #ccc;
+  }
+  input {
+    &[type="submit"], &[type="button"] {
+      background-color: #333;
+      border-color: #111;
+      color: #ccc;
+    }
+  }
+  button {
+    &:hover, &:focus, &:active:focus, &.selected {
+      background-color: #111;
+      border-color: #111;
+      color: #ccc;
+    }
+  }
+  .btn {
+    &.selected, &:hover, &.selected, {
+      background-color: #111;
+      border-color: #111;
+      color: #ccc;
+    }
+  }
+  input[type=file].file:focus + label.btn{
+    background-color: #111;
+    border-color: #111;
+    color: #ccc;
+  }
+  a.btn {
+    &:hover, &.selected {
+      background-color: #111;
+      border-color: #111;
+      color: #ccc;
+    }
+  }
+  input {
+    &[type="submit"] {
+      &:hover, &.selected:hover {
+        background-color: #111;
+        border-color: #111;
+        color: #ccc;
+      }
+    }
+    &[type="button"] {
+      &:hover, &.selected:hover {
+        background-color: #111;
+        border-color: #111;
+        color: #ccc;
+      }
+    }
+  }
+  button[disabled="disabled"], .btn[disabled="disabled"], a.btn[disabled="disabled"] {
+    background-color: #222;
+    border-color: #111;
+    color: #666;
+  }
+  input {
+    &[type="submit"][disabled="disabled"], &[type="button"][disabled="disabled"] {
+      background-color: #222;
+      border-color: #111;
+      color: #666;
+    }
+  }
+}

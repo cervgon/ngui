@@ -1,8 +1,8 @@
 import angular from 'angular';
 import Template from './template.html';
-import cssCoreButton from '../../css/core_button.css';
-import cssButton from '../../css/button.element.css';
-import Styles from './styles.css';
+import cssCoreButton from '../../css/core_button.scss';
+import cssButton from '../../css/button.element.scss';
+import Styles from './styles.scss';
 
 export default angular
     .module('ngui.modal', [])

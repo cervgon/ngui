@@ -1,7 +1,7 @@
-<div style="max-width: 1000px; position: relative; margin: 0 auto 0;" class="p0-1">
-    <h1>NGUI</h1>
+<div style="max-width: 1000px" class="ginner mauto relative">
+    <h1 class="mb-m mt-l">NGUI</h1>
     <div class="p1-0">
-        <h3>BGLoader</h3>
+        <h2  class="mb-m mt-l">BGLoader</h2>
         <div style="max-width: 320px; height: 240px">
             <bgloader
                     ngui-options="{
@@ -17,13 +17,13 @@
     <scrollable></scrollable>
 
     <div class="p1-0">
-        <h3>Datepicker</h3>
+        <h2  class="mb-m mt-l">Datepicker</h2>
         <datepicker ngui-model="$ctrl.datepickerData.model"></datepicker>
         <hr>
     </div>
 
     <div class="p1-0">
-        <h3>Dropdown</h3>
+        <h2  class="mb-m mt-l">Dropdown</h2>
         <dropdown ngui-model="$ctrl.dropdownData.model" ngui-options="{
             options: $ctrl.dropdownData.items,
             placeholder: 'Pick something good'
@@ -32,14 +32,14 @@
     </div>
 
     <div class="p1-0">
-        <h3>Hamburger</h3>
+        <h2  class="mb-m mt-l">Hamburger</h2>
         <hamburger ngui-model="$ctrl.hamburgerData"></hamburger>
         <p>Hamburger state is: {{$ctrl.hamburgerData}}</p>
         <hr>
     </div>
 
     <div class="p1-0">
-        <h3>List</h3>
+        <h2  class="mb-m mt-l">List</h2>
         <list>
             <list-item ng-repeat="item in $ctrl.listData.items" ngui-ondelete="$ctrl.listData.onDelete($index)">
                 <list-item-fold>
@@ -80,7 +80,7 @@
     </div>
 
     <div class="p1-0">
-        <h3>Loader</h3>
+        <h2  class="mb-m mt-l">Loader</h2>
         <loader></loader>
         <button ng-click="$ctrl.loaderData.show()">Show loader for 5 seconds</button>
         <hr>
@@ -88,7 +88,7 @@
 </div>
 <div class="matchParent">
     <div class="p1-0">
-        <h3 class="center">Masonry</h3>
+        <h3 class="center">Masonry</h2>
         <div>
             <masonry ngui-options="{bricks: $ctrl.bricks}"></masonry>
             <masonry ngui-options="{bricks: $ctrl.bricks, alignment: 'center'}">
@@ -115,9 +115,9 @@
         <hr>
     </div>
 </div>
-<div style="max-width: 1000px; position: relative; margin: 0 auto 0;" class="p0-1">
+<div style="max-width: 1000px" class="ginner mauto relative">
     <div class="p1-0">
-        <h3>Modal</h3>
+        <h2  class="mb-m mt-l">Modal</h2>
         <modal></modal>
         <button ng-click="$ctrl.modalData.alert()">Show alert</button>
         <button ng-click="$ctrl.modalData.success()">Show success</button>
@@ -131,7 +131,7 @@
     </div>
 
     <div class="p1-0">
-        <h3>Pagination</h3>
+        <h2  class="mb-m mt-l">Pagination</h2>
         <pagination ngui-options="{
             items: $ctrl.paginationData.items,
             itemsPerPage: 6
@@ -142,7 +142,7 @@
     </div>
 
     <div class="p1-0">
-        <h3>Progbar</h3>
+        <h2  class="mb-m mt-l">Progbar</h2>
         <progbar
             ngui-model="$ctrl.progbarData.value",
             ngui-options="{
@@ -154,7 +154,7 @@
     </div>
 
     <div class="p1-0">
-        <h3>Tabs</h3>
+        <h2  class="mb-m mt-l">Tabs</h2>
         <tabs  ngui-model="$ctrl.tabsData.model" ngui-options="{
             options: $ctrl.tabsData.items,
             placeholder: 'Pick something good',
@@ -165,7 +165,7 @@
     </div>
 
     <div class="p1-0">
-        <h3>Toggle</h3>
+        <h2  class="mb-m mt-l">Toggle</h2>
         <toggle ngui-model="$ctrl.toggleData"
                 ngui-options="{
                     oncolor: '#005e9d',
@@ -177,7 +177,7 @@
     </div>
 
     <div class="p1-0">
-        <h3>Tooltip</h3>
+        <h2  class="mb-m mt-l">Tooltip</h2>
         <select ng-mouseover="$ctrl.tooltip = true" style="width: 200px">
             <option value="White">White</option>
             <option value="Black">Black</option>
@@ -191,7 +191,7 @@
     </div>
 
     <div class="p1-0">
-        <h3>Radar</h3>
+        <h2  class="mb-m mt-l">Radar</h2>
         <radar ngui-model="$ctrl.radar"
                 ngui-options="{
                     data: $ctrl.radarData,
@@ -205,7 +205,7 @@
     </div>
 
     <div class="p1-0">
-        <h3>Pie</h3>
+        <h2  class="mb-m mt-l">Pie</h2>
         <pie ngui-model="$ctrl.pie"
                ngui-options="{
                     data: [
@@ -245,7 +245,7 @@
 
 
     <div class="p1-0">
-        <h3>Line</h3>
+        <h2  class="mb-m mt-l">Line</h2>
         <chart-line ngui-model="$ctrl.myLine"
              ngui-options="{
                     data: {

@@ -1,6 +1,6 @@
 import angular from 'angular';
 import Template from './template.html';
-import Styles from './styles.css';
+import Styles from './styles.scss';
 import angularTouch from 'angular-touch';
 
 export default angular
