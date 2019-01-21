@@ -6,7 +6,7 @@ export default angular
     .module('ngui.scrollable', [])
     .component('scrollable', {
         template: Template,
-        controller: function($window,$scope) {
+        controller: function($window,$scope,$timeout) {
             "ngInject";
             var $ctrl = this;
 
@@ -16,6 +16,9 @@ export default angular
                     if(this.pageYOffset > 300 && !$ctrl.scrolled){
                         $ctrl.scrolled = true;
                         $scope.$apply();
+                        $timeout(function(){
+                            $ctrl.hideIndicator = true;
+                        },2000);
                     }
                 });
                 if ("ontouchstart" in document.documentElement) {

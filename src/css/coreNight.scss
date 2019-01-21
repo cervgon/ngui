@@ -44,6 +44,10 @@
       color: #fff;
       border-color: #ccc;
     }
+    &:disabled{
+      color: #666;
+      border-color: #181818;
+    }
   }
   input {
     &:focus, &[type="text"]:focus, &[type="number"]:focus, &[type="file"]:focus, &[type="email"]:focus {
