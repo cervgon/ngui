@@ -1,4 +1,4 @@
-<div class="scrollable" ng-class="{'fadeOut': $ctrl.scrolled }">
+<div class="scrollable" ng-class="{'fadeOut': $ctrl.scrolled }" ng-if="!$ctrl.hideIndicator">
     <svg ng-hide="$ctrl.finger" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">
         <rect class="mouse" x="10" y="5" width="10" height="18" rx="5" ry="5"></rect>
         <rect class="wheel" x="14" y="8" width="2" height="2" rx="1" ry="1"></rect>
