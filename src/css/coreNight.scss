@@ -31,10 +31,19 @@
       color: #ccc;
     }
   }
-  select, textarea {
+  select {
     background-color: #333;
     border-color: #111;
     color: #ccc;
+  }
+  textarea {
+    background-color: #333;
+    border-color: #111;
+    color: #ccc;
+    &:focus {
+      color: #fff;
+      border-color: #ccc;
+    }
   }
   input {
     &:focus, &[type="text"]:focus, &[type="number"]:focus, &[type="file"]:focus, &[type="email"]:focus {
@@ -42,18 +51,26 @@
       border-color: #ccc;
     }
   }
-  select:focus, textarea:focus {
-    color: #fff;
-    border-color: #ccc;
+  select {
+    &:hover, &:focus, &:active:focus, &.selected {
+      background-color: #111;
+      border-color: #111;
+      color: #ccc;
+      &:disabled {
+        color: #666;
+        border-color:#181818;
+      }
+    }
+    &:disabled {
+      color: #666;
+      border-color:#181818;
+    }
   }
   input {
     &:disabled, &[type="text"]:disabled, &[type="number"]:disabled, &[type="file"]:disabled, &[type="email"]:disabled, &[type="search"]:disabled, &.search:disabled {
       color: #666;
       border-color:#181818;
     }
-  }
-  select:disabled, textarea:disabled {
-    color: #eee;
   }
   [type="checkbox"] {
     &:not(:checked), &:checked {}
