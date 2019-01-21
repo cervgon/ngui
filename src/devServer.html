@@ -18,16 +18,21 @@
 
     <div class="p1-0">
         <h2  class="mb-m mt-l">Datepicker</h2>
-        <datepicker ngui-model="$ctrl.datepickerData.model"></datepicker>
+        <div style="max-width:300px">
+            <datepicker ngui-model="$ctrl.datepickerData.model"></datepicker>
+        </div>
         <hr>
     </div>
 
     <div class="p1-0">
         <h2  class="mb-m mt-l">Dropdown</h2>
-        <dropdown ngui-model="$ctrl.dropdownData.model" ngui-options="{
-            options: $ctrl.dropdownData.items,
-            placeholder: 'Pick something good'
-        }"></dropdown>
+        <div style="max-width:300px">
+            <dropdown ngui-model="$ctrl.dropdownData.model" ngui-options="{
+                options: $ctrl.dropdownData.items,
+                bordered: $ctrl.dropdownData.bordered,
+                placeholder: 'Pick something good'
+            }"></dropdown>
+        </div>
         <hr>
     </div>
 

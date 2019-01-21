@@ -243,8 +243,8 @@ input {
   &:not(:checked), &:checked {}
 }
 
-select, textarea {
-  background-color: #f9f9f9;
+select {
+  background-color: #f2f2f2;
   border: 1px solid #aaa;
   color: #666;
   display: inline-block;
@@ -258,20 +258,46 @@ select, textarea {
   -moz-opacity: 1;
   width: 100%;
   -webkit-appearance: none;
+  &:hover, &:focus, &:active:focus, &.selected {
+    background-color: #ddd;
+    border-color: #aaa;
+    color: #222;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    outline: 0 none;
+  }
+  &:disabled {
+    cursor: not-allowed;
+    color: #999;
+  }
 }
 
-select:focus, textarea:focus {
-  color: #333;
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
-  outline: 0 none;
-  border-color: #000;
-}
-
-select:disabled, textarea:disabled {
-  cursor: not-allowed;
-  color: #999;
+textarea {
+  background-color: #f9f9f9;
+  border: 1px solid #aaa;
+  color: #666;
+  display: inline-block;
+  padding: .572em .75em;
+  margin: 0;
+  max-width: 100%;
+  font-weight: 400;
+  border-radius: 0;
+  opacity: 0.9;
+  -webkit-opacity: 1;
+  -moz-opacity: 1;
+  &:focus {
+    color: #333;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    outline: 0 none;
+    border-color: #000;
+  }
+  &:disabled {
+    cursor: not-allowed;
+    color: #999;
+  }
 }
 
 /* Autofill */

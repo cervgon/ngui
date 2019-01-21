@@ -23,7 +23,8 @@ App.component('app', {
         // Dropdown
         $ctrl.dropdownData = {
             model: "",
-            items: []
+            items: [],
+            bordered: true
         }
         for (var i = 0; i < 50; i++) {
             $ctrl.dropdownData.items.push("Option " + i);

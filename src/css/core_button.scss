@@ -1,5 +1,5 @@
 button, .btn, a.btn {
-  background-color: #f9f9f9;
+  background-color: #f2f2f2;
   border: 1px solid #aaa;
   color: #444;
   cursor: pointer;
@@ -16,7 +16,7 @@ button, .btn, a.btn {
 
 input {
   &[type="submit"], &[type="button"] {
-    background-color: #f9f9f9;
+    background-color: #f2f2f2;
     border: 1px solid #aaa;
     color: #444;
     cursor: pointer;
@@ -161,7 +161,7 @@ input {
 }
 
 button[disabled="disabled"], .btn[disabled="disabled"], a.btn[disabled="disabled"] {
-  background-color: #f9f9f9;
+  background-color: #f2f2f2;
   border-color: #aaa;
   color: #999;
   text-decoration: none;
@@ -171,7 +171,7 @@ button[disabled="disabled"], .btn[disabled="disabled"], a.btn[disabled="disabled
 
 input {
   &[type="submit"][disabled="disabled"], &[type="button"][disabled="disabled"] {
-    background-color: #f9f9f9;
+    background-color: #f2f2f2;
     border-color: #aaa;
     color: #999;
     text-decoration: none;
