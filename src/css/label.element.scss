@@ -1,0 +1,106 @@
+/* Labels */
+
+label {
+  font-size: 1em;
+  display: block;
+  margin-bottom: 0.5em;
+  color: #444;
+  .material-icons {
+    vertical-align: middle;
+  }
+}
+
+.night {
+  label {color:#999}
+}
+
+.label {
+  background-color: #eee;
+  border: 1px solid #ccc;
+  border-radius: 0.2em;
+  color: #666;
+  display: inline-block;
+  font-size: 62.5%;
+  font-weight: 700;
+  padding: 0.2em 0.5em 0.2em;
+  white-space: nowrap;
+  -webkit-border-radius: 0.2em;
+  -moz-border-radius: 0.2em;
+  text-rendering: optimizeLegibility;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  text-shadow: none !important;
+  margin: 0;
+  &.redLabel, &.label-danger {
+    background-color: #ff7373;
+    color: #330d0d;
+    border: 1px solid #d83636;
+  }
+  &.salmonLabel {
+    background-color: #ff895a;
+    color: #3f1610;
+    border: 1px solid #cc5936;
+  }
+  &.amberLabel {
+    background-color: #ffd45a;
+    color: #473313;
+    border: 1px solid #e5a83c;
+  }
+  &.orangeLabel, &.label-warning {
+    background-color: #ffb45a;
+    color: #3f2710;
+    border: 1px solid #d88b36;
+  }
+  &.yellowLabel {
+    background-color: #fff15a;
+    color: #473d13;
+    border: 1px solid #e5d142;
+  }
+  &.lemonLabel {
+    background-color: #bcd877;
+    color: #2e330d;
+    border: 1px solid #95a340;
+  }
+  &.greenLabel, &.label-success {
+    background-color: #8dd892;
+    color: #0d330d;
+    border: 1px solid #3da33d;
+  }
+  &.emeraldLabel {
+    background-color: #8ed6c3;
+    color: #0c2d1f;
+    border: 1px solid #379378;
+  }
+  &.blueLabel, &.label-primary {
+    background-color: #9ecef2;
+    color: #0d2833;
+    border: 1px solid #4c96d8;
+  }
+  &.lavenderLabel {
+    background-color: #9ea8f2;
+    color: #0b163d;
+    border: 1px solid #6771d8;
+  }
+  &.violetLabel {
+    background-color: #ba9ef2;
+    color: #130933;
+    border: 1px solid #8b56ef;
+  }
+  &.pinkLabel {
+    background-color: #ed8ed9;
+    color: #3d1035;
+    border: 1px solid #d84cae;
+  }
+  &.blackLabel {
+    background-color: #444;
+    color: #fff;
+    border: 1px solid #000;
+    text-shadow: 0 0px 2px #000 !important;
+  }
+  &.grayLabel, &.label-info, &.label-default {
+    background-color: #bfbfbf;
+    color: #333333;
+    border: 1px solid #8c8c8c;
+  }
+}
+.label + .label {margin: 0 0 0 0.25em;}

@@ -1,0 +1,37 @@
+/* Markdown doc style */
+
+pre {
+  padding: 0.75em 1em;
+  overflow: auto;
+  line-height: 1.45;
+  background-color: #f7f7f7;
+  border-radius: 3px;
+  font: 0.8em monospace;
+  color: #966a03;
+}
+
+.night {
+  pre {
+    background-color: #1e1e1e;
+    color:#e2896c;
+    border-color: transparent;
+  }
+}
+.pl-ent {
+  color: #63a35c;
+}
+
+.pl-e, .pl-en {
+  color: #795da3;
+}
+
+.pl-s, .pl-pds, .pl-s .pl-pse .pl-s1 {
+  color: #183691;
+}
+
+.pl-sr {
+  color: #183691;
+  .pl-cce, .pl-sre, .pl-sra {
+    color: #183691;
+  }
+}
