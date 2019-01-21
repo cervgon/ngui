@@ -1,0 +1,83 @@
+tabs{
+    font-family: "Source Sans Pro", "lucida grande", "Segoe UI", arial, verdana, "lucida sans unicode", tahoma, sans-serif;
+    .tab { 
+        display: block; vertical-align: bottom; width: 100%; font-family: "Source Sans Pro", "lucida grande", "Segoe UI", arial, verdana, "lucida sans unicode", tahoma, sans-serif; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;
+        .tabs { 
+            display: block; width: 100%; font-size: 1em; margin-bottom: -2px; background-color: transparent !important; padding: 0 !important; 
+            &:focus {outline: 0 none; }
+            ul { 
+                width: 100%; border-bottom: 1px solid #ccc;
+                li { 
+                    list-style: none; cursor: default; width: auto; text-decoration: none; margin: 0; color: #999; padding: 0 0.75em 0; background-color: #eee; border: 1px solid #ccc; border-bottom: none; border-right: none; line-height:2.75em; height: 2.75em; -webkit-height: 2.75em; vertical-align: middle; display: inline-block; font-size: 1em; font-weight: 600; font-family: 'Source Sans Pro', sans-serif; border-radius: 0.375em 0.375em 0 0; transition: background-color 0.4s ease; 
+                    &:last-child { border-right: 1px solid #ccc; }
+                    &:hover { background-color: #f6f6f6; cursor: pointer; }
+                    &.current { 
+                        border-bottom: 1px solid #fff; background-color: #fff; color: #000; border-bottom: none; margin-bottom: -1px; height: calc( 2.75em + 1px); -webkit-height:  calc( 2.75em + 1px); 
+                        &:hover{cursor: default;}
+                    }
+                }
+            }
+        }
+    }
+    .breadcrumb { 
+        display: inline-block; vertical-align: bottom; width: 100%; font-family: "Source Sans Pro", "lucida grande", "Segoe UI", arial, verdana, "lucida sans unicode", tahoma, sans-serif; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; height: 2.75em; -webkit-height:  2.75em; 
+        .tabs { 
+            display: inline-block; width: 100%; font-size: 1em; margin-bottom: -2px; padding: 0 !important;
+            ul { 
+                width: 100%;
+                li { 
+                    list-style: none; cursor: pointer; width: auto; text-decoration: none; margin: 0; color: #777; padding: 0 0.75em 0; border-right: 1px solid #ccc; border-bottom: none; line-height: 2.75em; height: 2.75em; -webkit-height:  2.75em; vertical-align: middle; display: inline-block; font-size: 1em; font-weight: 600; font-family: 'Source Sans Pro', sans-serif; background-color:#eeeeee; transition: background-color 0.4s ease; 
+                    &:first-child{border-radius: 0.375em 0 0 0.375em;}
+                    &:last-child{ border-radius: 0 0.375em 0.375em 0; border-right: none;}
+                    &:hover { color:#333; cursor: pointer; }
+                    &.current { 
+                        color: #000;
+                        &:hover { color: #000; cursor: default; }
+                        ~ li {background-color:#f9f9f9;}
+                    }
+                }
+            }
+        }
+    }
+    &[ng-reflect-bread-crumb-style=false]{display: block;}
+}
+
+.night {
+    tabs{
+        .tab { 
+            .tabs { 
+                &:focus {}
+                ul { 
+                    border-bottom-color: #555;
+                    li { 
+                        color: #444; background-color: #111; border-color: #444; border-bottom: none;
+                        &:last-child { border-right-color: #555; }
+                        &:hover { background-color: #191919; color:#eee; }
+                        &.current { 
+                            border-bottom-color: #222; background-color: #222; color: #fff; border-bottom: none;
+                            &:hover{}
+                        }
+                    }
+                }
+            }
+        }
+        .breadcrumb { 
+            .tabs { 
+                ul {
+                    border-bottom-color: #111; 
+                    li { 
+                        background-color:#111; color:#777;  border-right: 1px solid #555;
+                        &:first-child{ }
+                        &:last-child{ border-right:none; }
+                        &:hover { color:#ccc; }
+                        &.current { 
+                            color: #fff;
+                            &:hover { color:#fff; }
+                            ~ li { background-color:#1d1d1d; }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
