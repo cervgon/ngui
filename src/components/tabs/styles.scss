@@ -12,7 +12,7 @@ tabs{
                     &:last-child { border-right: 1px solid #ccc; }
                     &:hover { background-color: #f6f6f6; cursor: pointer; }
                     &.current { 
-                        border-bottom: 1px solid #fff; background-color: #fff; color: #000; border-bottom: none; margin-bottom: -1px; height: calc( 2.75em + 1px); -webkit-height:  calc( 2.75em + 1px); 
+                        border-bottom: 2px solid #fff; background-color: #fff; color: #000; margin-bottom: -2px; height: calc( 2.75em + 2px); -webkit-height:  calc( 2.75em + 1px); 
                         &:hover{cursor: default;}
                     }
                 }
@@ -54,7 +54,7 @@ tabs{
                         &:last-child { border-right-color: #555; }
                         &:hover { background-color: #191919; color:#eee; }
                         &.current { 
-                            border-bottom-color: #222; background-color: #222; color: #fff; border-bottom: none;
+                            border-bottom: 2px solid #222; background-color: #222; color: #fff;
                             &:hover{}
                         }
                     }

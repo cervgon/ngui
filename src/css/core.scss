@@ -286,6 +286,10 @@ textarea {
   opacity: 0.9;
   -webkit-opacity: 1;
   -moz-opacity: 1;
+  -moz-box-shadow:    none;
+  -webkit-box-shadow: none;
+  box-shadow:         none;
+  -webkit-appearance: none;
   &:focus {
     color: #333;
     -webkit-box-shadow: none;
