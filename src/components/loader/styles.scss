@@ -1,3 +1,17 @@
+$circColor: '666666';
+$labelColor: #666666;
+$circNightColor: 'cccccc';
+$labelNightColor: #cccccc;
+
+@mixin circBG($color) {
+    background: url("data:image/svg+xml;charset=UTF-8, %3Csvg viewBox='0 0 24 24' version='1.1' xmlns='http://www.w3.org/2000/svg'%3E' %3Cg stroke='none' stroke-width='1' fill='none' fill-rule='evenodd' stroke-linecap='round'%3E'  %3Cpath stroke='%23#{$color}' d='M12,1 C5.92486775,1 1,5.92486775 1,12' stroke-width='2'%3E%3C/path%3E' %3C/g%3E'%3C/svg%3E") no-repeat center;
+}
+@mixin transform($property) {
+    -webkit-transform: $property;
+    -ms-transform: $property;
+    transform: $property;
+}
+
 /* Loading Popup */
 @-webkit-keyframes rotatePart {
     0% { -webkit-transform: rotate(0deg) }
@@ -20,25 +34,19 @@ loader {
     .loadingPopup {
         width: 100%; height: 100%; position: fixed; top: 0; left: 0; z-index: 999; background-color: rgba(255,255,255,0.92);
         .loader {
-            font-size: 0.4999em; position: relative; top: 50%; left: 50%; width: 6em; height: 6em; margin: -5em 0 0 -3em; -webkit-box-sizing: initial; -moz-box-sizing: initial; box-sizing: initial; -webkit-animation: spinner 1s cubic-bezier(0.8,.21,.25,.89) infinite; -moz-animation: spinner 1s cubic-bezier(0.8,.21,.25,.89) infinite; animation: spinner 1s cubic-bezier(0.8,.21,.25,.89) infinite;
+            font-size: 0.5em; position: relative; top: 50%; left: 50%; width: 6em; height: 6em; margin: -5em 0 0 -3em; -webkit-box-sizing: initial; -moz-box-sizing: initial; box-sizing: initial; -webkit-animation: spinner 1s cubic-bezier(0.8,.21,.25,.89) infinite; -moz-animation: spinner 1s cubic-bezier(0.8,.21,.25,.89) infinite; animation: spinner 1s cubic-bezier(0.8,.21,.25,.89) infinite;
             .circular { 
                 height: 6em; width: 6em; position: absolute; top: 0; bottom: 0; left: 0; right: 0; margin: 0;
+                @include circBG($circColor);
                 &.circ1{
-                    z-index: 2; -ms-transform: rotate(80deg); -webkit-transform: rotate(80deg); transform: rotate(80deg);
-                    .circuleTip{ left: 2.75em;top:0em; }
+                    z-index: 2; @include transform(rotate(70deg));
                 }
                 &.circ2{
                     z-index: 1; -webkit-animation: rotatePart 1s linear infinite; -moz-animation: rotatePart 1s linear infinite; animation: rotatePart 1s linear infinite;
-                    .circuleTip{ left: 0;top:2.75em; }
                 }
-                .cutCircule{ 
-                    overflow: hidden; width: 50%; height: 50%;
-                    .circule{ border-radius: 4em; border:0.5em solid #005e9d; width: 6em; height: 6em; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
-                }
-                .circuleTip{ background-color: #005e9d; width: .499em; height: .499em; border-radius: 0.5em; position: absolute; }
             }
         }
-        .loadingMessage { font-family: "Source Sans Pro", "lucida grande", "Segoe UI", arial, verdana, "lucida sans unicode", tahoma, sans-serif; color:#005e9d; top:50%; left: 0; width: 100%; position:absolute; text-align: center; margin: 1em 0 0; }
+        .loadingMessage { font-family: "Source Sans Pro", "lucida grande", "Segoe UI", arial, verdana, "lucida sans unicode", tahoma, sans-serif; color:$labelColor; top:50%; left: 0; width: 100%; position:absolute; text-align: center; margin: 1em 0 0; }
     }
 }
 .night {
@@ -46,20 +54,11 @@ loader {
         .loadingPopup {
             background-color: rgba(0,0,0,0.92);
             .loader {
-                .circular { 
-                    &.circ1{
-                        .circuleTip{  }
-                    }
-                    &.circ2{
-                        .circuleTip{  }
-                    }
-                    .cutCircule{ 
-                        .circule{ border-color: #ccc; }
-                    }
-                    .circuleTip{ background-color: #ccc; }
+                .circular {
+                    @include circBG($circNightColor);
                 }
             }
-            .loadingMessage { color:#ccc; }
+            .loadingMessage { color:$labelNightColor; }
         }
     }
 }

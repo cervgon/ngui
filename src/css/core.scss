@@ -175,6 +175,7 @@ input {
   &[type="text"], &[type="file"], &[type="password"], &[type="email"], &[type="search"] {
     width: 100%;
     -webkit-appearance: none;
+    -moz-appearance: none;
   }
   &[type="text"], &[type="email"], &[type="file"] {
     white-space: nowrap;
@@ -258,6 +259,7 @@ select {
   -moz-opacity: 1;
   width: 100%;
   -webkit-appearance: none;
+  -moz-appearance: none;
   &:hover, &:focus, &:active:focus, &.selected {
     background-color: #ddd;
     border-color: #aaa;
@@ -290,6 +292,7 @@ textarea {
   -webkit-box-shadow: none;
   box-shadow:         none;
   -webkit-appearance: none;
+  -moz-appearance: none;
   &:focus {
     color: #333;
     -webkit-box-shadow: none;
@@ -352,6 +355,7 @@ select {
   background-size: 2em;
   padding: .572em 2em .572em .75em;
   height: 2.55em;
+  -webkit-appearance: none;
   -moz-appearance: none;
   &:disabled {
     color: #999;
