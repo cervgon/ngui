@@ -1079,3 +1079,10 @@ nav + .container {
     }
   }
 }
+/* Temp fix for Firefox v64 :after issues */
+@-moz-document url-prefix() {
+    label [type=checkbox],
+    label [type=radio] { visibility: visible !important }
+    label [type=checkbox]::after,
+    label [type=radio]::after { visibility: hidden !important }
+}

@@ -6,7 +6,7 @@ tabs{
             display: block; width: 100%; font-size: 1em; margin-bottom: -2px; background-color: transparent !important; padding: 0 !important; 
             &:focus {outline: 0 none; }
             ul { 
-                width: 100%; border-bottom: 1px solid #ccc;
+                width: 100%; border-bottom: 1px solid #ccc; margin: 0;
                 li { 
                     list-style: none; cursor: default; width: auto; text-decoration: none; margin: 0; color: #999; padding: 0 0.75em 0; background-color: #eee; border: 1px solid #ccc; border-bottom: none; border-right: none; line-height:2.75em; height: 2.75em; -webkit-height: 2.75em; vertical-align: middle; display: inline-block; font-size: 1em; font-weight: 600; font-family: 'Source Sans Pro', sans-serif; border-radius: 0.375em 0.375em 0 0; transition: background-color 0.4s ease; 
                     &:last-child { border-right: 1px solid #ccc; }
