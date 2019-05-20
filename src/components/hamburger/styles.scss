@@ -10,7 +10,7 @@ hamburger {
             span:nth-child(2) { opacity: 0; }
             span:nth-child(3){ top: 8px; -webkit-transform: rotate(45deg); -moz-transform: rotate(45deg); -o-transform: rotate(45deg); transform: rotate(45deg); }
         }
-        span { display: block; position: absolute; height: 2px; width: 100%; background-color: #005e9d; opacity: 1; left: 0; -webkit-transform: rotate(0); -moz-transform: rotate(0); -o-transform: rotate(0); transform: rotate(0); -webkit-transition: transform 125ms linear; -moz-transition: transform 125ms linear; -o-transition: transform 125ms linear; -ms-transition: transform 125ms linear; transition: transform 125ms linear; }
+        span { display: block; position: absolute; height: 2px; width: 100%; background-color: #005e9d; opacity: 1; left: 0; -webkit-transform: rotate(0); -moz-transform: rotate(0); -o-transform: rotate(0); transform: rotate(0); -webkit-transition: all 125ms linear; -moz-transition: all 125ms linear; -o-transition: all 125ms linear; -ms-transition: all 125ms linear; transition: all 125ms linear; }
     }
 }
 .night {

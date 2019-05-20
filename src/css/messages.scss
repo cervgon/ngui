@@ -216,31 +216,31 @@ textarea.wrong:focus, nguix-datepicker.wrong .datepicker-input {
   .msg.msg-red, input.wrong, select.wrong {
     background-color: #471f1f;
     border-color: #1a0a0a;
-    color: #e0b8b8;
+    color: #da5a5a;
   }
   input {
     &[type="text"].wrong, &[type="email"].wrong, &[type="number"].wrong, &[type="file"].wrong {
       background-color: #471f1f;
       border-color: #1a0a0a;
-      color: #e0b8b8;
+      color: #da5a5a;
     }
   }
   textarea.wrong {
     background-color: #471f1f;
     border-color: #1a0a0a;
-    color: #e0b8b8;
+    color: #da5a5a;
   }
   input {
     &.wrong:focus, &[type="text"].wrong:focus, &[type="email"].wrong:focus, &[type="number"].wrong:focus, &[type="file"].wrong:focus {
       background-color: #471f1f;
-      border-color: #e0b8b8;
-      color: #e0b8b8;
+      border-color: #da5a5a;
+      color: #da5a5a;
     }
   }
   textarea.wrong:focus, nguix-datepicker.wrong .datepicker-input {
     background-color: #471f1f;
-    border-color: #e0b8b8;
-    color: #e0b8b8;
+    border-color: #da5a5a;
+    color: #da5a5a;
   }
 }
 
@@ -289,6 +289,6 @@ p.msg {
   .wrong input:focus{
     background-color: #471f1f;
     border-color: #1a0a0a;
-    color: #e0b8b8;
+    color: #da5a5a;
   }
 }
