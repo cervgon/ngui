@@ -1,5 +1,8 @@
 button, .btn, a.btn {
   transition: background-color 0.4s ease;
+  &:disabled {
+    cursor: not-allowed;
+  }
 }
 button+button:not(.matchParent),button+.btn:not(.matchParent),button+a.btn:not(.matchParent), .btn+.btn:not(.matchParent),.btn+button:not(.matchParent),.btn+a.btn:not(.matchParent), a.btn+button:not(.matchParent),a.btn+.btn:not(.matchParent),a.btn+a.btn:not(.matchParent) {
   margin-left: 0.25em
@@ -21,7 +24,7 @@ button.btnGreen, .btn.btnGreen, a.btn.btnGreen, label.btn.btnGreen {
 }
 
 button.btnGreenLight, .btn.btnGreenLight, a.btn.btnGreenLight, label.btn.btnGreenLight {
-  background-color: #f2f2f2;
+  background-color: #fff;
   border: 1px solid #94d19f;
   color: #327d40;
   text-shadow: none;
@@ -35,7 +38,7 @@ button.btnBlue, .btn.btnBlue, a.btn.btnBlue, label.btn.btnBlue {
 }
 
 button.btnBlueLight, .btn.btnBlueLight, a.btn.btnBlueLight, label.btn.btnBlueLight {
-  background-color: #f2f2f2;
+  background-color: #fff;
   border: 1px solid #8cbad9;
   color: #005691;
   text-shadow: none;
@@ -49,7 +52,7 @@ button.btnRed, .btn.btnRed, a.btn.btnRed, label.btn.btnRed {
 }
 
 button.btnRedLight, .btn.btnRedLight, a.btn.btnRedLight, label.btn.btnRedLight {
-  background-color: #f2f2f2;
+  background-color: #fff;
   border: 1px solid #ebadad;
   color: #b20000;
   text-shadow: none;
